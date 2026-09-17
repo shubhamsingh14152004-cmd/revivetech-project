@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+.output/
+.tanstack/
+.wrangler/
+.vercel/
+.nitro/
+coverage/
+*.log
+.DS_Store
