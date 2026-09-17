@@ -25,8 +25,10 @@ export const connectDB = async () => {
 
   if (!uri) {
     if (process.env.NODE_ENV === "production") {
+      const error = new Error("Database configuration required: MONGODB_URI environment variable is missing in Vercel. Please add MONGODB_URI in your Vercel Project Settings -> Environment Variables.");
+      error.statusCode = 503;
       console.error("❌ FATAL: MONGODB_URI environment variable is required in production mode.");
-      throw new Error("MONGODB_URI is required in production mode");
+      throw error;
     }
     console.warn("⚠️ Warning: MONGODB_URI not set. Attempting localhost default mongodb://localhost:27017/revivetech");
   }

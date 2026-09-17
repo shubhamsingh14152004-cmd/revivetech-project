@@ -53,43 +53,50 @@ export const ensureDBAndAdmin = async () => {
 };
 
 // Production-ready CORS Configuration
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      // Allow requests with no origin (like mobile apps, curl, server-to-server)
-      if (!origin) return callback(null, true);
+const defaultOrigins = [
+  "https://revivetech-project.vercel.app",
+];
 
-      const frontendUrl = process.env.FRONTEND_URL;
-      const configuredOrigins = frontendUrl
-        ? frontendUrl.split(",").map((url) => url.trim().replace(/\/$/, ""))
-        : [];
+const configuredOrigins = process.env.FRONTEND_URL
+  ? process.env.FRONTEND_URL.split(",").map((url) => url.trim().replace(/\/+$/, ""))
+  : [];
 
-      const localOrigins = [
-        "http://localhost:5173",
-        "http://localhost:8080",
-        "http://localhost:3000",
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:8080",
-      ];
+const localOrigins = [
+  "http://localhost:5173",
+  "http://localhost:8080",
+  "http://localhost:3000",
+  "http://127.0.0.1:5173",
+  "http://127.0.0.1:8080",
+];
 
-      const allowedOrigins = [
-        ...configuredOrigins,
-        ...(process.env.NODE_ENV !== "production" ? localOrigins : []),
-      ].filter(Boolean);
+const allowedOrigins = [
+  ...defaultOrigins,
+  ...configuredOrigins,
+  ...(process.env.NODE_ENV !== "production" ? localOrigins : []),
+].filter(Boolean);
 
-      const isAllowed = allowedOrigins.includes(origin);
+const corsOptions = {
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps, curl, server-to-server)
+    if (!origin) return callback(null, true);
 
-      if (isAllowed) {
-        callback(null, true);
-      } else {
-        callback(new Error(`CORS policy violation: Origin '${origin}' is not authorized`));
-      }
-    },
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+    const normalizedOrigin = origin.trim().replace(/\/+$/, "");
+    const isAllowed = allowedOrigins.includes(normalizedOrigin);
+
+    if (isAllowed) {
+      callback(null, true);
+    } else {
+      console.warn(`[CORS] Blocked request from unauthorized origin: '${origin}'`);
+      callback(null, false);
+    }
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+  allowedHeaders: ["Content-Type", "Authorization", "Accept", "X-Requested-With"],
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 app.use(express.json({ limit: "25mb" }));
 app.use(express.urlencoded({ limit: "25mb", extended: true }));
@@ -119,8 +126,11 @@ app.get("/health", (req, res) => {
   });
 });
 
-// Middleware to ensure DB connection on API requests (serverless & local)
-app.use("/api", async (req, res, next) => {
+// API Router
+const apiRouter = express.Router();
+
+// Middleware to ensure DB connection on all /api requests (serverless & local)
+apiRouter.use(async (req, res, next) => {
   try {
     await ensureDBAndAdmin();
     next();
@@ -129,7 +139,7 @@ app.use("/api", async (req, res, next) => {
   }
 });
 
-app.get("/api/health", (req, res) => {
+apiRouter.get("/health", (req, res) => {
   res.status(200).json({
     success: true,
     status: "healthy",
@@ -139,9 +149,11 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// API Routes
-app.use("/api/auth", authRoutes);
-app.use("/api/repairs", repairRoutes);
+apiRouter.use("/auth", authRoutes);
+apiRouter.use("/repairs", repairRoutes);
+
+// Mount central API router under /api
+app.use("/api", apiRouter);
 
 // 404 and Centralized Error Handling
 app.use(notFoundHandler);
