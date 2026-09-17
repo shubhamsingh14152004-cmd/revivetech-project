@@ -1,6 +1,26 @@
 import mongoose from "mongoose";
 
+// Connection caching for serverless environments (e.g. Vercel)
+let cached = global.mongooseConnection;
+if (!cached) {
+  cached = global.mongooseConnection = { conn: null, promise: null };
+}
+
 export const connectDB = async () => {
+  // If already connected and ready, return existing connection immediately
+  if (cached.conn && mongoose.connection.readyState === 1) {
+    return cached.conn;
+  }
+
+  // If connection is in-flight, return the existing promise
+  if (cached.promise && mongoose.connection.readyState === 2) {
+    try {
+      return await cached.promise;
+    } catch {
+      // In-flight connection failed; will fall through to retry
+    }
+  }
+
   const uri = process.env.MONGODB_URI;
 
   if (!uri) {
@@ -13,13 +33,30 @@ export const connectDB = async () => {
 
   const connectionUri = uri || "mongodb://localhost:27017/revivetech";
 
-  try {
-    const conn = await mongoose.connect(connectionUri, {
+  if (!cached.promise) {
+    const opts = {
+      bufferCommands: false,
       serverSelectionTimeoutMS: 5000,
-    });
-    console.log(` MongoDB Connected: ${conn.connection.host}/${conn.connection.name}`);
-    return conn;
+    };
+
+    cached.promise = mongoose
+      .connect(connectionUri, opts)
+      .then((mongooseInstance) => {
+        console.log(` MongoDB Connected: ${mongooseInstance.connection.host}/${mongooseInstance.connection.name}`);
+        return mongooseInstance;
+      })
+      .catch((err) => {
+        cached.promise = null; // Reset promise on failure so subsequent invocations can retry
+        throw err;
+      });
+  }
+
+  try {
+    cached.conn = await cached.promise;
+    return cached.conn;
   } catch (err) {
+    cached.conn = null;
+    cached.promise = null;
     console.error(`❌ MongoDB Connection Error: ${err.message}`);
     if (process.env.NODE_ENV === "production") {
       throw err;
@@ -31,8 +68,13 @@ export const connectDB = async () => {
 
 mongoose.connection.on("disconnected", () => {
   console.warn("⚠️ MongoDB connection disconnected.");
+  if (cached) {
+    cached.conn = null;
+    cached.promise = null;
+  }
 });
 
 mongoose.connection.on("error", (err) => {
   console.error("❌ MongoDB connection error event:", err.message);
 });
+

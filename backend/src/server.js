@@ -13,44 +13,44 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Connect to MongoDB Atlas
-connectDB()
-  .then(async (conn) => {
-    if (conn) {
-      try {
-        const name = process.env.DEFAULT_ADMIN_NAME || "ReviveTech Admin";
-        const email = (process.env.DEFAULT_ADMIN_EMAIL || "admin@revivetech.com").toLowerCase().trim();
-        const password = process.env.DEFAULT_ADMIN_PASSWORD;
+// Database Connection & Admin Initialization Helper
+let adminInitialized = false;
+export const ensureDBAndAdmin = async () => {
+  const conn = await connectDB();
+  if (conn && !adminInitialized) {
+    try {
+      const name = process.env.DEFAULT_ADMIN_NAME || "ReviveTech Admin";
+      const email = (process.env.DEFAULT_ADMIN_EMAIL || "admin@revivetech.com").toLowerCase().trim();
+      const password = process.env.DEFAULT_ADMIN_PASSWORD;
 
-        if (!password) {
-          console.log("ℹ️ DEFAULT_ADMIN_PASSWORD not configured; skipping automatic admin account creation/update.");
+      if (!password) {
+        console.log("ℹ️ DEFAULT_ADMIN_PASSWORD not configured; skipping automatic admin account creation/update.");
+      } else {
+        const existingAdmin = await Admin.findOne({ email });
+        if (!existingAdmin) {
+          await Admin.create({
+            name,
+            email,
+            password,
+            role: "superadmin",
+          });
+          console.log(` Created admin account in MongoDB: ${email}`);
         } else {
-          const existingAdmin = await Admin.findOne({ email });
-          if (!existingAdmin) {
-            await Admin.create({
-              name,
-              email,
-              password,
-              role: "superadmin",
-            });
-            console.log(` Created admin account in MongoDB: ${email}`);
-          } else {
-            const isMatch = await existingAdmin.comparePassword(password);
-            if (!isMatch) {
-              existingAdmin.password = password;
-              await existingAdmin.save();
-              console.log(` Updated admin credentials for: ${email}`);
-            }
+          const isMatch = await existingAdmin.comparePassword(password);
+          if (!isMatch) {
+            existingAdmin.password = password;
+            await existingAdmin.save();
+            console.log(` Updated admin credentials for: ${email}`);
           }
         }
-      } catch (e) {
-        console.warn("⚠️ Could not auto-seed admin:", e.message);
       }
+      adminInitialized = true;
+    } catch (e) {
+      console.warn("⚠️ Could not auto-seed admin:", e.message);
     }
-  })
-  .catch((err) => {
-    console.error("Database connection initialization failed:", err.message);
-  });
+  }
+  return conn;
+};
 
 // Production-ready CORS Configuration
 app.use(
@@ -74,7 +74,7 @@ app.use(
 
       const allowedOrigins = [
         ...configuredOrigins,
-        ...(process.env.NODE_ENV !== "production" ? localOrigins : ["http://localhost:5173"]),
+        ...(process.env.NODE_ENV !== "production" ? localOrigins : []),
       ].filter(Boolean);
 
       const isAllowed = allowedOrigins.includes(origin);
@@ -119,6 +119,16 @@ app.get("/health", (req, res) => {
   });
 });
 
+// Middleware to ensure DB connection on API requests (serverless & local)
+app.use("/api", async (req, res, next) => {
+  try {
+    await ensureDBAndAdmin();
+    next();
+  } catch (err) {
+    next(err);
+  }
+});
+
 app.get("/api/health", (req, res) => {
   res.status(200).json({
     success: true,
@@ -137,8 +147,16 @@ app.use("/api/repairs", repairRoutes);
 app.use(notFoundHandler);
 app.use(errorHandler);
 
-// Start server listening on platform assigned port
-app.listen(PORT, () => {
-  console.log(`⚡ ReviveTech Backend Server running on port ${PORT}`);
-  console.log(`   Healthcheck: http://localhost:${PORT}/health`);
-});
+// Start server listening locally if run directly and not in Vercel serverless environment
+if (!process.env.VERCEL) {
+  ensureDBAndAdmin().catch((err) => {
+    console.error("Database connection initialization failed:", err.message);
+  });
+
+  app.listen(PORT, () => {
+    console.log(`⚡ ReviveTech Backend Server running on port ${PORT}`);
+    console.log(`   Healthcheck: http://localhost:${PORT}/health`);
+  });
+}
+
+export default app;

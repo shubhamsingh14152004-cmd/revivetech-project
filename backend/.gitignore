@@ -2,7 +2,12 @@ node_modules/
 .env
 .env.*
 !.env.example
-data/revivetech_db.json
+dist/
+.output/
+.tanstack/
+.wrangler/
 coverage/
 *.log
+.vercel/
+data/revivetech_db.json
 .DS_Store
