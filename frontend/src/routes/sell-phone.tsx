@@ -47,9 +47,14 @@ const FAQS = [
       "Original accessories and invoice are not mandatory, but having the original box and bill can fetch you an extra trade-in bonus. A valid government photo ID (Aadhaar/Driving License) is required at pickup for anti-theft verification.",
   },
   {
-    question: "What brands of smartphones do you buy back?",
+    question: "Purana phone kaha beche: How does doorstep pickup work for selling used phones?",
     answer:
-      "We buy back all models of Apple iPhone, Samsung Galaxy, OnePlus, Xiaomi / Redmi, Vivo, Oppo, Realme, Motorola, Google Pixel, and Nothing phones regardless of age or condition.",
+      "Aap ghar baithe apna purana mobile sell kar sakte hain. ReviveTech provides free doorstep collection across India. Simply calculate your device value online, schedule a pickup, and receive cash directly via UPI before our representative leaves.",
+  },
+  {
+    question: "Phone bechna hai: Can I sell broken screen or dead phones here?",
+    answer:
+      "Haan! Chahe phone ki screen toot gayi ho, dead ho gaya ho, ya purana model ho, ReviveTech buys phones in all conditions with instant valuation and certified data wipe.",
   },
 ];
 
@@ -57,21 +62,21 @@ export const Route = createFileRoute("/sell-phone")({
   head: () => ({
     meta: [
       {
-        title: "Sell Old Phone Online — Instant Cash for Dead, Broken & Used Mobiles | ReviveTech",
+        title: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | ReviveTech",
       },
       {
         name: "description",
         content:
-          "Sell your old, used, broken, or dead mobile phone for the highest instant cash payout. Free doorstep pickup, instant UPI payment, certified NIST data wipe with ReviveTech.",
+          "Purana phone becho for highest instant cash! Sell old, used, broken, or dead mobile phones online. Free doorstep pickup, instant UPI payment & certified data wipe.",
       },
       {
         name: "keywords",
         content:
-          "sell phone, sell old phone, sell used phone, sell dead phone, sell damaged phone, phone buyback, sell mobile phone near me, cash for old phones, sell broken iphone, sell samsung phone",
+          "purana phone becho, purana mobile becho, phone bechna hai, mobile bechna hai, purana phone kaha beche, ghar baithe phone becho, sell old phone, sell used phone, sell dead phone, dead phone becho, band phone becho, phone buyback, old phone sell, sell mobile phone near me",
       },
       {
         property: "og:title",
-        content: "Sell Old Phone Online — Instant Cash for Dead, Broken & Used Mobiles | ReviveTech",
+        content: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | ReviveTech",
       },
       {
         property: "og:description",

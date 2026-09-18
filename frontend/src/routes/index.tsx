@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "phone repair near me, mobile repair near me, phone repair shop near me, sell dead phone, sell old phone, sell used phone, phone buyback, iPhone repair near me, Samsung repair near me, mobile screen replacement, phone battery replacement, Android phone repair",
+          "phone repair near me, mobile repair near me, sell dead phone, sell old phone, purana phone becho, purana mobile becho, dead phone becho, band phone becho, kharab phone becho, band phone repair, band phone thik karna, phone chalu nahi ho raha, phone repair, phone buyback, iPhone repair near me, Samsung repair near me, mobile screen replacement, phone battery replacement, Android phone repair",
       },
       {
         property: "og:title",
@@ -273,9 +273,11 @@ function Index() {
             <div className="relative rounded-[2.5rem] bg-gradient-to-b from-white/20 via-white/10 to-transparent p-3 backdrop-saturate-150 border border-white/20 shadow-2xl">
               <img
                 src={heroPhone}
-                alt="Chrome smartphone floating over a warm sunset horizon"
+                alt="ReviveTech cleanroom mobile phone repair and dead phone buyback laboratory"
                 width={1024}
                 height={1280}
+                loading="eager"
+                fetchPriority="high"
                 className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl object-cover outline-1 -outline-offset-1 outline-white/15"
               />
             </div>
@@ -509,6 +511,84 @@ function Index() {
               )}
             </button>
           </form>
+        </div>
+      </section>
+
+      {/* Multilingual / Hinglish Popular Search Intents & FAQs */}
+      <section className="mx-auto max-w-6xl px-5 py-12 border-t border-white/10">
+        <div className="text-center max-w-2xl mx-auto mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/25 text-purple-300 text-xs font-semibold mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+            अक्सर पूछे जाने वाले सवाल • Frequently Asked Questions
+          </div>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-white">
+            Phone Repair & Selling Guide in Hindi & Hinglish
+          </h2>
+          <p className="font-display text-xs sm:text-sm text-white/70 mt-1">
+            Answers to common questions for users searching in Hindi / Hinglish.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div className="p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-colors">
+            <h3 className="font-bold text-white text-sm mb-2 text-purple-300">
+              Q: Purana phone ya dead phone bechna hai — kaise beche?
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Agar aapko purana ya band phone bechna hai, ReviveTech par 1 minute me online valuation check kar sakte hain. Free doorstep pickup book karein aur pickup ke samay instant UPI cash payment paayein.
+            </p>
+            <div className="mt-3">
+              <a href="/dead-phone-buyback" className="text-purple-400 font-semibold hover:underline inline-flex items-center gap-1 text-xs">
+                <span>Dead Phone Becho (Get Instant Quote)</span>
+                <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-colors">
+            <h3 className="font-bold text-white text-sm mb-2 text-emerald-300">
+              Q: Phone chalu nahi ho raha? Kya dead phone repair ho sakta hai?
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Haan! Phone band ho gaya ho ya chalu nahi ho raha ho, hamare cleanroom lab me motherboard IC micro-soldering aur power chip repair ke zariye bina data delete kiye 80%+ phones ko thik kiya jata hai.
+            </p>
+            <div className="mt-3">
+              <a href="/dead-phone-repair" className="text-emerald-400 font-semibold hover:underline inline-flex items-center gap-1 text-xs">
+                <span>Band Phone Thik Karwao (Book Diagnosis)</span>
+                <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-colors">
+            <h3 className="font-bold text-white text-sm mb-2 text-blue-300">
+              Q: Phone ki screen toot gayi ya display me lines aa rahi hain?
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Original OEM Dynamic AMOLED aur True Tone displays se 30 se 45 minute ke andar screen replace ki jaati hai. Har screen replacement par 90-day VIP warranty milti hai.
+            </p>
+            <div className="mt-3">
+              <a href="/screen-repair" className="text-blue-400 font-semibold hover:underline inline-flex items-center gap-1 text-xs">
+                <span>Screen Replacement Rates & Booking</span>
+                <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-colors">
+            <h3 className="font-bold text-white text-sm mb-2 text-amber-300">
+              Q: Phone ki battery jaldi khatam hoti hai ya charge nahi ho raha?
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Degraded battery swap aur USB-C / Lightning charging port repair express 30 minute me ho jata hai. Fast charging protocol 100% preserve rehta hai.
+            </p>
+            <div className="mt-3">
+              <a href="/battery-replacement" className="text-amber-400 font-semibold hover:underline inline-flex items-center gap-1 text-xs">
+                <span>Battery & Charging Port Options</span>
+                <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

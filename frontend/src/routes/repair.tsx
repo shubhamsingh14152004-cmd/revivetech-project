@@ -41,9 +41,14 @@ const FAQS = [
       "Yes. We use certified OEM-grade displays with true color calibration and high-capacity battery cells tested to match original device specifications.",
   },
   {
-    question: "How does free doorstep repair pickup work?",
+    question: "Phone repair karwana hai: Kitna time lagta hai aur process kya hai?",
     answer:
-      "Once you book online, our insured courier kit or doorstep logistics partner arrives at your address to inspect and securely transport your device to our cleanroom lab.",
+      "Aap online booking karein ya +91 8591770877 par call karein. Screen aur battery replacement 30 se 45 minute me ho jata hai. Free doorstep pickup aur delivery provide ki jaati hai.",
+  },
+  {
+    question: "Phone chalu nahi ho raha: Kya dead phone thik ho jayega?",
+    answer:
+      "Haan! Agar aapka phone band ho gaya hai ya chalu nahi ho raha hai, hamare cleanroom technicians motherboard micro-soldering aur power IC repair ke zariye use revive karte hain. 90-day warranty milti hai.",
   },
 ];
 
@@ -51,21 +56,21 @@ export const Route = createFileRoute("/repair")({
   head: () => ({
     meta: [
       {
-        title: "Phone Repair Near Me — Same-Day Screen & Battery Repair | ReviveTech",
+        title: "Phone Repair Near Me — Mobile Repair Karwana Hai | ReviveTech",
       },
       {
         name: "description",
         content:
-          "Expert mobile phone repair service. OEM screen replacement, battery swap & motherboard micro-soldering within 45 mins. Free doorstep pickup & 90-day warranty across India.",
+          "Phone repair karwana hai? Expert mobile repair service. OEM screen replacement, battery swap & motherboard repair within 45 mins. Free doorstep pickup & 90-day warranty across India.",
       },
       {
         name: "keywords",
         content:
-          "phone repair near me, mobile repair near me, phone repair shop near me, mobile screen replacement, phone battery replacement, smartphone repair, same day phone repair",
+          "phone repair near me, mobile repair near me, phone repair karwana hai, mobile repair karwana hai, phone thik karwana hai, band phone repair, phone chalu nahi ho raha repair, mobile screen replacement, phone battery replacement, same day phone repair",
       },
       {
         property: "og:title",
-        content: "Phone Repair Near Me — Same-Day Screen & Battery Repair | ReviveTech",
+        content: "Phone Repair Near Me — Mobile Repair Karwana Hai | ReviveTech",
       },
       {
         property: "og:description",

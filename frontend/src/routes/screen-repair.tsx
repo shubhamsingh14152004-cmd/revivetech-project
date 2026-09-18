@@ -62,9 +62,9 @@ const FAQS = [
       "Yes. Every screen installed by ReviveTech comes with a 90-Day VIP Warranty against touch unresponsiveness, ghost touching, color discolouration, and manufacturing defects.",
   },
   {
-    question: "How long does mobile screen replacement take?",
+    question: "Phone ki screen toot gayi hai: Kya sirf glass change ho sakta hai ya poora display badalna padega?",
     answer:
-      "Express bench screen replacements are completed in approximately 30 to 45 minutes. Doorstep courier pickup and drop-off are also available across all serviced PIN codes.",
+      "Agar display me picture bilkul saaf aa rahi hai aur touch chal raha hai, to OCA lamination ke zariye sirf toota hua outer glass change ho sakta hai jisse aapka 40% tak paisa bachta hai. Agar display me ink spots, black spots ya color lines aa gayi hain, to complete assembly change karni padti hai.",
   },
 ];
 
@@ -72,21 +72,21 @@ export const Route = createFileRoute("/screen-repair")({
   head: () => ({
     meta: [
       {
-        title: "Mobile Screen Replacement & Repair Near Me — 30 Min Fix | ReviveTech",
+        title: "Mobile Screen Replacement & Repair Near Me — Phone Ki Screen Toot Gayi | ReviveTech",
       },
       {
         name: "description",
         content:
-          "Fast mobile phone screen replacement. OEM OLED & glass repair for iPhone, Samsung, OnePlus & Xiaomi within 30-45 mins. 90-day warranty & free doorstep pickup.",
+          "Phone ki screen toot gayi? Fast mobile phone screen replacement. OEM OLED & glass repair for iPhone, Samsung, OnePlus & Xiaomi within 30-45 mins. 90-day warranty & free doorstep pickup.",
       },
       {
         name: "keywords",
         content:
-          "mobile screen replacement, phone screen repair, cracked phone screen, fix broken screen, phone display repair near me, iPhone screen replacement, Samsung screen repair",
+          "phone ki screen toot gayi, mobile screen repair, screen replacement, mobile display repair, cracked screen repair, broken phone screen repair, phone display replacement, phone glass replacement, iPhone screen replacement, Samsung screen repair, screen repair near me",
       },
       {
         property: "og:title",
-        content: "Mobile Screen Replacement & Repair Near Me — 30 Min Fix | ReviveTech",
+        content: "Mobile Screen Replacement & Repair Near Me — Phone Ki Screen Toot Gayi | ReviveTech",
       },
       {
         property: "og:description",

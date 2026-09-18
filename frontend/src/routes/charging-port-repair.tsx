@@ -59,9 +59,9 @@ const FAQS = [
       "Yes. We install OEM sub-boards with matching thermistors and high-current traces to retain 25W, 45W, 65W, 80W, and 120W fast charging capabilities.",
   },
   {
-    question: "Is there a warranty on charging port repairs?",
+    question: "Mobile charge nahi ho raha: Charging jack / connector thik karne me kitna time lagta hai?",
     answer:
-      "Yes! All charging port repairs and replacements include ReviveTech's 90-Day VIP Warranty.",
+      "Charging jack ya port replacement sirf 30 se 45 minute me complete ho jata hai. Loose connection, cable hilane par charging hona, ya moisture detected warning ka permanent solution kiya jata hai with fast-charging retention.",
   },
 ];
 
@@ -69,21 +69,21 @@ export const Route = createFileRoute("/charging-port-repair")({
   head: () => ({
     meta: [
       {
-        title: "Phone Charging Port Repair & Replacement Near Me | ReviveTech",
+        title: "Phone Charging Port Repair Near Me — Mobile Charge Nahi Ho Raha | ReviveTech",
       },
       {
         name: "description",
         content:
-          "Fast phone charging port repair & USB-C / Lightning replacement. Fix loose cable, slow charging & moisture detected errors within 30-45 mins with 90-day warranty.",
+          "Mobile charge nahi ho raha? Fast phone charging port repair & USB-C / Lightning replacement. Fix loose jack & moisture errors within 30-45 mins with 90-day warranty.",
       },
       {
         name: "keywords",
         content:
-          "charging port repair, phone not charging fix, loose charging port repair, USB-C port replacement, iPhone lightning port repair, fix phone charging near me",
+          "mobile charge nahi ho raha, phone charging problem, mobile charging problem, phone not charging, charging jack repair, charging connector repair, phone charging socket repair, charging port repair near me, USB-C port replacement",
       },
       {
         property: "og:title",
-        content: "Phone Charging Port Repair & Replacement Near Me | ReviveTech",
+        content: "Phone Charging Port Repair Near Me — Mobile Charge Nahi Ho Raha | ReviveTech",
       },
       {
         property: "og:description",

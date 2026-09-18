@@ -196,24 +196,33 @@ Runs at `http://localhost:5173`.
 
 ReviveTech has been engineered with a complete white-hat technical and content SEO architecture targeting high-intent phone repair and buyback queries across India.
 
-### 🌐 Canonical Public URL Hierarchy & Target Queries
+### 🌐 Canonical Public URL Hierarchy & Target Queries (23 Indexable Routes)
 
-| Canonical URL | Page Focus & Target Queries | Structured Schema |
+| Canonical URL | Page Focus & Target Search Terms (English, Hindi & Hinglish) | Structured Schema |
 |---|---|---|
-| `https://www.sellrepairphone.org/` | Primary Homepage — "phone repair near me", "sell dead phone", "mobile repair near me" | `LocalBusiness`, `WebSite`, `FAQPage` |
-| `https://www.sellrepairphone.org/repair` | Same-Day Repair Hub — "phone repair", "same day mobile repair", "phone screen replacement" | `BreadcrumbList`, `Service`, `FAQPage` |
-| `https://www.sellrepairphone.org/sell-phone` | Sell Phone & Buyback — "sell old phone", "sell dead phone", "sell damaged phone", "instant phone cash" | `BreadcrumbList`, `Service`, `FAQPage` |
-| `https://www.sellrepairphone.org/buyback` | Trade-In & ITAD — "phone buyback", "bulk phone trade in", "corporate phone recycling" | `BreadcrumbList`, `Service`, `FAQPage` |
-| `https://www.sellrepairphone.org/iphone-repair` | Apple Specialist — "iPhone repair near me", "iPhone screen replacement", "iPhone battery repair" | `BreadcrumbList`, `Service`, `FAQPage` |
-| `https://www.sellrepairphone.org/samsung-repair` | Samsung Specialist — "Samsung repair near me", "Galaxy S24 screen", "Samsung green line fix" | `BreadcrumbList`, `Service`, `FAQPage` |
-| `https://www.sellrepairphone.org/android-repair` | Android Brands — "OnePlus repair", "Xiaomi repair", "Vivo repair", "Oppo repair", "Pixel repair" | `BreadcrumbList`, `Service`, `FAQPage` |
-| `https://www.sellrepairphone.org/screen-repair` | Display Replacement — "mobile screen replacement", "cracked screen repair", "phone display fix" | `BreadcrumbList`, `Service`, `FAQPage` |
-| `https://www.sellrepairphone.org/battery-replacement` | Battery Service — "phone battery replacement", "iPhone battery replacement", "swollen battery fix" | `BreadcrumbList`, `Service`, `FAQPage` |
-| `https://www.sellrepairphone.org/charging-port-repair` | Port Service — "charging port repair", "phone not charging fix", "USB-C port replacement" | `BreadcrumbList`, `Service`, `FAQPage` |
-| `https://www.sellrepairphone.org/water-damage-repair` | Liquid Recovery — "phone water damage repair", "dropped phone in water fix", "wet phone recovery" | `BreadcrumbList`, `Service`, `FAQPage` |
-| `https://www.sellrepairphone.org/contact` | Direct Contact & NAP — "ReviveTech phone number", "doorstep repair helpline", customer care | `BreadcrumbList`, `LocalBusiness` |
+| `https://www.sellrepairphone.org/` | Primary Homepage — "phone repair near me", "sell dead phone", "purana phone becho", "band phone thik karna" | `LocalBusiness`, `WebSite`, `FAQPage` |
+| `https://www.sellrepairphone.org/repair` | Same-Day Repair Hub — "phone repair karwana hai", "mobile thik karwana hai", "mobile repair near me" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/sell-phone` | Sell Old Phone — "purana phone becho", "purana mobile becho", "phone bechna hai", "ghar baithe phone becho" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/dead-phone-repair` | Dead Phone Repair — "dead phone repair", "band phone repair", "phone chalu nahi ho raha", "motherboard IC repair" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/dead-phone-buyback` | Dead Phone Buyback — "dead phone sell", "dead phone becho", "band phone becho", "kharab phone becho", "dead phone price" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/buyback` | Enterprise & Consumer Buyback — "phone buyback", "corporate trade in", "ITAD mobile recycling" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/iphone-repair` | Apple Specialist — "iPhone repair near me", "iPhone screen replacement", "iPhone battery repair", "TrueTone" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/samsung-repair` | Samsung Specialist — "Samsung repair near me", "Galaxy S24 screen", "Samsung green line fix", "AMOLED 2X" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/oneplus-repair` | OnePlus Hub — "OnePlus repair", "OnePlus screen replacement", "green line laser fix", "SuperVOOC port" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/xiaomi-repair` | Xiaomi & Redmi Hub — "Xiaomi repair", "Redmi repair", "POCO CPU reballing", "POCO X3 dead fix" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/vivo-repair` | Vivo & iQOO Hub — "Vivo repair", "iQOO repair", "Vivo curved AMOLED screen", "FlashCharge port" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/oppo-repair` | Oppo Reno & Find Hub — "Oppo repair", "Reno screen replacement", "SuperVOOC battery swap" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/realme-repair` | Realme GT & Narzo Hub — "Realme repair", "GT series screen", "SuperDart charging port" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/motorola-repair` | Motorola Edge & Razr Hub — "Motorola repair", "Razr flip display", "TurboPower charging port" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/google-pixel-repair` | Google Pixel Hub — "Google Pixel repair", "Pixel Actua OLED screen", "camera visor glass fix" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/android-repair` | Multi-Brand Android Hub — "Android phone repair", "OnePlus, Xiaomi, Vivo, Oppo, Realme repair" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/screen-repair` | Display Replacement — "phone ki screen toot gayi", "mobile screen replacement", "cracked screen repair" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/battery-replacement` | Battery Replacement — "phone ki battery kharab hai", "phone battery replacement", "battery draining fast" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/charging-port-repair` | Charging Port Repair — "mobile charge nahi ho raha", "charging jack repair", "charging connector fix" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/water-damage-repair` | Liquid Recovery — "phone pani me gir gaya repair", "water damage phone repair", "wet phone recovery" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/contact` | Direct Contact & NAP — "ReviveTech phone number", "+91 8591770877", doorstep repair helpline | `BreadcrumbList`, `LocalBusiness` |
 | `https://www.sellrepairphone.org/about` | Brand Authority — Cleanroom standards, 100-point inspection, zero-landfill e-waste pledge | `BreadcrumbList` |
-| `https://www.sellrepairphone.org/faq` | Customer Help Desk — 10+ categorized FAQs with accordion search | `BreadcrumbList`, `FAQPage` |
+| `https://www.sellrepairphone.org/faq` | Customer Help Desk — 10+ categorized FAQs with live search and Hinglish support | `BreadcrumbList`, `FAQPage` |
 
 > [!NOTE]
 > **Admin Protection**: All staff administration paths (`/admin`, `/admin/login`, `/api/*`) are strictly blocked in `public/robots.txt` and protected with `<meta name="robots" content="noindex, nofollow" />` to safeguard internal operational records from search engine indexing.

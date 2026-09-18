@@ -107,6 +107,14 @@ export function getLocalBusinessSchema() {
             description: "Instant cash payout for non-working, liquid-damaged, or crushed phones.",
           },
         },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Dead Phone & Motherboard IC Repair",
+            description: "Cleanroom diagnosis, PMIC micro-soldering, and power rail short clearing for phones that do not turn on.",
+          },
+        },
       ],
     },
   };
