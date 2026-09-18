@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import { db } from "../models/dataStore.js";
+import { Admin } from "../models/Admin.js";
 
 // Helper to get JWT Secret
 const getJwtSecret = () => {
