@@ -36,19 +36,51 @@ export const loginAdmin = async (req, res, next) => {
     const cleanEmail = (email || "").replace(/^["']|["']$/g, "").trim().toLowerCase();
     const cleanPassword = (password || "").replace(/^["']|["']$/g, "").trim();
 
-    const admin = await db.admin.findByEmail(cleanEmail);
+    let admin = await db.admin.findByEmail(cleanEmail);
     if (!admin) {
       const totalAdmins = await db.admin.count();
       if (totalAdmins === 0) {
+        // Self-healing bootstrap: if database has zero admins, create initial superadmin directly from login
+        const configuredEmail = (process.env.DEFAULT_ADMIN_EMAIL || "supportsellphone@gmail.com")
+          .replace(/^["']|["']$/g, "")
+          .trim()
+          .toLowerCase();
+
+        if (cleanEmail === configuredEmail || cleanEmail === "supportsellphone@gmail.com" || cleanEmail === "admin@revivetech.com") {
+          if (cleanPassword.length < 6) {
+            return res.status(400).json({
+              success: false,
+              message: "Initial admin password must be at least 6 characters long.",
+            });
+          }
+
+          try {
+            admin = await Admin.create({
+              name: process.env.DEFAULT_ADMIN_NAME || "ReviveTech SuperAdmin",
+              email: cleanEmail,
+              password: cleanPassword,
+              role: "superadmin",
+            });
+            console.log(`🎉 Successfully initialized superadmin account in MongoDB: ${cleanEmail}`);
+          } catch (seedErr) {
+            console.error("Failed to bootstrap superadmin:", seedErr.message);
+            return res.status(500).json({
+              success: false,
+              message: `Failed to initialize admin account in database: ${seedErr.message}`,
+            });
+          }
+        } else {
+          return res.status(401).json({
+            success: false,
+            message: `No admin account found. Please log in with ${configuredEmail} to initialize the admin desk.`,
+          });
+        }
+      } else {
         return res.status(401).json({
           success: false,
-          message: "No admin account found in database. Please verify backend environment variables in Vercel.",
+          message: "Invalid email or password",
         });
       }
-      return res.status(401).json({
-        success: false,
-        message: "Invalid email or password",
-      });
     }
 
     let isMatch = await admin.comparePassword(password);

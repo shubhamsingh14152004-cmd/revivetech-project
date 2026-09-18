@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 5000;
 
 // Database Connection & Admin Initialization Helper
 let lastAdminSync = 0;
+let lastAdminError = null;
 export const ensureDBAndAdmin = async () => {
   const conn = await connectDB();
   const now = Date.now();
@@ -30,6 +31,7 @@ export const ensureDBAndAdmin = async () => {
       const name = rawName.replace(/^["']|["']$/g, "").trim();
 
       if (!password) {
+        lastAdminError = "DEFAULT_ADMIN_PASSWORD is empty or undefined in process.env";
         console.log("ℹ️ DEFAULT_ADMIN_PASSWORD not configured; skipping automatic admin account creation/update.");
       } else {
         const existingAdmin = await Admin.findOne({ email });
@@ -40,6 +42,7 @@ export const ensureDBAndAdmin = async () => {
             password,
             role: "superadmin",
           });
+          lastAdminError = null;
           console.log(` Created admin account in MongoDB: ${email}`);
         } else {
           const isMatch = await existingAdmin.comparePassword(password);
@@ -48,10 +51,12 @@ export const ensureDBAndAdmin = async () => {
             await existingAdmin.save();
             console.log(` Updated admin credentials for: ${email}`);
           }
+          lastAdminError = null;
         }
       }
       lastAdminSync = now;
     } catch (e) {
+      lastAdminError = e.message;
       console.warn("⚠️ Could not auto-seed admin:", e.message);
     }
   }
@@ -145,13 +150,19 @@ apiRouter.use(async (req, res, next) => {
   }
 });
 
-apiRouter.get("/health", (req, res) => {
+apiRouter.get("/health", async (req, res) => {
+  const adminCount = await db.admin.count().catch(() => -1);
   res.status(200).json({
     success: true,
     status: "healthy",
     message: "ReviveTech REST API is active and operational",
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV || "development",
+    adminCount,
+    hasAdminPassword: Boolean(process.env.DEFAULT_ADMIN_PASSWORD),
+    hasAdminEmail: Boolean(process.env.DEFAULT_ADMIN_EMAIL),
+    configuredEmail: (process.env.DEFAULT_ADMIN_EMAIL || "supportsellphone@gmail.com").replace(/^["']|["']$/g, "").trim().toLowerCase(),
+    lastAdminError,
   });
 });
 
