@@ -135,8 +135,20 @@ export function RepairBooking() {
 
   const handleBooking = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!custName || !custPhone) {
-      toast.error("Please enter your name and phone number");
+    if (!custName.trim()) {
+      toast.error("Please enter your name");
+      return;
+    }
+
+    const cleanPhone = custPhone.replace(/\D/g, "");
+    if (!cleanPhone) {
+      toast.error("Please enter your phone number");
+      return;
+    }
+    if (cleanPhone.length !== 10) {
+      toast.error("Phone number must be exactly 10 digits", {
+        description: `You entered ${cleanPhone.length} digits. Indian mobile numbers must be exactly 10 digits (no more, no less).`,
+      });
       return;
     }
 
@@ -156,7 +168,7 @@ export function RepairBooking() {
     try {
       const response = await api.submitRepairRequest({
         customerName: custName.trim(),
-        phoneNumber: custPhone.trim(),
+        phoneNumber: cleanPhone,
         phoneModel: deviceModel.trim(),
         serviceType: `Certified Repair (${serviceSpeedLabel})`,
         problemDescription: `Issues: ${issueNames || "General Diagnostic"} · Preferred Slot: ${selectedDate} at ${selectedTime}`,
@@ -430,14 +442,38 @@ export function RepairBooking() {
                   placeholder="Your Full Name"
                   className="w-full rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs text-white placeholder:text-white/40 outline-none focus:border-brand font-display"
                 />
-                <input
-                  type="tel"
-                  required
-                  value={custPhone}
-                  onChange={(e) => setCustPhone(e.target.value)}
-                  placeholder="+91 98765 43210"
-                  className="w-full rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs text-white placeholder:text-white/40 outline-none focus:border-brand font-display"
-                />
+                <div>
+                  <div className="flex items-center justify-between mb-1 px-1">
+                    <span className="text-[10px] font-label text-white/60">Phone Number *</span>
+                    <span
+                      className={`text-[10px] font-mono font-bold ${
+                        custPhone.replace(/\D/g, "").length === 10
+                          ? "text-emerald-400"
+                          : "text-accent"
+                      }`}
+                    >
+                      {custPhone.replace(/\D/g, "").length === 10
+                        ? "✓ 10 Digits"
+                        : `${custPhone.replace(/\D/g, "").length}/10`}
+                    </span>
+                  </div>
+                  <div className="relative">
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-mono text-white/60 font-bold border-r border-white/20 pr-1.5 pointer-events-none">
+                      +91
+                    </span>
+                    <input
+                      type="tel"
+                      required
+                      maxLength={10}
+                      value={custPhone}
+                      onChange={(e) =>
+                        setCustPhone(e.target.value.replace(/\D/g, "").slice(0, 10))
+                      }
+                      placeholder="9876543210"
+                      className="w-full rounded-xl border border-white/15 bg-white/10 pl-14 pr-3.5 py-2 text-xs text-white placeholder:text-white/40 outline-none font-mono tracking-wider focus:border-brand"
+                    />
+                  </div>
+                </div>
               </div>
 
               {/* Total breakdown */}

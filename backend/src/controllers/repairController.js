@@ -30,10 +30,18 @@ export const createRepairRequest = async (req, res, next) => {
       });
     }
 
-    if (!phoneNumber || !phoneNumber.trim()) {
+    const cleanPhone = (phoneNumber || "").replace(/\D/g, "");
+    if (!cleanPhone) {
       return res.status(400).json({
         success: false,
         message: "Phone number is required",
+      });
+    }
+
+    if (cleanPhone.length !== 10) {
+      return res.status(400).json({
+        success: false,
+        message: "Phone number must be exactly 10 digits (no more, no less).",
       });
     }
 
@@ -67,7 +75,7 @@ export const createRepairRequest = async (req, res, next) => {
     const newRequest = await db.repairs.create({
       ticketNumber,
       customerName: customerName.trim(),
-      phoneNumber: phoneNumber.trim(),
+      phoneNumber: cleanPhone,
       email: email ? email.trim().toLowerCase() : "",
       phoneBrand: brand,
       phoneModel: phoneModel.trim(),

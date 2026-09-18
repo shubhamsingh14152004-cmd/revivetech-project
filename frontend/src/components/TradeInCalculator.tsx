@@ -19,6 +19,7 @@ import {
   Upload,
   Trash2,
   Image as ImageIcon,
+  Phone,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -172,13 +173,31 @@ export function TradeInCalculator() {
       });
       return;
     }
+    const cleanPhone = custPhone.replace(/\D/g, "");
+    if (cleanPhone.length > 0 && cleanPhone.length !== 10) {
+      toast.error("Phone number must be exactly 10 digits", {
+        description: `You entered ${cleanPhone.length} digits. Indian mobile numbers must be exactly 10 digits (no more, no less).`,
+      });
+      return;
+    }
     setIsModalOpen(true);
   };
 
   const handleLockInQuote = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!custName || !custPhone) {
-      toast.error("Please fill in your name and phone number");
+    if (!custName.trim()) {
+      toast.error("Please enter your full name");
+      return;
+    }
+    const cleanPhone = custPhone.replace(/\D/g, "");
+    if (!cleanPhone) {
+      toast.error("Please enter your phone number");
+      return;
+    }
+    if (cleanPhone.length !== 10) {
+      toast.error("Phone number must be exactly 10 digits", {
+        description: `You entered ${cleanPhone.length} digits. Indian mobile numbers must be exactly 10 digits (no more, no less).`,
+      });
       return;
     }
     setIsSubmittingTradeIn(true);
@@ -186,7 +205,7 @@ export function TradeInCalculator() {
       const formattedModel = `${currentBrand.name} ${modelName.trim()} (${storage})`;
       const response = await api.submitRepairRequest({
         customerName: custName.trim(),
-        phoneNumber: custPhone.trim(),
+        phoneNumber: cleanPhone,
         email: custEmail.trim(),
         phoneBrand: currentBrand.name,
         phoneModel: formattedModel,
@@ -592,6 +611,47 @@ export function TradeInCalculator() {
             )}
           </div>
 
+          {/* 6. Customer Mobile Number */}
+          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2.5">
+            <div className="flex items-center justify-between">
+              <label className="block font-label text-xs font-bold uppercase tracking-wider text-white/90 flex items-center gap-1.5">
+                <Phone className="h-3.5 w-3.5 text-accent" />
+                <span>6. Mobile Number for Pickup & Cash Payout *</span>
+              </label>
+              <span
+                className={`text-[11px] font-mono font-bold px-2 py-0.5 rounded-full border ${
+                  custPhone.replace(/\D/g, "").length === 10
+                    ? "bg-emerald-500/20 text-emerald-400 border-emerald-500/30"
+                    : "bg-accent/10 text-accent border-accent/20"
+                }`}
+              >
+                {custPhone.replace(/\D/g, "").length === 10
+                  ? "✓ 10 Digits Valid"
+                  : `${custPhone.replace(/\D/g, "").length} / 10 digits`}
+              </span>
+            </div>
+            <div className="relative">
+              <div className="absolute left-3.5 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-white/70 font-mono text-xs font-bold border-r border-white/20 pr-2.5 pointer-events-none">
+                <span className="text-sm">🇮🇳</span>
+                <span>+91</span>
+              </div>
+              <input
+                type="tel"
+                maxLength={10}
+                value={custPhone}
+                onChange={(e) => {
+                  const cleaned = e.target.value.replace(/\D/g, "").slice(0, 10);
+                  setCustPhone(cleaned);
+                }}
+                placeholder="Enter 10-digit mobile number"
+                className="w-full rounded-xl border border-white/15 bg-black/40 pl-20 pr-4 py-2.5 text-sm text-white placeholder:text-white/30 outline-none transition font-mono tracking-wider focus:border-accent focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <p className="font-display text-[11px] text-white/50">
+              Our verified cleanroom technician will call this 10-digit number for doorstep pickup & instant payment.
+            </p>
+          </div>
+
           {/* Addons toggle */}
           <div className="flex items-center justify-between p-3.5 rounded-xl bg-white/5 border border-white/10">
             <div className="flex items-center gap-2.5">
@@ -771,17 +831,38 @@ export function TradeInCalculator() {
 
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <label className="block font-display text-xs text-white/80 mb-1">
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        value={custPhone}
-                        onChange={(e) => setCustPhone(e.target.value)}
-                        placeholder="8591770877"
-                        className="w-full rounded-xl border border-white/15 bg-white/10 px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 outline-none focus:border-brand focus:ring-1 focus:ring-brand"
-                      />
+                      <div className="flex items-center justify-between mb-1">
+                        <label className="block font-display text-xs text-white/80">
+                          Phone Number *
+                        </label>
+                        <span
+                          className={`text-[10px] font-mono font-bold ${
+                            custPhone.replace(/\D/g, "").length === 10
+                              ? "text-emerald-400"
+                              : "text-accent"
+                          }`}
+                        >
+                          {custPhone.replace(/\D/g, "").length === 10
+                            ? "✓ 10 Digits"
+                            : `${custPhone.replace(/\D/g, "").length}/10`}
+                        </span>
+                      </div>
+                      <div className="relative">
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-mono text-white/60 font-bold border-r border-white/20 pr-1.5 pointer-events-none">
+                          +91
+                        </span>
+                        <input
+                          type="tel"
+                          required
+                          maxLength={10}
+                          value={custPhone}
+                          onChange={(e) =>
+                            setCustPhone(e.target.value.replace(/\D/g, "").slice(0, 10))
+                          }
+                          placeholder="9876543210"
+                          className="w-full rounded-xl border border-white/15 bg-white/10 pl-14 pr-3 py-2.5 text-sm text-white placeholder:text-white/40 outline-none font-mono tracking-wider focus:border-brand focus:ring-1 focus:ring-brand"
+                        />
+                      </div>
                     </div>
                     <div>
                       <label className="block font-display text-xs text-white/80 mb-1">

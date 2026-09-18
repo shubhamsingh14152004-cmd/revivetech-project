@@ -463,10 +463,28 @@ export function AdminDashboard() {
                         <span className="font-bold text-white block">
                           {item.customerName}
                         </span>
-                        <span className="text-[11px] text-white/60 flex items-center gap-1">
-                          <Phone className="h-3 w-3 text-gold" />
-                          {item.phoneNumber}
-                        </span>
+                        <div
+                          className="flex items-center gap-2 mt-1"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <a
+                            href={`tel:${item.phoneNumber}`}
+                            className="font-mono text-xs font-bold text-accent hover:underline flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded border border-white/10 hover:bg-white/10 transition"
+                            title="Click to call customer"
+                          >
+                            <Phone className="h-3 w-3 text-emerald-400" />
+                            <span>{item.phoneNumber}</span>
+                          </a>
+                          <a
+                            href={`https://wa.me/91${item.phoneNumber.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(item.customerName)}%2C%20ReviveTech%20team%20here%20regarding%20ticket%20${item.ticketNumber}.`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[10px] font-bold font-label bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 px-2 py-0.5 rounded border border-emerald-500/30 transition"
+                            title="Chat with customer on WhatsApp"
+                          >
+                            WhatsApp
+                          </a>
+                        </div>
                       </td>
 
                       {/* Device */}
@@ -634,9 +652,29 @@ export function AdminDashboard() {
                   <span className="text-white/60">Name:</span>
                   <span className="font-semibold text-white">{selectedRequest.customerName}</span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                   <span className="text-white/60">Phone:</span>
-                  <span className="font-semibold text-white">{selectedRequest.phoneNumber}</span>
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono font-bold text-accent text-sm">
+                      {selectedRequest.phoneNumber}
+                    </span>
+                    <a
+                      href={`tel:${selectedRequest.phoneNumber}`}
+                      className="rounded-lg bg-white/10 hover:bg-white/20 px-2.5 py-1 text-xs text-white flex items-center gap-1 transition border border-white/15"
+                      title="Direct phone call"
+                    >
+                      <Phone className="h-3 w-3 text-emerald-400" /> Call
+                    </a>
+                    <a
+                      href={`https://wa.me/91${selectedRequest.phoneNumber.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(selectedRequest.customerName)}%2C%20ReviveTech%20team%20here%20regarding%20ticket%20${selectedRequest.ticketNumber}.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 px-2.5 py-1 text-xs font-semibold flex items-center gap-1 border border-emerald-500/30 transition"
+                      title="Open WhatsApp chat"
+                    >
+                      WhatsApp
+                    </a>
+                  </div>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-white/60">Email:</span>
