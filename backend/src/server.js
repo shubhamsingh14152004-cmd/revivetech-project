@@ -14,14 +14,20 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Database Connection & Admin Initialization Helper
-let adminInitialized = false;
+let lastAdminSync = 0;
 export const ensureDBAndAdmin = async () => {
   const conn = await connectDB();
-  if (conn && !adminInitialized) {
+  const now = Date.now();
+  // Ensure admin credentials are initialized/synced (at least once every 30 seconds across invocations)
+  if (conn && (now - lastAdminSync > 30000)) {
     try {
-      const name = process.env.DEFAULT_ADMIN_NAME || "ReviveTech Admin";
-      const email = (process.env.DEFAULT_ADMIN_EMAIL || "admin@revivetech.com").toLowerCase().trim();
-      const password = process.env.DEFAULT_ADMIN_PASSWORD;
+      const rawEmail = process.env.DEFAULT_ADMIN_EMAIL || "admin@revivetech.com";
+      const rawPassword = process.env.DEFAULT_ADMIN_PASSWORD;
+      const rawName = process.env.DEFAULT_ADMIN_NAME || "ReviveTech Admin";
+
+      const email = rawEmail.replace(/^["']|["']$/g, "").trim().toLowerCase();
+      const password = rawPassword ? rawPassword.replace(/^["']|["']$/g, "").trim() : "";
+      const name = rawName.replace(/^["']|["']$/g, "").trim();
 
       if (!password) {
         console.log("ℹ️ DEFAULT_ADMIN_PASSWORD not configured; skipping automatic admin account creation/update.");
@@ -44,7 +50,7 @@ export const ensureDBAndAdmin = async () => {
           }
         }
       }
-      adminInitialized = true;
+      lastAdminSync = now;
     } catch (e) {
       console.warn("⚠️ Could not auto-seed admin:", e.message);
     }

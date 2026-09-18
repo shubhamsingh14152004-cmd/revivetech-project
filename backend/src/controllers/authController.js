@@ -33,15 +33,28 @@ export const loginAdmin = async (req, res, next) => {
       });
     }
 
-    const admin = await db.admin.findByEmail(email);
+    const cleanEmail = (email || "").replace(/^["']|["']$/g, "").trim().toLowerCase();
+    const cleanPassword = (password || "").replace(/^["']|["']$/g, "").trim();
+
+    const admin = await db.admin.findByEmail(cleanEmail);
     if (!admin) {
+      const totalAdmins = await db.admin.count();
+      if (totalAdmins === 0) {
+        return res.status(401).json({
+          success: false,
+          message: "No admin account found in database. Please verify backend environment variables in Vercel.",
+        });
+      }
       return res.status(401).json({
         success: false,
         message: "Invalid email or password",
       });
     }
 
-    const isMatch = await admin.comparePassword(password);
+    let isMatch = await admin.comparePassword(password);
+    if (!isMatch && cleanPassword !== password) {
+      isMatch = await admin.comparePassword(cleanPassword);
+    }
     if (!isMatch) {
       return res.status(401).json({
         success: false,

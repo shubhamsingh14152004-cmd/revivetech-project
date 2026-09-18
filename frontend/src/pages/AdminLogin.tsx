@@ -32,7 +32,7 @@ export function AdminLogin() {
     setIsLoading(true);
 
     try {
-      const res = await api.adminLogin(email, password);
+      const res = await api.adminLogin(email.trim(), password);
       if (res.success) {
         toast.success("Welcome back, Administrator!", {
           description: "Authenticated securely with JWT session.",
