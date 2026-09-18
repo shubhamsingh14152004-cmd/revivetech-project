@@ -10,12 +10,90 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AndroidRepairRouteImport } from './routes/android-repair'
+import { Route as BatteryReplacementRouteImport } from './routes/battery-replacement'
+import { Route as BuybackRouteImport } from './routes/buyback'
+import { Route as ChargingPortRepairRouteImport } from './routes/charging-port-repair'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as IphoneRepairRouteImport } from './routes/iphone-repair'
+import { Route as RepairRouteImport } from './routes/repair'
+import { Route as SamsungRepairRouteImport } from './routes/samsung-repair'
+import { Route as ScreenRepairRouteImport } from './routes/screen-repair'
+import { Route as SellPhoneRouteImport } from './routes/sell-phone'
+import { Route as WaterDamageRepairRouteImport } from './routes/water-damage-repair'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AndroidRepairRoute = AndroidRepairRouteImport.update({
+  id: '/android-repair',
+  path: '/android-repair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BatteryReplacementRoute = BatteryReplacementRouteImport.update({
+  id: '/battery-replacement',
+  path: '/battery-replacement',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuybackRoute = BuybackRouteImport.update({
+  id: '/buyback',
+  path: '/buyback',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChargingPortRepairRoute = ChargingPortRepairRouteImport.update({
+  id: '/charging-port-repair',
+  path: '/charging-port-repair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IphoneRepairRoute = IphoneRepairRouteImport.update({
+  id: '/iphone-repair',
+  path: '/iphone-repair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RepairRoute = RepairRouteImport.update({
+  id: '/repair',
+  path: '/repair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SamsungRepairRoute = SamsungRepairRouteImport.update({
+  id: '/samsung-repair',
+  path: '/samsung-repair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScreenRepairRoute = ScreenRepairRouteImport.update({
+  id: '/screen-repair',
+  path: '/screen-repair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SellPhoneRoute = SellPhoneRouteImport.update({
+  id: '/sell-phone',
+  path: '/sell-phone',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WaterDamageRepairRoute = WaterDamageRepairRouteImport.update({
+  id: '/water-damage-repair',
+  path: '/water-damage-repair',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
@@ -31,30 +109,131 @@ const AdminLoginRoute = AdminLoginRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/android-repair': typeof AndroidRepairRoute
+  '/battery-replacement': typeof BatteryReplacementRoute
+  '/buyback': typeof BuybackRoute
+  '/charging-port-repair': typeof ChargingPortRepairRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/iphone-repair': typeof IphoneRepairRoute
+  '/repair': typeof RepairRoute
+  '/samsung-repair': typeof SamsungRepairRoute
+  '/screen-repair': typeof ScreenRepairRoute
+  '/sell-phone': typeof SellPhoneRoute
+  '/water-damage-repair': typeof WaterDamageRepairRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/': typeof AdminIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/android-repair': typeof AndroidRepairRoute
+  '/battery-replacement': typeof BatteryReplacementRoute
+  '/buyback': typeof BuybackRoute
+  '/charging-port-repair': typeof ChargingPortRepairRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/iphone-repair': typeof IphoneRepairRoute
+  '/repair': typeof RepairRoute
+  '/samsung-repair': typeof SamsungRepairRoute
+  '/screen-repair': typeof ScreenRepairRoute
+  '/sell-phone': typeof SellPhoneRoute
+  '/water-damage-repair': typeof WaterDamageRepairRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin': typeof AdminIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/android-repair': typeof AndroidRepairRoute
+  '/battery-replacement': typeof BatteryReplacementRoute
+  '/buyback': typeof BuybackRoute
+  '/charging-port-repair': typeof ChargingPortRepairRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/iphone-repair': typeof IphoneRepairRoute
+  '/repair': typeof RepairRoute
+  '/samsung-repair': typeof SamsungRepairRoute
+  '/screen-repair': typeof ScreenRepairRoute
+  '/sell-phone': typeof SellPhoneRoute
+  '/water-damage-repair': typeof WaterDamageRepairRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/': typeof AdminIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/admin/login' | '/admin/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/android-repair'
+    | '/battery-replacement'
+    | '/buyback'
+    | '/charging-port-repair'
+    | '/contact'
+    | '/faq'
+    | '/iphone-repair'
+    | '/repair'
+    | '/samsung-repair'
+    | '/screen-repair'
+    | '/sell-phone'
+    | '/water-damage-repair'
+    | '/admin/login'
+    | '/admin/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/admin/login' | '/admin'
-  id: '__root__' | '/' | '/admin/login' | '/admin/'
+  to:
+    | '/'
+    | '/about'
+    | '/android-repair'
+    | '/battery-replacement'
+    | '/buyback'
+    | '/charging-port-repair'
+    | '/contact'
+    | '/faq'
+    | '/iphone-repair'
+    | '/repair'
+    | '/samsung-repair'
+    | '/screen-repair'
+    | '/sell-phone'
+    | '/water-damage-repair'
+    | '/admin/login'
+    | '/admin'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/android-repair'
+    | '/battery-replacement'
+    | '/buyback'
+    | '/charging-port-repair'
+    | '/contact'
+    | '/faq'
+    | '/iphone-repair'
+    | '/repair'
+    | '/samsung-repair'
+    | '/screen-repair'
+    | '/sell-phone'
+    | '/water-damage-repair'
+    | '/admin/login'
+    | '/admin/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AndroidRepairRoute: typeof AndroidRepairRoute
+  BatteryReplacementRoute: typeof BatteryReplacementRoute
+  BuybackRoute: typeof BuybackRoute
+  ChargingPortRepairRoute: typeof ChargingPortRepairRoute
+  ContactRoute: typeof ContactRoute
+  FaqRoute: typeof FaqRoute
+  IphoneRepairRoute: typeof IphoneRepairRoute
+  RepairRoute: typeof RepairRoute
+  SamsungRepairRoute: typeof SamsungRepairRoute
+  ScreenRepairRoute: typeof ScreenRepairRoute
+  SellPhoneRoute: typeof SellPhoneRoute
+  WaterDamageRepairRoute: typeof WaterDamageRepairRoute
   AdminLoginRoute: typeof AdminLoginRoute
   AdminIndexRoute: typeof AdminIndexRoute
 }
@@ -66,6 +245,97 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/android-repair': {
+      id: '/android-repair'
+      path: '/android-repair'
+      fullPath: '/android-repair'
+      preLoaderRoute: typeof AndroidRepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/battery-replacement': {
+      id: '/battery-replacement'
+      path: '/battery-replacement'
+      fullPath: '/battery-replacement'
+      preLoaderRoute: typeof BatteryReplacementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/buyback': {
+      id: '/buyback'
+      path: '/buyback'
+      fullPath: '/buyback'
+      preLoaderRoute: typeof BuybackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/charging-port-repair': {
+      id: '/charging-port-repair'
+      path: '/charging-port-repair'
+      fullPath: '/charging-port-repair'
+      preLoaderRoute: typeof ChargingPortRepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iphone-repair': {
+      id: '/iphone-repair'
+      path: '/iphone-repair'
+      fullPath: '/iphone-repair'
+      preLoaderRoute: typeof IphoneRepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/repair': {
+      id: '/repair'
+      path: '/repair'
+      fullPath: '/repair'
+      preLoaderRoute: typeof RepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/samsung-repair': {
+      id: '/samsung-repair'
+      path: '/samsung-repair'
+      fullPath: '/samsung-repair'
+      preLoaderRoute: typeof SamsungRepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/screen-repair': {
+      id: '/screen-repair'
+      path: '/screen-repair'
+      fullPath: '/screen-repair'
+      preLoaderRoute: typeof ScreenRepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sell-phone': {
+      id: '/sell-phone'
+      path: '/sell-phone'
+      fullPath: '/sell-phone'
+      preLoaderRoute: typeof SellPhoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/water-damage-repair': {
+      id: '/water-damage-repair'
+      path: '/water-damage-repair'
+      fullPath: '/water-damage-repair'
+      preLoaderRoute: typeof WaterDamageRepairRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/': {
@@ -87,6 +357,19 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AndroidRepairRoute: AndroidRepairRoute,
+  BatteryReplacementRoute: BatteryReplacementRoute,
+  BuybackRoute: BuybackRoute,
+  ChargingPortRepairRoute: ChargingPortRepairRoute,
+  ContactRoute: ContactRoute,
+  FaqRoute: FaqRoute,
+  IphoneRepairRoute: IphoneRepairRoute,
+  RepairRoute: RepairRoute,
+  SamsungRepairRoute: SamsungRepairRoute,
+  ScreenRepairRoute: ScreenRepairRoute,
+  SellPhoneRoute: SellPhoneRoute,
+  WaterDamageRepairRoute: WaterDamageRepairRoute,
   AdminLoginRoute: AdminLoginRoute,
   AdminIndexRoute: AdminIndexRoute,
 }

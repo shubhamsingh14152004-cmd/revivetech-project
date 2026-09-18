@@ -12,6 +12,7 @@ import { Toaster } from "../components/ui/sonner";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { initGA } from "../lib/analytics";
 
 function NotFoundComponent() {
   return (
@@ -90,12 +91,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "theme-color", content: "#0e0d15" },
       { title: "ReviveTech — Sell Dead Phones & Repair Your Phone" },
       { name: "description", content: "Sell your dead phone for top cash, or book expert same-day cleanroom repairs at ReviveTech." },
       { name: "author", content: "ReviveTech" },
+      { property: "og:site_name", content: "ReviveTech" },
       { property: "og:title", content: "ReviveTech — Sell Dead Phones & Repair Your Phone" },
       { property: "og:description", content: "Sell your dead phone for top cash, or book expert same-day cleanroom repairs at ReviveTech." },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@ReviveTech" },
     ],
@@ -111,6 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ],
   }),
   shellComponent: RootShell,
@@ -144,6 +149,11 @@ function ClientOnlyToaster() {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    // Dynamically initialize GA4 if VITE_GA_MEASUREMENT_ID is configured
+    initGA();
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>

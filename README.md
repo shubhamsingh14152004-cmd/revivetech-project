@@ -189,3 +189,98 @@ npm install
 npm run dev
 ```
 Runs at `http://localhost:5173`.
+
+---
+
+## 🔍 SEO & Google Ranking Playbook (Search & Maps)
+
+ReviveTech has been engineered with a complete white-hat technical and content SEO architecture targeting high-intent phone repair and buyback queries across India.
+
+### 🌐 Canonical Public URL Hierarchy & Target Queries
+
+| Canonical URL | Page Focus & Target Queries | Structured Schema |
+|---|---|---|
+| `https://www.sellrepairphone.org/` | Primary Homepage — "phone repair near me", "sell dead phone", "mobile repair near me" | `LocalBusiness`, `WebSite`, `FAQPage` |
+| `https://www.sellrepairphone.org/repair` | Same-Day Repair Hub — "phone repair", "same day mobile repair", "phone screen replacement" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/sell-phone` | Sell Phone & Buyback — "sell old phone", "sell dead phone", "sell damaged phone", "instant phone cash" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/buyback` | Trade-In & ITAD — "phone buyback", "bulk phone trade in", "corporate phone recycling" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/iphone-repair` | Apple Specialist — "iPhone repair near me", "iPhone screen replacement", "iPhone battery repair" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/samsung-repair` | Samsung Specialist — "Samsung repair near me", "Galaxy S24 screen", "Samsung green line fix" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/android-repair` | Android Brands — "OnePlus repair", "Xiaomi repair", "Vivo repair", "Oppo repair", "Pixel repair" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/screen-repair` | Display Replacement — "mobile screen replacement", "cracked screen repair", "phone display fix" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/battery-replacement` | Battery Service — "phone battery replacement", "iPhone battery replacement", "swollen battery fix" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/charging-port-repair` | Port Service — "charging port repair", "phone not charging fix", "USB-C port replacement" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/water-damage-repair` | Liquid Recovery — "phone water damage repair", "dropped phone in water fix", "wet phone recovery" | `BreadcrumbList`, `Service`, `FAQPage` |
+| `https://www.sellrepairphone.org/contact` | Direct Contact & NAP — "ReviveTech phone number", "doorstep repair helpline", customer care | `BreadcrumbList`, `LocalBusiness` |
+| `https://www.sellrepairphone.org/about` | Brand Authority — Cleanroom standards, 100-point inspection, zero-landfill e-waste pledge | `BreadcrumbList` |
+| `https://www.sellrepairphone.org/faq` | Customer Help Desk — 10+ categorized FAQs with accordion search | `BreadcrumbList`, `FAQPage` |
+
+> [!NOTE]
+> **Admin Protection**: All staff administration paths (`/admin`, `/admin/login`, `/api/*`) are strictly blocked in `public/robots.txt` and protected with `<meta name="robots" content="noindex, nofollow" />` to safeguard internal operational records from search engine indexing.
+
+---
+
+### 🚀 Google Search Console (GSC) Setup Guide
+
+1. **Add Property**:
+   - Go to [Google Search Console](https://search.google.com/search-console).
+   - Click **Add Property** and choose **URL prefix**: `https://www.sellrepairphone.org`.
+2. **Verify Ownership**:
+   - Recommended: DNS TXT record via your domain registrar (Hostinger, GoDaddy, Cloudflare, etc.).
+   - Alternatively: Add the GSC HTML verification meta tag to `frontend/src/routes/__root.tsx`.
+3. **Submit Sitemap**:
+   - In the left sidebar, navigate to **Sitemaps**.
+   - Under *Add a new sitemap*, enter `sitemap.xml` (Full URL: `https://www.sellrepairphone.org/sitemap.xml`).
+   - Click **Submit**. Verify status changes to **Success**.
+4. **Request Priority Indexing**:
+   - Paste each of the 14 public canonical URLs into the top Search Console inspection bar.
+   - Click **Test Live URL**.
+   - Click **Request Indexing** for immediate crawler queueing.
+
+---
+
+### 📍 Google Business Profile & Google Maps (Local SEO)
+
+To rank on Google Maps for **"phone repair near me"** and **"mobile repair shop near me"**:
+
+1. **Create Profile**: Visit [Google Business Profile](https://www.google.com/business/).
+2. **Exact Business Name**: Enter **ReviveTech — Mobile Phone Repair & Buyback**.
+3. **Primary Categories**:
+   - Primary: `Mobile Phone Repair Shop`
+   - Secondary: `Cell Phone Store`, `Electronics Repair Shop`, `Data Recovery Service`.
+4. **Service Area Business (SAB)**:
+   - Select **"I deliver goods and services to my customers"** (Doorstep Pickup & Delivery model).
+   - Add your operational cities, regions, and districts.
+5. **Exact NAP Consistency**:
+   - **Phone**: `+91 8591770877` (Identical to website header, footer, and schema).
+   - **Website**: `https://www.sellrepairphone.org`
+   - **Appointment URL**: `https://www.sellrepairphone.org/repair`
+6. **Add Core Services**:
+   - Mobile Phone Screen Replacement
+   - Mobile Phone Battery Replacement
+   - Mobile Phone Buyback / Sell Dead Phone
+   - Charging Port Repair
+   - Water Damage Ultrasonic Treatment
+   - Apple iPhone / Samsung Galaxy / OnePlus / Xiaomi Repair
+7. **Collect Genuine Reviews**:
+   - Send customers their Google Review link right after a completed doorstep repair or trade-in payout.
+
+---
+
+### 📊 Google Analytics 4 (GA4) Event Tracking
+
+Real-time user intent and conversion events are automatically measured.
+
+1. Create a GA4 property on [Google Analytics](https://analytics.google.com/).
+2. Obtain your **Measurement ID** (`G-XXXXXXXXXX`).
+3. Add it to your Vercel Project Environment Variables:
+   ```env
+   VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+   ```
+4. Custom Events Fired:
+   - `phone_call_click`: User tapped telephone button to call `+91 8591770877`.
+   - `whatsapp_click`: User opened WhatsApp chat for quick query.
+   - `repair_booking_started`: User opened the repair appointment form.
+   - `repair_booking_submitted`: Customer successfully submitted a repair request.
+   - `trade_in_calculated`: User selected brand/model/condition in buyback calculator.
+   - `sell_phone_submitted`: Customer locked in a trade-in payout quote.

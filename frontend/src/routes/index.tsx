@@ -28,32 +28,47 @@ import {
   X,
 } from "lucide-react";
 import { toast } from "sonner";
+import { SiteHeader } from "../components/SiteHeader";
+import { SiteFooter } from "../components/SiteFooter";
+import {
+  SeoJsonLd,
+  getLocalBusinessSchema,
+  getWebSiteSchema,
+  SITE_URL,
+} from "../components/SeoJsonLd";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "ReviveTech — Sell Dead Phones & Repair within 24hrs",
+        title: "ReviveTech — Phone Repair Near Me, Sell Dead Phone & Instant Buyback",
       },
       {
         name: "description",
         content:
-          "Sell broken or dead phones for top cash, or book expert repair within 24hrs. Get an instant quote at ReviveTech.",
+          "Same-day mobile phone repair near you & instant cash buyback for dead or old phones. OEM screen replacement, battery fix, free doorstep pickup & 90-day warranty across India.",
+      },
+      {
+        name: "keywords",
+        content:
+          "phone repair near me, mobile repair near me, phone repair shop near me, sell dead phone, sell old phone, sell used phone, phone buyback, iPhone repair near me, Samsung repair near me, mobile screen replacement, phone battery replacement, Android phone repair",
       },
       {
         property: "og:title",
-        content: "ReviveTech — Sell Dead Phones & Repair within 24hrs",
+        content: "ReviveTech — Phone Repair Near Me, Sell Dead Phone & Instant Buyback",
       },
       {
         property: "og:description",
         content:
-          "Sell broken or dead phones for top cash, or book expert repair within 24hrs. Get an instant quote at ReviveTech.",
+          "Same-day mobile phone repair & top cash for dead or used phones. Free doorstep pickup, instant payment, and 90-day warranty.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE_URL },
       { property: "og:image", content: heroPhone },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: heroPhone },
     ],
+    links: [{ rel: "canonical", href: SITE_URL }],
   }),
   component: Index,
 });
@@ -158,124 +173,13 @@ function Index() {
     }
   };
 
+  const localBusinessSchema = getLocalBusinessSchema();
+  const websiteSchema = getWebSiteSchema();
+
   return (
     <div className="dusk min-h-screen w-full text-white selection:bg-brand selection:text-white pb-24">
-      {/* Live Activity Top Ticker */}
-      <div className="w-full bg-black/40 border-b border-white/10 px-4 py-2 overflow-hidden backdrop-blur-md">
-        <div className="mx-auto max-w-6xl flex flex-wrap items-center justify-between gap-2 text-[11px] font-label">
-          <div className="flex items-center gap-2 text-white/90">
-            <span className="h-2 w-2 rounded-full bg-emerald-400 live-pulse" />
-            <span className="text-emerald-400 font-bold uppercase tracking-wider hidden sm:inline">
-              Live Activity:
-            </span>
-            <span className="text-white/80">
-              ⚡ Priya S. from Mumbai just sold a dead iPhone 14 with free doorstep pickup
-            </span>
-          </div>
-          <div className="flex items-center gap-3">
-            <a
-              href="tel:8591770877"
-              className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 px-2.5 py-1 text-blue-300 hover:text-white transition font-mono font-bold border border-blue-500/30"
-              title="Call 8591770877"
-            >
-              <PhoneCall className="h-3 w-3" />
-              <span>8591770877</span>
-            </a>
-            <a
-              href="https://wa.me/918591770877?text=Hi%20ReviveTech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/20 hover:bg-[#25D366]/30 px-2.5 py-1 text-emerald-300 hover:text-white transition font-mono font-bold border border-emerald-500/30"
-              title="WhatsApp 8591770877"
-            >
-              <WhatsAppIcon className="h-3 w-3 fill-emerald-400" />
-              <span>8591770877</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation */}
-      <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-[#0e0d15]/90 border-b border-white/10 shadow-lg">
-        <div className="mx-auto max-w-6xl px-5 py-3">
-          <nav className="flex items-center justify-between">
-            <a href="#" className="flex items-center gap-3">
-              <div className="chrome-plate grid h-10 w-10 place-items-center rounded-xl">
-                <span className="font-label font-bold text-ink text-lg">R</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display text-lg font-bold tracking-tight text-white">
-                  ReviveTech
-                </span>
-                <span className="font-label text-[9px] uppercase tracking-widest text-accent font-semibold -mt-1">
-                  Lab & Marketplace
-                </span>
-              </div>
-            </a>
-
-          {/* Desktop Nav Links */}
-          <div className="hidden items-center gap-6 text-xs text-white/80 md:flex font-display">
-            <a href="#sell-calculator" className="transition hover:text-accent flex items-center gap-1">
-              <IndianRupee className="h-3.5 w-3.5 text-gold" />
-              <span>Sell Dead Phone</span>
-            </a>
-            <button
-              type="button"
-              onClick={openRepairPopup}
-              className="transition hover:text-accent flex items-center gap-1 cursor-pointer bg-transparent border-none p-0 text-xs font-display text-white/80"
-              title="Click to view Free Doorstep & Gift Perks"
-            >
-              <Wrench className="h-3.5 w-3.5 text-brand" />
-              <span>Repair within 24hrs</span>
-              <span className="rounded-full bg-accent/20 px-1.5 py-0.5 text-[9px] text-accent font-mono font-bold">Offer</span>
-            </button>
-            <a href="#diagnostic-triage" className="transition hover:text-accent flex items-center gap-1">
-              <Zap className="h-3.5 w-3.5 text-emerald-400" />
-              <span>AI Triage</span>
-            </a>
-            <a href="#faq" className="transition hover:text-accent flex items-center gap-1">
-              <Sparkles className="h-3.5 w-3.5 text-blue-400" />
-              <span>FAQ</span>
-            </a>
-          </div>
-
-          <div className="flex items-center gap-2">
-            {/* Call Us Pill */}
-            <a
-              href="tel:8591770877"
-              className="hidden lg:inline-flex items-center justify-between gap-2.5 rounded-full bg-[#489535] hover:bg-[#3d832c] text-white pl-4 pr-1 py-1 text-xs font-bold font-display shadow-md border border-white/20 transition hover:scale-105"
-              title="Call Us: 8591770877"
-            >
-              <span>Call Us</span>
-              <span className="grid h-6 w-6 place-items-center rounded-full bg-white/20">
-                <Phone className="h-3 w-3 text-white stroke-[2.4]" />
-              </span>
-            </a>
-
-            {/* WhatsApp Us Pill */}
-            <a
-              href="https://wa.me/918591770877?text=Hi%20ReviveTech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center justify-between gap-2.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white pl-4 pr-1 py-1 text-xs font-bold font-display shadow-md border border-white/20 transition hover:scale-105"
-              title="WhatsApp Us: 8591770877"
-            >
-              <span>WhatsApp Us</span>
-              <span className="grid h-6 w-6 place-items-center rounded-full bg-white/20">
-                <WhatsAppIcon className="h-3.5 w-3.5 fill-white" />
-              </span>
-            </a>
-
-            <a
-              href="#quote"
-              className="chrome-plate inline-flex items-center justify-center rounded-full px-4 py-2 text-xs font-bold text-ink transition hover:brightness-105 font-label shadow-md cursor-pointer"
-            >
-              Get Instant Quote
-            </a>
-          </div>
-        </nav>
-        </div>
-      </header>
+      <SeoJsonLd schema={[localBusinessSchema, websiteSchema]} />
+      <SiteHeader onOpenRepairModal={openRepairPopup} />
 
       {/* Hero Section */}
       <section className="mx-auto max-w-6xl px-5 pt-12 pb-8 md:pt-16">
@@ -608,49 +512,8 @@ function Index() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="mx-auto max-w-6xl px-5 pt-8 pb-12 border-t border-white/10 text-xs text-white/60 font-display">
-        <div className="grid gap-8 sm:grid-cols-2 pb-8">
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="chrome-plate grid h-8 w-8 place-items-center rounded-lg">
-                <span className="font-label font-bold text-ink">R</span>
-              </div>
-              <span className="font-display text-base font-bold text-white">
-                ReviveTech
-              </span>
-            </div>
-            <p className="text-white/60 leading-relaxed text-xs max-w-sm">
-              Chrome-grade cleanroom phone care. We buy dead devices and execute
-              precision micro-soldering repairs with guaranteed warranty.
-            </p>
-          </div>
-
-          <div className="sm:justify-self-end">
-            <h4 className="font-label text-xs font-bold uppercase text-white tracking-wider mb-3">
-              Services
-            </h4>
-            <ul className="space-y-2 text-xs text-white/70">
-              <li><a href="#sell-calculator" className="hover:text-white">Sell Dead iPhone</a></li>
-              <li><a href="#sell-calculator" className="hover:text-white">Sell Dead Galaxy</a></li>
-              <li><a href="#quote" className="hover:text-white">OLED Screen Replacement</a></li>
-              <li><a href="#quote" className="hover:text-white">Liquid Damage Ultrasonic</a></li>
-              <li><a href="#diagnostic-triage" className="hover:text-white">AI Diagnostic Triage</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="flex flex-col sm:flex-row items-center justify-between border-t border-white/5 pt-6 text-[11px] text-white/40">
-          <p>© 2026 ReviveTech Inc. All rights reserved.</p>
-          <div className="flex gap-4 mt-2 sm:mt-0 items-center">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
-            <a href="#" className="hover:text-white">IMEI Compliance</a>
-            <span>·</span>
-            <a href="/admin/login" className="text-accent hover:underline font-label font-bold">Staff Admin Portal</a>
-          </div>
-        </div>
-      </footer>
+      {/* Site Comprehensive SEO Footer */}
+      <SiteFooter />
 
       {/* Floating Dock & AI Chat Support Widget */}
       <FloatingDock onOpenRepairModal={openRepairPopup} />

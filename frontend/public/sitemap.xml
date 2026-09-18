@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- 1. Homepage -->
+  <url>
+    <loc>https://www.sellrepairphone.org/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 2. Phone Repair Hub -->
+  <url>
+    <loc>https://www.sellrepairphone.org/repair</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 3. Sell Dead & Used Phone -->
+  <url>
+    <loc>https://www.sellrepairphone.org/sell-phone</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 4. Device Buyback Program -->
+  <url>
+    <loc>https://www.sellrepairphone.org/buyback</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 5. Apple iPhone Repair -->
+  <url>
+    <loc>https://www.sellrepairphone.org/iphone-repair</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 6. Samsung Galaxy Repair -->
+  <url>
+    <loc>https://www.sellrepairphone.org/samsung-repair</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 7. Android Multi-Brand Repair -->
+  <url>
+    <loc>https://www.sellrepairphone.org/android-repair</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 8. Mobile Screen Replacement -->
+  <url>
+    <loc>https://www.sellrepairphone.org/screen-repair</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 9. Phone Battery Replacement -->
+  <url>
+    <loc>https://www.sellrepairphone.org/battery-replacement</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 10. Charging Port & IC Rework -->
+  <url>
+    <loc>https://www.sellrepairphone.org/charging-port-repair</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 11. Water Damage Recovery -->
+  <url>
+    <loc>https://www.sellrepairphone.org/water-damage-repair</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 12. Contact & Service Area Coverage -->
+  <url>
+    <loc>https://www.sellrepairphone.org/contact</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 13. About Cleanroom Lab -->
+  <url>
+    <loc>https://www.sellrepairphone.org/about</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 14. Frequently Asked Questions -->
+  <url>
+    <loc>https://www.sellrepairphone.org/faq</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

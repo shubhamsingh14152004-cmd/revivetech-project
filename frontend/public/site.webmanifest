@@ -1,0 +1,16 @@
+{
+  "name": "ReviveTech — Cleanroom Phone Repair & Buyback",
+  "short_name": "ReviveTech",
+  "description": "Sell your dead phone for top cash, or book expert same-day cleanroom repairs.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e0d15",
+  "theme_color": "#ff5722",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
