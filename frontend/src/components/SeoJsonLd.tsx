@@ -36,7 +36,7 @@ export function getLocalBusinessSchema() {
     name: BUSINESS_NAME,
     alternateName: "Sagar Tech Phone Repair & Sell Old Phone",
     url: SITE_URL,
-    logo: `${SITE_URL}/favicon.ico`,
+    logo: `${SITE_URL}/favicon.svg`,
     image: `${SITE_URL}/hero-phone.jpg`,
     description:
       "Certified cleanroom mobile phone repairs and instant cash buyback for used, damaged, or dead smartphones with free doorstep courier pickup across India.",
