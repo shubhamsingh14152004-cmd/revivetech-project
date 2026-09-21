@@ -74,10 +74,10 @@ export function SiteFooter() {
           <div className="space-y-3 md:col-span-1">
             <div className="flex items-center gap-2">
               <div className="chrome-plate grid h-8 w-8 place-items-center rounded-lg shadow-md">
-                <span className="font-label font-bold text-ink">R</span>
+                <span className="font-label font-bold text-ink">S</span>
               </div>
               <span className="font-display text-base font-bold text-white tracking-tight">
-                ReviveTech
+                Sagar Tech
               </span>
             </div>
             <p className="text-white/60 leading-relaxed text-xs">
@@ -99,7 +99,7 @@ export function SiteFooter() {
                   href="tel:8591770877"
                   onClick={handleCall}
                   className="hover:text-accent font-mono font-bold"
-                  title="Call ReviveTech"
+                  title="Call Sagar Tech"
                 >
                   +91 8591770877
                 </a>
@@ -107,12 +107,12 @@ export function SiteFooter() {
               <div className="flex items-center gap-2 text-white/80">
                 <WhatsAppIcon className="h-3.5 w-3.5 fill-emerald-400 shrink-0" />
                 <a
-                  href="https://wa.me/918591770877?text=Hi%20ReviveTech%2C%20I%20have%20an%20inquiry%20regarding%20phone%20repair%20or%20buyback."
+                  href="https://wa.me/918591770877?text=Hi%20Sagar%20Tech%2C%20I%20have%20an%20inquiry%20regarding%20phone%20repair%20or%20buyback."
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleWhatsApp}
                   className="hover:text-emerald-400 font-mono font-bold"
-                  title="WhatsApp ReviveTech"
+                  title="WhatsApp Sagar Tech"
                 >
                   +91 8591770877
                 </a>
@@ -122,7 +122,7 @@ export function SiteFooter() {
                 <a
                   href="mailto:supportsellphone@gmail.com"
                   className="hover:text-white"
-                  title="Email ReviveTech Support"
+                  title="Email Sagar Tech Support"
                 >
                   supportsellphone@gmail.com
                 </a>
@@ -274,7 +274,7 @@ export function SiteFooter() {
             <ul className="space-y-2 text-xs text-white/70">
               <li>
                 <Link to="/about" className="hover:text-white transition">
-                  About ReviveTech Lab
+                  About Sagar Tech Lab
                 </Link>
               </li>
               <li>
@@ -308,7 +308,7 @@ export function SiteFooter() {
 
         {/* Bottom Copyright & Legal */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/50">
-          <p>© 2026 ReviveTech (sellrepairphone.org). All rights reserved.</p>
+          <p>© 2026 Sagar Tech (sellrepairphone.org). All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-4">
             <Link to="/about" className="hover:text-white">
               Data Security

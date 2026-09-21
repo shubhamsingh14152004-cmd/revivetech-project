@@ -137,7 +137,7 @@ export function PreLovedStore() {
     }
     setCart([...cart, device]);
     toast.success(`Added ${device.name} to Bag!`, {
-      description: "12-Month ReviveTech Shield & Free 2-Day Shipping included.",
+      description: "12-Month Sagar Tech Shield & Free 2-Day Shipping included.",
     });
     setIsCartOpen(true);
   };

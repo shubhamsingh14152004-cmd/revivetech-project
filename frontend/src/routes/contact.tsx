@@ -121,7 +121,7 @@ function ContactPage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
               Get in Touch with{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300">
-                ReviveTech
+                Sagar Tech
               </span>
             </h1>
 

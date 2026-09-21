@@ -25,7 +25,7 @@ const REVIEWS_DATA: Review[] = [
     date: "2 days ago",
     highlightBadge: "Instant ₹4,200 Payout",
     review:
-      "My phone sat at the bottom of a lake for 3 hours and wouldn't power on. Service center told me to scrap it for ₹0. ReviveTech gave me ₹4,200 within 24 hours of receiving the box. Truly unreal service!",
+      "My phone sat at the bottom of a lake for 3 hours and wouldn't power on. Service center told me to scrap it for ₹0. Sagar Tech gave me ₹4,200 within 24 hours of receiving the box. Truly unreal service!",
     payoutOrSaved: "Paid ₹4,200 via UPI",
   },
   {
@@ -38,7 +38,7 @@ const REVIEWS_DATA: Review[] = [
     date: "Yesterday",
     highlightBadge: "42-Min Cleanroom Fix",
     review:
-      "Dropped my phone down concrete metro stairs. Dropped it off at ReviveTech during lunch and had it back glowing like brand new in 42 minutes. True OEM display and fingerprint unlock works seamlessly.",
+      "Dropped my phone down concrete metro stairs. Dropped it off at Sagar Tech during lunch and had it back glowing like brand new in 42 minutes. True OEM display and fingerprint unlock works seamlessly.",
     payoutOrSaved: "Saved ₹35,000 vs replacement",
   },
   {
@@ -51,7 +51,7 @@ const REVIEWS_DATA: Review[] = [
     date: "3 days ago",
     highlightBadge: "100% Battery Health",
     review:
-      "Bought a pre-loved Pixel 8 Pro for ₹32,000 less than retail. Arrived sealed in a custom ReviveTech box with 100% battery capacity and not a single scratch anywhere. 10/10.",
+      "Bought a pre-loved Pixel 8 Pro for ₹32,000 less than retail. Arrived sealed in a custom Sagar Tech box with 100% battery capacity and not a single scratch anywhere. 10/10.",
     payoutOrSaved: "Saved ₹32,000",
   },
   {
@@ -90,7 +90,7 @@ const REVIEWS_DATA: Review[] = [
     date: "1 week ago",
     highlightBadge: "1-Year Shield Guarantee",
     review:
-      "Was nervous buying a refurbished folding phone, but ReviveTech's 100-point inspection certificate put my mind at ease. Hinge is tight and screens are immaculate.",
+      "Was nervous buying a refurbished folding phone, but Sagar Tech's 100-point inspection certificate put my mind at ease. Hinge is tight and screens are immaculate.",
     payoutOrSaved: "Saved ₹65,000 vs brand new",
   },
 ];

@@ -24,7 +24,7 @@ interface ChatMessage {
 const DEFAULT_MESSAGES: ChatMessage[] = [
   {
     sender: "bot",
-    text: "👋 Hey there! Welcome to ReviveTech. Looking to sell a dead phone, book a 45-min repair, or chat with us directly at 8591770877?",
+    text: "👋 Hey there! Welcome to Sagar Tech. Looking to sell a dead phone, book a 45-min repair, or chat with us directly at 8591770877?",
     time: "Just now",
   },
 ];
@@ -114,7 +114,7 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
 
         {/* WhatsApp Us Button */}
         <a
-          href="https://wa.me/918591770877?text=Hi%20ReviveTech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
+          href="https://wa.me/918591770877?text=Hi%20Sagar%20Tech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
           target="_blank"
           rel="noopener noreferrer"
           title="WhatsApp Us: 8591770877"
@@ -188,7 +188,7 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
               </div>
               <div>
                 <h4 className="font-display text-sm font-bold">
-                  ReviveTech AI Support
+                  Sagar Tech AI Support
                 </h4>
                 <div className="flex items-center gap-1.5 text-[10px] text-emerald-400 font-label">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 live-pulse" />

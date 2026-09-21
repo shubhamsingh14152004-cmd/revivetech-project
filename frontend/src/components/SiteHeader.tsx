@@ -59,7 +59,7 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
             </a>
 
             <a
-              href="https://wa.me/918591770877?text=Hi%20ReviveTech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
+              href="https://wa.me/918591770877?text=Hi%20Sagar%20Tech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
@@ -79,14 +79,14 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="chrome-plate grid h-10 w-10 place-items-center rounded-xl transition group-hover:scale-105">
-              <span className="font-label font-bold text-ink text-lg">R</span>
+              <span className="font-label font-bold text-ink text-lg">S</span>
             </div>
             <div className="flex flex-col">
               <span className="font-display text-lg font-bold tracking-tight text-white group-hover:text-accent transition">
-                ReviveTech
+                Sagar Tech
               </span>
-              <span className="font-label text-[9px] uppercase tracking-widest text-accent font-semibold -mt-1">
-                Lab & Buyback
+              <span className="font-label text-[8px] sm:text-[8.5px] uppercase tracking-wider text-accent font-semibold -mt-0.5 whitespace-nowrap">
+                SELL OLD PHONE & REPAIR YOUR PHONE
               </span>
             </div>
           </Link>
@@ -323,7 +323,7 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
             </a>
 
             <a
-              href="https://wa.me/918591770877?text=Hi%20ReviveTech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
+              href="https://wa.me/918591770877?text=Hi%20Sagar%20Tech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}

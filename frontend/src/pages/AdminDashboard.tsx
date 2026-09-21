@@ -216,12 +216,12 @@ export function AdminDashboard() {
         <div className="mx-auto max-w-7xl flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="chrome-plate grid h-9 w-9 place-items-center rounded-xl shadow-lg">
-              <span className="font-label font-bold text-ink text-base">R</span>
+              <span className="font-label font-bold text-ink text-base">S</span>
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-display font-bold text-base text-white tracking-tight">
-                  ReviveTech Operations
+                  Sagar Tech Operations
                 </span>
                 <span className="rounded-md bg-brand/20 px-2 py-0.5 text-[10px] font-label font-bold text-brand uppercase tracking-wider border border-brand/30">
                   Admin v2.0
@@ -476,7 +476,7 @@ export function AdminDashboard() {
                             <span>{item.phoneNumber}</span>
                           </a>
                           <a
-                            href={`https://wa.me/91${item.phoneNumber.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(item.customerName)}%2C%20ReviveTech%20team%20here%20regarding%20ticket%20${item.ticketNumber}.`}
+                            href={`https://wa.me/91${item.phoneNumber.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(item.customerName)}%2C%20Sagar%20Tech%20team%20here%20regarding%20ticket%20${item.ticketNumber}.`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[10px] font-bold font-label bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 px-2 py-0.5 rounded border border-emerald-500/30 transition"
@@ -666,7 +666,7 @@ export function AdminDashboard() {
                       <Phone className="h-3 w-3 text-emerald-400" /> Call
                     </a>
                     <a
-                      href={`https://wa.me/91${selectedRequest.phoneNumber.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(selectedRequest.customerName)}%2C%20ReviveTech%20team%20here%20regarding%20ticket%20${selectedRequest.ticketNumber}.`}
+                      href={`https://wa.me/91${selectedRequest.phoneNumber.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(selectedRequest.customerName)}%2C%20Sagar%20Tech%20team%20here%20regarding%20ticket%20${selectedRequest.ticketNumber}.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 px-2.5 py-1 text-xs font-semibold flex items-center gap-1 border border-emerald-500/30 transition"
