@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/buyback")({
   head: () => ({
     meta: [
       {
-        title: "Mobile Phone Buyback & Trade-In Program | ReviveTech",
+        title: "Mobile Phone Buyback & Trade-In Program | SellRepair",
       },
       {
         name: "description",
@@ -66,7 +66,7 @@ export const Route = createFileRoute("/buyback")({
       },
       {
         property: "og:title",
-        content: "Mobile Phone Buyback & Trade-In Program | ReviveTech",
+        content: "Mobile Phone Buyback & Trade-In Program | SellRepair",
       },
       {
         property: "og:description",
@@ -189,7 +189,7 @@ function BuybackPage() {
                   Corporate IT Asset Disposition (ITAD) for Mobile Devices
                 </h2>
                 <p className="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
-                  Upgrading your company sales team phones or retiring executive iPhones? ReviveTech handles complete end-to-end logistics, serialized inventory audits, cryptographic flash storage sanitization, and bulk wire transfer settlement.
+                  Upgrading your company sales team phones or retiring executive iPhones? SellRepair handles complete end-to-end logistics, serialized inventory audits, cryptographic flash storage sanitization, and bulk wire transfer settlement.
                 </p>
 
                 <div className="mt-6 space-y-3">

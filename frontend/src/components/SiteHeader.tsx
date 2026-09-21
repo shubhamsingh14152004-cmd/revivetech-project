@@ -242,8 +242,22 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
                   <div className="border-t border-white/10 my-1.5" />
 
                   <div className="font-label text-[10px] uppercase font-bold text-accent tracking-wider px-2.5 py-1">
-                    Specialized Component Repairs
+                    Specialized Component & Local Hubs
                   </div>
+                  <Link
+                    to="/doorstep-mobile-repair"
+                    onClick={() => setServicesDropdownOpen(false)}
+                    className="block px-2.5 py-1 rounded-lg hover:bg-white/10 text-white font-semibold transition"
+                  >
+                    🏠 Doorstep Mobile Repair (45-Min Fix)
+                  </Link>
+                  <Link
+                    to="/mobile-repair-mumbai"
+                    onClick={() => setServicesDropdownOpen(false)}
+                    className="block px-2.5 py-1 rounded-lg hover:bg-white/10 text-accent font-semibold transition"
+                  >
+                    📍 Mobile Repair in Mumbai Hub
+                  </Link>
                   <Link
                     to="/dead-phone-repair"
                     onClick={() => setServicesDropdownOpen(false)}

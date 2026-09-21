@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -202,7 +202,7 @@ function ContactPage() {
                     <span>Nationwide Doorstep Courier & Cleanroom Processing</span>
                   </div>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    ReviveTech operates a centralized high-tech ISO cleanroom repair laboratory with pan-India insured courier pickup and local express doorstep technician visits. Every parcel is tamper-sealed and insured end-to-end.
+                    SellRepair operates a centralized high-tech ISO cleanroom repair laboratory with pan-India insured courier pickup and local express doorstep technician visits. Every parcel is tamper-sealed and insured end-to-end.
                   </p>
                 </div>
               </div>

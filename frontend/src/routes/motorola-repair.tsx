@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/motorola-repair")({
   head: () => ({
     meta: [
       {
-        title: "Motorola Repair Near Me — Edge, Razr & Moto G Screen & Battery Fix | ReviveTech",
+        title: "Motorola Repair Near Me — Edge, Razr & Moto G Screen & Battery Fix | SellRepair",
       },
       {
         name: "description",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/motorola-repair")({
       },
       {
         property: "og:title",
-        content: "Motorola Repair Near Me — Edge, Razr & Moto G Screen & Battery Fix | ReviveTech",
+        content: "Motorola Repair Near Me — Edge, Razr & Moto G Screen & Battery Fix | SellRepair",
       },
       {
         property: "og:description",
@@ -164,7 +164,7 @@ function MotorolaRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              From Motorola Edge curved pOLED screens and Razr folding hinge recalibration to Moto G battery replacements and TurboPower charging ports, ReviveTech provides cleanroom-grade repairs with 90-day warranty coverage.
+              From Motorola Edge curved pOLED screens and Razr folding hinge recalibration to Moto G battery replacements and TurboPower charging ports, SellRepair provides cleanroom-grade repairs with 90-day warranty coverage.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

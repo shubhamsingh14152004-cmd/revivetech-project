@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -75,7 +75,7 @@ const FAQS = [
   {
     question: "Do you repair both Redmi and POCO phones?",
     answer:
-      "Yes! ReviveTech provides comprehensive cleanroom hardware and motherboard repair for all Xiaomi, Redmi, and POCO smartphones.",
+      "Yes! SellRepair provides comprehensive cleanroom hardware and motherboard repair for all Xiaomi, Redmi, and POCO smartphones.",
   },
   {
     question: "What warranty do you provide on Xiaomi repairs?",
@@ -88,7 +88,7 @@ export const Route = createFileRoute("/xiaomi-repair")({
   head: () => ({
     meta: [
       {
-        title: "Xiaomi, Redmi & POCO Repair Near Me — CPU Reball & Screen Fix | ReviveTech",
+        title: "Xiaomi, Redmi & POCO Repair Near Me — CPU Reball & Screen Fix | SellRepair",
       },
       {
         name: "description",
@@ -102,7 +102,7 @@ export const Route = createFileRoute("/xiaomi-repair")({
       },
       {
         property: "og:title",
-        content: "Xiaomi, Redmi & POCO Repair Near Me — CPU Reball & Screen Fix | ReviveTech",
+        content: "Xiaomi, Redmi & POCO Repair Near Me — CPU Reball & Screen Fix | SellRepair",
       },
       {
         property: "og:description",
@@ -181,7 +181,7 @@ function XiaomiRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Facing POCO sudden death, Redmi restart loops, or a cracked DotDisplay? ReviveTech provides cleanroom motherboard micro-soldering, CPU reballing, and display replacement with 90-day warranty coverage.
+              Facing POCO sudden death, Redmi restart loops, or a cracked DotDisplay? SellRepair provides cleanroom motherboard micro-soldering, CPU reballing, and display replacement with 90-day warranty coverage.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

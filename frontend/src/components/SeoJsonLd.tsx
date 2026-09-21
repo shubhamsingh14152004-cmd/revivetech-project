@@ -18,12 +18,38 @@ export function SeoJsonLd({ schema }: SeoJsonLdProps) {
   );
 }
 
-export const SITE_URL = "https://www.sellrepairphone.org";
-export const BUSINESS_NAME = "Sagar Tech";
+export const SITE_URL = "https://sellrepair.org";
+export const BUSINESS_NAME = "SellRepair";
 export const BUSINESS_PHONE = "+91 8591770877";
 export const BUSINESS_PHONE_RAW = "8591770877";
 export const BUSINESS_EMAIL = "supportsellphone@gmail.com";
 export const BUSINESS_WHATSAPP = "https://wa.me/918591770877";
+
+/**
+ * Organization structured data
+ */
+export function getOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: BUSINESS_NAME,
+    alternateName: "Sagar Tech — SellRepair",
+    url: SITE_URL,
+    logo: `${SITE_URL}/favicon.svg`,
+    telephone: BUSINESS_PHONE,
+    email: BUSINESS_EMAIL,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: BUSINESS_PHONE,
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"],
+      },
+    ],
+  };
+}
 
 /**
  * Standard LocalBusiness / Store structured data
@@ -34,17 +60,30 @@ export function getLocalBusinessSchema() {
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#business`,
     name: BUSINESS_NAME,
-    alternateName: "Sagar Tech Phone Repair & Sell Old Phone",
+    alternateName: "Sagar Tech — SellRepair",
     url: SITE_URL,
     logo: `${SITE_URL}/favicon.svg`,
     image: `${SITE_URL}/hero-phone.jpg`,
     description:
-      "Certified cleanroom mobile phone repairs and instant cash buyback for used, damaged, or dead smartphones with free doorstep courier pickup across India.",
+      "Sell old, used, damaged or dead mobile phones for top cash and book 45-minute doorstep phone repairs in Mumbai and across India with 90-day warranty.",
     telephone: BUSINESS_PHONE,
     email: BUSINESS_EMAIL,
     priceRange: "₹₹",
     currenciesAccepted: "INR",
     paymentAccepted: "Cash, UPI, Credit Card, Debit Card, Net Banking",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Shop No. 4, Service Hub & Dispatch Facility",
+      addressLocality: "Mumbai",
+      addressRegion: "Maharashtra",
+      postalCode: "400001",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 19.076,
+      longitude: 72.8777,
+    },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -63,20 +102,20 @@ export function getLocalBusinessSchema() {
     ],
     areaServed: [
       {
-        "@type": "Country",
-        name: "India",
-      },
-      {
         "@type": "City",
         name: "Mumbai",
       },
       {
         "@type": "City",
-        name: "Bengaluru",
+        name: "Navi Mumbai",
       },
       {
         "@type": "City",
-        name: "Delhi NCR",
+        name: "Thane",
+      },
+      {
+        "@type": "Country",
+        name: "India",
       },
     ],
     hasOfferCatalog: {

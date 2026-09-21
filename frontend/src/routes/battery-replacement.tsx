@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -70,7 +70,7 @@ export const Route = createFileRoute("/battery-replacement")({
   head: () => ({
     meta: [
       {
-        title: "Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | ReviveTech",
+        title: "Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | SellRepair",
       },
       {
         name: "description",
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/battery-replacement")({
       },
       {
         property: "og:title",
-        content: "Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | ReviveTech",
+        content: "Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | SellRepair",
       },
       {
         property: "og:description",

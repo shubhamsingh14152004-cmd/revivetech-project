@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/oppo-repair")({
   head: () => ({
     meta: [
       {
-        title: "Oppo Repair Near Me — Reno & Find Series Screen & Battery Fix | ReviveTech",
+        title: "Oppo Repair Near Me — Reno & Find Series Screen & Battery Fix | SellRepair",
       },
       {
         name: "description",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/oppo-repair")({
       },
       {
         property: "og:title",
-        content: "Oppo Repair Near Me — Reno & Find Series Screen & Battery Fix | ReviveTech",
+        content: "Oppo Repair Near Me — Reno & Find Series Screen & Battery Fix | SellRepair",
       },
       {
         property: "og:description",
@@ -164,7 +164,7 @@ function OppoRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Broken curved screen, fast-draining battery, or charging port issues on your Oppo Reno or Find phone? ReviveTech provides cleanroom-grade repairs with 90-day warranty coverage and free doorstep pickup.
+              Broken curved screen, fast-draining battery, or charging port issues on your Oppo Reno or Find phone? SellRepair provides cleanroom-grade repairs with 90-day warranty coverage and free doorstep pickup.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

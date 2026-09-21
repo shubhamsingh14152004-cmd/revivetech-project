@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -29,7 +29,7 @@ const FAQS = [
   {
     question: "Can I sell a completely dead phone that doesn't turn on?",
     answer:
-      "Yes! ReviveTech buys completely dead, water-damaged, and motherboard-faulty phones. We salvage functional ICs, camera sensors, chassis components, and recycle hazardous materials responsibly. Simply choose 'Dead / Non-Functional' in our calculator for an instant cash quote.",
+      "Yes! SellRepair buys completely dead, water-damaged, and motherboard-faulty phones. We salvage functional ICs, camera sensors, chassis components, and recycle hazardous materials responsibly. Simply choose 'Dead / Non-Functional' in our calculator for an instant cash quote.",
   },
   {
     question: "How and when do I receive payment for my old phone?",
@@ -49,12 +49,12 @@ const FAQS = [
   {
     question: "Purana phone kaha beche: How does doorstep pickup work for selling used phones?",
     answer:
-      "Aap ghar baithe apna purana mobile sell kar sakte hain. ReviveTech provides free doorstep collection across India. Simply calculate your device value online, schedule a pickup, and receive cash directly via UPI before our representative leaves.",
+      "Aap ghar baithe apna purana mobile sell kar sakte hain. SellRepair provides free doorstep collection across India. Simply calculate your device value online, schedule a pickup, and receive cash directly via UPI before our representative leaves.",
   },
   {
     question: "Phone bechna hai: Can I sell broken screen or dead phones here?",
     answer:
-      "Haan! Chahe phone ki screen toot gayi ho, dead ho gaya ho, ya purana model ho, ReviveTech buys phones in all conditions with instant valuation and certified data wipe.",
+      "Haan! Chahe phone ki screen toot gayi ho, dead ho gaya ho, ya purana model ho, SellRepair buys phones in all conditions with instant valuation and certified data wipe.",
   },
 ];
 
@@ -62,7 +62,7 @@ export const Route = createFileRoute("/sell-phone")({
   head: () => ({
     meta: [
       {
-        title: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | ReviveTech",
+        title: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | SellRepair",
       },
       {
         name: "description",
@@ -76,7 +76,7 @@ export const Route = createFileRoute("/sell-phone")({
       },
       {
         property: "og:title",
-        content: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | ReviveTech",
+        content: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | SellRepair",
       },
       {
         property: "og:description",

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -88,7 +88,7 @@ export const Route = createFileRoute("/android-repair")({
   head: () => ({
     meta: [
       {
-        title: "Android Phone Repair — OnePlus, Xiaomi, Vivo, Oppo, Realme, Pixel | ReviveTech",
+        title: "Android Phone Repair — OnePlus, Xiaomi, Vivo, Oppo, Realme, Pixel | SellRepair",
       },
       {
         name: "description",
@@ -102,7 +102,7 @@ export const Route = createFileRoute("/android-repair")({
       },
       {
         property: "og:title",
-        content: "Android Phone Repair — OnePlus, Xiaomi, Vivo, Oppo, Realme, Pixel | ReviveTech",
+        content: "Android Phone Repair — OnePlus, Xiaomi, Vivo, Oppo, Realme, Pixel | SellRepair",
       },
       {
         property: "og:description",

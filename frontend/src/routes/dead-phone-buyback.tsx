@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -29,7 +29,7 @@ const FAQS = [
   {
     question: "Dead phone becho: Can I really get cash for a phone that won't turn on at all?",
     answer:
-      "Yes! Even if your phone is completely dead (band phone / chalu nahi ho raha), its internal hardware components still hold real value. Original OLED flex circuits, camera modules, chassis housing, speakers, and micro-ICs can be salvaged for refurbishing or eco-recycling. ReviveTech pays instant cash for dead phones via UPI or IMPS.",
+      "Yes! Even if your phone is completely dead (band phone / chalu nahi ho raha), its internal hardware components still hold real value. Original OLED flex circuits, camera modules, chassis housing, speakers, and micro-ICs can be salvaged for refurbishing or eco-recycling. SellRepair pays instant cash for dead phones via UPI or IMPS.",
   },
   {
     question: "Kharab phone kaise beche: How does doorstep dead phone selling work?",
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
   head: () => ({
     meta: [
       {
-        title: "Sell Dead Phone for Cash — Dead Mobile Becho | ReviveTech",
+        title: "Sell Dead Phone for Cash — Dead Mobile Becho | SellRepair",
       },
       {
         name: "description",
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
       },
       {
         property: "og:title",
-        content: "Sell Dead Phone for Cash — Dead Mobile Becho | ReviveTech",
+        content: "Sell Dead Phone for Cash — Dead Mobile Becho | SellRepair",
       },
       {
         property: "og:description",
@@ -150,7 +150,7 @@ function DeadPhoneBuybackPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Don't throw away your dead phone! Even if your mobile does not power on, has a shattered display, or motherboard failure, ReviveTech buys it for top salvage cash with on-the-spot UPI payment and zero doorstep pickup fees.
+              Don't throw away your dead phone! Even if your mobile does not power on, has a shattered display, or motherboard failure, SellRepair buys it for top salvage cash with on-the-spot UPI payment and zero doorstep pickup fees.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-300">

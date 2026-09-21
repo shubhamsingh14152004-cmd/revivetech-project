@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -70,7 +70,7 @@ export const Route = createFileRoute("/water-damage-repair")({
   head: () => ({
     meta: [
       {
-        title: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | ReviveTech",
+        title: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | SellRepair",
       },
       {
         name: "description",
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/water-damage-repair")({
       },
       {
         property: "og:title",
-        content: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | ReviveTech",
+        content: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | SellRepair",
       },
       {
         property: "og:description",

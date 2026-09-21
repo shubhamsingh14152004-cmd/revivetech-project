@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -56,7 +56,7 @@ export const Route = createFileRoute("/repair")({
   head: () => ({
     meta: [
       {
-        title: "Phone Repair Near Me — Mobile Repair Karwana Hai | ReviveTech",
+        title: "Phone Repair Near Me — Mobile Repair Karwana Hai | SellRepair",
       },
       {
         name: "description",
@@ -70,7 +70,7 @@ export const Route = createFileRoute("/repair")({
       },
       {
         property: "og:title",
-        content: "Phone Repair Near Me — Mobile Repair Karwana Hai | ReviveTech",
+        content: "Phone Repair Near Me — Mobile Repair Karwana Hai | SellRepair",
       },
       {
         property: "og:description",
@@ -81,7 +81,7 @@ export const Route = createFileRoute("/repair")({
       { property: "og:type", content: "website" },
       { property: "og:image", content: heroPhone },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Same-Day Mobile Phone Repair | ReviveTech" },
+      { name: "twitter:title", content: "Same-Day Mobile Phone Repair | SellRepair" },
       {
         name: "twitter:description",
         content: "OEM screen replacement, battery fixes & motherboard micro-soldering. Free doorstep pickup.",

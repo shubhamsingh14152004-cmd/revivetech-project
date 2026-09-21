@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -88,7 +88,7 @@ export const Route = createFileRoute("/oneplus-repair")({
   head: () => ({
     meta: [
       {
-        title: "OnePlus Repair Near Me — Screen, Green Line & Battery Fix | ReviveTech",
+        title: "OnePlus Repair Near Me — Screen, Green Line & Battery Fix | SellRepair",
       },
       {
         name: "description",
@@ -102,7 +102,7 @@ export const Route = createFileRoute("/oneplus-repair")({
       },
       {
         property: "og:title",
-        content: "OnePlus Repair Near Me — Screen, Green Line & Battery Fix | ReviveTech",
+        content: "OnePlus Repair Near Me — Screen, Green Line & Battery Fix | SellRepair",
       },
       {
         property: "og:description",
@@ -181,7 +181,7 @@ function OnePlusRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              From OnePlus 12 and 11 Pro screens and vertical green line fixes to SuperVOOC charging docks and alert sliders, ReviveTech provides cleanroom-grade repairs with 90-day warranty coverage and zero data loss.
+              From OnePlus 12 and 11 Pro screens and vertical green line fixes to SuperVOOC charging docks and alert sliders, SellRepair provides cleanroom-grade repairs with 90-day warranty coverage and zero data loss.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

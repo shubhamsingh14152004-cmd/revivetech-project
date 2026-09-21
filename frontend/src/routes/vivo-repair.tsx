@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/vivo-repair")({
   head: () => ({
     meta: [
       {
-        title: "Vivo & iQOO Repair Near Me — Curved Screen, Camera & Battery Fix | ReviveTech",
+        title: "Vivo & iQOO Repair Near Me — Curved Screen, Camera & Battery Fix | SellRepair",
       },
       {
         name: "description",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/vivo-repair")({
       },
       {
         property: "og:title",
-        content: "Vivo & iQOO Repair Near Me — Curved Screen, Camera & Battery Fix | ReviveTech",
+        content: "Vivo & iQOO Repair Near Me — Curved Screen, Camera & Battery Fix | SellRepair",
       },
       {
         property: "og:description",
@@ -164,7 +164,7 @@ function VivoRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Cracked curved AMOLED, broken Zeiss camera gimbal, or slow FlashCharge? ReviveTech provides certified component replacements with a 90-day warranty and free doorstep collection.
+              Cracked curved AMOLED, broken Zeiss camera gimbal, or slow FlashCharge? SellRepair provides certified component replacements with a 90-day warranty and free doorstep collection.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

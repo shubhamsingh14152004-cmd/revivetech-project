@@ -41,26 +41,26 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "ReviveTech — Phone Repair Near Me, Sell Dead Phone & Instant Buyback",
+        title: "Sell Old Mobile Phones & Phone Repair in Mumbai | SellRepair",
       },
       {
         name: "description",
         content:
-          "Same-day mobile phone repair near you & instant cash buyback for dead or old phones. OEM screen replacement, battery fix, free doorstep pickup & 90-day warranty across India.",
+          "Sell your old, used, damaged or dead mobile phone for top cash and book 45-minute doorstep phone repairs in Mumbai with SellRepair. Free doorstep pickup & 90-day warranty.",
       },
       {
         name: "keywords",
         content:
-          "phone repair near me, mobile repair near me, sell dead phone, sell old phone, purana phone becho, purana mobile becho, dead phone becho, band phone becho, kharab phone becho, band phone repair, band phone thik karna, phone chalu nahi ho raha, phone repair, phone buyback, iPhone repair near me, Samsung repair near me, mobile screen replacement, phone battery replacement, Android phone repair",
+          "sell old mobile phone, sell old phone, sell used phone, sell damaged phone, sell broken phone, sell dead phone, mobile repair Mumbai, phone repair Mumbai, doorstep mobile repair, purana phone becho, purana mobile becho, dead phone becho, phone repair near me, mobile repair near me",
       },
       {
         property: "og:title",
-        content: "ReviveTech — Phone Repair Near Me, Sell Dead Phone & Instant Buyback",
+        content: "Sell Old Mobile Phones & Phone Repair in Mumbai | SellRepair",
       },
       {
         property: "og:description",
         content:
-          "Same-day mobile phone repair & top cash for dead or used phones. Free doorstep pickup, instant payment, and 90-day warranty.",
+          "Sell your old, used, damaged or dead mobile phone and book fast mobile repair services in Mumbai with SellRepair. Instant UPI cash & free doorstep pickup.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
@@ -191,13 +191,11 @@ function Index() {
             </div>
 
             <h1 className="font-display mt-6 text-5xl font-extrabold leading-[1.04] tracking-tight md:text-7xl">
-              Sell <span className="chrome">dead phone</span>, and repair your phone.
+              Sell old mobile phones, <span className="chrome">& repair your phone.</span>
             </h1>
 
             <p className="font-display mt-5 max-w-lg text-base leading-relaxed text-white/80 md:text-lg">
-              Sell broken, cracked, liquid-damaged, or dead devices for real cash.
-              Or drop it off for 45-minute cleanroom micro-soldering and pick it
-              up glowing like brand new.
+              Sell your old, used, damaged, or dead phone for top cash in Mumbai and across India. Or book 45-minute doorstep mobile repair with free tempered glass and 90-day warranty.
             </p>
 
             {/* Quick Action CTA Pill Buttons */}
@@ -232,7 +230,7 @@ function Index() {
                 <span>8591770877</span>
               </a>
               <a
-                href="https://wa.me/918591770877?text=Hi%20ReviveTech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
+                href="https://wa.me/918591770877?text=Hi%20SellRepair%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 px-3 py-1 font-mono font-bold text-emerald-300 border border-emerald-500/30 transition"
@@ -273,7 +271,7 @@ function Index() {
             <div className="relative rounded-[2.5rem] bg-gradient-to-b from-white/20 via-white/10 to-transparent p-3 backdrop-saturate-150 border border-white/20 shadow-2xl">
               <img
                 src={heroPhone}
-                alt="ReviveTech cleanroom mobile phone repair and dead phone buyback laboratory"
+                alt="SellRepair mobile phone repair and old phone buyback in Mumbai"
                 width={1024}
                 height={1280}
                 loading="eager"
@@ -418,7 +416,7 @@ function Index() {
                 <span>Call 8591770877</span>
               </a>
               <a
-                href="https://wa.me/918591770877?text=Hi%20ReviveTech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
+                href="https://wa.me/918591770877?text=Hi%20SellRepair%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 px-3.5 py-1.5 text-xs font-mono font-bold text-emerald-300 transition"

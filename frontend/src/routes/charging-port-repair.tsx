@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -46,7 +46,7 @@ const FAQS = [
   {
     question: "Do I need a new port or just a deep clean?",
     answer:
-      "In around 30% of cases, pocket lint, compacted dust, and oxidation prevent the cable pins from making solid electrical contact. ReviveTech technicians inspect your port under optical magnification and safely extract debris with anti-static probes. If internal copper contact pins are broken or burnt, we replace the sub-board flex cable.",
+      "In around 30% of cases, pocket lint, compacted dust, and oxidation prevent the cable pins from making solid electrical contact. SellRepair technicians inspect your port under optical magnification and safely extract debris with anti-static probes. If internal copper contact pins are broken or burnt, we replace the sub-board flex cable.",
   },
   {
     question: "How long does charging port replacement take?",
@@ -69,7 +69,7 @@ export const Route = createFileRoute("/charging-port-repair")({
   head: () => ({
     meta: [
       {
-        title: "Phone Charging Port Repair Near Me — Mobile Charge Nahi Ho Raha | ReviveTech",
+        title: "Phone Charging Port Repair Near Me — Mobile Charge Nahi Ho Raha | SellRepair",
       },
       {
         name: "description",
@@ -83,7 +83,7 @@ export const Route = createFileRoute("/charging-port-repair")({
       },
       {
         property: "og:title",
-        content: "Phone Charging Port Repair Near Me — Mobile Charge Nahi Ho Raha | ReviveTech",
+        content: "Phone Charging Port Repair Near Me — Mobile Charge Nahi Ho Raha | SellRepair",
       },
       {
         property: "og:description",

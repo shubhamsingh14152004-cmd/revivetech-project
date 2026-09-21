@@ -1,4 +1,4 @@
-# Production robots.txt for ReviveTech (https://www.sellrepairphone.org)
+# Production robots.txt for SellRepair (https://sellrepair.org)
 
 User-agent: Googlebot
 Allow: /
@@ -30,5 +30,5 @@ Disallow: /admin
 Disallow: /admin/
 Disallow: /api/
 
-# Canonical XML Sitemap
-Sitemap: https://www.sellrepairphone.org/sitemap.xml
+# Canonical XML Sitemap for Google Search Console
+Sitemap: https://sellrepair.org/sitemap.xml

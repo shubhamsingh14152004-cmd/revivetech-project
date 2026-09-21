@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/realme-repair")({
   head: () => ({
     meta: [
       {
-        title: "Realme Repair Near Me — GT, Narzo & Number Series Screen & Battery Fix | ReviveTech",
+        title: "Realme Repair Near Me — GT, Narzo & Number Series Screen & Battery Fix | SellRepair",
       },
       {
         name: "description",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/realme-repair")({
       },
       {
         property: "og:title",
-        content: "Realme Repair Near Me — GT, Narzo & Number Series Screen & Battery Fix | ReviveTech",
+        content: "Realme Repair Near Me — GT, Narzo & Number Series Screen & Battery Fix | SellRepair",
       },
       {
         property: "og:description",
@@ -164,7 +164,7 @@ function RealmeRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Cracked screen, fast-draining battery, or charging port issues on your Realme smartphone? ReviveTech provides cleanroom-grade repairs with 90-day warranty coverage and free doorstep pickup.
+              Cracked screen, fast-draining battery, or charging port issues on your Realme smartphone? SellRepair provides cleanroom-grade repairs with 90-day warranty coverage and free doorstep pickup.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

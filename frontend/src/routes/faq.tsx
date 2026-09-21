@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -47,7 +47,7 @@ const ALL_FAQS = [
     category: "Selling & Buyback",
     question: "Can I sell a phone that is completely dead and won't turn on?",
     answer:
-      "Yes! ReviveTech buys completely non-functional, water-damaged, or motherboard-shorted phones. We salvage working IC chips, camera modules, and chassis brackets, and send non-recoverable materials to authorized e-waste recyclers. Choose 'Dead' in our calculator for an instant cash quote.",
+      "Yes! SellRepair buys completely non-functional, water-damaged, or motherboard-shorted phones. We salvage working IC chips, camera modules, and chassis brackets, and send non-recoverable materials to authorized e-waste recyclers. Choose 'Dead' in our calculator for an instant cash quote.",
   },
   {
     category: "Selling & Buyback",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
       {
-        title: "Frequently Asked Questions — Phone Repair & Buyback | ReviveTech",
+        title: "Frequently Asked Questions — Phone Repair & Buyback | SellRepair",
       },
       {
         name: "description",
@@ -99,7 +99,7 @@ export const Route = createFileRoute("/faq")({
       },
       {
         property: "og:title",
-        content: "Frequently Asked Questions — Phone Repair & Buyback | ReviveTech",
+        content: "Frequently Asked Questions — Phone Repair & Buyback | SellRepair",
       },
       {
         property: "og:description",

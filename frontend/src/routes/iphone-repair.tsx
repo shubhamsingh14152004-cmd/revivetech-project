@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -90,7 +90,7 @@ const FAQS = [
   {
     question: "Will Face ID and True Tone continue working after screen replacement?",
     answer:
-      "Yes! Unlike uncertified street shops where Face ID and True Tone are permanently lost, ReviveTech technicians use specialized EEPROM programmers to migrate original screen serial data, maintaining full True Tone and Face ID security.",
+      "Yes! Unlike uncertified street shops where Face ID and True Tone are permanently lost, SellRepair technicians use specialized EEPROM programmers to migrate original screen serial data, maintaining full True Tone and Face ID security.",
   },
   {
     question: "How long does an iPhone screen or battery swap take?",
@@ -113,7 +113,7 @@ export const Route = createFileRoute("/iphone-repair")({
   head: () => ({
     meta: [
       {
-        title: "iPhone Repair Near Me — Apple Screen & Battery Replacement | ReviveTech",
+        title: "iPhone Repair Near Me — Apple Screen & Battery Replacement | SellRepair",
       },
       {
         name: "description",
@@ -127,7 +127,7 @@ export const Route = createFileRoute("/iphone-repair")({
       },
       {
         property: "og:title",
-        content: "iPhone Repair Near Me — Apple Screen & Battery Replacement | ReviveTech",
+        content: "iPhone Repair Near Me — Apple Screen & Battery Replacement | SellRepair",
       },
       {
         property: "og:description",
@@ -206,7 +206,7 @@ function IphoneRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Don't compromise your premium Apple iPhone with inferior third-party parts. ReviveTech provides certified OEM-grade display calibration, battery swaps, laser back glass separation, and logic board micro-soldering.
+              Don't compromise your premium Apple iPhone with inferior third-party parts. SellRepair provides certified OEM-grade display calibration, battery swaps, laser back glass separation, and logic board micro-soldering.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

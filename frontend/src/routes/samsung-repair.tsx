@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -103,7 +103,7 @@ export const Route = createFileRoute("/samsung-repair")({
   head: () => ({
     meta: [
       {
-        title: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | ReviveTech",
+        title: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | SellRepair",
       },
       {
         name: "description",
@@ -117,7 +117,7 @@ export const Route = createFileRoute("/samsung-repair")({
       },
       {
         property: "og:title",
-        content: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | ReviveTech",
+        content: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | SellRepair",
       },
       {
         property: "og:description",
@@ -196,7 +196,7 @@ function SamsungRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              From flagship Galaxy S24 Ultra screens and Z Fold flexible displays to green line laser fixes and fast-charging port replacements, ReviveTech provides cleanroom-grade Samsung repairs with 100% functional fingerprint calibration.
+              From flagship Galaxy S24 Ultra screens and Z Fold flexible displays to green line laser fixes and fast-charging port replacements, SellRepair provides cleanroom-grade Samsung repairs with 100% functional fingerprint calibration.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

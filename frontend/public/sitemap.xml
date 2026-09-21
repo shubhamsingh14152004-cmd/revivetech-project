@@ -2,149 +2,175 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Primary Homepage -->
   <url>
-    <loc>https://www.sellrepairphone.org/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Core Service Hubs -->
+  <!-- High-Intent Dedicated Service Hubs -->
   <url>
-    <loc>https://www.sellrepairphone.org/repair</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.sellrepairphone.org/sell-phone</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.sellrepairphone.org/dead-phone-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/sell-old-phone</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/dead-phone-buyback</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/sell-damaged-phone</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/buyback</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/doorstep-mobile-repair</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://sellrepair.org/mobile-repair-mumbai</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Core Hubs -->
+  <url>
+    <loc>https://sellrepair.org/repair</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sellrepair.org/sell-phone</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sellrepair.org/dead-phone-repair</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sellrepair.org/dead-phone-buyback</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sellrepair.org/buyback</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Brand Cleanroom Repair Hubs -->
   <url>
-    <loc>https://www.sellrepairphone.org/iphone-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/iphone-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/samsung-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/samsung-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/oneplus-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/oneplus-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/xiaomi-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/xiaomi-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/vivo-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/vivo-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/oppo-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/oppo-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/realme-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/realme-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/motorola-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/motorola-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/google-pixel-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/google-pixel-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/android-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/android-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Problem-Specific Repair Hubs -->
+  <!-- Hardware Component Repair Hubs -->
   <url>
-    <loc>https://www.sellrepairphone.org/screen-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/screen-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/battery-replacement</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/battery-replacement</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/charging-port-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/charging-port-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/water-damage-repair</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/water-damage-repair</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Informational & Contact Pages -->
+  <!-- Trust, Support & Company Hubs -->
   <url>
-    <loc>https://www.sellrepairphone.org/contact</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/contact</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sellrepair.org/about</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.sellrepairphone.org/about</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.sellrepairphone.org/faq</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://sellrepair.org/faq</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>

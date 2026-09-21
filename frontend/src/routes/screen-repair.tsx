@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -72,7 +72,7 @@ export const Route = createFileRoute("/screen-repair")({
   head: () => ({
     meta: [
       {
-        title: "Mobile Screen Replacement & Repair Near Me — Phone Ki Screen Toot Gayi | ReviveTech",
+        title: "Mobile Screen Replacement & Repair Near Me — Phone Ki Screen Toot Gayi | SellRepair",
       },
       {
         name: "description",
@@ -86,7 +86,7 @@ export const Route = createFileRoute("/screen-repair")({
       },
       {
         property: "og:title",
-        content: "Mobile Screen Replacement & Repair Near Me — Phone Ki Screen Toot Gayi | ReviveTech",
+        content: "Mobile Screen Replacement & Repair Near Me — Phone Ki Screen Toot Gayi | SellRepair",
       },
       {
         property: "og:description",

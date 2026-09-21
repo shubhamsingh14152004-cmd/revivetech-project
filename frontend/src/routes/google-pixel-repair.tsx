@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/google-pixel-repair")({
   head: () => ({
     meta: [
       {
-        title: "Google Pixel Repair Near Me — Actua OLED Screen & Camera Fix | ReviveTech",
+        title: "Google Pixel Repair Near Me — Actua OLED Screen & Camera Fix | SellRepair",
       },
       {
         name: "description",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/google-pixel-repair")({
       },
       {
         property: "og:title",
-        content: "Google Pixel Repair Near Me — Actua OLED Screen & Camera Fix | ReviveTech",
+        content: "Google Pixel Repair Near Me — Actua OLED Screen & Camera Fix | SellRepair",
       },
       {
         property: "og:description",
@@ -164,7 +164,7 @@ function GooglePixelRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              From Pixel 9, 8 Pro, and 7 Actua OLED screen replacements and camera bar visor glass fixes to Tensor thermal service and battery swaps, ReviveTech provides cleanroom-grade repairs with 90-day warranty coverage.
+              From Pixel 9, 8 Pro, and 7 Actua OLED screen replacements and camera bar visor glass fixes to Tensor thermal service and battery swaps, SellRepair provides cleanroom-grade repairs with 90-day warranty coverage.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

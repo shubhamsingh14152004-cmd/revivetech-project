@@ -134,40 +134,35 @@ export function SiteFooter() {
             </div>
           </div>
 
-          {/* Column 2: Dead & Selling Services */}
+          {/* Column 2: Sell & Buyback Services */}
           <div>
             <h4 className="font-label text-xs font-bold uppercase text-white tracking-wider mb-3 text-gold">
               Sell & Buyback
             </h4>
             <ul className="space-y-2 text-xs text-white/70">
               <li>
-                <Link to="/sell-phone" className="hover:text-white transition">
-                  Sell Old Phone (Purana Phone Becho)
+                <Link to="/sell-old-phone" className="hover:text-white transition font-semibold text-white">
+                  Sell Old Mobile Phone (Instant Cash)
                 </Link>
               </li>
               <li>
-                <Link to="/dead-phone-buyback" className="hover:text-white transition font-semibold text-amber-300">
+                <Link to="/sell-damaged-phone" className="hover:text-white transition text-amber-300">
+                  Sell Damaged & Broken Phone
+                </Link>
+              </li>
+              <li>
+                <Link to="/dead-phone-buyback" className="hover:text-white transition font-semibold text-emerald-300">
                   ⚡ Sell Dead Phone (Dead Phone Becho)
+                </Link>
+              </li>
+              <li>
+                <Link to="/sell-phone" className="hover:text-white transition">
+                  Used Phone Value Calculator
                 </Link>
               </li>
               <li>
                 <Link to="/buyback" className="hover:text-white transition">
                   Corporate Phone Buyback (ITAD)
-                </Link>
-              </li>
-              <li>
-                <Link to="/sell-phone" className="hover:text-white transition">
-                  Sell Broken Screen Mobile
-                </Link>
-              </li>
-              <li>
-                <Link to="/dead-phone-buyback" className="hover:text-white transition">
-                  Sell Water Damaged Phone
-                </Link>
-              </li>
-              <li>
-                <Link to="/dead-phone-buyback" className="hover:text-white transition">
-                  Dead Phone Price Calculator
                 </Link>
               </li>
             </ul>
@@ -179,6 +174,16 @@ export function SiteFooter() {
               Repair Services
             </h4>
             <ul className="space-y-2 text-xs text-white/70">
+              <li>
+                <Link to="/doorstep-mobile-repair" className="hover:text-white transition font-semibold text-white">
+                  🏠 Doorstep Mobile Repair (45-Min Fix)
+                </Link>
+              </li>
+              <li>
+                <Link to="/mobile-repair-mumbai" className="hover:text-white transition text-accent">
+                  📍 Mobile Repair in Mumbai Hub
+                </Link>
+              </li>
               <li>
                 <Link to="/repair" className="hover:text-white transition">
                   Same-Day Phone Repair
@@ -308,7 +313,7 @@ export function SiteFooter() {
 
         {/* Bottom Copyright & Legal */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/50">
-          <p>© 2026 Sagar Tech (sellrepairphone.org). All rights reserved.</p>
+          <p>© 2026 SellRepair (sellrepair.org). All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-4">
             <Link to="/about" className="hover:text-white">
               Data Security
