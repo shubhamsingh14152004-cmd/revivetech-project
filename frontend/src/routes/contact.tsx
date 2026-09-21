@@ -26,26 +26,26 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       {
-        title: "Contact ReviveTech — Customer Support, Doorstep Pickup & Cleanroom Lab",
+        title: "Contact Sagar Tech — Customer Support, Doorstep Pickup & Cleanroom Lab",
       },
       {
         name: "description",
         content:
-          "Contact ReviveTech customer support. Call/WhatsApp +91 8591770877 or email supportsellphone@gmail.com for instant repair quotes, doorstep courier pickup & phone buybacks.",
+          "Contact Sagar Tech customer support. Call/WhatsApp +91 8591770877 or email supportsellphone@gmail.com for instant repair quotes, doorstep courier pickup & phone buybacks.",
       },
       {
         name: "keywords",
         content:
-          "contact ReviveTech, phone repair contact, phone repair customer care, doorstep mobile repair pickup, sell phone contact number, mobile repair helpline",
+          "contact Sagar Tech, phone repair contact, phone repair customer care, doorstep mobile repair pickup, sell phone contact number, mobile repair helpline",
       },
       {
         property: "og:title",
-        content: "Contact ReviveTech — Customer Support, Doorstep Pickup & Cleanroom Lab",
+        content: "Contact Sagar Tech — Customer Support, Doorstep Pickup & Cleanroom Lab",
       },
       {
         property: "og:description",
         content:
-          "Need help with phone repair or selling your device? Connect with ReviveTech via phone, WhatsApp, or instant message.",
+          "Need help with phone repair or selling your device? Connect with Sagar Tech via phone, WhatsApp, or instant message.",
       },
       {
         property: "og:url",

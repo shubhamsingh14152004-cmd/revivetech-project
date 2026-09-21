@@ -29,7 +29,7 @@ const FAQS = [
   {
     question: "What is the difference between trade-in and selling for cash?",
     answer:
-      "At ReviveTech, both options provide upfront liquidity. You can choose direct instant cash (via UPI or bank transfer) or receive a premium credit voucher with bonus value toward a certified refurbished phone upgrade.",
+      "At Sagar Tech, both options provide upfront liquidity. You can choose direct instant cash (via UPI or bank transfer) or receive a premium credit voucher with bonus value toward a certified refurbished phone upgrade.",
   },
   {
     question: "Do you accept corporate and bulk phone buyback orders?",
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/buyback")({
   head: () => ({
     meta: [
       {
-        title: "Mobile Phone Buyback & Trade-In Program | SellRepair",
+        title: "Mobile Phone Buyback & Trade-In Program | SellRepairPhone",
       },
       {
         name: "description",
@@ -66,7 +66,7 @@ export const Route = createFileRoute("/buyback")({
       },
       {
         property: "og:title",
-        content: "Mobile Phone Buyback & Trade-In Program | SellRepair",
+        content: "Mobile Phone Buyback & Trade-In Program | SellRepairPhone",
       },
       {
         property: "og:description",

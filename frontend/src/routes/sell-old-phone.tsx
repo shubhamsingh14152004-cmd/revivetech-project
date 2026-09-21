@@ -58,7 +58,7 @@ export const Route = createFileRoute("/sell-old-phone")({
   head: () => ({
     meta: [
       {
-        title: "Sell Old Mobile Phone Online — Instant Cash & Free Doorstep Pickup | SellRepair",
+        title: "Sell Old Mobile Phone Online — Instant Cash & Free Doorstep Pickup | SellRepairPhone",
       },
       {
         name: "description",
@@ -72,7 +72,7 @@ export const Route = createFileRoute("/sell-old-phone")({
       },
       {
         property: "og:title",
-        content: "Sell Old Mobile Phone Online — Instant Cash & Doorstep Pickup | SellRepair",
+        content: "Sell Old Mobile Phone Online — Instant Cash & Doorstep Pickup | SellRepairPhone",
       },
       {
         property: "og:description",

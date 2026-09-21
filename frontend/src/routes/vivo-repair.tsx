@@ -63,7 +63,7 @@ const FAQS = [
   {
     question: "What warranty do you provide on Vivo repairs?",
     answer:
-      "All Vivo and iQOO repairs come backed by ReviveTech's 90-Day VIP Warranty covering touch accuracy, display quality, and replacement parts.",
+      "All Vivo and iQOO repairs come backed by Sagar Tech's 90-Day VIP Warranty covering touch accuracy, display quality, and replacement parts.",
   },
 ];
 
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/vivo-repair")({
   head: () => ({
     meta: [
       {
-        title: "Vivo & iQOO Repair Near Me — Curved Screen, Camera & Battery Fix | SellRepair",
+        title: "Vivo & iQOO Repair Near Me — Curved Screen, Camera & Battery Fix | SellRepairPhone",
       },
       {
         name: "description",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/vivo-repair")({
       },
       {
         property: "og:title",
-        content: "Vivo & iQOO Repair Near Me — Curved Screen, Camera & Battery Fix | SellRepair",
+        content: "Vivo & iQOO Repair Near Me — Curved Screen, Camera & Battery Fix | SellRepairPhone",
       },
       {
         property: "og:description",

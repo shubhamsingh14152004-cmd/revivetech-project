@@ -69,7 +69,7 @@ export const Route = createFileRoute("/charging-port-repair")({
   head: () => ({
     meta: [
       {
-        title: "Phone Charging Port Repair Near Me — Mobile Charge Nahi Ho Raha | SellRepair",
+        title: "Phone Charging Port Repair Near Me — Mobile Charge Nahi Ho Raha | SellRepairPhone",
       },
       {
         name: "description",
@@ -83,7 +83,7 @@ export const Route = createFileRoute("/charging-port-repair")({
       },
       {
         property: "og:title",
-        content: "Phone Charging Port Repair Near Me — Mobile Charge Nahi Ho Raha | SellRepair",
+        content: "Phone Charging Port Repair Near Me — Mobile Charge Nahi Ho Raha | SellRepairPhone",
       },
       {
         property: "og:description",
@@ -162,7 +162,7 @@ function ChargingPortRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Having to wiggle your charger or hold the cable at an awkward angle? ReviveTech diagnoses debris blockage, bent pins, and burnt solder pads to restore snug, rapid charging in 30 to 45 minutes.
+              Having to wiggle your charger or hold the cable at an awkward angle? Sagar Tech diagnoses debris blockage, bent pins, and burnt solder pads to restore snug, rapid charging in 30 to 45 minutes.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

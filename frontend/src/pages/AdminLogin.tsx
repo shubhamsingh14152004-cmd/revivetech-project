@@ -103,7 +103,7 @@ export function AdminLogin() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@revivetech.com"
+                  placeholder="admin@sagartech.com"
                   className="w-full rounded-xl border border-white/15 bg-white/5 pl-10 pr-4 py-2.5 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
                 />
               </div>

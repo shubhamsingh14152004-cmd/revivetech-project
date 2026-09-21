@@ -39,7 +39,7 @@ const FAQS = [
   {
     question: "Will my data (photos, contacts, chats) be safe during dead phone motherboard repair?",
     answer:
-      "Yes! Our first priority during dead phone repair is data preservation. Unlike official service centers that simply wipe or replace motherboards, ReviveTech works directly on component-level traces so your NAND flash storage remains intact with all your photos, WhatsApp chats, and personal data.",
+      "Yes! Our first priority during dead phone repair is data preservation. Unlike official service centers that simply wipe or replace motherboards, Sagar Tech works directly on component-level traces so your NAND flash storage remains intact with all your photos, WhatsApp chats, and personal data.",
   },
   {
     question: "What if my dead phone cannot be repaired?",
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/dead-phone-repair")({
   head: () => ({
     meta: [
       {
-        title: "Dead Phone Repair Near Me — Band Phone Thik Karna | SellRepair",
+        title: "Dead Phone Repair Near Me — Band Phone Thik Karna | SellRepairPhone",
       },
       {
         name: "description",
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/dead-phone-repair")({
       },
       {
         property: "og:title",
-        content: "Dead Phone Repair Near Me — Band Phone Thik Karna | SellRepair",
+        content: "Dead Phone Repair Near Me — Band Phone Thik Karna | SellRepairPhone",
       },
       {
         property: "og:description",
@@ -150,7 +150,7 @@ function DeadPhoneRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Phone chalu nahi ho raha? Whether your phone suddenly died, stopped charging, or got stuck on a black screen after an update or drop, ReviveTech diagnoses and repairs motherboard shorts at component level with a 90-day warranty.
+              Phone chalu nahi ho raha? Whether your phone suddenly died, stopped charging, or got stuck on a black screen after an update or drop, Sagar Tech diagnoses and repairs motherboard shorts at component level with a 90-day warranty.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

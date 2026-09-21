@@ -57,7 +57,7 @@ const FAQS = [
   {
     question: "Is a swollen phone battery dangerous?",
     answer:
-      "Yes! A swollen lithium-ion battery indicates electrolyte breakdown and flammable gas accumulation. Continuing to charge a bulging battery can cause thermal runaway or fire. Do not puncture or press on it; bring it to ReviveTech immediately for safe extraction and eco-disposal.",
+      "Yes! A swollen lithium-ion battery indicates electrolyte breakdown and flammable gas accumulation. Continuing to charge a bulging battery can cause thermal runaway or fire. Do not puncture or press on it; bring it to Sagar Tech immediately for safe extraction and eco-disposal.",
   },
   {
     question: "Phone ki battery jaldi khatam ho rahi hai: Battery change karne me kitna time lagta hai?",
@@ -70,7 +70,7 @@ export const Route = createFileRoute("/battery-replacement")({
   head: () => ({
     meta: [
       {
-        title: "Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | SellRepair",
+        title: "Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | SellRepairPhone",
       },
       {
         name: "description",
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/battery-replacement")({
       },
       {
         property: "og:title",
-        content: "Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | SellRepair",
+        content: "Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | SellRepairPhone",
       },
       {
         property: "og:description",
@@ -163,7 +163,7 @@ function BatteryReplacementPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Tired of constant low battery anxiety and mid-day shutdowns? ReviveTech installs high-density lithium cells engineered for maximum longevity and factory thermal stability, completed in just 30 minutes.
+              Tired of constant low battery anxiety and mid-day shutdowns? Sagar Tech installs high-density lithium cells engineered for maximum longevity and factory thermal stability, completed in just 30 minutes.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

@@ -59,7 +59,7 @@ const FAQS = [
   {
     question: "Do replacement screens come with a warranty?",
     answer:
-      "Yes. Every screen installed by ReviveTech comes with a 90-Day VIP Warranty against touch unresponsiveness, ghost touching, color discolouration, and manufacturing defects.",
+      "Yes. Every screen installed by Sagar Tech comes with a 90-Day VIP Warranty against touch unresponsiveness, ghost touching, color discolouration, and manufacturing defects.",
   },
   {
     question: "Phone ki screen toot gayi hai: Kya sirf glass change ho sakta hai ya poora display badalna padega?",
@@ -72,7 +72,7 @@ export const Route = createFileRoute("/screen-repair")({
   head: () => ({
     meta: [
       {
-        title: "Mobile Screen Replacement & Repair Near Me — Phone Ki Screen Toot Gayi | SellRepair",
+        title: "Mobile Screen Replacement & Repair Near Me — Phone Ki Screen Toot Gayi | SellRepairPhone",
       },
       {
         name: "description",
@@ -86,7 +86,7 @@ export const Route = createFileRoute("/screen-repair")({
       },
       {
         property: "og:title",
-        content: "Mobile Screen Replacement & Repair Near Me — Phone Ki Screen Toot Gayi | SellRepair",
+        content: "Mobile Screen Replacement & Repair Near Me — Phone Ki Screen Toot Gayi | SellRepairPhone",
       },
       {
         property: "og:description",
@@ -165,7 +165,7 @@ function ScreenRepairPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Don't let a shattered glass or unresponsive touch slow you down. ReviveTech replaces cracked smartphone screens with certified OEM-grade displays in just 30 to 45 minutes, backed by our comprehensive 90-Day VIP Warranty.
+              Don't let a shattered glass or unresponsive touch slow you down. Sagar Tech replaces cracked smartphone screens with certified OEM-grade displays in just 30 to 45 minutes, backed by our comprehensive 90-Day VIP Warranty.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

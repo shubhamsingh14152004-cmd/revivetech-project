@@ -63,7 +63,7 @@ const FAQS = [
   {
     question: "What warranty do you provide on Motorola repairs?",
     answer:
-      "All Motorola phone repairs include ReviveTech's 90-Day VIP Warranty covering touch accuracy, display performance, and craftsmanship.",
+      "All Motorola phone repairs include Sagar Tech's 90-Day VIP Warranty covering touch accuracy, display performance, and craftsmanship.",
   },
 ];
 
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/motorola-repair")({
   head: () => ({
     meta: [
       {
-        title: "Motorola Repair Near Me — Edge, Razr & Moto G Screen & Battery Fix | SellRepair",
+        title: "Motorola Repair Near Me — Edge, Razr & Moto G Screen & Battery Fix | SellRepairPhone",
       },
       {
         name: "description",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/motorola-repair")({
       },
       {
         property: "og:title",
-        content: "Motorola Repair Near Me — Edge, Razr & Moto G Screen & Battery Fix | SellRepair",
+        content: "Motorola Repair Near Me — Edge, Razr & Moto G Screen & Battery Fix | SellRepairPhone",
       },
       {
         property: "og:description",

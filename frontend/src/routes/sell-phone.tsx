@@ -37,7 +37,7 @@ const FAQS = [
       "Payment is disbursed instantly on the spot. Once our doorstep executive performs a 5-minute visual and hardware verification, the agreed cash amount is transferred immediately via UPI (Google Pay, PhonePe, Paytm) or IMPS bank transfer.",
   },
   {
-    question: "Is personal data safely removed from phones sold to ReviveTech?",
+    question: "Is personal data safely removed from phones sold to Sagar Tech?",
     answer:
       "Absolutely. For working devices, we perform military-grade NIST 800-88 cryptographic data erasure that renders prior photos, accounts, and files permanently unrecoverable. For dead devices, storage flash chips are demagnetized or shredded.",
   },
@@ -62,7 +62,7 @@ export const Route = createFileRoute("/sell-phone")({
   head: () => ({
     meta: [
       {
-        title: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | SellRepair",
+        title: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | SellRepairPhone",
       },
       {
         name: "description",
@@ -76,7 +76,7 @@ export const Route = createFileRoute("/sell-phone")({
       },
       {
         property: "og:title",
-        content: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | SellRepair",
+        content: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | SellRepairPhone",
       },
       {
         property: "og:description",
@@ -150,7 +150,7 @@ function SellPhonePage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              Turn your idle smartphones into real money within 24 hours. Whether your phone is in pristine condition, cracked, water-damaged, or completely dead, ReviveTech guarantees honest valuations and on-the-spot UPI payment.
+              Turn your idle smartphones into real money within 24 hours. Whether your phone is in pristine condition, cracked, water-damaged, or completely dead, Sagar Tech guarantees honest valuations and on-the-spot UPI payment.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-300">
@@ -267,7 +267,7 @@ function SellPhonePage() {
         <section className="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-white">
-              How ReviveTech Buyback Works
+              How Sagar Tech Buyback Works
             </h2>
             <p className="text-slate-400 text-sm mt-2">
               Three effortless steps to sell your old or damaged mobile phone without haggling.

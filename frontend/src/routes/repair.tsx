@@ -26,7 +26,7 @@ import heroPhone from "../assets/hero-phone.jpg";
 
 const FAQS = [
   {
-    question: "How fast is same-day mobile phone repair at ReviveTech?",
+    question: "How fast is same-day mobile phone repair at Sagar Tech?",
     answer:
       "Most screen replacements, battery swaps, and camera lens fixes take only 30 to 45 minutes on our certified cleanroom benches. You can book an express slot online or request free doorstep courier collection.",
   },
@@ -56,7 +56,7 @@ export const Route = createFileRoute("/repair")({
   head: () => ({
     meta: [
       {
-        title: "Phone Repair Near Me — Mobile Repair Karwana Hai | SellRepair",
+        title: "Phone Repair Near Me — Mobile Repair Karwana Hai | SellRepairPhone",
       },
       {
         name: "description",
@@ -70,7 +70,7 @@ export const Route = createFileRoute("/repair")({
       },
       {
         property: "og:title",
-        content: "Phone Repair Near Me — Mobile Repair Karwana Hai | SellRepair",
+        content: "Phone Repair Near Me — Mobile Repair Karwana Hai | SellRepairPhone",
       },
       {
         property: "og:description",
@@ -81,7 +81,7 @@ export const Route = createFileRoute("/repair")({
       { property: "og:type", content: "website" },
       { property: "og:image", content: heroPhone },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Same-Day Mobile Phone Repair | SellRepair" },
+      { name: "twitter:title", content: "Same-Day Mobile Phone Repair | SellRepairPhone" },
       {
         name: "twitter:description",
         content: "OEM screen replacement, battery fixes & motherboard micro-soldering. Free doorstep pickup.",
@@ -147,7 +147,7 @@ function RepairPage() {
             </h1>
 
             <p className="mt-4 text-sm sm:text-base text-white/70 max-w-2xl mx-auto leading-relaxed font-display">
-              Cracked screen, fast-draining battery, or dead motherboard? ReviveTech delivers precision repairs in 45 minutes using OEM-grade components, backed by a 90-day warranty and 100% free doorstep courier pickup.
+              Cracked screen, fast-draining battery, or dead motherboard? Sagar Tech delivers precision repairs in 45 minutes using OEM-grade components, backed by a 90-day warranty and 100% free doorstep courier pickup.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-display text-white/80">

@@ -151,8 +151,13 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link to="/dead-phone-buyback" className="hover:text-white transition font-semibold text-emerald-300">
-                  ⚡ Sell Dead Phone (Dead Phone Becho)
+                <Link to="/sell-dead-phone" className="hover:text-white transition font-semibold text-emerald-300">
+                  ⚡ Sell Dead Phone (Band Phone Becho)
+                </Link>
+              </li>
+              <li>
+                <Link to="/dead-phone-buyback" className="hover:text-white transition text-white/80">
+                  Dead Mobile Salvage Buyback
                 </Link>
               </li>
               <li>
@@ -180,7 +185,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link to="/mobile-repair-mumbai" className="hover:text-white transition text-accent">
+                <Link to="/mobile-repair-mumbai" className="hover:text-white transition text-accent font-semibold">
                   📍 Mobile Repair in Mumbai Hub
                 </Link>
               </li>
@@ -274,9 +279,14 @@ export function SiteFooter() {
           {/* Column 5: Company & Help */}
           <div>
             <h4 className="font-label text-xs font-bold uppercase text-white tracking-wider mb-3">
-              Company & Help
+              Guides & Help
             </h4>
             <ul className="space-y-2 text-xs text-white/70">
+              <li>
+                <Link to="/blog" className="hover:text-white transition font-semibold text-accent">
+                  📚 Repair & Buyback Guides
+                </Link>
+              </li>
               <li>
                 <Link to="/about" className="hover:text-white transition">
                   About Sagar Tech Lab
@@ -313,7 +323,7 @@ export function SiteFooter() {
 
         {/* Bottom Copyright & Legal */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/50">
-          <p>© 2026 SellRepair (sellrepair.org). All rights reserved.</p>
+          <p>© 2026 SellRepairPhone (sellrepairphone.org). All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-4">
             <Link to="/about" className="hover:text-white">
               Data Security
@@ -327,12 +337,16 @@ export function SiteFooter() {
               Doorstep Coverage Area
             </Link>
             <span>·</span>
-            <Link to="/dead-phone-repair" className="hover:text-white">
-              Band Phone Thik Karna
+            <Link to="/blog" className="hover:text-white">
+              Tech Guides
             </Link>
             <span>·</span>
-            <Link to="/dead-phone-buyback" className="hover:text-white">
-              Purana Phone Becho
+            <Link to="/sell-dead-phone" className="hover:text-white">
+              Band Phone Becho
+            </Link>
+            <span>·</span>
+            <Link to="/doorstep-mobile-repair" className="hover:text-white">
+              Mumbai Doorstep Repair
             </Link>
           </div>
         </div>

@@ -55,7 +55,7 @@ export const Route = createFileRoute("/sell-damaged-phone")({
   head: () => ({
     meta: [
       {
-        title: "Sell Damaged & Broken Phone for Cash — Toota Phone Becho | SellRepair",
+        title: "Sell Damaged & Broken Phone for Cash — Toota Phone Becho | SellRepairPhone",
       },
       {
         name: "description",
@@ -69,7 +69,7 @@ export const Route = createFileRoute("/sell-damaged-phone")({
       },
       {
         property: "og:title",
-        content: "Sell Damaged & Broken Phone for Cash | SellRepair",
+        content: "Sell Damaged & Broken Phone for Cash | SellRepairPhone",
       },
       {
         property: "og:description",

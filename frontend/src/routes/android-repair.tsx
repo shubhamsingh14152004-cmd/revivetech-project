@@ -80,7 +80,7 @@ const FAQS = [
   {
     question: "What warranty do you provide on Android repairs?",
     answer:
-      "All Android phone repairs include ReviveTech's 90-Day VIP Warranty covering touch accuracy, display clarity, and parts reliability.",
+      "All Android phone repairs include Sagar Tech's 90-Day VIP Warranty covering touch accuracy, display clarity, and parts reliability.",
   },
 ];
 
@@ -88,7 +88,7 @@ export const Route = createFileRoute("/android-repair")({
   head: () => ({
     meta: [
       {
-        title: "Android Phone Repair — OnePlus, Xiaomi, Vivo, Oppo, Realme, Pixel | SellRepair",
+        title: "Android Phone Repair — OnePlus, Xiaomi, Vivo, Oppo, Realme, Pixel | SellRepairPhone",
       },
       {
         name: "description",
@@ -102,7 +102,7 @@ export const Route = createFileRoute("/android-repair")({
       },
       {
         property: "og:title",
-        content: "Android Phone Repair — OnePlus, Xiaomi, Vivo, Oppo, Realme, Pixel | SellRepair",
+        content: "Android Phone Repair — OnePlus, Xiaomi, Vivo, Oppo, Realme, Pixel | SellRepairPhone",
       },
       {
         property: "og:description",

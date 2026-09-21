@@ -63,7 +63,7 @@ const FAQS = [
   {
     question: "What warranty do you provide on Google Pixel repairs?",
     answer:
-      "All Google Pixel repairs come backed by ReviveTech's 90-Day VIP Warranty covering touch accuracy, display quality, and replacement parts.",
+      "All Google Pixel repairs come backed by Sagar Tech's 90-Day VIP Warranty covering touch accuracy, display quality, and replacement parts.",
   },
 ];
 
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/google-pixel-repair")({
   head: () => ({
     meta: [
       {
-        title: "Google Pixel Repair Near Me — Actua OLED Screen & Camera Fix | SellRepair",
+        title: "Google Pixel Repair Near Me — Actua OLED Screen & Camera Fix | SellRepairPhone",
       },
       {
         name: "description",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/google-pixel-repair")({
       },
       {
         property: "og:title",
-        content: "Google Pixel Repair Near Me — Actua OLED Screen & Camera Fix | SellRepair",
+        content: "Google Pixel Repair Near Me — Actua OLED Screen & Camera Fix | SellRepairPhone",
       },
       {
         property: "og:description",

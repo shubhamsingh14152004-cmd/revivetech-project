@@ -57,12 +57,12 @@ const FAQS = [
   {
     question: "What should I do right after dropping my phone in water?",
     answer:
-      "1) Turn the device OFF immediately. 2) Do NOT plug it into a charger. 3) Do NOT shake the phone or blow hot air with a hairdryer (which forces water deeper into display layers). 4) Book an express emergency cleanroom slot with ReviveTech.",
+      "1) Turn the device OFF immediately. 2) Do NOT plug it into a charger. 3) Do NOT shake the phone or blow hot air with a hairdryer (which forces water deeper into display layers). 4) Book an express emergency cleanroom slot with Sagar Tech.",
   },
   {
     question: "Phone pani me gir gaya: Kya karna chahiye aur kya phone thik ho sakta hai?",
     answer:
-      "Agar phone pani me gir gaya ho: 1) Phone ko turant switch off karein. 2) Charger me bilkul mat lagayein. 3) Chawal (rice) me mat daalein kyunki rice se corrosion badhti hai. 4) ReviveTech me ultrasonic chemical bath ke liye book karein. 85%+ pani me gire phones bilkul thik ho jaate hain.",
+      "Agar phone pani me gir gaya ho: 1) Phone ko turant switch off karein. 2) Charger me bilkul mat lagayein. 3) Chawal (rice) me mat daalein kyunki rice se corrosion badhti hai. 4) Sagar Tech me ultrasonic chemical bath ke liye book karein. 85%+ pani me gire phones bilkul thik ho jaate hain.",
   },
 ];
 
@@ -70,7 +70,7 @@ export const Route = createFileRoute("/water-damage-repair")({
   head: () => ({
     meta: [
       {
-        title: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | SellRepair",
+        title: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | SellRepairPhone",
       },
       {
         name: "description",
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/water-damage-repair")({
       },
       {
         property: "og:title",
-        content: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | SellRepair",
+        content: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | SellRepairPhone",
       },
       {
         property: "og:description",

@@ -70,7 +70,7 @@ export function AdminDashboard() {
     }
 
     try {
-      const stored = localStorage.getItem("revivetech_admin_user");
+      const stored = localStorage.getItem("sagartech_admin_user");
       if (stored) setAdminUser(JSON.parse(stored));
     } catch (_) {}
   }, [navigate]);

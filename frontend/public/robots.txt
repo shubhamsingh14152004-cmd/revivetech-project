@@ -1,4 +1,4 @@
-# Production robots.txt for SellRepair (https://sellrepair.org)
+# Production robots.txt for SellRepairPhone (https://sellrepairphone.org)
 
 User-agent: Googlebot
 Allow: /
@@ -31,4 +31,4 @@ Disallow: /admin/
 Disallow: /api/
 
 # Canonical XML Sitemap for Google Search Console
-Sitemap: https://sellrepair.org/sitemap.xml
+Sitemap: https://sellrepairphone.org/sitemap.xml

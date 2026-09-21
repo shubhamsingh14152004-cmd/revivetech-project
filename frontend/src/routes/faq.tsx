@@ -21,7 +21,7 @@ import heroPhone from "../assets/hero-phone.jpg";
 const ALL_FAQS = [
   {
     category: "Phone Repairs",
-    question: "How long does a typical phone repair take at ReviveTech?",
+    question: "How long does a typical phone repair take at Sagar Tech?",
     answer:
       "Most common smartphone repairs—such as screen replacement, battery swap, charging port repair, and camera lens replacement—take between 30 and 45 minutes on our certified cleanroom benches. Motherboard micro-soldering or complex liquid damage treatments typically take 24 to 48 hours.",
   },
@@ -85,21 +85,21 @@ export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
       {
-        title: "Frequently Asked Questions — Phone Repair & Buyback | SellRepair",
+        title: "Frequently Asked Questions — Phone Repair & Buyback | SellRepairPhone",
       },
       {
         name: "description",
         content:
-          "Got questions about phone repairs, selling dead phones, doorstep pickups, data wiping, or warranties? Find answers to all ReviveTech frequently asked questions.",
+          "Got questions about phone repairs, selling dead phones, doorstep pickups, data wiping, or warranties? Find answers to all Sagar Tech frequently asked questions.",
       },
       {
         name: "keywords",
         content:
-          "ReviveTech FAQ, phone repair questions, sell dead phone questions, doorstep phone repair, mobile repair warranty, screen replacement time",
+          "Sagar Tech FAQ, phone repair questions, sell dead phone questions, doorstep phone repair, mobile repair warranty, screen replacement time",
       },
       {
         property: "og:title",
-        content: "Frequently Asked Questions — Phone Repair & Buyback | SellRepair",
+        content: "Frequently Asked Questions — Phone Repair & Buyback | SellRepairPhone",
       },
       {
         property: "og:description",

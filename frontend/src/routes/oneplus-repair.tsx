@@ -80,7 +80,7 @@ const FAQS = [
   {
     question: "What warranty do you provide on OnePlus repairs?",
     answer:
-      "All OnePlus phone repairs include ReviveTech's 90-Day VIP Warranty covering touch accuracy, display performance, and craftsmanship.",
+      "All OnePlus phone repairs include Sagar Tech's 90-Day VIP Warranty covering touch accuracy, display performance, and craftsmanship.",
   },
 ];
 
@@ -88,7 +88,7 @@ export const Route = createFileRoute("/oneplus-repair")({
   head: () => ({
     meta: [
       {
-        title: "OnePlus Repair Near Me — Screen, Green Line & Battery Fix | SellRepair",
+        title: "OnePlus Repair Near Me — Screen, Green Line & Battery Fix | SellRepairPhone",
       },
       {
         name: "description",
@@ -102,7 +102,7 @@ export const Route = createFileRoute("/oneplus-repair")({
       },
       {
         property: "og:title",
-        content: "OnePlus Repair Near Me — Screen, Green Line & Battery Fix | SellRepair",
+        content: "OnePlus Repair Near Me — Screen, Green Line & Battery Fix | SellRepairPhone",
       },
       {
         property: "og:description",

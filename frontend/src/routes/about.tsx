@@ -25,21 +25,21 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       {
-        title: "About ReviveTech — Certified Cleanroom Phone Repair & Buyback",
+        title: "About Sagar Tech — Certified Cleanroom Phone Repair & Buyback",
       },
       {
         name: "description",
         content:
-          "Learn about ReviveTech: India's trusted smartphone repair, buyback, and electronics circular economy platform. Cleanroom repair benches, NIST data sanitization & 90-day warranty.",
+          "Learn about Sagar Tech: India's trusted smartphone repair, buyback, and electronics circular economy platform. Cleanroom repair benches, NIST data sanitization & 90-day warranty.",
       },
       {
         name: "keywords",
         content:
-          "about ReviveTech, phone repair company, cleanroom mobile repair, trustworthy phone repair shop, certified smartphone technicians",
+          "about Sagar Tech, phone repair company, cleanroom mobile repair, trustworthy phone repair shop, certified smartphone technicians",
       },
       {
         property: "og:title",
-        content: "About ReviveTech — Certified Cleanroom Phone Repair & Buyback",
+        content: "About Sagar Tech — Certified Cleanroom Phone Repair & Buyback",
       },
       {
         property: "og:description",
@@ -103,7 +103,7 @@ function AboutPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-              ReviveTech was founded with a single mission: to eliminate throwaway culture in consumer electronics by pairing precision cleanroom micro-soldering with transparent, fair buybacks for old and dead mobile devices.
+              Sagar Tech was founded with a single mission: to eliminate throwaway culture in consumer electronics by pairing precision cleanroom micro-soldering with transparent, fair buybacks for old and dead mobile devices.
             </p>
           </div>
         </section>
@@ -137,7 +137,7 @@ function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Zero-Landfill Philosophy</h3>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                Millions of smartphones rot in drawers or poison soil in landfills. When you sell an unrepairable dead phone to ReviveTech, functional ICs are reclaimed, and non-salvageable battery chemicals and motherboards are routed to licensed smelters.
+                Millions of smartphones rot in drawers or poison soil in landfills. When you sell an unrepairable dead phone to Sagar Tech, functional ICs are reclaimed, and non-salvageable battery chemicals and motherboards are routed to licensed smelters.
               </p>
             </div>
           </div>
@@ -151,7 +151,7 @@ function AboutPage() {
                 Our 100-Point Quality Commitment
               </h2>
               <p className="text-slate-400 text-sm mt-2">
-                Every smartphone repaired or refurbished by ReviveTech undergoes rigorous algorithmic and manual stress tests.
+                Every smartphone repaired or refurbished by Sagar Tech undergoes rigorous algorithmic and manual stress tests.
               </p>
             </div>
 

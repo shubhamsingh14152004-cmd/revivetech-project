@@ -68,7 +68,7 @@ export const Route = createFileRoute("/mobile-repair-mumbai")({
   head: () => ({
     meta: [
       {
-        title: "Mobile Phone Repair in Mumbai — Same-Day Doorstep Service | SellRepair",
+        title: "Mobile Phone Repair in Mumbai — Same-Day Doorstep Service | SellRepairPhone",
       },
       {
         name: "description",
@@ -82,7 +82,7 @@ export const Route = createFileRoute("/mobile-repair-mumbai")({
       },
       {
         property: "og:title",
-        content: "Mobile Phone Repair in Mumbai — Same-Day Doorstep Service | SellRepair",
+        content: "Mobile Phone Repair in Mumbai — Same-Day Doorstep Service | SellRepairPhone",
       },
       {
         property: "og:description",

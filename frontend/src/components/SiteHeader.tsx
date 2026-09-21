@@ -121,7 +121,7 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
             </Link>
 
             <Link
-              to="/dead-phone-buyback"
+              to="/sell-dead-phone"
               className="transition hover:text-accent flex items-center gap-1 py-1 text-amber-300"
               activeProps={{ className: "text-accent font-bold" }}
             >
@@ -314,6 +314,14 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
             </Link>
 
             <Link
+              to="/blog"
+              className="transition hover:text-accent py-1"
+              activeProps={{ className: "text-accent font-bold" }}
+            >
+              Guides
+            </Link>
+
+            <Link
               to="/contact"
               className="transition hover:text-accent py-1"
               activeProps={{ className: "text-accent font-bold" }}
@@ -392,7 +400,7 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
               <span>Dead Phone Motherboard Repair (Band Phone)</span>
             </Link>
             <Link
-              to="/sell-phone"
+              to="/sell-old-phone"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-white/10 text-white/90"
             >
@@ -400,12 +408,20 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
               <span>Sell Old Phone (Purana Phone Becho)</span>
             </Link>
             <Link
-              to="/dead-phone-buyback"
+              to="/sell-dead-phone"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-white/10 text-amber-300 font-semibold"
             >
               <Zap className="h-4 w-4 text-amber-400" />
               <span>Sell Dead Phone for Cash (Band Phone Becho)</span>
+            </Link>
+            <Link
+              to="/doorstep-mobile-repair"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-white/10 text-emerald-300 font-semibold"
+            >
+              <Smartphone className="h-4 w-4 text-emerald-400" />
+              <span>45-Min Doorstep Mobile Repair</span>
             </Link>
             <Link
               to="/buyback"
@@ -485,6 +501,13 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
                 className="text-white/70 hover:text-white"
               >
                 About Us
+              </Link>
+              <Link
+                to="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-white/70 hover:text-white"
+              >
+                Guides
               </Link>
               <Link
                 to="/faq"

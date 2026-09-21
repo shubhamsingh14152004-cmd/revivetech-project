@@ -105,7 +105,7 @@ const FAQS = [
   {
     question: "What warranty comes with iPhone repairs?",
     answer:
-      "Every iPhone repair comes backed by ReviveTech's 90-Day VIP Warranty covering touch responsiveness, display flickering, and component integrity.",
+      "Every iPhone repair comes backed by Sagar Tech's 90-Day VIP Warranty covering touch responsiveness, display flickering, and component integrity.",
   },
 ];
 
@@ -113,7 +113,7 @@ export const Route = createFileRoute("/iphone-repair")({
   head: () => ({
     meta: [
       {
-        title: "iPhone Repair Near Me — Apple Screen & Battery Replacement | SellRepair",
+        title: "iPhone Repair Near Me — Apple Screen & Battery Replacement | SellRepairPhone",
       },
       {
         name: "description",
@@ -127,7 +127,7 @@ export const Route = createFileRoute("/iphone-repair")({
       },
       {
         property: "og:title",
-        content: "iPhone Repair Near Me — Apple Screen & Battery Replacement | SellRepair",
+        content: "iPhone Repair Near Me — Apple Screen & Battery Replacement | SellRepairPhone",
       },
       {
         property: "og:description",

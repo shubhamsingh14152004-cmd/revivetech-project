@@ -63,7 +63,7 @@ const FAQS = [
   {
     question: "What warranty do you provide on Realme repairs?",
     answer:
-      "All Realme phone repairs include ReviveTech's 90-Day VIP Warranty covering touch accuracy, display performance, and craftsmanship.",
+      "All Realme phone repairs include Sagar Tech's 90-Day VIP Warranty covering touch accuracy, display performance, and craftsmanship.",
   },
 ];
 
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/realme-repair")({
   head: () => ({
     meta: [
       {
-        title: "Realme Repair Near Me — GT, Narzo & Number Series Screen & Battery Fix | SellRepair",
+        title: "Realme Repair Near Me — GT, Narzo & Number Series Screen & Battery Fix | SellRepairPhone",
       },
       {
         name: "description",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/realme-repair")({
       },
       {
         property: "og:title",
-        content: "Realme Repair Near Me — GT, Narzo & Number Series Screen & Battery Fix | SellRepair",
+        content: "Realme Repair Near Me — GT, Narzo & Number Series Screen & Battery Fix | SellRepairPhone",
       },
       {
         property: "og:description",

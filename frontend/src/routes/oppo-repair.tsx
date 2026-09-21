@@ -63,7 +63,7 @@ const FAQS = [
   {
     question: "What warranty do you provide on Oppo phone repairs?",
     answer:
-      "All Oppo repairs include ReviveTech's 90-Day VIP Warranty covering touch accuracy, display performance, and craftsmanship.",
+      "All Oppo repairs include Sagar Tech's 90-Day VIP Warranty covering touch accuracy, display performance, and craftsmanship.",
   },
 ];
 
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/oppo-repair")({
   head: () => ({
     meta: [
       {
-        title: "Oppo Repair Near Me — Reno & Find Series Screen & Battery Fix | SellRepair",
+        title: "Oppo Repair Near Me — Reno & Find Series Screen & Battery Fix | SellRepairPhone",
       },
       {
         name: "description",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/oppo-repair")({
       },
       {
         property: "og:title",
-        content: "Oppo Repair Near Me — Reno & Find Series Screen & Battery Fix | SellRepair",
+        content: "Oppo Repair Near Me — Reno & Find Series Screen & Battery Fix | SellRepairPhone",
       },
       {
         property: "og:description",

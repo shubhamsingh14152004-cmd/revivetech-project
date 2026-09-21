@@ -41,12 +41,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Sell Old Mobile Phones & Phone Repair in Mumbai | SellRepair",
+        title: "Sell Old Mobile Phones & Phone Repair in Mumbai | SellRepairPhone",
       },
       {
         name: "description",
         content:
-          "Sell your old, used, damaged or dead mobile phone for top cash and book 45-minute doorstep phone repairs in Mumbai with SellRepair. Free doorstep pickup & 90-day warranty.",
+          "Sell your old, used, damaged or dead mobile phone for top cash and book 45-minute doorstep phone repairs in Mumbai with SellRepairPhone. Free doorstep pickup & 90-day warranty.",
       },
       {
         name: "keywords",
@@ -55,12 +55,12 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Sell Old Mobile Phones & Phone Repair in Mumbai | SellRepair",
+        content: "Sell Old Mobile Phones & Phone Repair in Mumbai | SellRepairPhone",
       },
       {
         property: "og:description",
         content:
-          "Sell your old, used, damaged or dead mobile phone and book fast mobile repair services in Mumbai with SellRepair. Instant UPI cash & free doorstep pickup.",
+          "Sell your old, used, damaged or dead mobile phone and book fast mobile repair services in Mumbai with SellRepairPhone. Instant UPI cash & free doorstep pickup.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
@@ -533,7 +533,7 @@ function Index() {
               Q: Purana phone ya dead phone bechna hai — kaise beche?
             </h3>
             <p className="text-white/70 leading-relaxed">
-              Agar aapko purana ya band phone bechna hai, ReviveTech par 1 minute me online valuation check kar sakte hain. Free doorstep pickup book karein aur pickup ke samay instant UPI cash payment paayein.
+              Agar aapko purana ya band phone bechna hai, Sagar Tech par 1 minute me online valuation check kar sakte hain. Free doorstep pickup book karein aur pickup ke samay instant UPI cash payment paayein.
             </p>
             <div className="mt-3">
               <a href="/dead-phone-buyback" className="text-purple-400 font-semibold hover:underline inline-flex items-center gap-1 text-xs">
@@ -682,7 +682,7 @@ function Index() {
               </a>
 
               <a
-                href="https://wa.me/918591770877?text=Hi%20ReviveTech%2C%20I%20want%20to%20claim%20the%20Free%20Doorstep%20repair%20and%20Free%20Glass%20Protector%20%2B%20Cover%20offer."
+                href="https://wa.me/918591770877?text=Hi%20Sagar Tech%2C%20I%20want%20to%20claim%20the%20Free%20Doorstep%20repair%20and%20Free%20Glass%20Protector%20%2B%20Cover%20offer."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-between gap-2 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white pl-4 pr-1.5 py-1.5 shadow-md border border-white/20 transition hover:scale-102"

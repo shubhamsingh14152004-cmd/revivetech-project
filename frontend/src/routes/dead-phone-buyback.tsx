@@ -57,7 +57,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
   head: () => ({
     meta: [
       {
-        title: "Sell Dead Phone for Cash — Dead Mobile Becho | SellRepair",
+        title: "Sell Dead Phone for Cash — Dead Mobile Becho | SellRepairPhone",
       },
       {
         name: "description",
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
       },
       {
         property: "og:title",
-        content: "Sell Dead Phone for Cash — Dead Mobile Becho | SellRepair",
+        content: "Sell Dead Phone for Cash — Dead Mobile Becho | SellRepairPhone",
       },
       {
         property: "og:description",
@@ -186,7 +186,7 @@ function DeadPhoneBuybackPage() {
           </div>
         </section>
 
-        {/* Why ReviveTech Pays for Dead Mobiles */}
+        {/* Why Sagar Tech Pays for Dead Mobiles */}
         <section className="py-14 bg-[#0e0d15]/50 border-y border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">

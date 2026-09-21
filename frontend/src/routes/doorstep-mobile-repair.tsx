@@ -61,7 +61,7 @@ export const Route = createFileRoute("/doorstep-mobile-repair")({
   head: () => ({
     meta: [
       {
-        title: "Doorstep Mobile Repair Near Me — 45-Min Service at Home | SellRepair",
+        title: "Doorstep Mobile Repair Near Me — 45-Min Service at Home | SellRepairPhone",
       },
       {
         name: "description",
@@ -75,7 +75,7 @@ export const Route = createFileRoute("/doorstep-mobile-repair")({
       },
       {
         property: "og:title",
-        content: "Doorstep Mobile Repair Near Me — 45-Min Home Service | SellRepair",
+        content: "Doorstep Mobile Repair Near Me — 45-Min Home Service | SellRepairPhone",
       },
       {
         property: "og:description",

@@ -95,7 +95,7 @@ const FAQS = [
   {
     question: "Is there a warranty on Samsung repairs?",
     answer:
-      "Every Samsung Galaxy repair comes with ReviveTech's comprehensive 90-Day VIP Warranty covering touch functionality and display performance against defects.",
+      "Every Samsung Galaxy repair comes with Sagar Tech's comprehensive 90-Day VIP Warranty covering touch functionality and display performance against defects.",
   },
 ];
 
@@ -103,7 +103,7 @@ export const Route = createFileRoute("/samsung-repair")({
   head: () => ({
     meta: [
       {
-        title: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | SellRepair",
+        title: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | SellRepairPhone",
       },
       {
         name: "description",
@@ -117,7 +117,7 @@ export const Route = createFileRoute("/samsung-repair")({
       },
       {
         property: "og:title",
-        content: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | SellRepair",
+        content: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | SellRepairPhone",
       },
       {
         property: "og:description",

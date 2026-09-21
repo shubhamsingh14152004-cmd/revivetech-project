@@ -80,7 +80,7 @@ const FAQS = [
   {
     question: "What warranty do you provide on Xiaomi repairs?",
     answer:
-      "Every Xiaomi repair includes ReviveTech's 90-Day VIP Warranty covering touch accuracy, display performance, and parts integrity.",
+      "Every Xiaomi repair includes Sagar Tech's 90-Day VIP Warranty covering touch accuracy, display performance, and parts integrity.",
   },
 ];
 
@@ -88,7 +88,7 @@ export const Route = createFileRoute("/xiaomi-repair")({
   head: () => ({
     meta: [
       {
-        title: "Xiaomi, Redmi & POCO Repair Near Me — CPU Reball & Screen Fix | SellRepair",
+        title: "Xiaomi, Redmi & POCO Repair Near Me — CPU Reball & Screen Fix | SellRepairPhone",
       },
       {
         name: "description",
@@ -102,7 +102,7 @@ export const Route = createFileRoute("/xiaomi-repair")({
       },
       {
         property: "og:title",
-        content: "Xiaomi, Redmi & POCO Repair Near Me — CPU Reball & Screen Fix | SellRepair",
+        content: "Xiaomi, Redmi & POCO Repair Near Me — CPU Reball & Screen Fix | SellRepairPhone",
       },
       {
         property: "og:description",

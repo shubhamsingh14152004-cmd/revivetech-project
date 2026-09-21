@@ -18,8 +18,8 @@ export function SeoJsonLd({ schema }: SeoJsonLdProps) {
   );
 }
 
-export const SITE_URL = "https://sellrepair.org";
-export const BUSINESS_NAME = "SellRepair";
+export const SITE_URL = "https://sellrepairphone.org";
+export const BUSINESS_NAME = "SellRepairPhone";
 export const BUSINESS_PHONE = "+91 8591770877";
 export const BUSINESS_PHONE_RAW = "8591770877";
 export const BUSINESS_EMAIL = "supportsellphone@gmail.com";
@@ -34,7 +34,7 @@ export function getOrganizationSchema() {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: BUSINESS_NAME,
-    alternateName: "Sagar Tech — SellRepair",
+    alternateName: "Sagar Tech — SellRepairPhone",
     url: SITE_URL,
     logo: `${SITE_URL}/favicon.svg`,
     telephone: BUSINESS_PHONE,
@@ -60,7 +60,7 @@ export function getLocalBusinessSchema() {
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#business`,
     name: BUSINESS_NAME,
-    alternateName: "Sagar Tech — SellRepair",
+    alternateName: "Sagar Tech — SellRepairPhone",
     url: SITE_URL,
     logo: `${SITE_URL}/favicon.svg`,
     image: `${SITE_URL}/hero-phone.jpg`,

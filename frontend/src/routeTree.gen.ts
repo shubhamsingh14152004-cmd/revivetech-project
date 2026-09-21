@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AndroidRepairRouteImport } from './routes/android-repair'
 import { Route as BatteryReplacementRouteImport } from './routes/battery-replacement'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BuybackRouteImport } from './routes/buyback'
 import { Route as ChargingPortRepairRouteImport } from './routes/charging-port-repair'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -31,6 +32,7 @@ import { Route as RepairRouteImport } from './routes/repair'
 import { Route as SamsungRepairRouteImport } from './routes/samsung-repair'
 import { Route as ScreenRepairRouteImport } from './routes/screen-repair'
 import { Route as SellDamagedPhoneRouteImport } from './routes/sell-damaged-phone'
+import { Route as SellDeadPhoneRouteImport } from './routes/sell-dead-phone'
 import { Route as SellOldPhoneRouteImport } from './routes/sell-old-phone'
 import { Route as SellPhoneRouteImport } from './routes/sell-phone'
 import { Route as VivoRepairRouteImport } from './routes/vivo-repair'
@@ -57,6 +59,11 @@ const AndroidRepairRoute = AndroidRepairRouteImport.update({
 const BatteryReplacementRoute = BatteryReplacementRouteImport.update({
   id: '/battery-replacement',
   path: '/battery-replacement',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BuybackRoute = BuybackRouteImport.update({
@@ -149,6 +156,11 @@ const SellDamagedPhoneRoute = SellDamagedPhoneRouteImport.update({
   path: '/sell-damaged-phone',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SellDeadPhoneRoute = SellDeadPhoneRouteImport.update({
+  id: '/sell-dead-phone',
+  path: '/sell-dead-phone',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SellOldPhoneRoute = SellOldPhoneRouteImport.update({
   id: '/sell-old-phone',
   path: '/sell-old-phone',
@@ -190,6 +202,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/android-repair': typeof AndroidRepairRoute
   '/battery-replacement': typeof BatteryReplacementRoute
+  '/blog': typeof BlogRoute
   '/buyback': typeof BuybackRoute
   '/charging-port-repair': typeof ChargingPortRepairRoute
   '/contact': typeof ContactRoute
@@ -208,6 +221,7 @@ export interface FileRoutesByFullPath {
   '/samsung-repair': typeof SamsungRepairRoute
   '/screen-repair': typeof ScreenRepairRoute
   '/sell-damaged-phone': typeof SellDamagedPhoneRoute
+  '/sell-dead-phone': typeof SellDeadPhoneRoute
   '/sell-old-phone': typeof SellOldPhoneRoute
   '/sell-phone': typeof SellPhoneRoute
   '/vivo-repair': typeof VivoRepairRoute
@@ -221,6 +235,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/android-repair': typeof AndroidRepairRoute
   '/battery-replacement': typeof BatteryReplacementRoute
+  '/blog': typeof BlogRoute
   '/buyback': typeof BuybackRoute
   '/charging-port-repair': typeof ChargingPortRepairRoute
   '/contact': typeof ContactRoute
@@ -239,6 +254,7 @@ export interface FileRoutesByTo {
   '/samsung-repair': typeof SamsungRepairRoute
   '/screen-repair': typeof ScreenRepairRoute
   '/sell-damaged-phone': typeof SellDamagedPhoneRoute
+  '/sell-dead-phone': typeof SellDeadPhoneRoute
   '/sell-old-phone': typeof SellOldPhoneRoute
   '/sell-phone': typeof SellPhoneRoute
   '/vivo-repair': typeof VivoRepairRoute
@@ -253,6 +269,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/android-repair': typeof AndroidRepairRoute
   '/battery-replacement': typeof BatteryReplacementRoute
+  '/blog': typeof BlogRoute
   '/buyback': typeof BuybackRoute
   '/charging-port-repair': typeof ChargingPortRepairRoute
   '/contact': typeof ContactRoute
@@ -271,6 +288,7 @@ export interface FileRoutesById {
   '/samsung-repair': typeof SamsungRepairRoute
   '/screen-repair': typeof ScreenRepairRoute
   '/sell-damaged-phone': typeof SellDamagedPhoneRoute
+  '/sell-dead-phone': typeof SellDeadPhoneRoute
   '/sell-old-phone': typeof SellOldPhoneRoute
   '/sell-phone': typeof SellPhoneRoute
   '/vivo-repair': typeof VivoRepairRoute
@@ -286,6 +304,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/android-repair'
     | '/battery-replacement'
+    | '/blog'
     | '/buyback'
     | '/charging-port-repair'
     | '/contact'
@@ -304,6 +323,7 @@ export interface FileRouteTypes {
     | '/samsung-repair'
     | '/screen-repair'
     | '/sell-damaged-phone'
+    | '/sell-dead-phone'
     | '/sell-old-phone'
     | '/sell-phone'
     | '/vivo-repair'
@@ -317,6 +337,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/android-repair'
     | '/battery-replacement'
+    | '/blog'
     | '/buyback'
     | '/charging-port-repair'
     | '/contact'
@@ -335,6 +356,7 @@ export interface FileRouteTypes {
     | '/samsung-repair'
     | '/screen-repair'
     | '/sell-damaged-phone'
+    | '/sell-dead-phone'
     | '/sell-old-phone'
     | '/sell-phone'
     | '/vivo-repair'
@@ -348,6 +370,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/android-repair'
     | '/battery-replacement'
+    | '/blog'
     | '/buyback'
     | '/charging-port-repair'
     | '/contact'
@@ -366,6 +389,7 @@ export interface FileRouteTypes {
     | '/samsung-repair'
     | '/screen-repair'
     | '/sell-damaged-phone'
+    | '/sell-dead-phone'
     | '/sell-old-phone'
     | '/sell-phone'
     | '/vivo-repair'
@@ -380,6 +404,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AndroidRepairRoute: typeof AndroidRepairRoute
   BatteryReplacementRoute: typeof BatteryReplacementRoute
+  BlogRoute: typeof BlogRoute
   BuybackRoute: typeof BuybackRoute
   ChargingPortRepairRoute: typeof ChargingPortRepairRoute
   ContactRoute: typeof ContactRoute
@@ -398,6 +423,7 @@ export interface RootRouteChildren {
   SamsungRepairRoute: typeof SamsungRepairRoute
   ScreenRepairRoute: typeof ScreenRepairRoute
   SellDamagedPhoneRoute: typeof SellDamagedPhoneRoute
+  SellDeadPhoneRoute: typeof SellDeadPhoneRoute
   SellOldPhoneRoute: typeof SellOldPhoneRoute
   SellPhoneRoute: typeof SellPhoneRoute
   VivoRepairRoute: typeof VivoRepairRoute
@@ -435,6 +461,13 @@ declare module '@tanstack/react-router' {
       path: '/battery-replacement'
       fullPath: '/battery-replacement'
       preLoaderRoute: typeof BatteryReplacementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/buyback': {
@@ -563,6 +596,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SellDamagedPhoneRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sell-dead-phone': {
+      id: '/sell-dead-phone'
+      path: '/sell-dead-phone'
+      fullPath: '/sell-dead-phone'
+      preLoaderRoute: typeof SellDeadPhoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sell-old-phone': {
       id: '/sell-old-phone'
       path: '/sell-old-phone'
@@ -620,6 +660,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AndroidRepairRoute: AndroidRepairRoute,
   BatteryReplacementRoute: BatteryReplacementRoute,
+  BlogRoute: BlogRoute,
   BuybackRoute: BuybackRoute,
   ChargingPortRepairRoute: ChargingPortRepairRoute,
   ContactRoute: ContactRoute,
@@ -638,6 +679,7 @@ const rootRouteChildren: RootRouteChildren = {
   SamsungRepairRoute: SamsungRepairRoute,
   ScreenRepairRoute: ScreenRepairRoute,
   SellDamagedPhoneRoute: SellDamagedPhoneRoute,
+  SellDeadPhoneRoute: SellDeadPhoneRoute,
   SellOldPhoneRoute: SellOldPhoneRoute,
   SellPhoneRoute: SellPhoneRoute,
   VivoRepairRoute: VivoRepairRoute,
