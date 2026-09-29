@@ -129,13 +129,13 @@ function MobileRepairMumbaiPage() {
     }
     setIsSubmitting(true);
     try {
-      await api.createBuybackRequest({
+      await api.submitRepairRequest({
         customerName: name,
         phoneNumber: phone,
-        deviceBrand: "Mumbai Doorstep",
-        deviceModel: area,
-        deviceCondition: issue,
-        estimatedPayout: 0,
+        phoneBrand: "Mumbai Doorstep",
+        phoneModel: area || "Mumbai",
+        serviceType: "Doorstep Repair Mumbai",
+        problemDescription: issue,
       });
       toast.success("Mumbai Service Booked!", {
         description: `Our technician for ${area} will call you within 15 minutes to confirm timing.`,

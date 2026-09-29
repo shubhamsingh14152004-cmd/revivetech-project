@@ -12,7 +12,7 @@ export function SeoJsonLd({ schema }: SeoJsonLdProps) {
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(schema, null, process.env.NODE_ENV === "development" ? 2 : 0),
+        __html: JSON.stringify(schema, null, process.env["NODE_ENV"] === "development" ? 2 : 0),
       }}
     />
   );
@@ -179,41 +179,73 @@ export function getWebSiteSchema() {
 /**
  * BreadcrumbList schema generator
  */
-export function getBreadcrumbSchema(items: { name: string; path: string }[]) {
+export interface BreadcrumbItem {
+  name: string;
+  path?: string;
+  url?: string;
+  item?: string;
+}
+
+export function getBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.name,
-      item: item.path.startsWith("http") ? item.path : `${SITE_URL}${item.path}`,
-    })),
+    itemListElement: items.map((crumb, index) => {
+      const rawTarget = crumb.path || crumb.url || crumb.item || "/";
+      const targetUrl = rawTarget.startsWith("http")
+        ? rawTarget
+        : `${SITE_URL}${rawTarget.startsWith("/") ? "" : "/"}${rawTarget}`;
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name: crumb.name,
+        item: targetUrl,
+      };
+    }),
   };
 }
 
 /**
  * Service schema generator
  */
-export function getServiceSchema(service: {
+export interface ServiceSchemaInput {
   name: string;
   description: string;
-  url: string;
-  category: string;
-}) {
+  url?: string;
+  category?: string;
+  serviceType?: string;
+}
+
+export function getServiceSchema(
+  service: ServiceSchemaInput | string,
+  argDescription?: string,
+  argCategory?: string,
+  argUrl?: string
+) {
+  const isObj = typeof service === "object" && service !== null;
+  const name = isObj ? service.name : service;
+  const description = isObj ? service.description : argDescription || "";
+  const category = isObj
+    ? service.category || service.serviceType || "Mobile Phone Repair & Buyback"
+    : argCategory || "Mobile Phone Repair & Buyback";
+  const rawUrl = isObj ? service.url || "" : argUrl || "";
+  const fullUrl = rawUrl.startsWith("http")
+    ? rawUrl
+    : `${SITE_URL}${rawUrl.startsWith("/") ? "" : "/"}${rawUrl}`;
+
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: service.name,
-    description: service.description,
-    category: service.category,
+    name,
+    description,
+    category,
     provider: {
       "@type": "LocalBusiness",
       name: BUSINESS_NAME,
       url: SITE_URL,
       telephone: BUSINESS_PHONE,
     },
-    url: `${SITE_URL}${service.url}`,
+    url: fullUrl,
     areaServed: {
       "@type": "Country",
       name: "India",

@@ -92,15 +92,17 @@ export const Route = createFileRoute("/sell-dead-phone")({
 });
 
 function SellDeadPhonePage() {
-  const serviceSchema = getServiceSchema(
-    "Sell Dead Mobile Phone & Component Buyback",
-    "Instant valuation and cash payout service for completely dead, shorted, or water-damaged smartphones that do not power on. Doorstep pickup in Mumbai and all-India coverage.",
-    "https://schema.org/RecycleAction"
-  );
+  const serviceSchema = getServiceSchema({
+    name: "Sell Dead Mobile Phone & Component Buyback",
+    description:
+      "Instant valuation and cash payout service for completely dead, shorted, or water-damaged smartphones that do not power on. Doorstep pickup in Mumbai and all-India coverage.",
+    category: "https://schema.org/RecycleAction",
+    url: "/sell-dead-phone",
+  });
 
   const breadcrumbs = getBreadcrumbSchema([
-    { name: "Home", item: SITE_URL },
-    { name: "Sell Dead Phone", item: `${SITE_URL}/sell-dead-phone` },
+    { name: "Home", path: "/" },
+    { name: "Sell Dead Phone", path: "/sell-dead-phone" },
   ]);
 
   const faqSchema = getFaqSchema(DEAD_PHONE_FAQS);
