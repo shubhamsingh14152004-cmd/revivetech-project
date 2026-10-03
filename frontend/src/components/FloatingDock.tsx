@@ -102,9 +102,9 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
         <a
           href="tel:8591770877"
           title="Call Us: 8591770877"
-          className="group flex items-center justify-between gap-3 min-w-[140px] sm:min-w-[155px] rounded-full bg-[#489535] hover:bg-[#3d832c] text-white pl-5 pr-1.5 py-1.5 shadow-[0_8px_25px_rgba(72,149,53,0.5)] border border-white/20 transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
+          className="group flex items-center justify-between gap-3 min-w-[140px] sm:min-w-[155px] rounded-full bg-[#007F5F] hover:bg-[#005B46] text-white pl-5 pr-1.5 py-1.5 shadow-md border border-white/20 transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
         >
-          <span className="font-display text-sm font-bold tracking-tight text-white drop-shadow-sm">
+          <span className="font-display text-sm font-bold tracking-tight text-white drop-shadow-xs">
             Call Us
           </span>
           <span className="grid h-8 w-8 place-items-center rounded-full bg-white/20 transition-transform duration-200 group-hover:scale-110">
@@ -118,9 +118,9 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
           target="_blank"
           rel="noopener noreferrer"
           title="WhatsApp Us: 8591770877"
-          className="group flex items-center justify-between gap-3 min-w-[140px] sm:min-w-[155px] rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white pl-5 pr-1.5 py-1.5 shadow-[0_8px_25px_rgba(37,211,102,0.5)] border border-white/20 transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
+          className="group flex items-center justify-between gap-3 min-w-[140px] sm:min-w-[155px] rounded-full bg-[#16803D] hover:bg-[#146c33] text-white pl-5 pr-1.5 py-1.5 shadow-md border border-white/20 transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
         >
-          <span className="font-display text-sm font-bold tracking-tight text-white drop-shadow-sm">
+          <span className="font-display text-sm font-bold tracking-tight text-white drop-shadow-xs">
             WhatsApp Us
           </span>
           <span className="grid h-8 w-8 place-items-center rounded-full bg-white/20 transition-transform duration-200 group-hover:scale-110">
@@ -130,13 +130,13 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
       </div>
 
       {/* Floating Bottom Navigation Pill */}
-      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex items-center gap-1.5 rounded-full bg-ink/90 p-1.5 backdrop-blur-xl border border-white/20 shadow-[0_10px_35px_rgba(0,0,0,0.6)] font-label text-xs">
+      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex items-center gap-1.5 rounded-full bg-white/95 p-1.5 backdrop-blur-md border border-[#E5E7EB] shadow-xl font-label text-xs">
         <button
           type="button"
           onClick={() => scrollToSection("sell-calculator")}
-          className="flex items-center gap-1.5 rounded-full px-3 py-2 text-white/80 hover:bg-white/15 hover:text-white transition cursor-pointer"
+          className="flex items-center gap-1.5 rounded-full px-3 py-2 text-[#102A26] hover:bg-[#DDF5EA] hover:text-[#005B46] transition cursor-pointer font-medium"
         >
-          <IndianRupee className="h-3.5 w-3.5 text-gold" />
+          <IndianRupee className="h-3.5 w-3.5 text-[#007F5F]" />
           <span className="hidden sm:inline">Sell Dead Phone</span>
         </button>
 
@@ -149,30 +149,30 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
               scrollToSection("quote");
             }
           }}
-          className="flex items-center gap-1.5 rounded-full px-3 py-2 text-white/80 hover:bg-white/15 hover:text-white transition cursor-pointer"
+          className="flex items-center gap-1.5 rounded-full px-3 py-2 text-[#102A26] hover:bg-[#DDF5EA] hover:text-[#005B46] transition cursor-pointer font-medium"
         >
-          <Wrench className="h-3.5 w-3.5 text-accent" />
+          <Wrench className="h-3.5 w-3.5 text-[#007F5F]" />
           <span className="hidden sm:inline">Book Repair</span>
         </button>
 
         <button
           type="button"
           onClick={() => scrollToSection("diagnostic-triage")}
-          className="flex items-center gap-1.5 rounded-full px-3 py-2 text-white/80 hover:bg-white/15 hover:text-white transition cursor-pointer"
+          className="flex items-center gap-1.5 rounded-full px-3 py-2 text-[#102A26] hover:bg-[#DDF5EA] hover:text-[#005B46] transition cursor-pointer font-medium"
         >
-          <Zap className="h-3.5 w-3.5 text-emerald-400" />
+          <Zap className="h-3.5 w-3.5 text-[#43C59E]" />
           <span className="hidden sm:inline">AI Triage</span>
         </button>
 
-        <div className="h-4 w-[1px] bg-white/20 mx-1 hidden sm:block" />
+        <div className="h-4 w-[1px] bg-[#E5E7EB] mx-1 hidden sm:block" />
 
         {/* AI Assistant Chat Trigger */}
         <button
           type="button"
           onClick={() => setIsChatOpen(!isChatOpen)}
-          className="flex items-center gap-1.5 rounded-full bg-brand px-3.5 py-2 text-white font-bold hover:brightness-110 shadow-md shadow-brand/30 transition cursor-pointer"
+          className="flex items-center gap-1.5 rounded-full bg-[#007F5F] hover:bg-[#005B46] px-3.5 py-2 text-white font-bold shadow-sm transition cursor-pointer"
         >
-          <MessageSquare className="h-3.5 w-3.5" />
+          <MessageSquare className="h-3.5 w-3.5 text-white" />
           <span>Ask AI</span>
         </button>
       </div>

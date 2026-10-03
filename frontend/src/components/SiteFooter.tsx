@@ -23,7 +23,7 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="w-full bg-[#0a0910] border-t border-white/10 text-xs text-white/70 font-display pt-12 pb-14 mt-20">
+    <footer className="w-full bg-[#005B46] border-t border-[#43C59E]/30 text-xs text-[#DDF5EA]/90 font-display pt-12 pb-14 mt-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top Trust Badges */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-10 border-b border-white/10 text-xs">

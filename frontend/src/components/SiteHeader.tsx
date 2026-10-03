@@ -33,16 +33,16 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-[#0e0d15]/95 border-b border-white/10 shadow-lg">
+    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/95 border-b border-[#E5E7EB] shadow-sm">
       {/* Top Ticker Bar */}
-      <div className="w-full bg-black/50 border-b border-white/10 px-4 py-1.5 text-[11px] font-label">
+      <div className="w-full bg-[#DDF5EA] border-b border-[#E5E7EB] px-4 py-1.5 text-[11px] font-label">
         <div className="mx-auto max-w-6xl flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-white/90">
-            <span className="h-2 w-2 rounded-full bg-emerald-400 live-pulse" />
-            <span className="text-emerald-400 font-bold uppercase tracking-wider hidden sm:inline">
+          <div className="flex items-center gap-2 text-[#005B46]">
+            <span className="h-2 w-2 rounded-full bg-[#007F5F] live-pulse" />
+            <span className="text-[#005B46] font-bold uppercase tracking-wider hidden sm:inline">
               Cleanroom Express:
             </span>
-            <span className="text-white/80">
+            <span className="text-[#102A26]/80">
               Free Doorstep Pickup • Same-Day Screen & Battery Repair • Top Cash for Dead Phones
             </span>
           </div>
@@ -51,10 +51,10 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
             <a
               href="tel:8591770877"
               onClick={handleCallClick}
-              className="inline-flex items-center gap-1 rounded-full bg-blue-500/20 hover:bg-blue-500/30 px-2 py-0.5 text-blue-300 hover:text-white transition font-mono font-bold border border-blue-500/30"
+              className="inline-flex items-center gap-1 rounded-full bg-white hover:bg-[#DDF5EA] px-2.5 py-0.5 text-[#007F5F] transition font-mono font-bold border border-[#007F5F]/30 shadow-xs"
               title="Call Technician: 8591770877"
             >
-              <PhoneCall className="h-3 w-3" />
+              <PhoneCall className="h-3 w-3 text-[#007F5F]" />
               <span>+91 8591770877</span>
             </a>
 
@@ -63,10 +63,10 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="inline-flex items-center gap-1 rounded-full bg-[#25D366]/20 hover:bg-[#25D366]/30 px-2 py-0.5 text-emerald-300 hover:text-white transition font-mono font-bold border border-emerald-500/30"
+              className="inline-flex items-center gap-1 rounded-full bg-[#25D366]/15 hover:bg-[#25D366]/25 px-2.5 py-0.5 text-[#16803D] transition font-mono font-bold border border-[#25D366]/40"
               title="WhatsApp: 8591770877"
             >
-              <WhatsAppIcon className="h-3 w-3 fill-emerald-400" />
+              <WhatsAppIcon className="h-3 w-3 fill-[#16803D]" />
               <span>WhatsApp Us</span>
             </a>
           </div>
@@ -77,57 +77,57 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg p-1">
+          <Link to="/" className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007F5F] rounded-lg p-1">
             <img
               src="/images/revora-icon-transparent.png"
               alt="Revora Logo"
               className="h-9 w-auto object-contain transition group-hover:scale-105"
             />
             <div className="flex flex-col">
-              <span className="font-display text-xl font-bold tracking-tight text-white group-hover:text-emerald-400 transition">
+              <span className="font-display text-xl font-bold tracking-tight text-[#102A26] group-hover:text-[#007F5F] transition">
                 Revora
               </span>
-              <span className="font-label text-[8px] sm:text-[8.5px] uppercase tracking-wider text-emerald-400 font-semibold -mt-0.5 whitespace-nowrap">
+              <span className="font-label text-[8px] sm:text-[8.5px] uppercase tracking-wider text-[#007F5F] font-semibold -mt-0.5 whitespace-nowrap">
                 Sell Your Old Phone. Get Paid. Simple.
               </span>
             </div>
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-4 text-xs text-white/80 font-display">
+          <div className="hidden lg:flex items-center gap-4 text-xs text-[#102A26] font-display">
             <Link
               to="/repair"
-              className="transition hover:text-accent flex items-center gap-1 py-1"
-              activeProps={{ className: "text-accent font-bold" }}
+              className="transition hover:text-[#007F5F] flex items-center gap-1 py-1 font-medium"
+              activeProps={{ className: "text-[#007F5F] font-bold" }}
             >
-              <Wrench className="h-3.5 w-3.5 text-brand" />
+              <Wrench className="h-3.5 w-3.5 text-[#007F5F]" />
               <span>Repair</span>
             </Link>
 
             <Link
               to="/dead-phone-repair"
-              className="transition hover:text-accent flex items-center gap-1 py-1 text-emerald-300"
-              activeProps={{ className: "text-accent font-bold" }}
+              className="transition hover:text-[#007F5F] flex items-center gap-1 py-1 text-[#005B46] font-medium"
+              activeProps={{ className: "text-[#007F5F] font-bold" }}
             >
-              <Cpu className="h-3.5 w-3.5 text-emerald-400" />
+              <Cpu className="h-3.5 w-3.5 text-[#007F5F]" />
               <span>Dead Phone Repair</span>
             </Link>
 
             <Link
               to="/sell-phone"
-              className="transition hover:text-accent flex items-center gap-1 py-1"
-              activeProps={{ className: "text-accent font-bold" }}
+              className="transition hover:text-[#007F5F] flex items-center gap-1 py-1 font-medium"
+              activeProps={{ className: "text-[#007F5F] font-bold" }}
             >
-              <IndianRupee className="h-3.5 w-3.5 text-gold" />
+              <IndianRupee className="h-3.5 w-3.5 text-[#007F5F]" />
               <span>Sell Phone</span>
             </Link>
 
             <Link
               to="/sell-dead-phone"
-              className="transition hover:text-accent flex items-center gap-1 py-1 text-amber-300"
-              activeProps={{ className: "text-accent font-bold" }}
+              className="transition hover:text-[#007F5F] flex items-center gap-1 py-1 text-[#005B46] font-medium"
+              activeProps={{ className: "text-[#007F5F] font-bold" }}
             >
-              <Zap className="h-3.5 w-3.5 text-amber-400" />
+              <Zap className="h-3.5 w-3.5 text-[#43C59E]" />
               <span>Sell Dead Phone</span>
             </Link>
 
