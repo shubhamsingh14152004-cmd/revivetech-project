@@ -242,27 +242,27 @@ export function TradeInCalculator() {
   return (
     <div
       id="sell-calculator"
-      className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden shadow-xl border border-white/15"
+      className="relative rounded-3xl bg-white p-6 md:p-10 overflow-hidden shadow-md border border-[#E5E7EB]"
     >
       {/* Header */}
-      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-3.5 py-1 text-xs font-semibold text-amber-400 font-label border border-amber-500/30">
-            <ShieldCheck className="h-3.5 w-3.5 text-amber-400" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#DDF5EA] px-3.5 py-1 text-xs font-semibold text-[#005B46] font-label border border-[#007F5F]/20">
+            <ShieldCheck className="h-3.5 w-3.5 text-[#007F5F]" />
             Instant Cash Trade-In & Doorstep Pickup
           </div>
-          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-white">
+          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-[#102A26]">
             Calculate Used & Dead Phone Payout Value
           </h3>
-          <p className="font-display text-sm text-white/70 mt-1 max-w-xl">
+          <p className="font-display text-sm text-[#6B7280] mt-1 max-w-xl">
             Even if it won't boot, is water-soaked, or shattered into pieces.
             Select your brand, write your model, and request free doorstep pickup with top cash payout.
           </p>
         </div>
 
-        <div className="flex items-center gap-2 rounded-2xl bg-ink/70 px-4 py-2.5 border border-white/10 shrink-0">
-          <div className="h-2 w-2 rounded-full bg-emerald-400 live-pulse" />
-          <span className="font-label text-xs text-white/90">
+        <div className="flex items-center gap-2 rounded-2xl bg-[#FAFAF7] px-4 py-2.5 border border-[#E5E7EB] shrink-0 shadow-xs">
+          <div className="h-2 w-2 rounded-full bg-[#007F5F] live-pulse" />
+          <span className="font-label text-xs text-[#102A26] font-medium">
             Doorstep Service Active
           </span>
         </div>
@@ -273,73 +273,69 @@ export function TradeInCalculator() {
         {/* Left Column: Selectors */}
         <div className="lg:col-span-7 space-y-6">
           {/* Attractive Buyback Pamphlet / Marketing Showcase Card */}
-          <div className="relative overflow-hidden rounded-2xl border border-amber-500/30 bg-gradient-to-br from-amber-500/15 via-brand/15 to-purple-950/40 p-5 shadow-xl">
-            {/* Glow accents */}
-            <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-amber-400/20 blur-2xl pointer-events-none" />
-            <div className="absolute -left-8 -bottom-8 h-28 w-28 rounded-full bg-brand/25 blur-2xl pointer-events-none" />
-
+          <div className="relative overflow-hidden rounded-2xl border border-[#007F5F]/20 bg-[#DDF5EA]/60 p-5 shadow-xs">
             {/* Pamphlet Top Badge */}
-            <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-3">
-              <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-400/20 px-3 py-1 text-[11px] font-bold text-amber-300 font-label border border-amber-400/40">
-                <Award className="h-3.5 w-3.5 text-amber-400" />
+            <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 border-b border-[#007F5F]/15 pb-3">
+              <div className="inline-flex items-center gap-1.5 rounded-full bg-[#007F5F] px-3 py-1 text-[11px] font-bold text-white font-label shadow-xs">
+                <Award className="h-3.5 w-3.5 text-white" />
                 <span>OFFICIAL BUYBACK PAMPHLET</span>
               </div>
-              <div className="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-semibold font-label">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 live-pulse" />
+              <div className="inline-flex items-center gap-1.5 text-xs text-[#005B46] font-semibold font-label">
+                <span className="h-2 w-2 rounded-full bg-[#007F5F] live-pulse" />
                 <span>Highest Cash Guaranteed</span>
               </div>
             </div>
 
             {/* Pamphlet Headline */}
             <div className="relative z-10 mt-3.5">
-              <h4 className="font-display text-lg sm:text-xl font-extrabold text-white tracking-tight flex items-center gap-2">
-                <Flame className="h-5 w-5 text-amber-400 shrink-0" />
+              <h4 className="font-display text-lg sm:text-xl font-extrabold text-[#102A26] tracking-tight flex items-center gap-2">
+                <Flame className="h-5 w-5 text-[#007F5F] shrink-0" />
                 <span>Sell ANY Dead, Broken or Water-Damaged Phone</span>
               </h4>
-              <p className="font-display text-xs sm:text-sm text-white/80 mt-1 leading-relaxed">
+              <p className="font-display text-xs sm:text-sm text-[#475569] mt-1 leading-relaxed">
                 Motherboard burnt? Screen crushed? Dropped in water? We buy it for instant cash, guaranteed within 15 minutes!
               </p>
             </div>
 
             {/* Pamphlet 4 Pillars Grid */}
             <div className="relative z-10 mt-4 grid grid-cols-2 gap-2.5 sm:gap-3 font-display">
-              <div className="flex items-start gap-2.5 rounded-xl bg-white/5 border border-white/10 p-2.5 transition hover:bg-white/10">
-                <div className="rounded-lg bg-amber-400/20 p-1.5 text-amber-300 shrink-0">
+              <div className="flex items-start gap-2.5 rounded-xl bg-white border border-[#E5E7EB] p-2.5 shadow-2xs">
+                <div className="rounded-lg bg-[#DDF5EA] p-1.5 text-[#005B46] shrink-0">
                   <IndianRupee className="h-4 w-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white">Top Cash Payout</div>
-                  <div className="text-[11px] text-white/70">Highest valuation for dead flagship phones</div>
+                  <div className="text-xs font-bold text-[#102A26]">Top Cash Payout</div>
+                  <div className="text-[11px] text-[#6B7280]">Highest valuation for dead flagship phones</div>
                 </div>
               </div>
 
-              <div className="flex items-start gap-2.5 rounded-xl bg-white/5 border border-white/10 p-2.5 transition hover:bg-white/10">
-                <div className="rounded-lg bg-emerald-400/20 p-1.5 text-emerald-300 shrink-0">
+              <div className="flex items-start gap-2.5 rounded-xl bg-white border border-[#E5E7EB] p-2.5 shadow-2xs">
+                <div className="rounded-lg bg-[#DDF5EA] p-1.5 text-[#005B46] shrink-0">
                   <Clock className="h-4 w-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white">15-Min Instant Pay</div>
-                  <div className="text-[11px] text-white/70">Direct UPI (GPay/PhonePe) or Cash</div>
+                  <div className="text-xs font-bold text-[#102A26]">15-Min Instant Pay</div>
+                  <div className="text-[11px] text-[#6B7280]">Direct UPI (GPay/PhonePe) or Cash</div>
                 </div>
               </div>
 
-              <div className="flex items-start gap-2.5 rounded-xl bg-white/5 border border-white/10 p-2.5 transition hover:bg-white/10">
-                <div className="rounded-lg bg-blue-400/20 p-1.5 text-blue-300 shrink-0">
+              <div className="flex items-start gap-2.5 rounded-xl bg-white border border-[#E5E7EB] p-2.5 shadow-2xs">
+                <div className="rounded-lg bg-[#DDF5EA] p-1.5 text-[#005B46] shrink-0">
                   <Truck className="h-4 w-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white">Free Doorstep Pickup</div>
-                  <div className="text-[11px] text-white/70">100% insured, no pickup fees</div>
+                  <div className="text-xs font-bold text-[#102A26]">Free Doorstep Pickup</div>
+                  <div className="text-[11px] text-[#6B7280]">100% insured, no pickup fees</div>
                 </div>
               </div>
 
-              <div className="flex items-start gap-2.5 rounded-xl bg-white/5 border border-white/10 p-2.5 transition hover:bg-white/10">
-                <div className="rounded-lg bg-purple-400/20 p-1.5 text-purple-300 shrink-0">
+              <div className="flex items-start gap-2.5 rounded-xl bg-white border border-[#E5E7EB] p-2.5 shadow-2xs">
+                <div className="rounded-lg bg-[#DDF5EA] p-1.5 text-[#005B46] shrink-0">
                   <ShieldCheck className="h-4 w-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white">Military Data Wipe</div>
-                  <div className="text-[11px] text-white/70">DoD certified total privacy safety</div>
+                  <div className="text-xs font-bold text-[#102A26]">Military Data Wipe</div>
+                  <div className="text-[11px] text-[#6B7280]">DoD certified total privacy safety</div>
                 </div>
               </div>
             </div>
@@ -347,7 +343,7 @@ export function TradeInCalculator() {
 
           {/* 1. Mobile Brand Selector (Requested Brands) */}
           <div>
-            <label className="block font-label text-xs font-bold uppercase tracking-wider text-white/70 mb-2.5">
+            <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] mb-2.5">
               1. Select Mobile Brand
             </label>
             <select
@@ -355,13 +351,13 @@ export function TradeInCalculator() {
               onChange={(e) => {
                 setSelectedBrandId(e.target.value);
               }}
-              className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white font-display outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 cursor-pointer"
+              className="w-full rounded-xl border border-[#E5E7EB] bg-white px-4 py-3 text-sm text-[#102A26] font-display outline-none transition focus:border-[#007F5F] focus:ring-2 focus:ring-[#007F5F]/20 cursor-pointer shadow-2xs"
             >
               {SUPPORTED_BRANDS.map((brand) => (
                 <option
                   key={brand.id}
                   value={brand.id}
-                  className="bg-ink text-white py-2"
+                  className="bg-white text-[#102A26] py-2"
                 >
                   {brand.icon} {brand.name}
                 </option>
@@ -372,10 +368,10 @@ export function TradeInCalculator() {
           {/* 2. Write Model Name Manually */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <label className="block font-label text-xs font-bold uppercase tracking-wider text-white/70">
+              <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26]">
                 2. Write {currentBrand.name} Model Name
               </label>
-              <span className="text-[11px] text-accent font-label">
+              <span className="text-[11px] text-[#007F5F] font-label font-semibold">
                 Type exact model
               </span>
             </div>
@@ -385,20 +381,20 @@ export function TradeInCalculator() {
                 value={modelName}
                 onChange={(e) => setModelName(e.target.value)}
                 placeholder={currentBrand.placeholder}
-                className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white font-display placeholder:text-white/40 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
+                className="w-full rounded-xl border border-[#E5E7EB] bg-white px-4 py-3 text-sm text-[#102A26] font-display placeholder:text-[#94A3B8] outline-none transition focus:border-[#007F5F] focus:ring-2 focus:ring-[#007F5F]/20 shadow-2xs"
               />
-              <div className="absolute right-3.5 top-1/2 -translate-y-1/2 text-lg pointer-events-none">
+              <div className="absolute right-3.5 top-1/2 -translate-y-1/2 text-lg pointer-events-none text-[#007F5F]">
                 {currentBrand.icon}
               </div>
             </div>
-            <p className="text-[11px] text-white/50 mt-1.5 font-display">
+            <p className="text-[11px] text-[#6B7280] mt-1.5 font-display">
               Example for {currentBrand.name}: {currentBrand.placeholder}
             </p>
           </div>
 
           {/* 3. Storage Selector */}
           <div>
-            <label className="block font-label text-xs font-bold uppercase tracking-wider text-white/70 mb-2.5">
+            <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] mb-2.5">
               3. Storage Capacity
             </label>
             <div className="flex flex-wrap gap-2.5">
@@ -409,8 +405,8 @@ export function TradeInCalculator() {
                   onClick={() => setStorage(stg.label)}
                   className={`rounded-xl px-5 py-2.5 text-xs font-semibold font-label transition border cursor-pointer ${
                     storage === stg.label
-                      ? "bg-accent text-ink border-accent font-bold scale-105 shadow-md shadow-accent/20"
-                      : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
+                      ? "bg-[#007F5F] text-white border-[#007F5F] font-bold shadow-xs"
+                      : "bg-[#FAFAF7] text-[#102A26] border-[#E5E7EB] hover:bg-[#DDF5EA] hover:text-[#005B46]"
                   }`}
                 >
                   {stg.label}
@@ -421,7 +417,7 @@ export function TradeInCalculator() {
 
           {/* 4. Device Condition */}
           <div>
-            <label className="block font-label text-xs font-bold uppercase tracking-wider text-white/70 mb-2.5">
+            <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] mb-2.5">
               4. Device Condition
             </label>
             <div className="grid sm:grid-cols-2 gap-3">
@@ -431,22 +427,22 @@ export function TradeInCalculator() {
                 onClick={() => setCondition("dead")}
                 className={`flex flex-col text-left p-3.5 rounded-2xl border transition cursor-pointer ${
                   condition === "dead"
-                    ? "bg-brand/20 border-brand ring-2 ring-brand/30"
-                    : "bg-white/5 border-white/10 hover:bg-white/10"
+                    ? "bg-[#DDF5EA] border-[#007F5F] ring-2 ring-[#007F5F]/30"
+                    : "bg-white border-[#E5E7EB] hover:bg-[#FAFAF7]"
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Zap className="h-4 w-4 text-brand" />
-                    <span className="font-display font-semibold text-sm text-white">
+                    <Zap className="h-4 w-4 text-[#007F5F]" />
+                    <span className="font-display font-semibold text-sm text-[#102A26]">
                       Completely Dead / Won't Turn On
                     </span>
                   </div>
                   {condition === "dead" && (
-                    <CheckCircle2 className="h-4 w-4 text-brand" />
+                    <CheckCircle2 className="h-4 w-4 text-[#007F5F]" />
                   )}
                 </div>
-                <p className="font-display text-xs text-white/60 mt-1.5 leading-relaxed">
+                <p className="font-display text-xs text-[#6B7280] mt-1.5 leading-relaxed">
                   No power, water contact, black screen, or board failure. Still
                   guaranteed cash!
                 </p>
@@ -458,22 +454,22 @@ export function TradeInCalculator() {
                 onClick={() => setCondition("broken_screen")}
                 className={`flex flex-col text-left p-3.5 rounded-2xl border transition cursor-pointer ${
                   condition === "broken_screen"
-                    ? "bg-brand/20 border-brand ring-2 ring-brand/30"
-                    : "bg-white/5 border-white/10 hover:bg-white/10"
+                    ? "bg-[#DDF5EA] border-[#007F5F] ring-2 ring-[#007F5F]/30"
+                    : "bg-white border-[#E5E7EB] hover:bg-[#FAFAF7]"
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <AlertTriangle className="h-4 w-4 text-amber-400" />
-                    <span className="font-display font-semibold text-sm text-white">
+                    <AlertTriangle className="h-4 w-4 text-amber-500" />
+                    <span className="font-display font-semibold text-sm text-[#102A26]">
                       Cracked OLED / Touch Broken
                     </span>
                   </div>
                   {condition === "broken_screen" && (
-                    <CheckCircle2 className="h-4 w-4 text-brand" />
+                    <CheckCircle2 className="h-4 w-4 text-[#007F5F]" />
                   )}
                 </div>
-                <p className="font-display text-xs text-white/60 mt-1.5 leading-relaxed">
+                <p className="font-display text-xs text-[#6B7280] mt-1.5 leading-relaxed">
                   Powers on, but display has colored lines, black spots, or
                   shattered glass.
                 </p>
@@ -485,22 +481,22 @@ export function TradeInCalculator() {
                 onClick={() => setCondition("flawed")}
                 className={`flex flex-col text-left p-3.5 rounded-2xl border transition cursor-pointer ${
                   condition === "flawed"
-                    ? "bg-brand/20 border-brand ring-2 ring-brand/30"
-                    : "bg-white/5 border-white/10 hover:bg-white/10"
+                    ? "bg-[#DDF5EA] border-[#007F5F] ring-2 ring-[#007F5F]/30"
+                    : "bg-white border-[#E5E7EB] hover:bg-[#FAFAF7]"
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Smartphone className="h-4 w-4 text-blue-400" />
-                    <span className="font-display font-semibold text-sm text-white">
+                    <Smartphone className="h-4 w-4 text-blue-500" />
+                    <span className="font-display font-semibold text-sm text-[#102A26]">
                       Flawed / Heavy Scratches
                     </span>
                   </div>
                   {condition === "flawed" && (
-                    <CheckCircle2 className="h-4 w-4 text-brand" />
+                    <CheckCircle2 className="h-4 w-4 text-[#007F5F]" />
                   )}
                 </div>
-                <p className="font-display text-xs text-white/60 mt-1.5 leading-relaxed">
+                <p className="font-display text-xs text-[#6B7280] mt-1.5 leading-relaxed">
                   Fully operational, deep housing dents, degraded battery, or
                   camera glass cracks.
                 </p>
@@ -512,22 +508,22 @@ export function TradeInCalculator() {
                 onClick={() => setCondition("working")}
                 className={`flex flex-col text-left p-3.5 rounded-2xl border transition cursor-pointer ${
                   condition === "working"
-                    ? "bg-brand/20 border-brand ring-2 ring-brand/30"
-                    : "bg-white/5 border-white/10 hover:bg-white/10"
+                    ? "bg-[#DDF5EA] border-[#007F5F] ring-2 ring-[#007F5F]/30"
+                    : "bg-white border-[#E5E7EB] hover:bg-[#FAFAF7]"
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Sparkles className="h-4 w-4 text-emerald-400" />
-                    <span className="font-display font-semibold text-sm text-white">
+                    <Sparkles className="h-4 w-4 text-[#007F5F]" />
+                    <span className="font-display font-semibold text-sm text-[#102A26]">
                       Good / Mint Working
                     </span>
                   </div>
                   {condition === "working" && (
-                    <CheckCircle2 className="h-4 w-4 text-brand" />
+                    <CheckCircle2 className="h-4 w-4 text-[#007F5F]" />
                   )}
                 </div>
-                <p className="font-display text-xs text-white/60 mt-1.5 leading-relaxed">
+                <p className="font-display text-xs text-[#6B7280] mt-1.5 leading-relaxed">
                   Flawless screen, powers on instantly, normal battery health,
                   all features pass.
                 </p>
@@ -607,17 +603,17 @@ export function TradeInCalculator() {
           </div>
 
           {/* 6. Customer Mobile Number */}
-          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2.5">
+          <div className="p-4 rounded-2xl bg-[#FAFAF7] border border-[#E5E7EB] space-y-2.5">
             <div className="flex items-center justify-between">
-              <label className="block font-label text-xs font-bold uppercase tracking-wider text-white/90 flex items-center gap-1.5">
-                <Phone className="h-3.5 w-3.5 text-accent" />
+              <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] flex items-center gap-1.5">
+                <Phone className="h-3.5 w-3.5 text-[#007F5F]" />
                 <span>6. Mobile Number for Pickup & Cash Payout *</span>
               </label>
               <span
                 className={`text-[11px] font-mono font-bold px-2 py-0.5 rounded-full border ${
                   custPhone.replace(/\D/g, "").length === 10
-                    ? "bg-emerald-500/20 text-emerald-400 border-emerald-500/30"
-                    : "bg-accent/10 text-accent border-accent/20"
+                    ? "bg-[#DDF5EA] text-[#005B46] border-[#007F5F]/30"
+                    : "bg-[#FAFAF7] text-[#007F5F] border-[#E5E7EB]"
                 }`}
               >
                 {custPhone.replace(/\D/g, "").length === 10
@@ -626,7 +622,7 @@ export function TradeInCalculator() {
               </span>
             </div>
             <div className="relative">
-              <div className="absolute left-3.5 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-white/70 font-mono text-xs font-bold border-r border-white/20 pr-2.5 pointer-events-none">
+              <div className="absolute left-3.5 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-[#102A26] font-mono text-xs font-bold border-r border-[#E5E7EB] pr-2.5 pointer-events-none">
                 <span className="text-sm">🇮🇳</span>
                 <span>+91</span>
               </div>
@@ -639,119 +635,119 @@ export function TradeInCalculator() {
                   setCustPhone(cleaned);
                 }}
                 placeholder="Enter 10-digit mobile number"
-                className="w-full rounded-xl border border-white/15 bg-black/40 pl-20 pr-4 py-2.5 text-sm text-white placeholder:text-white/30 outline-none transition font-mono tracking-wider focus:border-accent focus:ring-1 focus:ring-accent"
+                className="w-full rounded-xl border border-[#E5E7EB] bg-white pl-20 pr-4 py-2.5 text-sm text-[#102A26] placeholder:text-[#94A3B8] outline-none transition font-mono tracking-wider focus:border-[#007F5F] focus:ring-1 focus:ring-[#007F5F]"
               />
             </div>
-            <p className="font-display text-[11px] text-white/50">
+            <p className="font-display text-[11px] text-[#6B7280]">
               Our verified cleanroom technician will call this 10-digit number for doorstep pickup & instant payment.
             </p>
           </div>
 
           {/* Addons toggle */}
-          <div className="flex items-center justify-between p-3.5 rounded-xl bg-white/5 border border-white/10">
+          <div className="flex items-center justify-between p-3.5 rounded-xl bg-[#FAFAF7] border border-[#E5E7EB]">
             <div className="flex items-center gap-2.5">
               <input
                 type="checkbox"
                 id="originalBox"
                 checked={hasOriginalBox}
                 onChange={(e) => setHasOriginalBox(e.target.checked)}
-                className="h-4 w-4 rounded accent-brand cursor-pointer"
+                className="h-4 w-4 rounded accent-[#007F5F] cursor-pointer"
               />
               <label
                 htmlFor="originalBox"
-                className="font-display text-xs text-white/80 cursor-pointer"
+                className="font-display text-xs text-[#102A26] cursor-pointer"
               >
                 Include original retail box & charging cable (Extra Bonus Payout)
               </label>
             </div>
-            <span className="font-label text-xs font-bold text-emerald-400">
+            <span className="font-label text-xs font-bold text-[#007F5F]">
               Bonus
             </span>
           </div>
         </div>
 
         {/* Right Column: Live Offer Card */}
-        <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl bg-gradient-to-br from-ink/90 via-ink/70 to-brand/10 p-6 border border-white/15 shadow-xl relative overflow-hidden">
+        <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl bg-[#FAFAF7] p-6 border border-[#E5E7EB] shadow-xs relative overflow-hidden">
           <div className="space-y-5">
             <div className="flex items-center justify-between">
-              <span className="font-label text-xs uppercase tracking-wider text-white/60">
+              <span className="font-label text-xs uppercase tracking-wider text-[#6B7280]">
                 Device Summary
               </span>
-              <span className="font-label text-xs text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+              <span className="font-label text-xs text-[#005B46] font-semibold bg-[#DDF5EA] px-2.5 py-0.5 rounded-full border border-[#007F5F]/20">
                 Free Doorstep Pickup
               </span>
             </div>
 
             {/* Selected device summary info */}
-            <div className="rounded-2xl bg-white/5 p-4 border border-white/10">
-              <span className="font-label text-[10px] uppercase tracking-wider text-white/50 block">
+            <div className="rounded-2xl bg-white p-4 border border-[#E5E7EB]">
+              <span className="font-label text-[10px] uppercase tracking-wider text-[#6B7280] block">
                 Selling Device
               </span>
-              <h4 className="font-display text-base font-bold text-white mt-1 flex items-center gap-2">
+              <h4 className="font-display text-base font-bold text-[#102A26] mt-1 flex items-center gap-2">
                 <span>{currentBrand.icon}</span>
                 <span>
                   {modelName.trim()
                     ? `${currentBrand.name} ${modelName.trim()}`
                     : `${currentBrand.name} (Enter Model Name)`}
                 </span>
-                <span className="text-white/60 text-sm font-normal">
+                <span className="text-[#6B7280] text-sm font-normal">
                   ({storage})
                 </span>
               </h4>
-              <p className="font-display text-xs text-accent mt-1 capitalize">
+              <p className="font-display text-xs text-[#007F5F] font-semibold mt-1 capitalize">
                 Condition: {condition.replace("_", " ")}
               </p>
             </div>
 
             {/* Photo Attached Pill */}
             {phoneImage && (
-              <div className="flex items-center gap-2 rounded-xl bg-emerald-500/15 border border-emerald-500/30 p-2 text-xs text-emerald-300 font-label">
-                <ImageIcon className="h-4 w-4 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-2 rounded-xl bg-[#DDF5EA] border border-[#007F5F]/30 p-2 text-xs text-[#005B46] font-label">
+                <ImageIcon className="h-4 w-4 text-[#007F5F] shrink-0" />
                 <span>Device Photo Attached & Ready</span>
               </div>
             )}
 
             {/* Payout & Pickup Valuation Card (Offer Amount Hidden) */}
-            <div className="rounded-2xl bg-gradient-to-br from-brand/20 via-black/60 to-emerald-950/40 p-5 border border-white/15 text-center relative overflow-hidden">
-              <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/20 px-3 py-1 text-xs font-bold text-emerald-300 border border-emerald-500/30 mb-2">
+            <div className="rounded-2xl bg-[#DDF5EA] p-5 border border-[#007F5F]/20 text-center relative overflow-hidden">
+              <div className="inline-flex items-center gap-1.5 rounded-full bg-[#007F5F] px-3 py-1 text-xs font-bold text-white mb-2">
                 <CheckCircle2 className="h-3.5 w-3.5" />
                 HIGHEST CASH PAYOUT GUARANTEED
               </div>
-              <h4 className="font-display text-xl sm:text-2xl font-black text-white tracking-tight">
+              <h4 className="font-display text-xl sm:text-2xl font-black text-[#102A26] tracking-tight">
                 Free Doorstep Pickup & Payout
               </h4>
-              <p className="font-display text-xs text-white/75 mt-1.5 max-w-sm mx-auto">
+              <p className="font-display text-xs text-[#475569] mt-1.5 max-w-sm mx-auto">
                 No hidden deductions. Our technician visits your doorstep, verifies the device, and transfers payment instantly via UPI or Cash!
               </p>
             </div>
 
             {/* Benefit Checkmarks */}
-            <div className="space-y-2 text-xs font-display text-white/80">
+            <div className="space-y-2 text-xs font-display text-[#102A26]">
               <div className="flex items-center gap-2">
-                <Truck className="h-4 w-4 text-accent shrink-0" />
+                <Truck className="h-4 w-4 text-[#007F5F] shrink-0" />
                 <span>Free Prepaid Insured Shipping Kit or Doorstep Pickup</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="h-4 w-4 text-accent shrink-0" />
+                <ShieldCheck className="h-4 w-4 text-[#007F5F] shrink-0" />
                 <span>NIST 800-88 Certified Military Data Wipe included</span>
               </div>
               <div className="flex items-center gap-2">
-                <IndianRupee className="h-4 w-4 text-accent shrink-0" />
+                <IndianRupee className="h-4 w-4 text-[#007F5F] shrink-0" />
                 <span>Instant Payout via UPI (GPay/PhonePe), Bank Transfer or Cash</span>
               </div>
             </div>
           </div>
 
-          <div className="mt-6 pt-5 border-t border-white/10">
+          <div className="mt-6 pt-5 border-t border-[#E5E7EB]">
             <button
               type="button"
               onClick={handleOpenLockModal}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-bold text-white shadow-[0_8px_30px_oklch(0.704_0.192_37.126/45%)] transition hover:brightness-110 font-label cursor-pointer"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#007F5F] hover:bg-[#005B46] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition font-label cursor-pointer"
             >
               <span>Request Free Doorstep Pickup & Cash</span>
               <ArrowRight className="h-4 w-4" />
             </button>
-            <p className="font-display text-[11px] text-center text-white/50 mt-2.5">
+            <p className="font-display text-[11px] text-center text-[#6B7280] mt-2.5">
               Zero obligation · 100% Free doorstep pickup & payout
             </p>
           </div>
@@ -760,50 +756,50 @@ export function TradeInCalculator() {
 
       {/* Lock-In Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-in fade-in duration-200">
-          <div className="relative w-full max-w-lg rounded-3xl bg-gradient-to-b from-ink to-black p-6 md:p-8 border border-white/20 shadow-2xl text-white max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-xs p-4 animate-in fade-in duration-200">
+          <div className="relative w-full max-w-lg rounded-3xl bg-white p-6 md:p-8 border border-[#E5E7EB] shadow-2xl text-[#102A26] max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => {
                 setIsModalOpen(false);
                 setOfferLockedId(null);
               }}
-              className="absolute right-5 top-5 p-2 text-white/60 hover:text-white rounded-full bg-white/10 transition cursor-pointer"
+              className="absolute right-5 top-5 p-2 text-[#6B7280] hover:text-[#102A26] rounded-full bg-[#FAFAF7] transition cursor-pointer"
             >
               <X className="h-5 w-5" />
             </button>
 
             {!offerLockedId ? (
               <div>
-                <div className="flex items-center gap-2 text-emerald-400 font-label text-xs uppercase tracking-wider font-semibold">
+                <div className="flex items-center gap-2 text-[#007F5F] font-label text-xs uppercase tracking-wider font-semibold">
                   <ShieldCheck className="h-4 w-4" />
                   Free Doorstep Inspection & Payout
                 </div>
-                <h3 className="font-display text-2xl font-bold mt-1 text-white">
+                <h3 className="font-display text-2xl font-bold mt-1 text-[#102A26]">
                   Request Top Cash Payout & Doorstep Pickup
                 </h3>
-                <p className="font-display text-xs text-white/70 mt-1">
+                <p className="font-display text-xs text-[#6B7280] mt-1">
                   We'll dispatch our insured pickup team to inspect and hand over your instant cash/UPI payout.
                 </p>
 
                 {/* Device summary card */}
-                <div className="mt-4 p-3.5 rounded-2xl bg-white/5 border border-white/10 text-xs font-display space-y-1.5">
+                <div className="mt-4 p-3.5 rounded-2xl bg-[#FAFAF7] border border-[#E5E7EB] text-xs font-display space-y-1.5">
                   <div className="flex justify-between items-center">
-                    <span className="text-white/60">Selected Device:</span>
-                    <span className="font-bold text-white">
+                    <span className="text-[#6B7280]">Selected Device:</span>
+                    <span className="font-bold text-[#102A26]">
                       {currentBrand.icon} {currentBrand.name} {modelName.trim()} ({storage})
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-white/60">Condition:</span>
-                    <span className="font-semibold text-accent capitalize">
+                    <span className="text-[#6B7280]">Condition:</span>
+                    <span className="font-semibold text-[#007F5F] capitalize">
                       {condition.replace("_", " ")}
                     </span>
                   </div>
                   {phoneImage && (
-                    <div className="flex justify-between items-center pt-1 border-t border-white/10">
-                      <span className="text-white/60">Photo Attached:</span>
-                      <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                        <CheckCircle2 className="h-3 w-3" /> Yes (Attached)
+                    <div className="flex justify-between items-center pt-1 border-t border-[#E5E7EB]">
+                      <span className="text-[#6B7280]">Photo Attached:</span>
+                      <span className="text-[#005B46] font-semibold flex items-center gap-1">
+                        <CheckCircle2 className="h-3 w-3 text-[#007F5F]" /> Yes (Attached)
                       </span>
                     </div>
                   )}
@@ -811,7 +807,7 @@ export function TradeInCalculator() {
 
                 <form onSubmit={handleLockInQuote} className="mt-4 space-y-3.5">
                   <div>
-                    <label className="block font-display text-xs text-white/80 mb-1">
+                    <label className="block font-display text-xs text-[#102A26] font-medium mb-1">
                       Full Name *
                     </label>
                     <input
@@ -820,21 +816,21 @@ export function TradeInCalculator() {
                       value={custName}
                       onChange={(e) => setCustName(e.target.value)}
                       placeholder="e.g. Rahul Sharma"
-                      className="w-full rounded-xl border border-white/15 bg-white/10 px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 outline-none focus:border-brand focus:ring-1 focus:ring-brand"
+                      className="w-full rounded-xl border border-[#E5E7EB] bg-white px-3.5 py-2.5 text-sm text-[#102A26] placeholder:text-[#94A3B8] outline-none focus:border-[#007F5F] focus:ring-1 focus:ring-[#007F5F]"
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
                     <div>
                       <div className="flex items-center justify-between mb-1">
-                        <label className="block font-display text-xs text-white/80">
+                        <label className="block font-display text-xs text-[#102A26] font-medium">
                           Phone Number *
                         </label>
                         <span
                           className={`text-[10px] font-mono font-bold ${
                             custPhone.replace(/\D/g, "").length === 10
-                              ? "text-emerald-400"
-                              : "text-accent"
+                              ? "text-[#005B46]"
+                              : "text-[#007F5F]"
                           }`}
                         >
                           {custPhone.replace(/\D/g, "").length === 10
@@ -843,7 +839,7 @@ export function TradeInCalculator() {
                         </span>
                       </div>
                       <div className="relative">
-                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-mono text-white/60 font-bold border-r border-white/20 pr-1.5 pointer-events-none">
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-mono text-[#102A26] font-bold border-r border-[#E5E7EB] pr-1.5 pointer-events-none">
                           +91
                         </span>
                         <input
@@ -855,12 +851,12 @@ export function TradeInCalculator() {
                             setCustPhone(e.target.value.replace(/\D/g, "").slice(0, 10))
                           }
                           placeholder="9876543210"
-                          className="w-full rounded-xl border border-white/15 bg-white/10 pl-14 pr-3 py-2.5 text-sm text-white placeholder:text-white/40 outline-none font-mono tracking-wider focus:border-brand focus:ring-1 focus:ring-brand"
+                          className="w-full rounded-xl border border-[#E5E7EB] bg-white pl-14 pr-3 py-2.5 text-sm text-[#102A26] placeholder:text-[#94A3B8] outline-none font-mono tracking-wider focus:border-[#007F5F] focus:ring-1 focus:ring-[#007F5F]"
                         />
                       </div>
                     </div>
                     <div>
-                      <label className="block font-display text-xs text-white/80 mb-1">
+                      <label className="block font-display text-xs text-[#102A26] font-medium mb-1">
                         Email (Optional)
                       </label>
                       <input
@@ -868,13 +864,13 @@ export function TradeInCalculator() {
                         value={custEmail}
                         onChange={(e) => setCustEmail(e.target.value)}
                         placeholder="rahul@example.com"
-                        className="w-full rounded-xl border border-white/15 bg-white/10 px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 outline-none focus:border-brand focus:ring-1 focus:ring-brand"
+                        className="w-full rounded-xl border border-[#E5E7EB] bg-white px-3.5 py-2.5 text-sm text-[#102A26] placeholder:text-[#94A3B8] outline-none focus:border-[#007F5F] focus:ring-1 focus:ring-[#007F5F]"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block font-display text-xs text-white/80 mb-1">
+                    <label className="block font-display text-xs text-[#102A26] font-medium mb-1">
                       Pickup Address *
                     </label>
                     <input
@@ -883,12 +879,12 @@ export function TradeInCalculator() {
                       value={custAddress}
                       onChange={(e) => setCustAddress(e.target.value)}
                       placeholder="House/Flat No., Street, City, Pincode"
-                      className="w-full rounded-xl border border-white/15 bg-white/10 px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 outline-none focus:border-brand focus:ring-1 focus:ring-brand"
+                      className="w-full rounded-xl border border-[#E5E7EB] bg-white px-3.5 py-2.5 text-sm text-[#102A26] placeholder:text-[#94A3B8] outline-none focus:border-[#007F5F] focus:ring-1 focus:ring-[#007F5F]"
                     />
                   </div>
 
                   <div>
-                    <label className="block font-display text-xs text-white/80 mb-1">
+                    <label className="block font-display text-xs text-[#102A26] font-medium mb-1">
                       Payout Method
                     </label>
                     <div className="grid grid-cols-3 gap-2">
@@ -903,8 +899,8 @@ export function TradeInCalculator() {
                           onClick={() => setPayoutMethod(pm.id)}
                           className={`rounded-xl py-2 px-2 text-xs font-semibold font-label transition border cursor-pointer ${
                             payoutMethod === pm.id
-                              ? "bg-brand text-white border-brand shadow-sm shadow-brand/40"
-                              : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
+                              ? "bg-[#007F5F] text-white border-[#007F5F] shadow-xs"
+                              : "bg-[#FAFAF7] text-[#102A26] border-[#E5E7EB] hover:bg-[#DDF5EA]"
                           }`}
                         >
                           {pm.label}
@@ -916,7 +912,7 @@ export function TradeInCalculator() {
                   <button
                     type="submit"
                     disabled={isSubmittingTradeIn}
-                    className="w-full mt-4 flex items-center justify-center gap-2 rounded-full bg-brand py-3 text-sm font-bold text-white shadow-lg transition hover:brightness-110 font-label disabled:opacity-50 cursor-pointer"
+                    className="w-full mt-4 flex items-center justify-center gap-2 rounded-full bg-[#007F5F] hover:bg-[#005B46] py-3 text-sm font-bold text-white shadow-sm transition font-label disabled:opacity-50 cursor-pointer"
                   >
                     {isSubmittingTradeIn ? (
                       <>
@@ -934,21 +930,21 @@ export function TradeInCalculator() {
               </div>
             ) : (
               <div className="text-center py-4 space-y-4">
-                <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
-                  <CheckCircle2 className="h-8 w-8" />
+                <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#DDF5EA] text-[#007F5F] border border-[#007F5F]/30">
+                  <CheckCircle2 className="h-8 w-8 text-[#007F5F]" />
                 </div>
                 <div>
-                  <h3 className="font-display text-2xl font-bold text-white">
+                  <h3 className="font-display text-2xl font-bold text-[#102A26]">
                     Pickup & Cash Request Registered!
                   </h3>
-                  <p className="font-mono text-sm font-bold text-accent mt-1">
+                  <p className="font-mono text-sm font-bold text-[#007F5F] mt-1">
                     Ref Ticket: #{offerLockedId}
                   </p>
-                  <p className="font-display text-xs text-white/70 mt-2 max-w-sm mx-auto">
+                  <p className="font-display text-xs text-[#6B7280] mt-2 max-w-sm mx-auto">
                     We've registered your {currentBrand.name} {modelName}. An operations technician will reach out to {custPhone} shortly to confirm the highest cash payout and coordinate free doorstep pickup.
                   </p>
                 </div>
-                <div className="pt-3 border-t border-white/10">
+                <div className="pt-3 border-t border-[#E5E7EB]">
                   <button
                     onClick={() => {
                       setIsModalOpen(false);
@@ -957,7 +953,7 @@ export function TradeInCalculator() {
                       setPhoneImage("");
                       setImageFileName("");
                     }}
-                    className="rounded-full bg-white/10 hover:bg-white/20 px-6 py-2.5 text-xs font-semibold transition cursor-pointer font-label"
+                    className="rounded-full bg-[#FAFAF7] hover:bg-[#DDF5EA] text-[#102A26] border border-[#E5E7EB] px-6 py-2.5 text-xs font-semibold transition cursor-pointer font-label"
                   >
                     Done
                   </button>

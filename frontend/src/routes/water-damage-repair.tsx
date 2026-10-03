@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -57,12 +57,12 @@ const FAQS = [
   {
     question: "What should I do right after dropping my phone in water?",
     answer:
-      "1) Turn the device OFF immediately. 2) Do NOT plug it into a charger. 3) Do NOT shake the phone or blow hot air with a hairdryer (which forces water deeper into display layers). 4) Book an express emergency cleanroom slot with Sagar Tech.",
+      "1) Turn the device OFF immediately. 2) Do NOT plug it into a charger. 3) Do NOT shake the phone or blow hot air with a hairdryer (which forces water deeper into display layers). 4) Book an express emergency cleanroom slot with Revora.",
   },
   {
     question: "Phone pani me gir gaya: Kya karna chahiye aur kya phone thik ho sakta hai?",
     answer:
-      "Agar phone pani me gir gaya ho: 1) Phone ko turant switch off karein. 2) Charger me bilkul mat lagayein. 3) Chawal (rice) me mat daalein kyunki rice se corrosion badhti hai. 4) Sagar Tech me ultrasonic chemical bath ke liye book karein. 85%+ pani me gire phones bilkul thik ho jaate hain.",
+      "Agar phone pani me gir gaya ho: 1) Phone ko turant switch off karein. 2) Charger me bilkul mat lagayein. 3) Chawal (rice) me mat daalein kyunki rice se corrosion badhti hai. 4) Revora me ultrasonic chemical bath ke liye book karein. 85%+ pani me gire phones bilkul thik ho jaate hain.",
   },
 ];
 
@@ -70,7 +70,7 @@ export const Route = createFileRoute("/water-damage-repair")({
   head: () => ({
     meta: [
       {
-        title: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | SellRepairPhone",
+        title: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | Revora",
       },
       {
         name: "description",
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/water-damage-repair")({
       },
       {
         property: "og:title",
-        content: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | SellRepairPhone",
+        content: "Phone Water Damage Repair Near Me — Phone Pani Me Gir Gaya | Revora",
       },
       {
         property: "og:description",
@@ -127,73 +127,73 @@ function WaterDamageRepairPage() {
   const faqSchema = getFaqSchema(FAQS);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-slate-100 flex flex-col selection:bg-purple-500 selection:text-white">
+    <div className="min-h-screen bg-[#FAFAF7] text-[#102A26] flex flex-col selection:bg-[#007F5F] selection:text-white">
       <SeoJsonLd schema={[breadcrumbSchema, serviceSchema, faqSchema]} />
       <SiteHeader />
 
       <main className="flex-1">
         {/* Breadcrumb Navigation */}
-        <div className="border-b border-white/5 bg-[#0e0d15]/60 py-3">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-400 flex items-center gap-2">
-            <Link to="/" className="hover:text-purple-400 transition-colors">
+        <div className="border-b border-[#E5E7EB] bg-white py-3">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-500 flex items-center gap-2">
+            <Link to="/" className="hover:text-[#007F5F] transition-colors">
               Home
             </Link>
             <span>/</span>
-            <Link to="/repair" className="hover:text-purple-400 transition-colors">
+            <Link to="/repair" className="hover:text-[#007F5F] transition-colors">
               Repair
             </Link>
             <span>/</span>
-            <span className="text-purple-400 font-medium">Water Damage Repair</span>
+            <span className="text-[#007F5F] font-medium">Water Damage Repair</span>
           </div>
         </div>
 
         {/* Hero Section */}
-        <section className="relative py-14 md:py-20 overflow-hidden border-b border-white/5 bg-gradient-to-b from-blue-950/20 via-transparent to-transparent">
+        <section className="relative py-14 md:py-20 overflow-hidden border-b border-[#E5E7EB] bg-gradient-to-b from-[#DDF5EA]/50 via-[#FAFAF7] to-[#FAFAF7]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-300 text-xs font-semibold mb-6">
-              <Droplets className="w-3.5 h-3.5 text-blue-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DDF5EA] border border-[#43C59E]/30 text-[#005B46] text-xs font-semibold mb-6">
+              <Droplets className="w-3.5 h-3.5 text-[#007F5F]" />
               Emergency Cleanroom Treatment • 85%+ Data Recovery Rate
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#102A26] tracking-tight leading-tight">
               Emergency Phone{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-teal-300 to-purple-400">
+              <span className="text-[#007F5F]">
                 Water Damage Repair
               </span>
             </h1>
 
-            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
               Dropped your phone in water, pool, or coffee? Act quickly before galvanic oxidation destroys delicate logic board copper traces. Our lab combines ultrasonic chemical baths, thermal imaging, and micro-soldering to resurrect drowned devices.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
                 to="/repair"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-900/30 transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#007F5F] hover:bg-[#005B46] text-white font-semibold text-sm shadow-md shadow-[#007F5F]/20 transition-all hover:scale-105"
               >
                 <Wrench className="w-4 h-4" />
                 <span>Book Emergency Diagnosis</span>
               </Link>
               <a
                 href="tel:+918591770877"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-sm transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-[#E5E7EB] text-[#102A26] font-semibold text-sm transition-all"
               >
-                <PhoneCall className="w-4 h-4 text-emerald-400" />
+                <PhoneCall className="w-4 h-4 text-[#007F5F]" />
                 <span>Urgent Helpline: +91 8591770877</span>
               </a>
             </div>
 
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-300">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-600">
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-purple-400" />
+                <Clock className="w-4 h-4 text-[#007F5F]" />
                 <span>Same-Day Chemical Bath</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                <ShieldCheck className="w-4 h-4 text-[#007F5F]" />
                 <span>90-Day VIP Warranty</span>
               </div>
               <div className="flex items-center gap-2">
-                <Cpu className="w-4 h-4 text-blue-400" />
+                <Cpu className="w-4 h-4 text-[#007F5F]" />
                 <span>Board Micro-Soldering</span>
               </div>
             </div>
@@ -203,10 +203,10 @@ function WaterDamageRepairPage() {
         {/* 4 Steps */}
         <section className="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#102A26]">
               Our 4-Stage Liquid Recovery Protocol
             </h2>
-            <p className="text-slate-400 text-sm mt-2">
+            <p className="text-slate-500 text-sm mt-2">
               How we stop corrosion and safely salvage drowned circuitry.
             </p>
           </div>
@@ -215,12 +215,12 @@ function WaterDamageRepairPage() {
             {WATER_STEPS.map((step, idx) => (
               <div
                 key={idx}
-                className="bg-slate-900/50 border border-white/10 p-6 rounded-2xl"
+                className="bg-white border border-[#E5E7EB] p-6 rounded-2xl shadow-xs"
               >
-                <h3 className="text-base font-bold text-white mb-2 text-blue-300">
+                <h3 className="text-base font-bold text-[#007F5F] mb-2">
                   {step.step}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   {step.desc}
                 </p>
               </div>
@@ -229,9 +229,9 @@ function WaterDamageRepairPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-14 bg-[#0e0d15]/50 border-t border-white/5">
+        <section className="py-14 bg-[#FAFAF7] border-t border-[#E5E7EB]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#102A26] text-center mb-8">
               Water Damage FAQs
             </h2>
 
@@ -239,29 +239,29 @@ function WaterDamageRepairPage() {
               {FAQS.map((faq, index) => (
                 <details
                   key={index}
-                  className="group bg-slate-900/50 border border-white/10 rounded-xl p-5 open:bg-slate-900/80 transition-colors"
+                  className="group bg-white border border-[#E5E7EB] rounded-xl p-5 open:bg-slate-50 transition-colors shadow-xs"
                 >
-                  <summary className="font-semibold text-white cursor-pointer flex items-center justify-between text-base">
+                  <summary className="font-semibold text-[#102A26] cursor-pointer flex items-center justify-between text-base">
                     <span>{faq.question}</span>
-                    <span className="text-purple-400 group-open:rotate-180 transition-transform ml-4">
+                    <span className="text-[#007F5F] group-open:rotate-180 transition-transform ml-4">
                       ▼
                     </span>
                   </summary>
-                  <p className="mt-3 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+                  <p className="mt-3 text-sm text-[#475569] leading-relaxed border-t border-[#E5E7EB] pt-3">
                     {faq.answer}
                   </p>
                 </details>
               ))}
             </div>
 
-            <div className="mt-12 text-center p-6 rounded-2xl bg-gradient-to-r from-blue-950/30 to-slate-900 border border-blue-500/20">
-              <h3 className="text-lg font-bold text-white">Device beyond economical repair?</h3>
-              <p className="text-xs sm:text-sm text-slate-400 mt-1 mb-4">
+            <div className="mt-12 text-center p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-xs">
+              <h3 className="text-lg font-bold text-[#102A26]">Device beyond economical repair?</h3>
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 mb-4">
                 We buy water-damaged and dead phones for scrap IC value with instant UPI cash payout.
               </p>
               <Link
                 to="/sell-phone"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#007F5F] hover:bg-[#005B46] text-white text-xs font-semibold transition-colors"
               >
                 <span>Sell Dead Phone for Cash</span>
                 <ArrowRight className="w-3.5 h-3.5" />

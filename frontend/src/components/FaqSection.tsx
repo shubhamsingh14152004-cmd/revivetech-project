@@ -54,18 +54,18 @@ export function FaqSection() {
   );
 
   return (
-    <div className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden border border-white/15 shadow-2xl">
+    <div className="relative rounded-3xl bg-white p-6 md:p-10 overflow-hidden border border-[#E5E7EB] shadow-lg">
       {/* Header */}
-      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-3.5 py-1 text-xs font-semibold text-accent font-label border border-accent/30">
-            <HelpCircle className="h-3.5 w-3.5" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#DDF5EA] px-3.5 py-1 text-xs font-semibold text-[#005B46] font-label border border-[#43C59E]/30">
+            <HelpCircle className="h-3.5 w-3.5 text-[#007F5F]" />
             Instant Answers & Knowledge Base
           </div>
-          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-white">
+          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-[#102A26]">
             Frequently Asked Questions
           </h3>
-          <p className="font-display text-sm text-white/70 mt-1 max-w-xl">
+          <p className="font-display text-sm text-[#6B7280] mt-1 max-w-xl">
             Everything you need to know about selling dead phones, cleanroom
             repairs, data security, and payout speeds.
           </p>
@@ -78,16 +78,16 @@ export function FaqSection() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search questions (e.g. data, warranty)…"
-            className="w-full rounded-xl border border-white/15 bg-white/10 pl-9 pr-3.5 py-2.5 text-xs text-white placeholder:text-white/40 outline-none transition focus:border-accent font-display"
+            className="w-full rounded-xl border border-[#E5E7EB] bg-white pl-9 pr-3.5 py-2.5 text-xs text-[#102A26] placeholder:text-slate-400 outline-none transition focus:border-[#007F5F] font-display"
           />
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-white/50" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-[#6B7280]" />
         </div>
       </div>
 
       {/* Accordion List */}
       <div className="relative z-10 mt-6 space-y-3">
         {filteredFaqs.length === 0 ? (
-          <p className="py-8 text-center text-xs text-white/50 font-display">
+          <p className="py-8 text-center text-xs text-[#6B7280] font-display">
             No questions matched your search query. Contact our 24/7 team below!
           </p>
         ) : (
@@ -96,22 +96,22 @@ export function FaqSection() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-white/5 border border-white/10 overflow-hidden transition"
+                className="rounded-2xl bg-[#FAFAF7] border border-[#E5E7EB] overflow-hidden transition"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-display font-semibold text-sm text-white hover:text-accent transition cursor-pointer"
+                  className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-display font-semibold text-sm text-[#102A26] hover:text-[#007F5F] transition cursor-pointer"
                 >
                   <span className="pr-4">{faq.q}</span>
                   <ChevronDown
-                    className={`h-4 w-4 shrink-0 transition-transform duration-200 text-white/60 ${
-                      isOpen ? "rotate-180 text-accent" : ""
+                    className={`h-4 w-4 shrink-0 transition-transform duration-200 text-[#6B7280] ${
+                      isOpen ? "rotate-180 text-[#007F5F]" : ""
                     }`}
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 pt-1 border-t border-white/5 font-display text-xs sm:text-sm text-white/70 leading-relaxed animate-in fade-in duration-150">
+                  <div className="px-5 pb-5 pt-2 border-t border-[#E5E7EB] font-display text-xs sm:text-sm text-[#6B7280] leading-relaxed animate-in fade-in duration-150">
                     {faq.a}
                   </div>
                 )}

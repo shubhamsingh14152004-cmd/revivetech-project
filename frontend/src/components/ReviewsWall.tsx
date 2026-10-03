@@ -104,18 +104,18 @@ export function ReviewsWall() {
   });
 
   return (
-    <div className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden border border-white/15 shadow-2xl">
+    <div className="relative rounded-3xl bg-white p-6 md:p-10 overflow-hidden border border-[#E5E7EB] shadow-lg">
       {/* Header */}
-      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-3.5 py-1 text-xs font-semibold text-accent font-label border border-accent/30">
-            <Star className="h-3.5 w-3.5 fill-accent text-accent" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#DDF5EA] px-3.5 py-1 text-xs font-semibold text-[#005B46] font-label border border-[#43C59E]/30">
+            <Star className="h-3.5 w-3.5 fill-[#007F5F] text-[#007F5F]" />
             4.9 / 5.0 Rated Across 12,000+ Revivals
           </div>
-          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-white">
+          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-[#102A26]">
             Verified Customer Stories
           </h3>
-          <p className="font-display text-sm text-white/70 mt-1 max-w-xl">
+          <p className="font-display text-sm text-[#6B7280] mt-1 max-w-xl">
             Real payouts, cleanroom repairs, and certified device deliveries.
             Hear directly from customers who revived their tech.
           </p>
@@ -135,8 +135,8 @@ export function ReviewsWall() {
               onClick={() => setSelectedFilter(tab.key)}
               className={`rounded-xl px-3.5 py-2 text-xs font-semibold font-display border transition cursor-pointer ${
                 selectedFilter === tab.key
-                  ? "bg-white text-ink border-white shadow-md font-bold"
-                  : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10"
+                  ? "bg-[#007F5F] text-white border-[#007F5F] shadow-xs font-bold"
+                  : "bg-white text-[#102A26] border-[#E5E7EB] hover:bg-[#FAFAF7]"
               }`}
             >
               {tab.label}
@@ -150,37 +150,37 @@ export function ReviewsWall() {
         {filtered.map((rev) => (
           <div
             key={rev.id}
-            className="flex flex-col justify-between rounded-2xl bg-white/5 border border-white/10 p-5 hover:border-accent/40 hover:bg-white/10 transition shadow-xl space-y-4"
+            className="flex flex-col justify-between rounded-2xl bg-[#FAFAF7] border border-[#E5E7EB] p-5 hover:border-[#007F5F] transition shadow-xs space-y-4"
           >
             <div>
               {/* Rating & Highlight Badge */}
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-1 text-accent">
+                <div className="flex items-center gap-1 text-[#007F5F]">
                   {[...Array(rev.rating)].map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-accent" />
+                    <Star key={i} className="h-3.5 w-3.5 fill-[#007F5F]" />
                   ))}
                 </div>
-                <span className="font-label text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                <span className="font-label text-[10px] font-bold text-[#005B46] bg-[#DDF5EA] px-2 py-0.5 rounded-full border border-[#43C59E]/30">
                   {rev.highlightBadge}
                 </span>
               </div>
 
               {/* Review Text */}
-              <p className="font-display text-xs text-white/80 mt-3 leading-relaxed">
+              <p className="font-display text-xs text-[#102A26] mt-3 leading-relaxed">
                 "{rev.review}"
               </p>
             </div>
 
             {/* Author details */}
-            <div className="border-t border-white/10 pt-3 flex items-center justify-between font-display text-xs">
+            <div className="border-t border-[#E5E7EB] pt-3 flex items-center justify-between font-display text-xs">
               <div>
-                <div className="flex items-center gap-1 text-white font-bold">
+                <div className="flex items-center gap-1 text-[#102A26] font-bold">
                   <span>{rev.author}</span>
-                  <CheckCircle className="h-3 w-3 text-emerald-400" />
+                  <CheckCircle className="h-3 w-3 text-[#007F5F]" />
                 </div>
-                <span className="text-[11px] text-white/50">{rev.location} · {rev.device}</span>
+                <span className="text-[11px] text-[#6B7280]">{rev.location} · {rev.device}</span>
               </div>
-              <span className="font-label text-[10px] text-accent font-semibold">
+              <span className="font-label text-[10px] text-[#007F5F] font-semibold">
                 {rev.payoutOrSaved}
               </span>
             </div>

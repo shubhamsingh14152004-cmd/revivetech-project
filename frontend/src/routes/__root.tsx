@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#0e0d15" },
+      { name: "theme-color", content: "#007F5F" },
       { title: "Revora — Sell Your Old Phone. Get Paid. Simple." },
       { name: "description", content: "Sell your old smartphone or book a repair with a simple, convenient experience on Revora. Top cash buyback for used or dead phones & 90-day warranty across India." },
       { name: "author", content: "Revora — Sagar Tech Mobile Repair & Buyback" },

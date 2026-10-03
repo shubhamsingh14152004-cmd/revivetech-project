@@ -55,7 +55,7 @@ export const Route = createFileRoute("/sell-damaged-phone")({
   head: () => ({
     meta: [
       {
-        title: "Sell Damaged & Broken Phone for Cash — Toota Phone Becho | SellRepairPhone",
+        title: "Sell Damaged & Broken Phone for Cash — Toota Phone Becho | Revora",
       },
       {
         name: "description",
@@ -69,7 +69,7 @@ export const Route = createFileRoute("/sell-damaged-phone")({
       },
       {
         property: "og:title",
-        content: "Sell Damaged & Broken Phone for Cash | SellRepairPhone",
+        content: "Sell Damaged & Broken Phone for Cash | Revora",
       },
       {
         property: "og:description",
@@ -96,52 +96,52 @@ export const Route = createFileRoute("/sell-damaged-phone")({
 
 function SellDamagedPhonePage() {
   const breadcrumbSchema = getBreadcrumbSchema([
-    { name: "Home", path: "/" },
-    { name: "Sell Damaged Phone", path: "/sell-damaged-phone" },
+    { name: "Home", url: SITE_URL },
+    { name: "Sell Damaged Phone", url: `${SITE_URL}/sell-damaged-phone` },
   ]);
 
   const serviceSchema = getServiceSchema({
     name: "Damaged and Broken Phone Buyback Service",
     description:
       "Highest cash valuation and doorstep salvage buyback for cracked, liquid-damaged, and non-working mobile phones.",
-    url: "/sell-damaged-phone",
-    category: "Electronics Buyback & Recycling",
+    serviceType: "Electronics Buyback & Recycling",
+    url: `${SITE_URL}/sell-damaged-phone`,
   });
 
   const faqSchema = getFaqSchema(FAQS);
 
   return (
-    <div className="dusk min-h-screen w-full text-white selection:bg-brand selection:text-white pb-24">
+    <div className="min-h-screen bg-[#FAFAF7] text-[#102A26] flex flex-col selection:bg-[#007F5F] selection:text-white pb-24">
       <SeoJsonLd schema={[breadcrumbSchema, serviceSchema, faqSchema]} />
       <SiteHeader />
 
-      <main className="mx-auto max-w-6xl px-4 sm:px-6 pt-8 md:pt-12">
+      <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 pt-6">
         {/* Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs text-white/60 font-display">
-          <Link to="/" className="hover:text-white transition">Home</Link>
+        <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs text-slate-500 font-medium">
+          <Link to="/" className="hover:text-[#007F5F] transition">Home</Link>
           <span>/</span>
-          <span className="text-white font-semibold">Sell Damaged Phone</span>
+          <span className="text-[#007F5F] font-semibold">Sell Damaged Phone</span>
         </nav>
 
         {/* Hero Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
-          <div className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide text-amber-300 font-label border border-amber-500/30 bg-amber-500/10">
-            <AlertTriangle className="h-3.5 w-3.5 text-amber-400" />
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide text-[#005B46] border border-[#43C59E]/30 bg-[#DDF5EA]">
+            <AlertTriangle className="h-3.5 w-3.5 text-[#007F5F]" />
             <span>Broken Screen · Water Damage · Dead Motherboard · Instant Cash</span>
           </div>
 
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            Sell Damaged Phone <span className="chrome">For Top Value</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#102A26] leading-tight">
+            Sell Damaged Phone <span className="text-[#007F5F]">For Top Value</span>
           </h1>
 
-          <p className="font-display text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-[#475569] leading-relaxed max-w-2xl mx-auto">
             Don't let your broken, cracked, or non-working mobile phone sit in a drawer. Even badly damaged smartphones retain valuable internal micro-components. Get paid on the spot via UPI with free doorstep pickup.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2 text-xs font-mono text-emerald-300">
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4" /> Fair Salvage Price</span>
-            <span className="flex items-center gap-1.5"><Truck className="h-4 w-4" /> Zero Pickup Charges</span>
-            <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4" /> Certified Safe Disposal</span>
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2 text-xs font-semibold text-[#005B46]">
+            <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-[#007F5F]" /> Fair Salvage Price</span>
+            <span className="flex items-center gap-1.5"><Truck className="h-4 w-4 text-[#007F5F]" /> Zero Pickup Charges</span>
+            <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-[#007F5F]" /> Certified Safe Disposal</span>
           </div>
         </div>
 
@@ -151,45 +151,45 @@ function SellDamagedPhonePage() {
         </section>
 
         {/* What Damaged Conditions We Accept */}
-        <section className="mb-14 rounded-3xl bg-white/[0.03] p-6 sm:p-10 border border-white/10 space-y-8">
+        <section className="mb-14 rounded-3xl bg-white p-6 sm:p-10 border border-[#E5E7EB] space-y-8 shadow-xs">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h2 className="font-display text-2xl sm:text-3xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#102A26]">
               Types of Damaged Phones We Buy
             </h2>
-            <p className="text-xs text-white/70 font-display">
+            <p className="text-xs text-slate-500">
               We purchase smartphones in all severe conditions across iPhone, Samsung, OnePlus, and Android:
             </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-            <div className="rounded-2xl bg-black/40 p-5 border border-white/10 space-y-2.5">
+            <div className="rounded-2xl bg-[#FAFAF7] p-5 border border-[#E5E7EB] space-y-2.5">
               <span className="text-2xl block">🔨</span>
-              <h3 className="font-display text-base font-bold text-white">Shattered & Cracked Screens</h3>
-              <p className="text-xs text-white/70 font-display leading-relaxed">
+              <h3 className="text-base font-bold text-[#102A26]">Shattered & Cracked Screens</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
                 Broken outer glass, bleeding OLED ink lines, touch dead zones, or completely dark displays.
               </p>
             </div>
 
-            <div className="rounded-2xl bg-black/40 p-5 border border-white/10 space-y-2.5">
+            <div className="rounded-2xl bg-[#FAFAF7] p-5 border border-[#E5E7EB] space-y-2.5">
               <span className="text-2xl block">💧</span>
-              <h3 className="font-display text-base font-bold text-white">Water & Liquid Damage</h3>
-              <p className="text-xs text-white/70 font-display leading-relaxed">
+              <h3 className="text-base font-bold text-[#102A26]">Water & Liquid Damage</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
                 Corrosion from rain, pool drops, or drink spills that ruined the power circuits.
               </p>
             </div>
 
-            <div className="rounded-2xl bg-black/40 p-5 border border-white/10 space-y-2.5">
+            <div className="rounded-2xl bg-[#FAFAF7] p-5 border border-[#E5E7EB] space-y-2.5">
               <span className="text-2xl block">⚡</span>
-              <h3 className="font-display text-base font-bold text-white">Dead Logic Boards (No Power)</h3>
-              <p className="text-xs text-white/70 font-display leading-relaxed">
+              <h3 className="text-base font-bold text-[#102A26]">Dead Logic Boards (No Power)</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
                 Phones that do not boot, stuck in bootloops, burnt PMIC power ICs, or CPU faults.
               </p>
             </div>
 
-            <div className="rounded-2xl bg-black/40 p-5 border border-white/10 space-y-2.5">
+            <div className="rounded-2xl bg-[#FAFAF7] p-5 border border-[#E5E7EB] space-y-2.5">
               <span className="text-2xl block">🔋</span>
-              <h3 className="font-display text-base font-bold text-white">Swollen Battery & Body Bent</h3>
-              <p className="text-xs text-white/70 font-display leading-relaxed">
+              <h3 className="text-base font-bold text-[#102A26]">Swollen Battery & Body Bent</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
                 Deformed chassis, popped screens from expanding batteries, and broken charging ports.
               </p>
             </div>
@@ -199,22 +199,22 @@ function SellDamagedPhonePage() {
         {/* FAQs Section */}
         <section className="mb-14 space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h2 className="font-display text-2xl sm:text-3xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#102A26]">
               Frequently Asked Questions About Damaged Phone Buybacks
             </h2>
-            <p className="text-xs text-white/60 font-display">
+            <p className="text-xs text-slate-500">
               Everything you need to know about selling a damaged phone with broken display or power faults.
             </p>
           </div>
 
           <div className="grid gap-4 max-w-3xl mx-auto">
             {FAQS.map((faq, idx) => (
-              <div key={idx} className="rounded-2xl bg-white/[0.03] p-5 border border-white/10 space-y-2">
-                <h3 className="font-display text-sm font-bold text-white flex items-start gap-2">
-                  <span className="text-amber-400 font-mono">Q.</span>
+              <div key={idx} className="rounded-2xl bg-white p-5 border border-[#E5E7EB] space-y-2 shadow-xs">
+                <h3 className="text-sm font-bold text-[#102A26] flex items-start gap-2">
+                  <span className="text-[#007F5F] font-mono">Q.</span>
                   <span>{faq.question}</span>
                 </h3>
-                <p className="text-xs text-white/70 leading-relaxed pl-5 font-display">
+                <p className="text-xs text-[#475569] leading-relaxed pl-5">
                   {faq.answer}
                 </p>
               </div>
@@ -223,18 +223,18 @@ function SellDamagedPhonePage() {
         </section>
 
         {/* Related Repair Hub */}
-        <section className="mb-8 rounded-2xl bg-gradient-to-r from-emerald-950/40 to-black p-6 border border-emerald-500/30 flex flex-col md:flex-row items-center justify-between gap-4">
+        <section className="mb-8 rounded-2xl bg-[#DDF5EA] p-6 border border-[#43C59E]/30 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
-            <h3 className="font-display text-base font-bold text-white">Wondering if it can still be fixed?</h3>
-            <p className="text-xs text-white/70 font-display">
+            <h3 className="text-base font-bold text-[#005B46]">Wondering if it can still be fixed?</h3>
+            <p className="text-xs text-[#102A26]">
               Our certified cleanroom lab fixes dead and damaged phones in 45 minutes with free pickup in Mumbai.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <Link to="/dead-phone-repair" className="rounded-full bg-emerald-500 text-ink px-5 py-2.5 text-xs font-bold font-label hover:brightness-110 transition">
+            <Link to="/dead-phone-repair" className="rounded-full bg-[#007F5F] text-white px-5 py-2.5 text-xs font-bold hover:bg-[#005B46] transition">
               Dead Phone Repair
             </Link>
-            <Link to="/screen-repair" className="rounded-full bg-white/10 px-5 py-2.5 text-xs font-bold font-label text-white hover:bg-white/20 transition">
+            <Link to="/screen-repair" className="rounded-full bg-white px-5 py-2.5 text-xs font-bold text-[#102A26] border border-[#E5E7EB] hover:bg-slate-50 transition">
               Screen Repair
             </Link>
           </div>

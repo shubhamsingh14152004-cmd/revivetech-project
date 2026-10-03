@@ -150,21 +150,18 @@ export function PreLovedStore() {
   const cartTotal = cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden border border-white/15 shadow-2xl">
-      {/* Background accent */}
-      <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-gold/15 blur-3xl pointer-events-none" />
-
+    <div className="relative rounded-3xl bg-white p-6 md:p-10 overflow-hidden border border-[#E5E7EB] shadow-lg">
       {/* Header */}
-      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-semibold text-emerald-400 font-label border border-emerald-500/30">
-            <ShieldCheck className="h-3.5 w-3.5" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#DDF5EA] px-3.5 py-1 text-xs font-semibold text-[#005B46] font-label border border-[#43C59E]/30">
+            <ShieldCheck className="h-3.5 w-3.5 text-[#007F5F]" />
             100-Point Inspected & Certified Pre-Loved
           </div>
-          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-white">
+          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-[#102A26]">
             Shop Certified Refurbished Flagships
           </h3>
-          <p className="font-display text-sm text-white/70 mt-1 max-w-xl">
+          <p className="font-display text-sm text-[#6B7280] mt-1 max-w-xl">
             Save up to 60% off retail. Every phone is bench-tested, sanitized,
             fitted with fresh battery cells, and backed by a 1-year warranty.
           </p>
@@ -174,12 +171,12 @@ export function PreLovedStore() {
         <button
           type="button"
           onClick={() => setIsCartOpen(true)}
-          className="relative inline-flex items-center gap-2.5 rounded-full bg-white/10 px-5 py-2.5 text-xs font-semibold text-white border border-white/20 hover:bg-white/20 transition font-label cursor-pointer"
+          className="relative inline-flex items-center gap-2.5 rounded-full bg-[#FAFAF7] px-5 py-2.5 text-xs font-semibold text-[#102A26] border border-[#E5E7EB] hover:bg-[#DDF5EA] transition font-label cursor-pointer shadow-xs"
         >
-          <ShoppingBag className="h-4 w-4 text-accent" />
+          <ShoppingBag className="h-4 w-4 text-[#007F5F]" />
           <span>Reserved Bag</span>
           {cart.length > 0 && (
-            <span className="grid h-5 w-5 place-items-center rounded-full bg-brand text-[10px] font-bold text-white">
+            <span className="grid h-5 w-5 place-items-center rounded-full bg-[#007F5F] text-[10px] font-bold text-white">
               {cart.length}
             </span>
           )}
@@ -187,7 +184,7 @@ export function PreLovedStore() {
       </div>
 
       {/* Filters Bar */}
-      <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 mt-6 border-b border-white/5 pb-4">
+      <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 mt-6 border-b border-[#E5E7EB] pb-4">
         {/* Brand tabs */}
         <div className="flex flex-wrap items-center gap-2">
           {[
@@ -200,10 +197,10 @@ export function PreLovedStore() {
               key={tab.key}
               type="button"
               onClick={() => setSelectedBrand(tab.key)}
-              className={`rounded-xl px-4 py-2 text-xs font-semibold font-display transition border ${
+              className={`rounded-xl px-4 py-2 text-xs font-semibold font-display transition border cursor-pointer ${
                 selectedBrand === tab.key
-                  ? "bg-brand text-white border-brand shadow-md shadow-brand/20"
-                  : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10"
+                  ? "bg-[#007F5F] text-white border-[#007F5F] shadow-xs"
+                  : "bg-white text-[#102A26] border-[#E5E7EB] hover:bg-[#FAFAF7]"
               }`}
             >
               {tab.label}
@@ -213,16 +210,16 @@ export function PreLovedStore() {
 
         {/* Grade filter */}
         <div className="flex items-center gap-2 text-xs font-display">
-          <span className="text-white/60">Condition Grade:</span>
+          <span className="text-[#6B7280]">Condition Grade:</span>
           {["all", "A+", "A", "B"].map((g) => (
             <button
               key={g}
               type="button"
               onClick={() => setSelectedGrade(g)}
-              className={`rounded-lg px-2.5 py-1 text-xs font-semibold font-label border transition ${
+              className={`rounded-lg px-2.5 py-1 text-xs font-semibold font-label border transition cursor-pointer ${
                 selectedGrade === g
-                  ? "bg-white text-ink border-white"
-                  : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10"
+                  ? "bg-[#007F5F] text-white border-[#007F5F]"
+                  : "bg-white text-[#102A26] border-[#E5E7EB] hover:bg-[#FAFAF7]"
               }`}
             >
               {g === "all" ? "All Grades" : `Grade ${g}`}
@@ -238,35 +235,35 @@ export function PreLovedStore() {
           return (
             <div
               key={dev.id}
-              className="group flex flex-col justify-between rounded-2xl bg-white/5 border border-white/10 p-5 transition hover:border-white/25 hover:bg-white/10 hover:-translate-y-1 shadow-xl"
+              className="group flex flex-col justify-between rounded-2xl bg-[#FAFAF7] border border-[#E5E7EB] p-5 transition hover:border-[#007F5F] hover:-translate-y-0.5 shadow-xs"
             >
               <div>
                 {/* Top badges */}
                 <div className="flex items-center justify-between">
-                  <span className="font-label text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                  <span className="font-label text-[11px] font-bold text-[#005B46] bg-[#DDF5EA] px-2 py-0.5 rounded-full border border-[#43C59E]/30">
                     Grade {dev.grade} · {dev.gradeLabel}
                   </span>
-                  <span className="font-label text-[11px] font-semibold text-accent flex items-center gap-1">
+                  <span className="font-label text-[11px] font-semibold text-[#007F5F] flex items-center gap-1">
                     <BatteryCharging className="h-3.5 w-3.5" />
                     {dev.batteryHealth}% Battery
                   </span>
                 </div>
 
                 {/* Device visual placeholder / mock frame */}
-                <div className="my-4 flex items-center justify-center rounded-2xl bg-black/40 py-6 border border-white/5 relative overflow-hidden group-hover:border-accent/30 transition">
-                  <span className="text-5xl drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] animate-float">
+                <div className="my-4 flex items-center justify-center rounded-2xl bg-white py-6 border border-[#E5E7EB] relative overflow-hidden group-hover:border-[#007F5F]/40 transition">
+                  <span className="text-5xl drop-shadow-md">
                     {dev.imageEmoji}
                   </span>
-                  <span className="absolute bottom-2 right-2 rounded-md bg-ink/80 px-2 py-0.5 text-[10px] font-mono text-white/70 border border-white/10">
+                  <span className="absolute bottom-2 right-2 rounded-md bg-[#FAFAF7] px-2 py-0.5 text-[10px] font-mono text-[#6B7280] border border-[#E5E7EB]">
                     {dev.storage}
                   </span>
                 </div>
 
                 {/* Title & Specs */}
-                <h4 className="font-display text-lg font-bold text-white group-hover:text-accent transition">
+                <h4 className="font-display text-lg font-bold text-[#102A26] group-hover:text-[#007F5F] transition">
                   {dev.name}
                 </h4>
-                <p className="font-display text-xs text-white/60 mt-0.5">
+                <p className="font-display text-xs text-[#6B7280] mt-0.5">
                   Color: {dev.color} · Factory Unlocked
                 </p>
 
@@ -275,7 +272,7 @@ export function PreLovedStore() {
                   {dev.features.slice(0, 3).map((feat, idx) => (
                     <span
                       key={idx}
-                      className="rounded-md bg-white/5 px-2 py-0.5 text-[10px] text-white/70 font-display border border-white/5"
+                      className="rounded-md bg-white px-2 py-0.5 text-[10px] text-[#6B7280] font-display border border-[#E5E7EB]"
                     >
                       {feat}
                     </span>
@@ -284,17 +281,17 @@ export function PreLovedStore() {
               </div>
 
               {/* Price & Actions */}
-              <div className="mt-5 pt-4 border-t border-white/10">
+              <div className="mt-5 pt-4 border-t border-[#E5E7EB]">
                 <div className="flex items-baseline justify-between mb-3">
                   <div>
-                    <span className="font-display text-2xl font-extrabold text-white">
+                    <span className="font-display text-2xl font-extrabold text-[#102A26]">
                       ₹{dev.price.toLocaleString("en-IN")}
                     </span>
-                    <span className="ml-2 font-display text-xs line-through text-white/40">
+                    <span className="ml-2 font-display text-xs line-through text-slate-400">
                       ₹{dev.originalPrice.toLocaleString("en-IN")}
                     </span>
                   </div>
-                  <span className="font-label text-[11px] font-bold text-gold">
+                  <span className="font-label text-[11px] font-bold text-[#007F5F]">
                     Save ₹{savings.toLocaleString("en-IN")}
                   </span>
                 </div>
@@ -303,15 +300,15 @@ export function PreLovedStore() {
                   <button
                     type="button"
                     onClick={() => setQuickViewItem(dev)}
-                    className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-white/5 py-2.5 text-xs font-semibold text-white/80 hover:bg-white/15 hover:text-white transition font-display border border-white/10 cursor-pointer"
+                    className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-white py-2.5 text-xs font-semibold text-[#102A26] hover:bg-[#FAFAF7] transition font-display border border-[#E5E7EB] cursor-pointer"
                   >
-                    <Eye className="h-3.5 w-3.5" />
+                    <Eye className="h-3.5 w-3.5 text-[#007F5F]" />
                     <span>Specs</span>
                   </button>
                   <button
                     type="button"
                     onClick={() => addToCart(dev)}
-                    className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-brand py-2.5 text-xs font-bold text-white hover:brightness-110 transition font-label shadow-md shadow-brand/30 cursor-pointer"
+                    className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#007F5F] hover:bg-[#005B46] py-2.5 text-xs font-bold text-white transition font-label shadow-xs cursor-pointer"
                   >
                     <ShoppingBag className="h-3.5 w-3.5" />
                     <span>Reserve</span>
@@ -325,16 +322,16 @@ export function PreLovedStore() {
 
       {/* Quick View Modal */}
       {quickViewItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-in fade-in duration-200">
-          <div className="relative w-full max-w-lg rounded-3xl bg-gradient-to-b from-ink to-black p-6 md:p-8 border border-white/20 shadow-2xl text-white">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-xs p-4 animate-in fade-in duration-200">
+          <div className="relative w-full max-w-lg rounded-3xl bg-white p-6 md:p-8 border border-[#E5E7EB] shadow-2xl text-[#102A26]">
             <button
               onClick={() => setQuickViewItem(null)}
-              className="absolute right-5 top-5 p-2 text-white/60 hover:text-white rounded-full bg-white/10 transition"
+              className="absolute right-5 top-5 p-2 text-[#6B7280] hover:text-[#102A26] rounded-full bg-[#FAFAF7] hover:bg-[#E5E7EB] transition"
             >
               <X className="h-5 w-5" />
             </button>
 
-            <div className="flex items-center gap-2 text-emerald-400 font-label text-xs uppercase tracking-wider font-semibold">
+            <div className="flex items-center gap-2 text-[#007F5F] font-label text-xs uppercase tracking-wider font-semibold">
               <ShieldCheck className="h-4 w-4" />
               100-Point Inspection Pass Certificate
             </div>
@@ -342,10 +339,10 @@ export function PreLovedStore() {
             <div className="flex items-center gap-4 mt-3">
               <span className="text-4xl">{quickViewItem.imageEmoji}</span>
               <div>
-                <h3 className="font-display text-2xl font-bold">
+                <h3 className="font-display text-2xl font-bold text-[#102A26]">
                   {quickViewItem.name}
                 </h3>
-                <p className="font-display text-xs text-white/70">
+                <p className="font-display text-xs text-[#6B7280]">
                   {quickViewItem.storage} · {quickViewItem.color} · Factory
                   Unlocked (All Carriers)
                 </p>
@@ -353,46 +350,46 @@ export function PreLovedStore() {
             </div>
 
             {/* Inspection Checklist */}
-            <div className="mt-5 rounded-2xl bg-white/5 border border-white/10 p-4 space-y-2.5 font-display text-xs">
-              <div className="flex items-center justify-between text-white/90">
+            <div className="mt-5 rounded-2xl bg-[#FAFAF7] border border-[#E5E7EB] p-4 space-y-2.5 font-display text-xs">
+              <div className="flex items-center justify-between text-[#102A26]">
                 <span>Display & Digitizer (Zero Dead Pixels):</span>
-                <span className="text-emerald-400 font-bold flex items-center gap-1">
+                <span className="text-[#007F5F] font-bold flex items-center gap-1">
                   <Check className="h-3.5 w-3.5" /> Pass
                 </span>
               </div>
-              <div className="flex items-center justify-between text-white/90">
+              <div className="flex items-center justify-between text-[#102A26]">
                 <span>Battery Real Health Capacity:</span>
-                <span className="font-bold text-accent">
+                <span className="font-bold text-[#007F5F]">
                   {quickViewItem.batteryHealth}% Tested
                 </span>
               </div>
-              <div className="flex items-center justify-between text-white/90">
+              <div className="flex items-center justify-between text-[#102A26]">
                 <span>5G Antenna, Wi-Fi 6E & Bluetooth:</span>
-                <span className="text-emerald-400 font-bold flex items-center gap-1">
+                <span className="text-[#007F5F] font-bold flex items-center gap-1">
                   <Check className="h-3.5 w-3.5" /> Pass
                 </span>
               </div>
-              <div className="flex items-center justify-between text-white/90">
+              <div className="flex items-center justify-between text-[#102A26]">
                 <span>Microphones, Speakers & FaceID/Biometrics:</span>
-                <span className="text-emerald-400 font-bold flex items-center gap-1">
+                <span className="text-[#007F5F] font-bold flex items-center gap-1">
                   <Check className="h-3.5 w-3.5" /> Pass
                 </span>
               </div>
-              <div className="flex items-center justify-between text-white/90">
+              <div className="flex items-center justify-between text-[#102A26]">
                 <span>IMEI Clean & iCloud/Google Account Free:</span>
-                <span className="text-emerald-400 font-bold flex items-center gap-1">
+                <span className="text-[#007F5F] font-bold flex items-center gap-1">
                   <Check className="h-3.5 w-3.5" /> 100% Clean
                 </span>
               </div>
             </div>
 
             {/* Price & CTA */}
-            <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+            <div className="mt-6 flex items-center justify-between border-t border-[#E5E7EB] pt-4">
               <div>
-                <span className="font-display text-2xl font-bold text-white">
+                <span className="font-display text-2xl font-bold text-[#102A26]">
                   ₹{quickViewItem.price.toLocaleString("en-IN")}
                 </span>
-                <span className="ml-2 font-display text-xs text-white/50 line-through">
+                <span className="ml-2 font-display text-xs text-[#6B7280] line-through">
                   ₹{quickViewItem.originalPrice.toLocaleString("en-IN")}
                 </span>
               </div>
@@ -402,7 +399,7 @@ export function PreLovedStore() {
                   addToCart(quickViewItem);
                   setQuickViewItem(null);
                 }}
-                className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-2.5 text-xs font-bold text-white hover:brightness-110 transition font-label"
+                className="inline-flex items-center gap-2 rounded-full bg-[#007F5F] hover:bg-[#005B46] px-6 py-2.5 text-xs font-bold text-white transition font-label cursor-pointer"
               >
                 <span>Add to Reserved Bag</span>
                 <ArrowRight className="h-4 w-4" />
@@ -414,29 +411,29 @@ export function PreLovedStore() {
 
       {/* Cart Drawer */}
       {isCartOpen && (
-        <div className="fixed inset-0 z-50 flex justify-end bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="w-full max-w-md h-full bg-gradient-to-b from-ink via-ink/95 to-black p-6 border-l border-white/20 shadow-2xl flex flex-col justify-between text-white">
+        <div className="fixed inset-0 z-50 flex justify-end bg-slate-900/40 backdrop-blur-xs animate-in fade-in duration-200">
+          <div className="w-full max-w-md h-full bg-white p-6 border-l border-[#E5E7EB] shadow-2xl flex flex-col justify-between text-[#102A26]">
             <div>
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-4">
                 <div className="flex items-center gap-2">
-                  <ShoppingBag className="h-5 w-5 text-accent" />
-                  <h3 className="font-display text-lg font-bold">
+                  <ShoppingBag className="h-5 w-5 text-[#007F5F]" />
+                  <h3 className="font-display text-lg font-bold text-[#102A26]">
                     Your Reserved Bag ({cart.length})
                   </h3>
                 </div>
                 <button
                   onClick={() => setIsCartOpen(false)}
-                  className="p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/70 transition"
+                  className="p-1.5 rounded-full bg-[#FAFAF7] hover:bg-[#E5E7EB] text-[#6B7280] transition"
                 >
                   <X className="h-4 w-4" />
                 </button>
               </div>
 
               {cart.length === 0 ? (
-                <div className="py-16 text-center text-white/50 font-display space-y-2">
-                  <ShoppingBag className="h-12 w-12 mx-auto opacity-40" />
+                <div className="py-16 text-center text-[#6B7280] font-display space-y-2">
+                  <ShoppingBag className="h-12 w-12 mx-auto opacity-40 text-[#6B7280]" />
                   <p className="text-sm">Your reservation bag is currently empty.</p>
-                  <p className="text-xs text-white/40">
+                  <p className="text-xs text-[#6B7280]">
                     Browse our certified pre-loved flagships and reserve before they sell out.
                   </p>
                 </div>
@@ -445,16 +442,16 @@ export function PreLovedStore() {
                   {cart.map((item) => (
                     <div
                       key={item.id}
-                      className="flex items-center justify-between p-3.5 rounded-2xl bg-white/5 border border-white/10 font-display text-xs"
+                      className="flex items-center justify-between p-3.5 rounded-2xl bg-[#FAFAF7] border border-[#E5E7EB] font-display text-xs"
                     >
                       <div className="flex items-center gap-3">
                         <span className="text-2xl">{item.imageEmoji}</span>
                         <div>
-                          <p className="font-bold text-white">{item.name}</p>
-                          <p className="text-white/60">
+                          <p className="font-bold text-[#102A26]">{item.name}</p>
+                          <p className="text-[#6B7280]">
                             {item.storage} · Grade {item.grade}
                           </p>
-                          <span className="text-accent font-bold">
+                          <span className="text-[#007F5F] font-bold">
                             ₹{item.price.toLocaleString("en-IN")}
                           </span>
                         </div>
@@ -462,7 +459,7 @@ export function PreLovedStore() {
                       <button
                         type="button"
                         onClick={() => removeFromCart(item.id)}
-                        className="p-2 text-white/40 hover:text-red-400 transition"
+                        className="p-2 text-[#6B7280] hover:text-rose-600 transition"
                       >
                         <Trash2 className="h-4 w-4" />
                       </button>
@@ -473,20 +470,20 @@ export function PreLovedStore() {
             </div>
 
             {cart.length > 0 && (
-              <div className="border-t border-white/10 pt-4 space-y-3 font-display">
-                <div className="flex justify-between text-xs text-white/70">
+              <div className="border-t border-[#E5E7EB] pt-4 space-y-3 font-display">
+                <div className="flex justify-between text-xs text-[#6B7280]">
                   <span>Shipping:</span>
-                  <span className="font-semibold text-emerald-400">
+                  <span className="font-semibold text-[#007F5F]">
                     FREE Express Priority
                   </span>
                 </div>
-                <div className="flex justify-between text-xs text-white/70">
+                <div className="flex justify-between text-xs text-[#6B7280]">
                   <span>1-Year Shield Warranty:</span>
-                  <span className="font-semibold text-accent">Included (₹0)</span>
+                  <span className="font-semibold text-[#007F5F]">Included (₹0)</span>
                 </div>
-                <div className="flex justify-between text-base font-bold text-white border-t border-white/10 pt-2">
+                <div className="flex justify-between text-base font-bold text-[#102A26] border-t border-[#E5E7EB] pt-2">
                   <span>Subtotal:</span>
-                  <span className="text-2xl text-accent font-display">
+                  <span className="text-2xl text-[#007F5F] font-display">
                     ₹{cartTotal.toLocaleString("en-IN")}
                   </span>
                 </div>
@@ -501,7 +498,7 @@ export function PreLovedStore() {
                     setCart([]);
                     setIsCartOpen(false);
                   }}
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-brand py-3 text-sm font-bold text-white shadow-lg shadow-brand/40 hover:brightness-110 font-label transition cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#007F5F] hover:bg-[#005B46] py-3 text-sm font-bold text-white shadow-md font-label transition cursor-pointer"
                 >
                   <span>Proceed to Free 24h Reserve Checkout</span>
                   <ArrowRight className="h-4 w-4" />

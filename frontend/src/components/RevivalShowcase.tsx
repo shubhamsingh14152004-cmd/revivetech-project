@@ -146,21 +146,18 @@ export function RevivalShowcase() {
   };
 
   return (
-    <div className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden border border-white/15 shadow-2xl">
-      {/* Glow highlight */}
-      <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-brand/15 blur-3xl pointer-events-none" />
-
+    <div className="relative rounded-3xl bg-white p-6 md:p-10 overflow-hidden border border-[#E5E7EB] shadow-lg">
       {/* Header */}
-      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-3.5 py-1 text-xs font-semibold text-accent font-label border border-accent/30">
-            <SlidersHorizontal className="h-3.5 w-3.5" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#DDF5EA] px-3.5 py-1 text-xs font-semibold text-[#005B46] font-label border border-[#43C59E]/30">
+            <SlidersHorizontal className="h-3.5 w-3.5 text-[#007F5F]" />
             Interactive Revival Comparison Lab
           </div>
-          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-white">
+          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-[#102A26]">
             See the Magic: Drag Before & After
           </h3>
-          <p className="font-display text-sm text-white/70 mt-1 max-w-xl">
+          <p className="font-display text-sm text-[#6B7280] mt-1 max-w-xl">
             Drag the chrome slider left and right to inspect real phone revivals
             carried out on our micro-soldering and cleanroom benches.
           </p>
@@ -178,8 +175,8 @@ export function RevivalShowcase() {
               }}
               className={`rounded-xl px-3.5 py-2 text-xs font-semibold font-display border transition cursor-pointer ${
                 activeCaseIndex === idx
-                  ? "bg-white text-ink border-white shadow-md font-bold"
-                  : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
+                  ? "bg-[#007F5F] text-white border-[#007F5F] shadow-xs font-bold"
+                  : "bg-white text-[#102A26] border-[#E5E7EB] hover:bg-[#FAFAF7]"
               }`}
             >
               Case #{idx + 1}: {c.device.split(" ")[0]}
@@ -199,7 +196,7 @@ export function RevivalShowcase() {
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onTouchMove={handleTouchMove}
-            className="relative h-80 sm:h-96 w-full rounded-3xl overflow-hidden cursor-ew-resize select-none border border-white/20 shadow-2xl"
+            className="relative h-80 sm:h-96 w-full rounded-3xl overflow-hidden cursor-ew-resize select-none border border-[#E5E7EB] shadow-lg"
           >
             {/* "After" Layer (Background) */}
             <div
@@ -266,21 +263,21 @@ export function RevivalShowcase() {
         </div>
 
         {/* Right Column: Lab Diagnostics & Replaced Parts */}
-        <div className="lg:col-span-5 rounded-2xl bg-black/40 p-6 border border-white/10 space-y-5">
-          <div className="flex items-center justify-between border-b border-white/10 pb-4">
+        <div className="lg:col-span-5 rounded-2xl bg-[#FAFAF7] p-6 border border-[#E5E7EB] space-y-5">
+          <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-4">
             <div>
-              <span className="font-label text-xs text-accent font-bold uppercase">
+              <span className="font-label text-xs text-[#007F5F] font-bold uppercase">
                 Case Study #{activeCaseIndex + 1}
               </span>
-              <h4 className="font-display text-lg font-bold text-white">
+              <h4 className="font-display text-lg font-bold text-[#102A26]">
                 {currentCase.title}
               </h4>
             </div>
             <div className="text-right">
-              <span className="font-label text-xs text-white/50 block">
+              <span className="font-label text-xs text-[#6B7280] block">
                 Turnaround Time
               </span>
-              <span className="font-display text-sm font-bold text-emerald-400 flex items-center gap-1 justify-end">
+              <span className="font-display text-sm font-bold text-[#007F5F] flex items-center gap-1 justify-end">
                 <Clock className="h-3.5 w-3.5" />
                 {currentCase.timeTaken}
               </span>
@@ -289,13 +286,13 @@ export function RevivalShowcase() {
 
           {/* Damage Symptoms */}
           <div>
-            <span className="font-label text-xs font-bold uppercase tracking-wider text-red-400 block mb-2">
+            <span className="font-label text-xs font-bold uppercase tracking-wider text-rose-700 block mb-2">
               ⚠️ Diagnostic Bench Findings:
             </span>
-            <ul className="space-y-1.5 font-display text-xs text-white/70">
+            <ul className="space-y-1.5 font-display text-xs text-[#102A26]">
               {currentCase.symptoms.map((s, idx) => (
                 <li key={idx} className="flex items-start gap-2">
-                  <span className="text-red-400">•</span>
+                  <span className="text-rose-600">•</span>
                   <span>{s}</span>
                 </li>
               ))}
@@ -304,13 +301,13 @@ export function RevivalShowcase() {
 
           {/* Repairs Completed */}
           <div>
-            <span className="font-label text-xs font-bold uppercase tracking-wider text-emerald-400 block mb-2">
+            <span className="font-label text-xs font-bold uppercase tracking-wider text-[#007F5F] block mb-2">
               🛠️ Micro-Fixes Executed:
             </span>
-            <ul className="space-y-1.5 font-display text-xs text-white/90">
+            <ul className="space-y-1.5 font-display text-xs text-[#102A26]">
               {currentCase.repairsMade.map((r, idx) => (
                 <li key={idx} className="flex items-start gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#007F5F] shrink-0 mt-0.5" />
                   <span>{r}</span>
                 </li>
               ))}
@@ -318,18 +315,18 @@ export function RevivalShowcase() {
           </div>
 
           {/* Value saved banner */}
-          <div className="rounded-xl bg-accent/10 border border-accent/20 p-3.5 flex items-center justify-between font-display text-xs">
+          <div className="rounded-xl bg-[#DDF5EA] border border-[#43C59E]/30 p-3.5 flex items-center justify-between font-display text-xs">
             <div>
-              <span className="text-white/70 block">
+              <span className="text-[#005B46] block">
                 Customer Saved vs New Device:
               </span>
-              <span className="font-display text-xl font-bold text-accent">
+              <span className="font-display text-xl font-bold text-[#007F5F]">
                 +₹{currentCase.costSaved.toLocaleString("en-IN")}
               </span>
             </div>
             <a
               href="#quote"
-              className="inline-flex items-center gap-1 text-xs font-bold text-white hover:text-accent font-label transition"
+              className="inline-flex items-center gap-1 text-xs font-bold text-[#005B46] hover:text-[#007F5F] font-label transition"
             >
               Revive Yours →
             </a>

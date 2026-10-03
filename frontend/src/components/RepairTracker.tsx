@@ -166,21 +166,18 @@ export function RepairTracker() {
   };
 
   return (
-    <div className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden border border-white/15 shadow-2xl">
-      {/* Background accent */}
-      <div className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-brand/15 blur-3xl pointer-events-none" />
-
+    <div className="relative rounded-3xl bg-white p-6 md:p-10 overflow-hidden border border-[#E5E7EB] shadow-lg">
       {/* Header */}
-      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/20 px-3.5 py-1 text-xs font-semibold text-blue-400 font-label border border-blue-500/30">
-            <Search className="h-3.5 w-3.5" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#DDF5EA] px-3.5 py-1 text-xs font-semibold text-[#005B46] font-label border border-[#43C59E]/30">
+            <Search className="h-3.5 w-3.5 text-[#007F5F]" />
             Live Cleanroom Diagnostic Tracker
           </div>
-          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-white">
+          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-[#102A26]">
             Track Device Repair in Real-Time
           </h3>
-          <p className="font-display text-sm text-white/70 mt-1 max-w-xl">
+          <p className="font-display text-sm text-[#6B7280] mt-1 max-w-xl">
             Enter your Repair Reference ID or IMEI to view microscopic bench
             progress, technician notes, and exact completion time.
           </p>
@@ -188,7 +185,7 @@ export function RepairTracker() {
 
         {/* Quick Demo Buttons */}
         <div className="flex items-center gap-2 text-xs font-display">
-          <span className="text-white/60">Demo Orders:</span>
+          <span className="text-[#6B7280]">Demo Orders:</span>
           {["RT-8842", "RT-9104", "RT-3319"].map((code) => (
             <button
               key={code}
@@ -196,8 +193,8 @@ export function RepairTracker() {
               onClick={() => loadDemo(code)}
               className={`rounded-lg px-2.5 py-1 text-xs font-mono font-bold border transition cursor-pointer ${
                 searchQuery === code
-                  ? "bg-brand text-white border-brand shadow-md"
-                  : "bg-white/5 text-white/80 border-white/10 hover:bg-white/10"
+                  ? "bg-[#007F5F] text-white border-[#007F5F] shadow-xs"
+                  : "bg-white text-[#102A26] border-[#E5E7EB] hover:bg-[#FAFAF7]"
               }`}
             >
               {code}
@@ -214,18 +211,18 @@ export function RepairTracker() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Enter Order ID (e.g. RT-8842) or IMEI number…"
-            className="w-full rounded-2xl border border-white/15 bg-white/10 pl-11 pr-4 py-3 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 font-mono"
+            className="w-full rounded-2xl border border-[#E5E7EB] bg-white pl-11 pr-4 py-3 text-sm text-[#102A26] placeholder:text-slate-400 outline-none transition focus:border-[#007F5F] focus:ring-2 focus:ring-[#007F5F]/20 font-mono"
           />
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-white/50" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#6B7280]" />
         </div>
         <button
           type="submit"
           disabled={isSearchingApi}
-          className="rounded-2xl bg-white px-6 py-3 text-xs font-bold text-ink hover:bg-white/90 transition font-label cursor-pointer flex items-center gap-2 disabled:opacity-50"
+          className="rounded-2xl bg-[#007F5F] hover:bg-[#005B46] px-6 py-3 text-xs font-bold text-white transition font-label cursor-pointer flex items-center gap-2 disabled:opacity-50"
         >
           {isSearchingApi ? (
             <>
-              <Loader2 className="h-4 w-4 animate-spin text-ink" />
+              <Loader2 className="h-4 w-4 animate-spin text-white" />
               <span>Searching…</span>
             </>
           ) : (
@@ -238,25 +235,25 @@ export function RepairTracker() {
       {activeOrder && (
         <div className="relative z-10 mt-8 grid gap-8 lg:grid-cols-12">
           {/* Left Column: Multi-Step Timeline */}
-          <div className="lg:col-span-7 rounded-2xl bg-black/40 p-6 border border-white/10 space-y-6">
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+          <div className="lg:col-span-7 rounded-2xl bg-[#FAFAF7] p-6 border border-[#E5E7EB] space-y-6">
+            <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-4">
               <div>
-                <span className="font-label text-xs text-white/50 block">
+                <span className="font-label text-xs text-[#6B7280] block">
                   Active Reference:
                 </span>
-                <span className="font-mono text-xl font-extrabold text-accent">
+                <span className="font-mono text-xl font-extrabold text-[#007F5F]">
                   #{activeOrder.id}
                 </span>
               </div>
               <div className="text-right">
-                <span className="font-label text-xs text-white/50 block">
+                <span className="font-label text-xs text-[#6B7280] block">
                   Current Status
                 </span>
                 <span
                   className={`font-label text-xs font-bold px-3 py-1 rounded-full border ${
                     activeOrder.currentStep === 5
-                      ? "bg-emerald-500/20 text-emerald-400 border-emerald-500/30"
-                      : "bg-amber-500/20 text-amber-400 border-amber-500/30"
+                      ? "bg-[#DDF5EA] text-[#005B46] border-[#43C59E]/30"
+                      : "bg-amber-100 text-amber-800 border-amber-300"
                   }`}
                 >
                   {activeOrder.currentStep === 5
@@ -279,10 +276,10 @@ export function RepairTracker() {
                     <div
                       className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-xs font-bold font-mono transition ${
                         isCompleted
-                          ? "bg-emerald-500 text-black shadow-lg shadow-emerald-500/30"
+                          ? "bg-[#007F5F] text-white shadow-xs"
                           : isCurrent
-                          ? "bg-accent text-ink live-pulse ring-4 ring-accent/30"
-                          : "bg-white/10 text-white/40"
+                          ? "bg-[#DDF5EA] text-[#005B46] border border-[#007F5F] ring-2 ring-[#007F5F]/30"
+                          : "bg-white text-slate-400 border border-[#E5E7EB]"
                       }`}
                     >
                       {isCompleted ? "✓" : stepNum}
@@ -294,18 +291,18 @@ export function RepairTracker() {
                         <h4
                           className={`font-display text-sm font-semibold ${
                             isCompleted || isCurrent
-                              ? "text-white"
-                              : "text-white/40"
+                              ? "text-[#102A26]"
+                              : "text-slate-400"
                           }`}
                         >
                           {step.title}
                         </h4>
-                        <span className="font-mono text-xs text-white/60">
+                        <span className="font-mono text-xs text-[#6B7280]">
                           {step.time}
                         </span>
                       </div>
                       {isCurrent && (
-                        <p className="font-display text-xs text-accent mt-0.5">
+                        <p className="font-display text-xs text-[#007F5F] mt-0.5">
                           Active task: Currently undergoing microscopic diagnostic
                           & solder repair.
                         </p>
@@ -318,49 +315,49 @@ export function RepairTracker() {
           </div>
 
           {/* Right Column: Technician Notes & Inspection Data */}
-          <div className="lg:col-span-5 rounded-2xl bg-gradient-to-br from-ink/90 to-brand/10 p-6 border border-white/15 space-y-5">
+          <div className="lg:col-span-5 rounded-2xl bg-white p-6 border border-[#E5E7EB] shadow-xs space-y-5">
             <div>
-              <span className="font-label text-xs text-accent uppercase font-bold tracking-wider">
+              <span className="font-label text-xs text-[#007F5F] uppercase font-bold tracking-wider">
                 Assigned Workstation
               </span>
-              <h4 className="font-display text-lg font-bold text-white mt-1">
+              <h4 className="font-display text-lg font-bold text-[#102A26] mt-1">
                 {activeOrder.device}
               </h4>
-              <p className="font-display text-xs text-white/70">
+              <p className="font-display text-xs text-[#6B7280]">
                 Primary Issue: {activeOrder.issue}
               </p>
             </div>
 
             {/* Bench health indicators */}
             <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-xl bg-white/5 border border-white/10 p-3 text-xs font-display">
-                <span className="text-white/60 block">Battery Post-Check:</span>
-                <span className="font-display text-base font-bold text-emerald-400">
+              <div className="rounded-xl bg-[#FAFAF7] border border-[#E5E7EB] p-3 text-xs font-display">
+                <span className="text-[#6B7280] block">Battery Post-Check:</span>
+                <span className="font-display text-base font-bold text-[#007F5F]">
                   {activeOrder.batteryHealth}% Capacity
                 </span>
               </div>
-              <div className="rounded-xl bg-white/5 border border-white/10 p-3 text-xs font-display">
-                <span className="text-white/60 block">Waterproof Reseal:</span>
-                <span className="font-display text-base font-bold text-emerald-400">
+              <div className="rounded-xl bg-[#FAFAF7] border border-[#E5E7EB] p-3 text-xs font-display">
+                <span className="text-[#6B7280] block">Waterproof Reseal:</span>
+                <span className="font-display text-base font-bold text-[#007F5F]">
                   IP68 Verified Pass
                 </span>
               </div>
             </div>
 
             {/* Technician Notes */}
-            <div className="rounded-xl bg-black/40 border border-white/10 p-4 font-display text-xs space-y-1.5">
-              <span className="font-label text-[11px] text-white/50 uppercase font-bold block">
+            <div className="rounded-xl bg-[#FAFAF7] border border-[#E5E7EB] p-4 font-display text-xs space-y-1.5">
+              <span className="font-label text-[11px] text-[#6B7280] uppercase font-bold block">
                 Lead Technician Notes ({activeOrder.technician}):
               </span>
-              <p className="text-white/80 leading-relaxed italic">
+              <p className="text-[#102A26] leading-relaxed italic">
                 "{activeOrder.notes}"
               </p>
             </div>
 
             {/* Estimated Completion */}
-            <div className="flex items-center justify-between border-t border-white/10 pt-4 font-display text-xs">
-              <span className="text-white/60">Estimated Ready:</span>
-              <span className="font-bold text-accent text-sm">
+            <div className="flex items-center justify-between border-t border-[#E5E7EB] pt-4 font-display text-xs">
+              <span className="text-[#6B7280]">Estimated Ready:</span>
+              <span className="font-bold text-[#007F5F] text-sm">
                 {activeOrder.estimatedReady}
               </span>
             </div>
@@ -370,9 +367,9 @@ export function RepairTracker() {
               onClick={() => {
                 toast.success("Diagnostic PDF report downloaded with bench stamps!");
               }}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-white/10 hover:bg-white/20 text-white py-3 text-xs font-bold font-label transition border border-white/10 cursor-pointer"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#FAFAF7] hover:bg-[#DDF5EA] text-[#102A26] hover:text-[#005B46] py-3 text-xs font-bold font-label transition border border-[#E5E7EB] hover:border-[#007F5F] cursor-pointer"
             >
-              <FileText className="h-4 w-4 text-accent" />
+              <FileText className="h-4 w-4 text-[#007F5F]" />
               <span>Download Signed Bench Certificate (PDF)</span>
             </button>
           </div>
