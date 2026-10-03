@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import {
   MessageSquare,
-  IndianRupee,
-  Wrench,
-  Zap,
   X,
   Send,
-  Sparkles,
   Bot,
-  User,
-  ArrowUp,
-  PhoneCall,
   Phone,
 } from "lucide-react";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { trackEvent } from "../lib/analytics";
 
 interface ChatMessage {
   sender: "bot" | "user";
@@ -24,16 +18,16 @@ interface ChatMessage {
 const DEFAULT_MESSAGES: ChatMessage[] = [
   {
     sender: "bot",
-    text: "Welcome to Revora. Sell Your Old Phone. Get Paid. Simple. Looking to sell a phone, book a 45-min repair, or chat with us at +91 8591770877?",
+    text: "Welcome to Revora! Sell your old/dead phone or book a 45-minute doorstep repair. How can we help you today?",
     time: "Just now",
   },
 ];
 
 const PRESET_QUESTIONS = [
-  "How does the dead phone cash pickup work?",
+  "How does dead phone cash pickup work?",
   "How long does screen replacement take?",
   "Is my personal data safe if the phone is dead?",
-  "Where do you ship prepaid boxes?",
+  "What is the 90-day warranty coverage?",
 ];
 
 interface FloatingDockProps {
@@ -62,17 +56,17 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
 
     setTimeout(() => {
       let botReply =
-        "Our cleanroom technicians are reviewing your inquiry. You can also call or WhatsApp us directly at 8591770877 for instant pricing!";
+        "Our cleanroom technicians are reviewing your inquiry. You can also call or WhatsApp us directly at +91 8591770877 for instant pricing!";
       const lower = textToSend.toLowerCase();
-      if (lower.includes("iphone") || lower.includes("dead") || lower.includes("price") || lower.includes("how much")) {
+      if (lower.includes("iphone") || lower.includes("dead") || lower.includes("price") || lower.includes("cash") || lower.includes("sell")) {
         botReply =
-          "We offer the highest market payout for dead iPhones and smartphones! You can call or WhatsApp us at 8591770877 for your personalized cash quote and free doorstep pickup.";
-      } else if (lower.includes("screen") || lower.includes("repair") || lower.includes("time")) {
+          "We offer the highest market payout for dead iPhones and smartphones! Call or WhatsApp us at +91 8591770877 for your instant cash quote and free doorstep pickup.";
+      } else if (lower.includes("screen") || lower.includes("repair") || lower.includes("time") || lower.includes("doorstep")) {
         botReply =
-          "Most OLED replacements and battery swaps are completed in 45 minutes in our certified cleanroom. Book online or call 8591770877.";
-      } else if (lower.includes("data") || lower.includes("safe")) {
+          "Most OLED screen replacements and battery swaps are completed in 45 minutes right at your doorstep. Plus enjoy a free glass protector and cover!";
+      } else if (lower.includes("data") || lower.includes("safe") || lower.includes("wipe")) {
         botReply =
-          "All devices undergo certified NIST 800-88 sanitized wiping or cryptographically protected repairs under live CCTV cameras.";
+          "All trade-in devices undergo certified NIST 800-88 sanitized cryptographic wiping. Your personal photos and data remain 100% secure.";
       }
 
       setMessages((prev) => [
@@ -84,114 +78,63 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
         },
       ]);
       setIsTyping(false);
-    }, 700);
-  };
-
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    }, 600);
   };
 
   return (
     <>
-      {/* Floating Quick Call & WhatsApp Badges matching user design */}
-      <div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 flex flex-col gap-3 items-end">
-        {/* Call Us Button */}
+      {/* Single Consolidated Floating Action Widget docked unobtrusively on Bottom-Right */}
+      <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-30 flex items-center gap-1.5 p-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#E5E7EB] shadow-xl">
+        {/* Quick Phone Call Button */}
         <a
           href="tel:8591770877"
-          title="Call Us: 8591770877"
-          className="group flex items-center justify-between gap-3 min-w-[140px] sm:min-w-[155px] rounded-full bg-[#007F5F] hover:bg-[#005B46] text-white pl-5 pr-1.5 py-1.5 shadow-md border border-white/20 transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
+          onClick={() => trackEvent("phone_call_click", { source: "floating_dock" })}
+          title="Call Us: +91 8591770877"
+          className="grid h-9 w-9 place-items-center rounded-full bg-[#FAFAF7] hover:bg-[#DDF5EA] text-[#007F5F] transition border border-[#E5E7EB] cursor-pointer"
         >
-          <span className="font-display text-sm font-bold tracking-tight text-white drop-shadow-xs">
-            Call Us
-          </span>
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-white/20 transition-transform duration-200 group-hover:scale-110">
-            <Phone className="h-4 w-4 text-white fill-none stroke-[2.4]" />
-          </span>
+          <Phone className="h-4 w-4 stroke-[2.4]" />
         </a>
 
-        {/* WhatsApp Us Button */}
+        {/* Quick WhatsApp Button */}
         <a
-          href="https://wa.me/918591770877?text=Hi%20Sagar%20Tech%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
+          href="https://wa.me/918591770877?text=Hi%20Revora%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
           target="_blank"
           rel="noopener noreferrer"
-          title="WhatsApp Us: 8591770877"
-          className="group flex items-center justify-between gap-3 min-w-[140px] sm:min-w-[155px] rounded-full bg-[#16803D] hover:bg-[#146c33] text-white pl-5 pr-1.5 py-1.5 shadow-md border border-white/20 transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
+          onClick={() => trackEvent("whatsapp_click", { source: "floating_dock" })}
+          title="WhatsApp Us: +91 8591770877"
+          className="grid h-9 w-9 place-items-center rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 transition border border-emerald-200 cursor-pointer"
         >
-          <span className="font-display text-sm font-bold tracking-tight text-white drop-shadow-xs">
-            WhatsApp Us
-          </span>
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-white/20 transition-transform duration-200 group-hover:scale-110">
-            <WhatsAppIcon className="h-4 w-4 fill-white" />
-          </span>
+          <WhatsAppIcon className="h-4 w-4 fill-emerald-700" />
         </a>
-      </div>
 
-      {/* Floating Bottom Navigation Pill */}
-      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex items-center gap-1.5 rounded-full bg-white/95 p-1.5 backdrop-blur-md border border-[#E5E7EB] shadow-xl font-label text-xs">
-        <button
-          type="button"
-          onClick={() => scrollToSection("sell-calculator")}
-          className="flex items-center gap-1.5 rounded-full px-3 py-2 text-[#102A26] hover:bg-[#DDF5EA] hover:text-[#005B46] transition cursor-pointer font-medium"
-        >
-          <IndianRupee className="h-3.5 w-3.5 text-[#007F5F]" />
-          <span className="hidden sm:inline">Sell Dead Phone</span>
-        </button>
+        <div className="h-4 w-[1px] bg-[#E5E7EB] mx-0.5" />
 
-        <button
-          type="button"
-          onClick={() => {
-            if (onOpenRepairModal) {
-              onOpenRepairModal();
-            } else {
-              scrollToSection("quote");
-            }
-          }}
-          className="flex items-center gap-1.5 rounded-full px-3 py-2 text-[#102A26] hover:bg-[#DDF5EA] hover:text-[#005B46] transition cursor-pointer font-medium"
-        >
-          <Wrench className="h-3.5 w-3.5 text-[#007F5F]" />
-          <span className="hidden sm:inline">Book Repair</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={() => scrollToSection("diagnostic-triage")}
-          className="flex items-center gap-1.5 rounded-full px-3 py-2 text-[#102A26] hover:bg-[#DDF5EA] hover:text-[#005B46] transition cursor-pointer font-medium"
-        >
-          <Zap className="h-3.5 w-3.5 text-[#43C59E]" />
-          <span className="hidden sm:inline">AI Triage</span>
-        </button>
-
-        <div className="h-4 w-[1px] bg-[#E5E7EB] mx-1 hidden sm:block" />
-
-        {/* AI Assistant Chat Trigger */}
+        {/* AI Assistant Chat Trigger Pill */}
         <button
           type="button"
           onClick={() => setIsChatOpen(!isChatOpen)}
-          className="flex items-center gap-1.5 rounded-full bg-[#007F5F] hover:bg-[#005B46] px-3.5 py-2 text-white font-bold shadow-sm transition cursor-pointer"
+          className="flex items-center gap-1.5 rounded-full bg-[#007F5F] hover:bg-[#005B46] px-3.5 py-2 text-white font-bold text-xs shadow-sm transition cursor-pointer"
         >
           <MessageSquare className="h-3.5 w-3.5 text-white" />
           <span>Ask AI</span>
         </button>
       </div>
 
-      {/* Floating Chat Modal */}
+      {/* Floating AI Support Drawer */}
       {isChatOpen && (
-        <div className="fixed bottom-20 right-5 z-50 w-full max-w-sm rounded-3xl bg-gradient-to-b from-ink via-zinc-950 to-black p-5 border border-white/20 shadow-2xl text-white animate-in slide-in-from-bottom-5 duration-200">
+        <div className="fixed bottom-18 sm:bottom-20 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-96 rounded-3xl bg-white border border-[#E5E7EB] p-4 sm:p-5 shadow-2xl text-[#102A26] animate-in slide-in-from-bottom-5 duration-200">
           {/* Chat Header */}
-          <div className="flex items-center justify-between border-b border-white/10 pb-3">
+          <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-3">
             <div className="flex items-center gap-2.5">
-              <div className="grid h-8 w-8 place-items-center rounded-xl bg-brand text-white">
-                <Bot className="h-4 w-4" />
+              <div className="grid h-8 w-8 place-items-center rounded-xl bg-[#DDF5EA] text-[#007F5F] border border-[#43C59E]/30">
+                <Bot className="h-4 w-4 text-[#007F5F]" />
               </div>
               <div>
-                <h4 className="font-display text-sm font-bold">
-                  Revora AI Support
+                <h4 className="font-display text-sm font-bold text-[#102A26]">
+                  Revora AI Assistant
                 </h4>
-                <div className="flex items-center gap-1.5 text-[10px] text-emerald-400 font-label">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 live-pulse" />
+                <div className="flex items-center gap-1.5 text-[10px] text-[#005B46] font-label font-semibold">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#007F5F] animate-pulse" />
                   <span>Online · Instant Answers</span>
                 </div>
               </div>
@@ -199,14 +142,14 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
             <button
               onClick={() => setIsChatOpen(false)}
               aria-label="Close AI support drawer"
-              className="p-1 rounded-full bg-white/10 hover:bg-white/20 text-white/60 hover:text-white transition cursor-pointer"
+              className="p-1 rounded-full bg-[#FAFAF7] hover:bg-[#E5E7EB] text-[#6B7280] transition cursor-pointer border border-[#E5E7EB]"
             >
               <X className="h-4 w-4" />
             </button>
           </div>
 
           {/* Messages Area */}
-          <div className="my-3 max-h-72 min-h-[160px] overflow-y-auto space-y-2.5 pr-1 font-display text-xs">
+          <div className="my-3 max-h-64 min-h-[150px] overflow-y-auto space-y-2.5 pr-1 font-display text-xs">
             {messages.map((m, idx) => (
               <div
                 key={idx}
@@ -215,15 +158,15 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
                 }`}
               >
                 {m.sender === "bot" && (
-                  <div className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand/20 text-brand text-[10px] border border-brand/30">
-                    <Bot className="h-3.5 w-3.5 text-brand" />
+                  <div className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#DDF5EA] text-[#007F5F] text-[10px] border border-[#43C59E]/30">
+                    <Bot className="h-3.5 w-3.5 text-[#007F5F]" />
                   </div>
                 )}
                 <div
-                  className={`rounded-2xl px-3.5 py-2 max-w-[80%] leading-relaxed ${
+                  className={`rounded-2xl px-3 py-2 max-w-[82%] leading-relaxed ${
                     m.sender === "user"
-                      ? "bg-brand text-white rounded-br-none"
-                      : "bg-white/10 text-white/90 rounded-bl-none border border-white/10"
+                      ? "bg-[#007F5F] text-white rounded-br-none"
+                      : "bg-[#FAFAF7] text-[#102A26] rounded-bl-none border border-[#E5E7EB]"
                   }`}
                 >
                   {m.text}
@@ -231,21 +174,21 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
               </div>
             ))}
             {isTyping && (
-              <div className="flex items-center gap-1 text-[11px] text-white/50 pl-8">
-                <span>ReviveBot is typing</span>
-                <span className="live-pulse">...</span>
+              <div className="flex items-center gap-1 text-[11px] text-[#6B7280] pl-8">
+                <span>Revora is typing</span>
+                <span className="animate-pulse">...</span>
               </div>
             )}
           </div>
 
           {/* Preset Prompts */}
-          <div className="mb-3 flex flex-wrap gap-1.5">
+          <div className="mb-3 flex flex-wrap gap-1">
             {PRESET_QUESTIONS.map((q, idx) => (
               <button
                 key={idx}
                 type="button"
                 onClick={() => handleSendMessage(q)}
-                className="rounded-lg bg-white/5 hover:bg-white/15 px-2.5 py-1 text-[10px] text-white/70 hover:text-white transition border border-white/10 text-left font-display cursor-pointer"
+                className="rounded-lg bg-[#FAFAF7] hover:bg-[#DDF5EA] px-2.5 py-1 text-[10px] text-[#475569] hover:text-[#005B46] transition border border-[#E5E7EB] text-left font-display cursor-pointer"
               >
                 {q}
               </button>
@@ -265,11 +208,11 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
               value={chatInput}
               onChange={(e) => setChatInput(e.target.value)}
               placeholder="Ask anything about phones or repairs…"
-              className="flex-1 rounded-xl border border-white/15 bg-white/10 px-3 py-2 text-xs text-white placeholder:text-white/40 outline-none focus:border-brand font-display"
+              className="flex-1 rounded-xl border border-[#E5E7EB] bg-white px-3 py-2 text-xs text-[#102A26] placeholder:text-slate-400 outline-none focus:border-[#007F5F] font-display"
             />
             <button
               type="submit"
-              className="rounded-xl bg-brand p-2 text-white hover:brightness-110 transition cursor-pointer"
+              className="rounded-xl bg-[#007F5F] hover:bg-[#005B46] p-2 text-white transition cursor-pointer"
             >
               <Send className="h-4 w-4" />
             </button>
@@ -279,3 +222,4 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
     </>
   );
 }
+

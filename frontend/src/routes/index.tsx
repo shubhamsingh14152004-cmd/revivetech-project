@@ -182,48 +182,49 @@ function Index() {
       <SiteHeader onOpenRepairModal={openRepairPopup} />
 
       {/* Hero Section */}
-      <section className="mx-auto max-w-6xl px-5 pt-12 pb-8 md:pt-16">
-        <div className="grid items-center gap-12 md:grid-cols-[1.15fr_.85fr]">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#DDF5EA] px-4 py-1.5 text-xs font-semibold tracking-wide text-[#005B46] font-label border border-[#43C59E]/30">
-              <span className="h-2 w-2 rounded-full bg-[#007F5F] animate-pulse" />
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 pt-8 pb-10 md:pt-14 md:pb-16 overflow-hidden">
+        <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-12">
+          {/* Left Column (Text & CTAs) */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#DDF5EA] px-3.5 py-1.5 text-xs font-semibold tracking-wide text-[#005B46] font-label border border-[#43C59E]/30">
+              <span className="h-2 w-2 rounded-full bg-[#007F5F] animate-pulse shrink-0" />
               <span>Cleanroom Diagnostics · Instant Payouts · 45-Min Fix</span>
             </div>
 
-            <h1 className="font-display mt-6 text-5xl font-extrabold leading-[1.04] tracking-tight md:text-7xl text-[#102A26]">
-              Sell old mobile phones, <span className="text-[#007F5F]">& repair your phone.</span>
+            <h1 className="font-display mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-[#102A26]">
+              Sell old mobile phones, <span className="text-[#007F5F] block sm:inline">& repair your phone.</span>
             </h1>
 
-            <p className="font-display mt-5 max-w-lg text-base leading-relaxed text-[#6B7280] md:text-lg">
-              Sell your old, used, damaged, or dead phone for top cash in Mumbai and across India. Or book 45-minute doorstep mobile repair with free tempered glass and 90-day warranty.
+            <p className="font-display mt-4 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-[#475569]">
+              Sell your old, used, damaged, or dead phone for top cash payouts. Or book 45-minute doorstep mobile repair with complimentary tempered glass & cover and 90-day VIP warranty.
             </p>
 
-            {/* Quick Action CTA Pill Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            {/* Quick Action CTA Buttons */}
+            <div className="mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
               <a
                 href="#sell-calculator"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#007F5F] hover:bg-[#005B46] px-7 py-3.5 text-sm font-bold text-white shadow-md transition font-label cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#007F5F] hover:bg-[#005B46] px-6 py-3.5 text-sm font-bold text-white shadow-md transition font-label cursor-pointer text-center"
               >
                 <IndianRupee className="h-4 w-4 text-white" />
-                <span>Sell Dead Phone (Top Cash Offer)</span>
+                <span>Sell Phone (Instant Cash Quote)</span>
               </a>
               <button
                 type="button"
                 onClick={openRepairPopup}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#102A26] hover:bg-[#FAFAF7] transition font-label border border-[#E5E7EB] hover:border-[#007F5F] cursor-pointer shadow-xs"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-[#102A26] hover:bg-[#FAFAF7] transition font-label border border-[#E5E7EB] hover:border-[#007F5F] cursor-pointer shadow-xs text-center"
               >
                 <Wrench className="h-4 w-4 text-[#007F5F]" />
                 <span>Repair Phone (Free Doorstep)</span>
-                <span className="rounded-full bg-[#DDF5EA] px-2 py-0.5 text-[10px] text-[#005B46] font-mono uppercase tracking-wider font-bold">Free Gifts</span>
+                <span className="rounded-full bg-[#DDF5EA] px-2 py-0.5 text-[10px] text-[#005B46] font-mono uppercase tracking-wider font-bold">Free Perks</span>
               </button>
             </div>
 
             {/* Direct Helpline & WhatsApp */}
-            <div className="mt-5 flex flex-wrap items-center gap-3 text-xs font-display">
-              <span className="text-[#6B7280] font-medium">Direct Tech Support:</span>
+            <div className="mt-5 flex flex-wrap items-center gap-2.5 text-xs font-display">
+              <span className="text-[#6B7280] font-medium">Direct Support:</span>
               <a
                 href="tel:8591770877"
-                className="inline-flex items-center gap-1.5 rounded-full bg-white hover:bg-[#FAFAF7] px-3.5 py-1.5 font-mono font-bold text-[#102A26] border border-[#E5E7EB] transition hover:text-[#007F5F]"
+                className="inline-flex items-center gap-1.5 rounded-full bg-white hover:bg-[#FAFAF7] px-3 py-1 font-mono font-bold text-[#102A26] border border-[#E5E7EB] transition hover:text-[#007F5F]"
                 title="Call 8591770877"
               >
                 <PhoneCall className="h-3.5 w-3.5 text-[#007F5F]" />
@@ -233,72 +234,69 @@ function Index() {
                 href="https://wa.me/918591770877?text=Hi%20Revora%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full bg-[#DDF5EA] hover:bg-[#cbf0df] px-3.5 py-1.5 font-mono font-bold text-[#005B46] border border-[#43C59E]/30 transition"
+                className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 hover:bg-emerald-100 px-3 py-1 font-mono font-bold text-emerald-800 border border-emerald-200 transition"
                 title="WhatsApp 8591770877"
               >
-                <WhatsAppIcon className="h-3.5 w-3.5 fill-[#005B46]" />
-                <span>8591770877</span>
+                <WhatsAppIcon className="h-3.5 w-3.5 fill-emerald-800" />
+                <span>WhatsApp</span>
               </a>
             </div>
 
             {/* Trust Metrics */}
-            <div className="font-display mt-10 grid grid-cols-3 gap-4 border-t border-[#E5E7EB] pt-6 text-xs text-[#6B7280]">
+            <div className="font-display mt-8 grid grid-cols-3 gap-3 sm:gap-6 border-t border-[#E5E7EB] pt-5 w-full text-xs text-[#6B7280]">
               <div>
-                <span className="font-display text-2xl font-black text-[#102A26] block">
+                <span className="font-display text-xl sm:text-2xl font-black text-[#102A26] block">
                   4.9★
                 </span>
                 <span className="text-[#6B7280]">12,400+ Revivals</span>
               </div>
               <div>
-                <span className="font-display text-2xl font-black text-[#007F5F] block">
+                <span className="font-display text-xl sm:text-2xl font-black text-[#007F5F] block">
                   45m
                 </span>
                 <span className="text-[#6B7280]">Avg. Turnaround</span>
               </div>
               <div>
-                <span className="font-display text-2xl font-black text-[#007F5F] block">
-                  ₹2.5 Lakh+
+                <span className="font-display text-xl sm:text-2xl font-black text-[#007F5F] block">
+                  ₹2.5L+
                 </span>
                 <span className="text-[#6B7280]">Paid to Customers</span>
               </div>
             </div>
           </div>
 
-          {/* Hero Visual Card */}
-          <div className="relative mx-auto w-full max-w-md">
-            <div className="relative rounded-[2.5rem] bg-white p-3 border border-[#E5E7EB] shadow-xl">
+          {/* Right Column (Hero Visual Card with Internal Floating Overlay Cards) */}
+          <div className="lg:col-span-5 relative mx-auto w-full max-w-md lg:max-w-none">
+            <div className="relative rounded-3xl bg-white p-2.5 sm:p-3 border border-[#E5E7EB] shadow-lg overflow-hidden">
               <img
                 src={heroPhone}
-                alt="Revora mobile phone repair and old phone buyback in Mumbai"
+                alt="Revora mobile phone repair and old phone buyback"
                 width={1024}
                 height={1280}
                 loading="eager"
                 fetchPriority="high"
-                className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl object-cover border border-[#E5E7EB]"
+                className="aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] w-full overflow-hidden rounded-2xl object-cover border border-[#E5E7EB]"
               />
-            </div>
 
-            {/* Floating Live Badge #1 */}
-            <div className="absolute -left-4 top-8 rounded-2xl bg-white p-4 shadow-xl border border-[#E5E7EB]">
-              <p className="font-label text-[10px] uppercase tracking-wider text-[#6B7280] font-bold">
-                Instant Payout
-              </p>
-              <p className="font-display text-xl font-extrabold text-[#102A26]">Top Cash</p>
-              <span className="text-[10px] text-[#007F5F] font-display font-semibold">For Your Dead Phone</span>
-            </div>
+              {/* Internalized Overlay Badges (contained strictly inside the right visual column) */}
+              <div className="absolute inset-x-5 bottom-5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2">
+                <div className="rounded-xl bg-white/95 backdrop-blur-md p-2.5 sm:p-3 shadow-md border border-[#E5E7EB]">
+                  <p className="font-label text-[9px] uppercase tracking-wider text-[#6B7280] font-bold">
+                    Instant Payout
+                  </p>
+                  <p className="font-display text-sm font-extrabold text-[#102A26]">Top Cash for Dead Phones</p>
+                </div>
 
-            {/* Floating Live Badge #2 */}
-            <div className="absolute -right-3 bottom-10 rounded-2xl bg-white p-4 shadow-xl border border-[#E5E7EB]">
-              <div className="flex items-center gap-1.5 text-[#007F5F] font-label text-[10px] font-bold">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#007F5F] animate-pulse" />
-                <span>Cleanroom QC Passed</span>
+                <div className="rounded-xl bg-white/95 backdrop-blur-md p-2.5 sm:p-3 shadow-md border border-[#E5E7EB]">
+                  <div className="flex items-center gap-1 text-[#007F5F] font-label text-[9px] font-bold">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#007F5F] animate-pulse" />
+                    <span>Cleanroom QC Passed</span>
+                  </div>
+                  <p className="font-display text-xs font-bold text-[#102A26] mt-0.5">
+                    90-Day VIP Warranty
+                  </p>
+                </div>
               </div>
-              <p className="font-display text-sm font-bold text-[#102A26] mt-0.5">
-                Ready for Pickup
-              </p>
-              <span className="text-[10px] text-[#6B7280] font-display">
-                Original 120Hz OLED
-              </span>
             </div>
           </div>
         </div>
