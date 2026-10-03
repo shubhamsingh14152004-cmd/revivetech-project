@@ -78,15 +78,15 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="chrome-plate grid h-10 w-10 place-items-center rounded-xl transition group-hover:scale-105">
-              <span className="font-label font-bold text-ink text-lg">S</span>
+            <div className="grid h-10 w-10 place-items-center rounded-xl bg-amber-500 text-black font-label font-bold text-xl transition group-hover:scale-105 shadow-md">
+              <span>R</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-display text-lg font-bold tracking-tight text-white group-hover:text-accent transition">
-                Sagar Tech
+              <span className="font-display text-lg font-bold tracking-tight text-white group-hover:text-amber-400 transition">
+                ReviveTech
               </span>
-              <span className="font-label text-[8px] sm:text-[8.5px] uppercase tracking-wider text-accent font-semibold -mt-0.5 whitespace-nowrap">
-                SELL OLD PHONE & REPAIR YOUR PHONE
+              <span className="font-label text-[8px] sm:text-[8.5px] uppercase tracking-wider text-amber-400 font-semibold -mt-0.5 whitespace-nowrap">
+                SELL OLD PHONES & REPAIR YOUR PHONE
               </span>
             </div>
           </Link>

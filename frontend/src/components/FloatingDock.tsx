@@ -24,7 +24,7 @@ interface ChatMessage {
 const DEFAULT_MESSAGES: ChatMessage[] = [
   {
     sender: "bot",
-    text: "👋 Hey there! Welcome to Sagar Tech. Looking to sell a dead phone, book a 45-min repair, or chat with us directly at 8591770877?",
+    text: "Welcome to ReviveTech. Looking to sell a dead phone, book a 45-min repair, or chat with us directly at +91 8591770877?",
     time: "Just now",
   },
 ];
@@ -188,7 +188,7 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
               </div>
               <div>
                 <h4 className="font-display text-sm font-bold">
-                  Sagar Tech AI Support
+                  ReviveTech AI Support
                 </h4>
                 <div className="flex items-center gap-1.5 text-[10px] text-emerald-400 font-label">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 live-pulse" />
@@ -198,7 +198,8 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
             </div>
             <button
               onClick={() => setIsChatOpen(false)}
-              className="p-1 rounded-full bg-white/10 hover:bg-white/20 text-white/60 hover:text-white transition"
+              aria-label="Close AI support drawer"
+              className="p-1 rounded-full bg-white/10 hover:bg-white/20 text-white/60 hover:text-white transition cursor-pointer"
             >
               <X className="h-4 w-4" />
             </button>
@@ -214,8 +215,8 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
                 }`}
               >
                 {m.sender === "bot" && (
-                  <div className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand/30 text-brand text-[10px]">
-                    🤖
+                  <div className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand/20 text-brand text-[10px] border border-brand/30">
+                    <Bot className="h-3.5 w-3.5 text-brand" />
                   </div>
                 )}
                 <div

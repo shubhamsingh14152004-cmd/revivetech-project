@@ -27,6 +27,7 @@ import { Route as MobileRepairMumbaiRouteImport } from './routes/mobile-repair-m
 import { Route as MotorolaRepairRouteImport } from './routes/motorola-repair'
 import { Route as OneplusRepairRouteImport } from './routes/oneplus-repair'
 import { Route as OppoRepairRouteImport } from './routes/oppo-repair'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RealmeRepairRouteImport } from './routes/realme-repair'
 import { Route as RepairRouteImport } from './routes/repair'
 import { Route as SamsungRepairRouteImport } from './routes/samsung-repair'
@@ -35,6 +36,7 @@ import { Route as SellDamagedPhoneRouteImport } from './routes/sell-damaged-phon
 import { Route as SellDeadPhoneRouteImport } from './routes/sell-dead-phone'
 import { Route as SellOldPhoneRouteImport } from './routes/sell-old-phone'
 import { Route as SellPhoneRouteImport } from './routes/sell-phone'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VivoRepairRouteImport } from './routes/vivo-repair'
 import { Route as WaterDamageRepairRouteImport } from './routes/water-damage-repair'
 import { Route as XiaomiRepairRouteImport } from './routes/xiaomi-repair'
@@ -131,6 +133,11 @@ const OppoRepairRoute = OppoRepairRouteImport.update({
   path: '/oppo-repair',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RealmeRepairRoute = RealmeRepairRouteImport.update({
   id: '/realme-repair',
   path: '/realme-repair',
@@ -169,6 +176,11 @@ const SellOldPhoneRoute = SellOldPhoneRouteImport.update({
 const SellPhoneRoute = SellPhoneRouteImport.update({
   id: '/sell-phone',
   path: '/sell-phone',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const VivoRepairRoute = VivoRepairRouteImport.update({
@@ -216,6 +228,7 @@ export interface FileRoutesByFullPath {
   '/motorola-repair': typeof MotorolaRepairRoute
   '/oneplus-repair': typeof OneplusRepairRoute
   '/oppo-repair': typeof OppoRepairRoute
+  '/privacy': typeof PrivacyRoute
   '/realme-repair': typeof RealmeRepairRoute
   '/repair': typeof RepairRoute
   '/samsung-repair': typeof SamsungRepairRoute
@@ -224,6 +237,7 @@ export interface FileRoutesByFullPath {
   '/sell-dead-phone': typeof SellDeadPhoneRoute
   '/sell-old-phone': typeof SellOldPhoneRoute
   '/sell-phone': typeof SellPhoneRoute
+  '/terms': typeof TermsRoute
   '/vivo-repair': typeof VivoRepairRoute
   '/water-damage-repair': typeof WaterDamageRepairRoute
   '/xiaomi-repair': typeof XiaomiRepairRoute
@@ -249,6 +263,7 @@ export interface FileRoutesByTo {
   '/motorola-repair': typeof MotorolaRepairRoute
   '/oneplus-repair': typeof OneplusRepairRoute
   '/oppo-repair': typeof OppoRepairRoute
+  '/privacy': typeof PrivacyRoute
   '/realme-repair': typeof RealmeRepairRoute
   '/repair': typeof RepairRoute
   '/samsung-repair': typeof SamsungRepairRoute
@@ -257,6 +272,7 @@ export interface FileRoutesByTo {
   '/sell-dead-phone': typeof SellDeadPhoneRoute
   '/sell-old-phone': typeof SellOldPhoneRoute
   '/sell-phone': typeof SellPhoneRoute
+  '/terms': typeof TermsRoute
   '/vivo-repair': typeof VivoRepairRoute
   '/water-damage-repair': typeof WaterDamageRepairRoute
   '/xiaomi-repair': typeof XiaomiRepairRoute
@@ -283,6 +299,7 @@ export interface FileRoutesById {
   '/motorola-repair': typeof MotorolaRepairRoute
   '/oneplus-repair': typeof OneplusRepairRoute
   '/oppo-repair': typeof OppoRepairRoute
+  '/privacy': typeof PrivacyRoute
   '/realme-repair': typeof RealmeRepairRoute
   '/repair': typeof RepairRoute
   '/samsung-repair': typeof SamsungRepairRoute
@@ -291,6 +308,7 @@ export interface FileRoutesById {
   '/sell-dead-phone': typeof SellDeadPhoneRoute
   '/sell-old-phone': typeof SellOldPhoneRoute
   '/sell-phone': typeof SellPhoneRoute
+  '/terms': typeof TermsRoute
   '/vivo-repair': typeof VivoRepairRoute
   '/water-damage-repair': typeof WaterDamageRepairRoute
   '/xiaomi-repair': typeof XiaomiRepairRoute
@@ -318,6 +336,7 @@ export interface FileRouteTypes {
     | '/motorola-repair'
     | '/oneplus-repair'
     | '/oppo-repair'
+    | '/privacy'
     | '/realme-repair'
     | '/repair'
     | '/samsung-repair'
@@ -326,6 +345,7 @@ export interface FileRouteTypes {
     | '/sell-dead-phone'
     | '/sell-old-phone'
     | '/sell-phone'
+    | '/terms'
     | '/vivo-repair'
     | '/water-damage-repair'
     | '/xiaomi-repair'
@@ -351,6 +371,7 @@ export interface FileRouteTypes {
     | '/motorola-repair'
     | '/oneplus-repair'
     | '/oppo-repair'
+    | '/privacy'
     | '/realme-repair'
     | '/repair'
     | '/samsung-repair'
@@ -359,6 +380,7 @@ export interface FileRouteTypes {
     | '/sell-dead-phone'
     | '/sell-old-phone'
     | '/sell-phone'
+    | '/terms'
     | '/vivo-repair'
     | '/water-damage-repair'
     | '/xiaomi-repair'
@@ -384,6 +406,7 @@ export interface FileRouteTypes {
     | '/motorola-repair'
     | '/oneplus-repair'
     | '/oppo-repair'
+    | '/privacy'
     | '/realme-repair'
     | '/repair'
     | '/samsung-repair'
@@ -392,6 +415,7 @@ export interface FileRouteTypes {
     | '/sell-dead-phone'
     | '/sell-old-phone'
     | '/sell-phone'
+    | '/terms'
     | '/vivo-repair'
     | '/water-damage-repair'
     | '/xiaomi-repair'
@@ -418,6 +442,7 @@ export interface RootRouteChildren {
   MotorolaRepairRoute: typeof MotorolaRepairRoute
   OneplusRepairRoute: typeof OneplusRepairRoute
   OppoRepairRoute: typeof OppoRepairRoute
+  PrivacyRoute: typeof PrivacyRoute
   RealmeRepairRoute: typeof RealmeRepairRoute
   RepairRoute: typeof RepairRoute
   SamsungRepairRoute: typeof SamsungRepairRoute
@@ -426,6 +451,7 @@ export interface RootRouteChildren {
   SellDeadPhoneRoute: typeof SellDeadPhoneRoute
   SellOldPhoneRoute: typeof SellOldPhoneRoute
   SellPhoneRoute: typeof SellPhoneRoute
+  TermsRoute: typeof TermsRoute
   VivoRepairRoute: typeof VivoRepairRoute
   WaterDamageRepairRoute: typeof WaterDamageRepairRoute
   XiaomiRepairRoute: typeof XiaomiRepairRoute
@@ -561,6 +587,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OppoRepairRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/realme-repair': {
       id: '/realme-repair'
       path: '/realme-repair'
@@ -615,6 +648,13 @@ declare module '@tanstack/react-router' {
       path: '/sell-phone'
       fullPath: '/sell-phone'
       preLoaderRoute: typeof SellPhoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/vivo-repair': {
@@ -674,6 +714,7 @@ const rootRouteChildren: RootRouteChildren = {
   MotorolaRepairRoute: MotorolaRepairRoute,
   OneplusRepairRoute: OneplusRepairRoute,
   OppoRepairRoute: OppoRepairRoute,
+  PrivacyRoute: PrivacyRoute,
   RealmeRepairRoute: RealmeRepairRoute,
   RepairRoute: RepairRoute,
   SamsungRepairRoute: SamsungRepairRoute,
@@ -682,6 +723,7 @@ const rootRouteChildren: RootRouteChildren = {
   SellDeadPhoneRoute: SellDeadPhoneRoute,
   SellOldPhoneRoute: SellOldPhoneRoute,
   SellPhoneRoute: SellPhoneRoute,
+  TermsRoute: TermsRoute,
   VivoRepairRoute: VivoRepairRoute,
   WaterDamageRepairRoute: WaterDamageRepairRoute,
   XiaomiRepairRoute: XiaomiRepairRoute,

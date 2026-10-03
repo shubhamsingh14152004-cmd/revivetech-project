@@ -152,7 +152,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link to="/sell-dead-phone" className="hover:text-white transition font-semibold text-emerald-300">
-                  ⚡ Sell Dead Phone (Band Phone Becho)
+                  Sell Dead Phone (Band Phone Becho)
                 </Link>
               </li>
               <li>
@@ -181,12 +181,12 @@ export function SiteFooter() {
             <ul className="space-y-2 text-xs text-white/70">
               <li>
                 <Link to="/doorstep-mobile-repair" className="hover:text-white transition font-semibold text-white">
-                  🏠 Doorstep Mobile Repair (45-Min Fix)
+                  Doorstep Mobile Repair (45-Min Fix)
                 </Link>
               </li>
               <li>
                 <Link to="/mobile-repair-mumbai" className="hover:text-white transition text-accent font-semibold">
-                  📍 Mobile Repair in Mumbai Hub
+                  Mobile Repair in Mumbai Hub
                 </Link>
               </li>
               <li>
@@ -196,7 +196,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link to="/dead-phone-repair" className="hover:text-white transition font-semibold text-emerald-300">
-                  ⚡ Dead Phone Repair (Band Phone)
+                  Dead Phone Repair (Band Phone)
                 </Link>
               </li>
               <li>
@@ -284,7 +284,7 @@ export function SiteFooter() {
             <ul className="space-y-2 text-xs text-white/70">
               <li>
                 <Link to="/blog" className="hover:text-white transition font-semibold text-accent">
-                  📚 Repair & Buyback Guides
+                  Repair & Buyback Guides
                 </Link>
               </li>
               <li>
@@ -298,13 +298,18 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition">
-                  Contact & Courier Dispatch
+                <Link to="/privacy" className="hover:text-white transition font-medium text-amber-300">
+                  Privacy Policy & Data Security
                 </Link>
               </li>
               <li>
-                <Link to="/buyback" className="hover:text-white transition">
-                  NIST 800-88 Data Wiping
+                <Link to="/terms" className="hover:text-white transition">
+                  Terms of Service & 90-Day Warranty
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white transition">
+                  Contact & Courier Dispatch
                 </Link>
               </li>
               <li>
@@ -323,10 +328,14 @@ export function SiteFooter() {
 
         {/* Bottom Copyright & Legal */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/50">
-          <p>© 2026 SellRepairPhone (sellrepairphone.org). All rights reserved.</p>
+          <p>© 2026 ReviveTech (sellrepairphone.org). All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-4">
-            <Link to="/about" className="hover:text-white">
-              Data Security
+            <Link to="/privacy" className="hover:text-white">
+              Privacy Policy
+            </Link>
+            <span>·</span>
+            <Link to="/terms" className="hover:text-white">
+              Terms of Service
             </Link>
             <span>·</span>
             <Link to="/faq" className="hover:text-white">
@@ -339,14 +348,6 @@ export function SiteFooter() {
             <span>·</span>
             <Link to="/blog" className="hover:text-white">
               Tech Guides
-            </Link>
-            <span>·</span>
-            <Link to="/sell-dead-phone" className="hover:text-white">
-              Band Phone Becho
-            </Link>
-            <span>·</span>
-            <Link to="/doorstep-mobile-repair" className="hover:text-white">
-              Mumbai Doorstep Repair
             </Link>
           </div>
         </div>

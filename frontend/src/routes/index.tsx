@@ -310,9 +310,9 @@ function Index() {
       <section className="mx-auto max-w-6xl px-5 py-6">
         <div className="flex flex-wrap items-center justify-center gap-2 rounded-3xl bg-black/40 p-2 border border-white/10">
           {[
-            { id: "sell", label: "💰 Value & Sell Dead Phone", target: "sell-calculator" },
-            { id: "repair", label: "🛠️ Repair & VIP Quote", target: "quote" },
-            { id: "triage", label: "🤖 AI Diagnostic Triage", target: "diagnostic-triage" },
+            { id: "sell", label: "Value & Sell Dead Phone", target: "sell-calculator" },
+            { id: "repair", label: "Repair & Priority Quote", target: "quote" },
+            { id: "triage", label: "Smart Diagnostic Triage", target: "diagnostic-triage" },
           ].map((tab) => (
             <a
               key={tab.id}

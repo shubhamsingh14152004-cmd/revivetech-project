@@ -35,19 +35,18 @@ export interface BrandItem {
 
 // User specified brand options
 export const SUPPORTED_BRANDS: BrandItem[] = [
-  { id: "oppo", name: "Oppo", icon: "🟢", placeholder: "e.g. Find X7 Ultra, Reno 12 Pro, F25 Pro…", baseVal: 9000, deadVal: 2000, brokenVal: 4200 },
-  { id: "vivo", name: "Vivo", icon: "💠", placeholder: "e.g. X100 Pro, V30 Pro, V29 5G, T3…", baseVal: 9500, deadVal: 2100, brokenVal: 4500 },
-  { id: "samsung", name: "Samsung", icon: "🪐", placeholder: "e.g. Galaxy S24 Ultra, S23, Z Fold 5, A55…", baseVal: 16000, deadVal: 3800, brokenVal: 8000 },
-  { id: "realme", name: "Realme", icon: "🟡", placeholder: "e.g. GT 6, 12 Pro+ 5G, Narzo 70 Pro…", baseVal: 8500, deadVal: 1900, brokenVal: 4000 },
-  { id: "iqoo", name: "iQOO", icon: "⚡", placeholder: "e.g. iQOO 12, Neo 9 Pro, Z9 5G…", baseVal: 11000, deadVal: 2500, brokenVal: 5500 },
-  { id: "iphone", name: "iPhone (Apple)", icon: "🍎", placeholder: "e.g. iPhone 16 Pro Max, 15, 14 Pro, 13…", baseVal: 19000, deadVal: 4800, brokenVal: 9500 },
-  { id: "redmi", name: "Redmi", icon: "🔴", placeholder: "e.g. Note 13 Pro+, 12 Pro, 13C 5G…", baseVal: 8000, deadVal: 1800, brokenVal: 3800 },
-  { id: "xiaomi", name: "Xiaomi", icon: "📱", placeholder: "e.g. Xiaomi 14 Ultra, 13 Pro, Pad 6…", baseVal: 10500, deadVal: 2300, brokenVal: 5200 },
-  { id: "motorola", name: "Motorola", icon: "🔷", placeholder: "e.g. Edge 50 Ultra, Edge 50 Pro, G84…", baseVal: 8500, deadVal: 1900, brokenVal: 4000 },
-  { id: "honor", name: "Honor", icon: "👑", placeholder: "e.g. Magic 6 Pro, Honor 200, 90 5G…", baseVal: 9000, deadVal: 2000, brokenVal: 4200 },
-  { id: "google-pixel", name: "Google Pixel", icon: "💎", placeholder: "e.g. Pixel 9 Pro XL, Pixel 8, 7a…", baseVal: 14000, deadVal: 3200, brokenVal: 7000 },
-  { id: "huawei", name: "Huawei", icon: "🌸", placeholder: "e.g. Pura 70 Ultra, Mate 60 Pro, P60…", baseVal: 10000, deadVal: 2200, brokenVal: 4800 },
-  { id: "nothing", name: "Nothing", icon: "⚪", placeholder: "e.g. Nothing Phone (2), Phone (2a), CMF Phone 1…", baseVal: 11500, deadVal: 2600, brokenVal: 5600 },
+  { id: "samsung", name: "Samsung", icon: "S", placeholder: "e.g. Galaxy S24 Ultra, S23, Z Fold 5, A55…", baseVal: 16000, deadVal: 3800, brokenVal: 8000 },
+  { id: "iphone", name: "iPhone (Apple)", icon: "", placeholder: "e.g. iPhone 16 Pro Max, 15, 14 Pro, 13…", baseVal: 19000, deadVal: 4800, brokenVal: 9500 },
+  { id: "oneplus", name: "OnePlus", icon: "1+", placeholder: "e.g. OnePlus 12, 11, Nord 4, Open…", baseVal: 12500, deadVal: 2800, brokenVal: 6000 },
+  { id: "xiaomi", name: "Xiaomi", icon: "Mi", placeholder: "e.g. Xiaomi 14 Ultra, 13 Pro, Pad 6…", baseVal: 10500, deadVal: 2300, brokenVal: 5200 },
+  { id: "oppo", name: "Oppo", icon: "O", placeholder: "e.g. Find X7 Ultra, Reno 12 Pro, F25 Pro…", baseVal: 9000, deadVal: 2000, brokenVal: 4200 },
+  { id: "vivo", name: "Vivo", icon: "V", placeholder: "e.g. X100 Pro, V30 Pro, V29 5G, T3…", baseVal: 9500, deadVal: 2100, brokenVal: 4500 },
+  { id: "realme", name: "Realme", icon: "R", placeholder: "e.g. GT 6, 12 Pro+ 5G, Narzo 70 Pro…", baseVal: 8500, deadVal: 1900, brokenVal: 4000 },
+  { id: "iqoo", name: "iQOO", icon: "iQ", placeholder: "e.g. iQOO 12, Neo 9 Pro, Z9 5G…", baseVal: 11000, deadVal: 2500, brokenVal: 5500 },
+  { id: "redmi", name: "Redmi", icon: "RM", placeholder: "e.g. Note 13 Pro+, 12 Pro, 13C 5G…", baseVal: 8000, deadVal: 1800, brokenVal: 3800 },
+  { id: "motorola", name: "Motorola", icon: "M", placeholder: "e.g. Edge 50 Ultra, Edge 50 Pro, G84…", baseVal: 8500, deadVal: 1900, brokenVal: 4000 },
+  { id: "google-pixel", name: "Google Pixel", icon: "G", placeholder: "e.g. Pixel 9 Pro XL, Pixel 8, 7a…", baseVal: 14000, deadVal: 3200, brokenVal: 7000 },
+  { id: "nothing", name: "Nothing", icon: "N", placeholder: "e.g. Nothing Phone (2), Phone (2a), CMF Phone 1…", baseVal: 11500, deadVal: 2600, brokenVal: 5600 },
 ];
 
 export const STORAGE_OPTIONS = [
@@ -243,21 +242,17 @@ export function TradeInCalculator() {
   return (
     <div
       id="sell-calculator"
-      className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden shadow-2xl border border-white/15"
+      className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden shadow-xl border border-white/15"
     >
-      {/* Background radial highlight */}
-      <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand/20 blur-3xl pointer-events-none" />
-      <div className="absolute -left-20 -bottom-20 h-72 w-72 rounded-full bg-gold/15 blur-3xl pointer-events-none" />
-
       {/* Header */}
       <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-3.5 py-1 text-xs font-semibold text-accent font-label border border-accent/30">
-            <Sparkles className="h-3.5 w-3.5" />
-            Sell Dead Phone with Doorstep Pickup
+          <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-3.5 py-1 text-xs font-semibold text-amber-400 font-label border border-amber-500/30">
+            <ShieldCheck className="h-3.5 w-3.5 text-amber-400" />
+            Instant Cash Trade-In & Doorstep Pickup
           </div>
           <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-white">
-            Sell Your Dead or Damaged Phone
+            Calculate Used & Dead Phone Payout Value
           </h3>
           <p className="font-display text-sm text-white/70 mt-1 max-w-xl">
             Even if it won't boot, is water-soaked, or shattered into pieces.

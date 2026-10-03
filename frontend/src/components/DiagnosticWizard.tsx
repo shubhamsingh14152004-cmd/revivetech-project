@@ -137,10 +137,7 @@ export function DiagnosticWizard() {
   const currentQ: Question = QUESTIONS[currentStep] ?? QUESTIONS[0]!;
 
   return (
-    <div className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden border border-white/15 shadow-2xl">
-      {/* Background accent */}
-      <div className="absolute right-0 bottom-0 h-72 w-72 rounded-full bg-accent/15 blur-3xl pointer-events-none" />
-
+    <div className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden border border-white/15 shadow-xl">
       {/* Header */}
       <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
         <div>

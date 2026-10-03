@@ -196,10 +196,7 @@ export function RepairBooking() {
   };
 
   return (
-    <div className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden border border-white/15 shadow-2xl">
-      {/* Background radial accent */}
-      <div className="absolute -right-24 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-accent/15 blur-3xl pointer-events-none" />
-
+    <div className="relative rounded-3xl glass-card p-6 md:p-10 overflow-hidden border border-white/15 shadow-xl">
       {/* Section Header */}
       <div className="relative z-10 border-b border-white/10 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
