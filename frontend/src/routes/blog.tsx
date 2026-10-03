@@ -132,7 +132,7 @@ export const Route = createFileRoute("/blog")({
       },
       {
         name: "twitter:title",
-        content: "Phone Repair & Buyback Technical Guides | ReviveTech",
+        content: "Phone Repair & Buyback Technical Guides | Revora",
       },
       {
         name: "twitter:description",

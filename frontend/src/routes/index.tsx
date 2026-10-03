@@ -41,26 +41,26 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Sell Old Mobile Phones & Phone Repair in Mumbai | SellRepairPhone",
+        title: "Revora — Sell Your Old Phone. Get Paid. Simple.",
       },
       {
         name: "description",
         content:
-          "Sell your old, used, damaged or dead mobile phone for top cash and book 45-minute doorstep phone repairs in Mumbai with SellRepairPhone. Free doorstep pickup & 90-day warranty.",
+          "Sell your old smartphone or book a repair with a simple, convenient experience on Revora. Top cash payout for used & dead phones plus 90-day repair warranty.",
       },
       {
         name: "keywords",
         content:
-          "sell old mobile phone, sell old phone, sell used phone, sell damaged phone, sell broken phone, sell dead phone, mobile repair Mumbai, phone repair Mumbai, doorstep mobile repair, purana phone becho, purana mobile becho, dead phone becho, phone repair near me, mobile repair near me",
+          "Revora, sell old smartphone, sell used phone, phone repair Mumbai, doorstep mobile repair, sell dead phone, sell broken phone, purana mobile becho",
       },
       {
         property: "og:title",
-        content: "Sell Old Mobile Phones & Phone Repair in Mumbai | SellRepairPhone",
+        content: "Revora — Sell Your Old Phone. Get Paid. Simple.",
       },
       {
         property: "og:description",
         content:
-          "Sell your old, used, damaged or dead mobile phone and book fast mobile repair services in Mumbai with SellRepairPhone. Instant UPI cash & free doorstep pickup.",
+          "Sell your old smartphone or book a repair with a simple, convenient experience on Revora. Instant payment & free doorstep pickup.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },

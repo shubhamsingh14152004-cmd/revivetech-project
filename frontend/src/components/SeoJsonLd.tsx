@@ -19,7 +19,7 @@ export function SeoJsonLd({ schema }: SeoJsonLdProps) {
 }
 
 export const SITE_URL = "https://sellrepairphone.org";
-export const BUSINESS_NAME = "ReviveTech — Sagar Tech Mobile Repair & Buyback";
+export const BUSINESS_NAME = "Revora — Sagar Tech Mobile Repair & Buyback";
 export const BUSINESS_PHONE = "+91 8591770877";
 export const BUSINESS_PHONE_RAW = "8591770877";
 export const BUSINESS_EMAIL = "supportsellphone@gmail.com";
@@ -34,9 +34,9 @@ export function getOrganizationSchema() {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: BUSINESS_NAME,
-    alternateName: "Sagar Tech — SellRepairPhone",
+    alternateName: "Revora — Sell Old Phone. Get Paid. Simple.",
     url: SITE_URL,
-    logo: `${SITE_URL}/favicon.svg`,
+    logo: `${SITE_URL}/images/revora-logo-full.png`,
     telephone: BUSINESS_PHONE,
     email: BUSINESS_EMAIL,
     contactPoint: [

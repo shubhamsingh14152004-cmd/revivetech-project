@@ -14,26 +14,26 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       {
-        title: "Privacy Policy & Data Security — ReviveTech",
+        title: "Privacy Policy & Data Security — Revora",
       },
       {
         name: "description",
         content:
-          "ReviveTech Privacy Policy: Learn how we protect customer data, perform NIST 800-88 cryptographic wiping on trade-in smartphones, and handle personal information.",
+          "Revora Privacy Policy: Learn how we protect customer data, perform NIST 800-88 cryptographic wiping on trade-in smartphones, and handle personal information.",
       },
       {
         name: "keywords",
         content:
-          "ReviveTech privacy policy, phone data security, NIST 800-88 wiping, smartphone repair data protection, sell phone data privacy",
+          "Revora privacy policy, phone data security, NIST 800-88 wiping, smartphone repair data protection, sell phone data privacy",
       },
       {
         property: "og:title",
-        content: "Privacy Policy & Data Security — ReviveTech",
+        content: "Privacy Policy & Data Security — Revora",
       },
       {
         property: "og:description",
         content:
-          "Read ReviveTech's commitment to data privacy, secure device handling, and certified NIST 800-88 storage sanitization.",
+          "Read Revora's commitment to data privacy, secure device handling, and certified NIST 800-88 storage sanitization.",
       },
       {
         property: "og:url",
@@ -86,7 +86,7 @@ function PrivacyPage() {
             Privacy Policy & Data Security Guarantee
           </h1>
           <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Last Updated: October 3, 2026. This policy outlines how ReviveTech handles customer data during mobile repair services, device trade-ins, and online inquiries.
+            Last Updated: October 3, 2026. This policy outlines how Revora handles customer data during mobile repair services, device trade-ins, and online inquiries.
           </p>
         </section>
 
@@ -99,7 +99,7 @@ function PrivacyPage() {
               <span>1. Device Storage Sanitization (NIST 800-88 Guidelines)</span>
             </h2>
             <p>
-              When you sell an old, used, damaged, or dead smartphone to ReviveTech, your data security is our highest operational priority:
+              When you sell an old, used, damaged, or dead smartphone to Revora, your data security is our highest operational priority:
             </p>
             <ul className="space-y-2 pl-5 list-disc text-slate-300">
               <li>
@@ -151,7 +151,7 @@ function PrivacyPage() {
               <span>4. Third-Party Sharing & Cookies</span>
             </h2>
             <p>
-              ReviveTech does not sell, rent, or trade customer contact details or personal data to third-party marketing brokers. We utilize privacy-friendly Google Analytics for website performance measurement without tracking personally identifiable credentials.
+              Revora does not sell, rent, or trade customer contact details or personal data to third-party marketing brokers. We utilize privacy-friendly Google Analytics for website performance measurement without tracking personally identifiable credentials.
             </p>
           </div>
 

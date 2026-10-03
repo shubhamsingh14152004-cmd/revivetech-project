@@ -72,16 +72,15 @@ export function SiteFooter() {
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-5 py-10">
           {/* Column 1: Business NAP */}
           <div className="space-y-3 md:col-span-1">
-            <div className="flex items-center gap-2">
-              <div className="chrome-plate grid h-8 w-8 place-items-center rounded-lg shadow-md">
-                <span className="font-label font-bold text-ink">S</span>
-              </div>
-              <span className="font-display text-base font-bold text-white tracking-tight">
-                Sagar Tech
-              </span>
-            </div>
+            <Link to="/" className="flex items-center gap-2 group">
+              <img
+                src="/images/revora-logo-transparent.png"
+                alt="Revora"
+                className="h-10 w-auto object-contain transition group-hover:scale-105"
+              />
+            </Link>
             <p className="text-white/60 leading-relaxed text-xs">
-              Certified cleanroom mobile phone repairs and guaranteed top cash buybacks for dead, water-damaged, or used smartphones.
+              Sell your old smartphone or book a repair with a simple, convenient experience. Certified cleanroom mobile phone repairs and guaranteed top cash buybacks.
             </p>
 
             {/* Consistent NAP Presentation */}
@@ -328,7 +327,7 @@ export function SiteFooter() {
 
         {/* Bottom Copyright & Legal */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/50">
-          <p>© 2026 ReviveTech (sellrepairphone.org). All rights reserved.</p>
+          <p>© 2026 Revora (sellrepairphone.org). All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-4">
             <Link to="/privacy" className="hover:text-white">
               Privacy Policy

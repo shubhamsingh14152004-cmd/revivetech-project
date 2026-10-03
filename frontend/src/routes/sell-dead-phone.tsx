@@ -92,7 +92,7 @@ export const Route = createFileRoute("/sell-dead-phone")({
       },
       {
         name: "twitter:title",
-        content: "Sell Dead Phone for Instant Cash | ReviveTech",
+        content: "Sell Dead Phone for Instant Cash | Revora",
       },
       {
         name: "twitter:description",

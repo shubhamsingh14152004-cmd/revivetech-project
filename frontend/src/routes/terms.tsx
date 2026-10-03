@@ -14,26 +14,26 @@ export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
       {
-        title: "Terms of Service & 90-Day Warranty Policy — ReviveTech",
+        title: "Terms of Service & 90-Day Warranty Policy — Revora",
       },
       {
         name: "description",
         content:
-          "ReviveTech Terms of Service: Device trade-in valuation terms, ownership verification requirements, doorstep repair conditions, and 90-Day VIP Warranty terms.",
+          "Revora Terms of Service: Device trade-in valuation terms, ownership verification requirements, doorstep repair conditions, and 90-Day VIP Warranty terms.",
       },
       {
         name: "keywords",
         content:
-          "ReviveTech terms of service, phone trade in terms, mobile repair warranty, 90 day repair warranty India, phone buyback terms",
+          "Revora terms of service, phone trade in terms, mobile repair warranty, 90 day repair warranty India, phone buyback terms",
       },
       {
         property: "og:title",
-        content: "Terms of Service & 90-Day Warranty Policy — ReviveTech",
+        content: "Terms of Service & 90-Day Warranty Policy — Revora",
       },
       {
         property: "og:description",
         content:
-          "Read ReviveTech's official service terms, trade-in quote policies, and 90-Day VIP Warranty guidelines.",
+          "Read Revora's official service terms, trade-in quote policies, and 90-Day VIP Warranty guidelines.",
       },
       {
         property: "og:url",
@@ -86,7 +86,7 @@ function TermsPage() {
             Terms of Service & Warranty Conditions
           </h1>
           <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Effective Date: October 3, 2026. By booking a repair, requesting a trade-in quote, or scheduling doorstep service with ReviveTech, you agree to these service terms.
+            Effective Date: October 3, 2026. By booking a repair, requesting a trade-in quote, or scheduling doorstep service with Revora, you agree to these service terms.
           </p>
         </section>
 
@@ -118,7 +118,7 @@ function TermsPage() {
               <span>2. 90-Day VIP Repair Warranty Terms</span>
             </h2>
             <p>
-              Every certified screen, battery, or hardware component repair performed by ReviveTech is backed by our official <strong className="text-white">90-Day VIP Warranty</strong>:
+              Every certified screen, battery, or hardware component repair performed by Revora is backed by our official <strong className="text-white">90-Day VIP Warranty</strong>:
             </p>
             <ul className="space-y-2 pl-5 list-disc text-slate-300">
               <li>
@@ -148,7 +148,7 @@ function TermsPage() {
               <span>4. Limitation of Liability</span>
             </h2>
             <p>
-              While ReviveTech exercises cleanroom precautions, we strongly advise backing up device data prior to micro-soldering motherboard repairs. ReviveTech is not liable for pre-existing liquid corrosion damage or NAND flash chip wear.
+              While Revora exercises cleanroom precautions, we strongly advise backing up device data prior to micro-soldering motherboard repairs. Revora is not liable for pre-existing liquid corrosion damage or NAND flash chip wear.
             </p>
           </div>
 

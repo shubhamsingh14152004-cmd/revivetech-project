@@ -133,7 +133,7 @@ export function RepairTracker() {
           issue: item.serviceType || item.problemDescription || "Mobile Repair",
           currentStep: stepNum,
           estimatedReady: item.status === "Completed" ? "READY FOR PICKUP" : "Processing in Cleanroom",
-          technician: "ReviveTech Certified Cleanroom Engineer",
+          technician: "Revora Certified Cleanroom Engineer",
           batteryHealth: 100,
           waterproofPass: true,
           notes: item.adminNotes || item.problemDescription || "Order registered in backend system.",

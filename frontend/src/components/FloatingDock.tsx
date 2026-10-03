@@ -24,7 +24,7 @@ interface ChatMessage {
 const DEFAULT_MESSAGES: ChatMessage[] = [
   {
     sender: "bot",
-    text: "Welcome to ReviveTech. Looking to sell a dead phone, book a 45-min repair, or chat with us directly at +91 8591770877?",
+    text: "Welcome to Revora. Sell Your Old Phone. Get Paid. Simple. Looking to sell a phone, book a 45-min repair, or chat with us at +91 8591770877?",
     time: "Just now",
   },
 ];
@@ -188,7 +188,7 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
               </div>
               <div>
                 <h4 className="font-display text-sm font-bold">
-                  ReviveTech AI Support
+                  Revora AI Support
                 </h4>
                 <div className="flex items-center gap-1.5 text-[10px] text-emerald-400 font-label">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 live-pulse" />
