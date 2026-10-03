@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { api } from "../services/api";
 import {
   Search,
   CheckCircle2,
@@ -9,6 +10,7 @@ import {
   Truck,
   FileText,
   Sparkles,
+  Loader2,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -29,7 +31,7 @@ interface OrderStatus {
 const DEMO_ORDERS: { [key: string]: OrderStatus } = {
   "RT-8842": {
     id: "RT-8842",
-    customer: "Sarah J. (Chicago, IL)",
+    customer: "Sarah J. (Mumbai, MH)",
     device: "iPhone 14 Pro Max - Space Black",
     issue: "Motherboard Power IC & Screen Glitch",
     currentStep: 3,
@@ -49,7 +51,7 @@ const DEMO_ORDERS: { [key: string]: OrderStatus } = {
   },
   "RT-9104": {
     id: "RT-9104",
-    customer: "David K. (Austin, TX)",
+    customer: "David K. (Mumbai, MH)",
     device: "Samsung Galaxy S24 Ultra - Titanium Gray",
     issue: "Shattered OLED & Periscope Camera Sensor",
     currentStep: 5,
@@ -69,7 +71,7 @@ const DEMO_ORDERS: { [key: string]: OrderStatus } = {
   },
   "RT-3319": {
     id: "RT-3319",
-    customer: "Elena M. (Seattle, WA)",
+    customer: "Elena M. (Thane, MH)",
     device: "Google Pixel 8 Pro - Bay Blue",
     issue: "Dead Battery Swelling & Thermal Throttle",
     currentStep: 2,
@@ -94,16 +96,67 @@ export function RepairTracker() {
   const [activeOrder, setActiveOrder] = useState<OrderStatus | null>(
     DEMO_ORDERS["RT-8842"] ?? null
   );
+  const [isSearchingApi, setIsSearchingApi] = useState(false);
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     const cleanQuery = searchQuery.trim().toUpperCase();
-    const found = DEMO_ORDERS[cleanQuery];
-    if (found) {
-      setActiveOrder(found);
-      toast.success(`Found live status for ${cleanQuery}`);
-    } else {
-      toast.error(`Order ${cleanQuery} not found. Try demo codes below.`);
+    if (!cleanQuery) return;
+
+    const foundDemo = DEMO_ORDERS[cleanQuery];
+    if (foundDemo) {
+      setActiveOrder(foundDemo);
+      toast.success(`Found status for ${cleanQuery}`);
+      return;
+    }
+
+    setIsSearchingApi(true);
+    try {
+      const res = await api.getRepairById(cleanQuery);
+      if (res.success && res.data) {
+        const item = res.data;
+        const stepNum =
+          item.status === "Pending"
+            ? 1
+            : item.status === "Confirmed"
+            ? 2
+            : item.status === "In Progress"
+            ? 3
+            : item.status === "Completed"
+            ? 5
+            : 1;
+
+        const mapped: OrderStatus = {
+          id: item.ticketNumber || item._id,
+          customer: `${item.customerName} (${item.phoneNumber})`,
+          device: `${item.phoneBrand || ""} ${item.phoneModel}`.trim(),
+          issue: item.serviceType || item.problemDescription || "Mobile Repair",
+          currentStep: stepNum,
+          estimatedReady: item.status === "Completed" ? "READY FOR PICKUP" : "Processing in Cleanroom",
+          technician: "ReviveTech Certified Cleanroom Engineer",
+          batteryHealth: 100,
+          waterproofPass: true,
+          notes: item.adminNotes || item.problemDescription || "Order registered in backend system.",
+          steps: [
+            { title: "Request Submitted & Registered", time: new Date(item.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), done: true },
+            { title: "Cleanroom Verification & Dispatch", time: stepNum >= 2 ? "Confirmed" : "Pending", done: stepNum >= 2 },
+            { title: "Hardware Repair & Diagnostics", time: stepNum >= 3 ? "In Progress" : "Pending", done: stepNum >= 3 },
+            { title: "28-Point Bench Quality Control", time: stepNum >= 4 ? "Passed" : "Pending", done: stepNum >= 4 },
+            { title: "Completion & Payout / Handover", time: item.status === "Completed" ? "Complete" : "Pending", done: stepNum >= 5 },
+          ],
+        };
+
+        setActiveOrder(mapped);
+        toast.success(`Found live database record #${mapped.id}`);
+      } else {
+        toast.error(`Order ${cleanQuery} not found. Try demo codes RT-8842, RT-9104, or RT-3319.`);
+      }
+    } catch (err: any) {
+      toast.error(`Could not locate order ${cleanQuery}`, {
+        description: err.message || "Order ID not found in system.",
+      });
+    } finally {
+      setIsSearchingApi(false);
     }
   };
 
@@ -167,9 +220,17 @@ export function RepairTracker() {
         </div>
         <button
           type="submit"
-          className="rounded-2xl bg-white px-6 py-3 text-xs font-bold text-ink hover:bg-white/90 transition font-label cursor-pointer"
+          disabled={isSearchingApi}
+          className="rounded-2xl bg-white px-6 py-3 text-xs font-bold text-ink hover:bg-white/90 transition font-label cursor-pointer flex items-center gap-2 disabled:opacity-50"
         >
-          Track Now
+          {isSearchingApi ? (
+            <>
+              <Loader2 className="h-4 w-4 animate-spin text-ink" />
+              <span>Searching…</span>
+            </>
+          ) : (
+            <span>Track Now</span>
+          )}
         </button>
       </form>
 

@@ -86,7 +86,24 @@ export const Route = createFileRoute("/sell-dead-phone")({
         property: "og:image",
         content: heroPhone,
       },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Sell Dead Phone for Instant Cash | ReviveTech",
+      },
+      {
+        name: "twitter:description",
+        content: "Get fair salvage cash for smartphones that won't turn on. Free doorstep pickup & instant UPI payout.",
+      },
+      {
+        name: "twitter:image",
+        content: heroPhone,
+      },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/sell-dead-phone` }],
   }),
   component: SellDeadPhonePage,
 });

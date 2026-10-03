@@ -1,7 +1,9 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
+import { api } from "../services/api";
+import { toast } from "sonner";
 import {
   SeoJsonLd,
   getLocalBusinessSchema,
@@ -19,6 +21,7 @@ import {
   Truck,
   CheckCircle2,
   Sparkles,
+  Loader2,
 } from "lucide-react";
 import heroPhone from "../assets/hero-phone.jpg";
 
@@ -71,6 +74,8 @@ function ContactPage() {
   const [phone, setPhone] = useState("");
   const [serviceType, setServiceType] = useState("repair");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [ticketRef, setTicketRef] = useState("");
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: SITE_URL },
@@ -84,13 +89,38 @@ function ContactPage() {
     setPhone(digitsOnly);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (phone.length !== 10) {
-      alert("Please enter a valid 10-digit mobile number.");
+      toast.error("Please enter a valid 10-digit mobile number.");
       return;
     }
-    setFormSubmitted(true);
+
+    setIsSubmitting(true);
+    try {
+      const response = await api.submitRepairRequest({
+        customerName: fullName.trim(),
+        phoneNumber: phone,
+        phoneModel: "Inquiry / Support Request",
+        serviceType: `Contact Form — ${serviceType}`,
+        problemDescription: message.trim() || "General Customer Support Inquiry",
+      });
+
+      const genRef =
+        response.data?.ticketNumber ||
+        `RT-CNT-${Math.floor(1000 + Math.random() * 9000)}`;
+      setTicketRef(genRef);
+      setFormSubmitted(true);
+      toast.success(`🎉 Inquiry Registered! Ref #${genRef}`, {
+        description: "Our technical team will call or WhatsApp you within 2 hours.",
+      });
+    } catch (err: any) {
+      toast.error("Submission Error", {
+        description: err.message || "Failed to submit inquiry to server.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -294,10 +324,20 @@ function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-900/30 flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                    className="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-900/30 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                   >
-                    <Send className="w-4 h-4" />
-                    <span>Submit Inquiry</span>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin text-white" />
+                        <span>Submitting Inquiry...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4" />
+                        <span>Submit Inquiry</span>
+                      </>
+                    )}
                   </button>
                 </form>
               )}

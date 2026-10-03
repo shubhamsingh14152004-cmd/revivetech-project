@@ -126,7 +126,24 @@ export const Route = createFileRoute("/blog")({
         property: "og:image",
         content: heroPhone,
       },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Phone Repair & Buyback Technical Guides | ReviveTech",
+      },
+      {
+        name: "twitter:description",
+        content: "Comprehensive guides on wiping data safely, repairing damaged screens, and selling dead smartphones.",
+      },
+      {
+        name: "twitter:image",
+        content: heroPhone,
+      },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/blog` }],
   }),
   component: BlogPage,
 });
