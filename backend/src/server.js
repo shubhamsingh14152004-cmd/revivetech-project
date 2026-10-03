@@ -66,6 +66,8 @@ export const ensureDBAndAdmin = async () => {
 // Production-ready CORS Configuration
 const defaultOrigins = [
   "https://revivetech-project.vercel.app",
+  "https://sellrepairphone.org",
+  "https://www.sellrepairphone.org",
 ];
 
 const configuredOrigins = process.env.FRONTEND_URL
