@@ -36,6 +36,7 @@ import {
   Download,
   Maximize2,
   Image as ImageIcon,
+  UserCheck,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -58,7 +59,6 @@ export function AdminDashboard() {
   const [selectedRequest, setSelectedRequest] = useState<RepairRequestItem | null>(null);
   const [statusUpdating, setStatusUpdating] = useState<string | null>(null);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
-  const [adminNotes, setAdminNotes] = useState("");
   const [adminUser, setAdminUser] = useState<any>(null);
 
   // Authentication check
@@ -70,7 +70,7 @@ export function AdminDashboard() {
     }
 
     try {
-      const stored = localStorage.getItem("sagartech_admin_user");
+      const stored = localStorage.getItem("revivetech_admin_user") || localStorage.getItem("sagartech_admin_user");
       if (stored) setAdminUser(JSON.parse(stored));
     } catch (_) {}
   }, [navigate]);
@@ -94,7 +94,7 @@ export function AdminDashboard() {
         setRequests(listRes.data.requests);
       }
     } catch (err: any) {
-      if (err.message.includes("401") || err.message.includes("token")) {
+      if (err.message && (err.message.includes("401") || err.message.includes("token"))) {
         clearAdminToken();
         navigate({ to: "/admin/login" });
       } else {
@@ -171,63 +171,63 @@ export function AdminDashboard() {
     switch (status) {
       case "Pending":
         return (
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-400/10 px-2.5 py-1 text-xs font-semibold text-amber-400 border border-amber-400/20">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-400/15 px-2.5 py-1 text-xs font-semibold text-amber-300 border border-amber-400/30">
             <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
             Pending Review
           </span>
         );
       case "Confirmed":
         return (
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-400/10 px-2.5 py-1 text-xs font-semibold text-blue-400 border border-blue-400/20">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-400/15 px-2.5 py-1 text-xs font-semibold text-blue-300 border border-blue-400/30">
             <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
             Confirmed
           </span>
         );
       case "In Progress":
         return (
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-400/10 px-2.5 py-1 text-xs font-semibold text-purple-400 border border-purple-400/20">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-400/15 px-2.5 py-1 text-xs font-semibold text-purple-300 border border-purple-400/30">
             <span className="h-1.5 w-1.5 rounded-full bg-purple-400 live-pulse" />
             On Bench / Transit
           </span>
         );
       case "Completed":
         return (
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/10 px-2.5 py-1 text-xs font-semibold text-emerald-400 border border-emerald-400/20">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/15 px-2.5 py-1 text-xs font-semibold text-emerald-300 border border-emerald-400/30">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
             Completed / Paid
           </span>
         );
       case "Cancelled":
         return (
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-rose-400/10 px-2.5 py-1 text-xs font-semibold text-rose-400 border border-rose-400/20">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-rose-400/15 px-2.5 py-1 text-xs font-semibold text-rose-300 border border-rose-400/30">
             <span className="h-1.5 w-1.5 rounded-full bg-rose-400" />
             Cancelled
           </span>
         );
       default:
-        return <span>{status}</span>;
+        return <span className="text-slate-300">{status}</span>;
     }
   };
 
   return (
-    <div className="dusk min-h-screen w-full text-white selection:bg-brand selection:text-white pb-20 font-display">
+    <div className="dusk-admin min-h-screen w-full text-slate-100 selection:bg-[#007F5F] selection:text-white pb-20 font-display flex flex-col">
       {/* Top Navigation Bar */}
-      <header className="sticky top-0 z-30 w-full bg-black/60 backdrop-blur-xl border-b border-white/10 px-4 md:px-8 py-3.5">
-        <div className="mx-auto max-w-7xl flex items-center justify-between">
+      <header className="sticky top-0 z-30 w-full bg-[#0A1412]/90 backdrop-blur-xl border-b border-[#43C59E]/20 px-4 md:px-8 py-3 shadow-xl">
+        <div className="mx-auto max-w-7xl flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="chrome-plate grid h-9 w-9 place-items-center rounded-xl shadow-lg">
-              <span className="font-label font-bold text-ink text-base">R</span>
+            <div className="chrome-plate grid h-9 w-9 shrink-0 place-items-center rounded-xl shadow-lg">
+              <span className="font-label font-bold text-white text-base">R</span>
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-display font-bold text-base text-white tracking-tight">
                   Revora Operations
                 </span>
-                <span className="rounded-md bg-brand/20 px-2 py-0.5 text-[10px] font-label font-bold text-brand uppercase tracking-wider border border-brand/30">
+                <span className="rounded-md bg-[#007F5F]/20 px-2 py-0.5 text-[10px] font-label font-bold text-[#43C59E] uppercase tracking-wider border border-[#43C59E]/30">
                   Admin v2.0
                 </span>
               </div>
-              <span className="text-[10px] font-label text-white/50 block -mt-0.5">
+              <span className="text-[10px] font-label text-slate-400 block -mt-0.5">
                 Cleanroom Repair & Buyout Management Desk
               </span>
             </div>
@@ -236,7 +236,7 @@ export function AdminDashboard() {
           <div className="flex items-center gap-3">
             <Link
               to="/"
-              className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-white/5 px-3.5 py-1.5 text-xs font-medium text-white/80 hover:bg-white/15 hover:text-white transition border border-white/10"
+              className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-200 hover:bg-white/15 hover:text-white transition border border-white/10"
             >
               <ExternalLink className="h-3.5 w-3.5" />
               <span>View Storefront</span>
@@ -247,14 +247,14 @@ export function AdminDashboard() {
                 <span className="text-xs font-bold text-white leading-tight">
                   {adminUser.name || "Administrator"}
                 </span>
-                <span className="text-[10px] text-white/50">{adminUser.email}</span>
+                <span className="text-[10px] text-slate-400">{adminUser.email}</span>
               </div>
             )}
 
             <button
               type="button"
               onClick={handleLogout}
-              className="inline-flex items-center gap-1.5 rounded-full bg-white/10 hover:bg-rose-500/20 hover:text-rose-300 px-3.5 py-1.5 text-xs font-bold font-label text-white/80 transition border border-white/10 cursor-pointer"
+              className="inline-flex items-center gap-1.5 rounded-full bg-rose-500/10 hover:bg-rose-500/20 hover:text-rose-200 px-3.5 py-1.5 text-xs font-bold font-label text-rose-300 transition border border-rose-500/30 cursor-pointer"
             >
               <LogOut className="h-3.5 w-3.5" />
               <span>Logout</span>
@@ -264,110 +264,110 @@ export function AdminDashboard() {
       </header>
 
       {/* Main Container */}
-      <main className="mx-auto max-w-7xl px-4 md:px-8 pt-8 space-y-8">
+      <main className="mx-auto max-w-7xl px-4 md:px-8 pt-8 space-y-8 flex-1 w-full">
         {/* KPI Statistics Row */}
         <div>
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center justify-between mb-4">
             <h2 className="font-display text-lg font-bold text-white flex items-center gap-2">
-              <TrendingUp className="h-5 w-5 text-accent" />
+              <TrendingUp className="h-5 w-5 text-[#43C59E]" />
               <span>Repair & Buyback Operations Overview</span>
             </h2>
             <button
               type="button"
               onClick={fetchData}
               disabled={loading}
-              className="inline-flex items-center gap-1.5 text-xs text-accent hover:text-white transition cursor-pointer font-label"
+              className="inline-flex items-center gap-1.5 text-xs text-[#43C59E] hover:text-white transition cursor-pointer font-label"
             >
               <RefreshCw className={`h-3.5 w-3.5 ${loading ? "animate-spin" : ""}`} />
               <span>Sync Live DB</span>
             </button>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
             {/* Total */}
-            <div className="rounded-2xl glass-card p-4 border border-white/15 shadow-lg">
-              <span className="text-[11px] font-label uppercase tracking-wider text-white/60 block">
+            <div className="h-full flex flex-col justify-between rounded-2xl glass-card-admin p-4 border border-[#43C59E]/20 shadow-lg">
+              <span className="text-[11px] font-label uppercase tracking-wider text-slate-300 block font-bold">
                 Total Orders
               </span>
-              <span className="font-display text-3xl font-black text-white mt-1 block">
+              <span className="font-display text-3xl font-black text-white mt-2 block">
                 {stats.total}
               </span>
-              <span className="text-[10px] text-white/50">All time tickets</span>
+              <span className="text-[10px] text-slate-400 mt-1 block">All time tickets</span>
             </div>
 
             {/* Pending */}
-            <div className="rounded-2xl bg-amber-500/10 p-4 border border-amber-500/20 shadow-lg">
-              <span className="text-[11px] font-label uppercase tracking-wider text-amber-400 block">
+            <div className="h-full flex flex-col justify-between rounded-2xl bg-amber-500/10 p-4 border border-amber-500/30 shadow-lg">
+              <span className="text-[11px] font-label uppercase tracking-wider text-amber-400 block font-bold">
                 Pending
               </span>
-              <span className="font-display text-3xl font-black text-amber-300 mt-1 block">
+              <span className="font-display text-3xl font-black text-amber-300 mt-2 block">
                 {stats.pending}
               </span>
-              <span className="text-[10px] text-amber-400/70">Needs review</span>
+              <span className="text-[10px] text-amber-300/80 mt-1 block">Needs review</span>
             </div>
 
             {/* Confirmed */}
-            <div className="rounded-2xl bg-blue-500/10 p-4 border border-blue-500/20 shadow-lg">
-              <span className="text-[11px] font-label uppercase tracking-wider text-blue-400 block">
+            <div className="h-full flex flex-col justify-between rounded-2xl bg-blue-500/10 p-4 border border-blue-500/30 shadow-lg">
+              <span className="text-[11px] font-label uppercase tracking-wider text-blue-400 block font-bold">
                 Confirmed
               </span>
-              <span className="font-display text-3xl font-black text-blue-300 mt-1 block">
+              <span className="font-display text-3xl font-black text-blue-300 mt-2 block">
                 {stats.confirmed}
               </span>
-              <span className="text-[10px] text-blue-400/70">Kit dispatched</span>
+              <span className="text-[10px] text-blue-300/80 mt-1 block">Kit dispatched</span>
             </div>
 
             {/* In Progress */}
-            <div className="rounded-2xl bg-purple-500/10 p-4 border border-purple-500/20 shadow-lg">
-              <span className="text-[11px] font-label uppercase tracking-wider text-purple-400 block">
+            <div className="h-full flex flex-col justify-between rounded-2xl bg-purple-500/10 p-4 border border-purple-500/30 shadow-lg">
+              <span className="text-[11px] font-label uppercase tracking-wider text-purple-400 block font-bold">
                 In Progress
               </span>
-              <span className="font-display text-3xl font-black text-purple-300 mt-1 block">
+              <span className="font-display text-3xl font-black text-purple-300 mt-2 block">
                 {stats.inProgress}
               </span>
-              <span className="text-[10px] text-purple-400/70">On clean bench</span>
+              <span className="text-[10px] text-purple-300/80 mt-1 block">On clean bench</span>
             </div>
 
             {/* Completed */}
-            <div className="rounded-2xl bg-emerald-500/10 p-4 border border-emerald-500/20 shadow-lg">
-              <span className="text-[11px] font-label uppercase tracking-wider text-emerald-400 block">
+            <div className="h-full flex flex-col justify-between rounded-2xl bg-emerald-500/10 p-4 border border-emerald-500/30 shadow-lg">
+              <span className="text-[11px] font-label uppercase tracking-wider text-emerald-400 block font-bold">
                 Completed
               </span>
-              <span className="font-display text-3xl font-black text-emerald-300 mt-1 block">
+              <span className="font-display text-3xl font-black text-emerald-300 mt-2 block">
                 {stats.completed}
               </span>
-              <span className="text-[10px] text-emerald-400/70">Paid & closed</span>
+              <span className="text-[10px] text-emerald-300/80 mt-1 block">Paid & closed</span>
             </div>
 
             {/* Cancelled */}
-            <div className="rounded-2xl bg-rose-500/10 p-4 border border-rose-500/20 shadow-lg">
-              <span className="text-[11px] font-label uppercase tracking-wider text-rose-400 block">
+            <div className="h-full flex flex-col justify-between rounded-2xl bg-rose-500/10 p-4 border border-rose-500/30 shadow-lg">
+              <span className="text-[11px] font-label uppercase tracking-wider text-rose-400 block font-bold">
                 Cancelled
               </span>
-              <span className="font-display text-3xl font-black text-rose-300 mt-1 block">
+              <span className="font-display text-3xl font-black text-rose-300 mt-2 block">
                 {stats.cancelled}
               </span>
-              <span className="text-[10px] text-rose-400/70">Void / refunded</span>
+              <span className="text-[10px] text-rose-300/80 mt-1 block">Void / refunded</span>
             </div>
           </div>
         </div>
 
         {/* Search & Filter Toolbar */}
-        <div className="rounded-2xl glass-card p-4 border border-white/15 flex flex-col md:flex-row gap-4 items-center justify-between shadow-xl">
+        <div className="rounded-2xl glass-card-admin p-4 border border-[#43C59E]/20 flex flex-col md:flex-row gap-4 items-center justify-between shadow-xl">
           {/* Search box */}
           <div className="relative w-full md:w-96">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
             <input
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search customer, phone, brand, model or RT- ticket…"
-              className="w-full rounded-xl border border-white/15 bg-white/5 pl-10 pr-4 py-2 text-xs text-white placeholder:text-white/40 outline-none transition focus:border-accent focus:ring-1 focus:ring-accent"
+              className="w-full rounded-xl border border-white/15 bg-black/40 pl-10 pr-4 py-2.5 text-xs text-white placeholder:text-slate-400 outline-none transition focus:border-[#43C59E] focus:ring-1 focus:ring-[#43C59E]"
             />
             {searchTerm && (
               <button
                 onClick={() => setSearchTerm("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 hover:text-white"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white"
               >
                 <X className="h-3.5 w-3.5" />
               </button>
@@ -387,10 +387,10 @@ export function AdminDashboard() {
               <button
                 key={tab.id}
                 onClick={() => setSelectedStatus(tab.id)}
-                className={`rounded-xl px-3 py-1.5 text-xs font-semibold font-label transition cursor-pointer ${
+                className={`rounded-xl px-3.5 py-1.5 text-xs font-semibold font-label transition cursor-pointer ${
                   selectedStatus === tab.id
-                    ? "bg-brand text-white shadow-md shadow-brand/30"
-                    : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
+                    ? "bg-[#007F5F] text-white shadow-md shadow-[#007F5F]/40 border border-[#43C59E]/40"
+                    : "bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white border border-white/10"
                 }`}
               >
                 {tab.label}
@@ -400,38 +400,38 @@ export function AdminDashboard() {
         </div>
 
         {/* Requests Table */}
-        <div className="rounded-3xl glass-card border border-white/15 shadow-2xl overflow-hidden">
+        <div className="rounded-3xl glass-card-admin border border-[#43C59E]/20 shadow-2xl overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-black/50 border-b border-white/10 font-label text-[11px] uppercase tracking-wider text-white/60">
+              <thead className="bg-black/60 border-b border-white/10 font-label text-[11px] uppercase tracking-wider text-slate-300">
                 <tr>
-                  <th className="py-3.5 px-4 font-semibold">Ticket / Date</th>
-                  <th className="py-3.5 px-4 font-semibold">Customer</th>
-                  <th className="py-3.5 px-4 font-semibold">Brand & Model</th>
-                  <th className="py-3.5 px-3 font-semibold text-center">Photo</th>
-                  <th className="py-3.5 px-4 font-semibold">Service Type</th>
-                  <th className="py-3.5 px-4 font-semibold">Amount / Payout</th>
-                  <th className="py-3.5 px-4 font-semibold">Status</th>
-                  <th className="py-3.5 px-4 font-semibold text-right">Actions</th>
+                  <th className="py-4 px-4 font-bold">Ticket / Date</th>
+                  <th className="py-4 px-4 font-bold">Customer</th>
+                  <th className="py-4 px-4 font-bold">Brand & Model</th>
+                  <th className="py-4 px-3 font-bold text-center">Photo</th>
+                  <th className="py-4 px-4 font-bold">Service Type</th>
+                  <th className="py-4 px-4 font-bold">Amount / Payout</th>
+                  <th className="py-4 px-4 font-bold">Status</th>
+                  <th className="py-4 px-4 font-bold text-right">Actions</th>
                 </tr>
               </thead>
 
               <tbody className="divide-y divide-white/5">
                 {loading && requests.length === 0 ? (
                   <tr>
-                    <td colSpan={8} className="py-12 text-center text-white/50">
-                      <Loader2 className="h-6 w-6 animate-spin mx-auto mb-2 text-accent" />
+                    <td colSpan={8} className="py-16 text-center text-slate-400">
+                      <Loader2 className="h-7 w-7 animate-spin mx-auto mb-2 text-[#43C59E]" />
                       <span>Loading database records…</span>
                     </td>
                   </tr>
                 ) : requests.length === 0 ? (
                   <tr>
-                    <td colSpan={8} className="py-12 text-center text-white/50">
-                      <Smartphone className="h-8 w-8 mx-auto mb-2 opacity-40" />
+                    <td colSpan={8} className="py-16 text-center text-slate-400">
+                      <Smartphone className="h-9 w-9 mx-auto mb-2 opacity-40 text-slate-400" />
                       <p className="font-bold text-white text-sm">No requests found</p>
-                      <p className="text-xs text-white/50 mt-0.5">
+                      <p className="text-xs text-slate-400 mt-1">
                         {searchTerm || selectedStatus !== "all"
-                          ? "Try clearing your search or status filter."
+                          ? "Try clearing your search term or status filter."
                           : "New customer repair & trade-in submissions will appear here in real time."}
                       </p>
                     </td>
@@ -440,15 +440,15 @@ export function AdminDashboard() {
                   requests.map((item) => (
                     <tr
                       key={item._id}
-                      className="hover:bg-white/5 transition-colors group cursor-pointer"
+                      className="hover:bg-white/[0.04] transition-colors group cursor-pointer border-b border-white/5"
                       onClick={() => setSelectedRequest(item)}
                     >
                       {/* Ticket & Date */}
-                      <td className="py-3.5 px-4">
-                        <span className="font-mono font-bold text-accent block">
+                      <td className="py-4 px-4">
+                        <span className="font-mono font-bold text-[#43C59E] block">
                           {item.ticketNumber}
                         </span>
-                        <span className="text-[10px] text-white/50 flex items-center gap-1 mt-0.5">
+                        <span className="text-[10px] text-slate-400 flex items-center gap-1 mt-1">
                           <Clock className="h-3 w-3" />
                           {new Date(item.createdAt).toLocaleDateString("en-IN", {
                             day: "numeric",
@@ -459,24 +459,24 @@ export function AdminDashboard() {
                       </td>
 
                       {/* Customer */}
-                      <td className="py-3.5 px-4">
+                      <td className="py-4 px-4">
                         <span className="font-bold text-white block">
                           {item.customerName}
                         </span>
                         <div
-                          className="flex items-center gap-2 mt-1"
+                          className="flex items-center gap-2 mt-1.5"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <a
                             href={`tel:${item.phoneNumber}`}
-                            className="font-mono text-xs font-bold text-accent hover:underline flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded border border-white/10 hover:bg-white/10 transition"
+                            className="font-mono text-xs font-bold text-[#43C59E] hover:underline flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded border border-white/10 hover:bg-white/10 transition"
                             title="Click to call customer"
                           >
                             <Phone className="h-3 w-3 text-emerald-400" />
                             <span>{item.phoneNumber}</span>
                           </a>
                           <a
-                            href={`https://wa.me/91${item.phoneNumber.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(item.customerName)}%2C%20Sagar%20Tech%20team%20here%20regarding%20ticket%20${item.ticketNumber}.`}
+                            href={`https://wa.me/91${item.phoneNumber.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(item.customerName)}%2C%20Revora%20team%20here%20regarding%20ticket%20${item.ticketNumber}.`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[10px] font-bold font-label bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 px-2 py-0.5 rounded border border-emerald-500/30 transition"
@@ -488,16 +488,16 @@ export function AdminDashboard() {
                       </td>
 
                       {/* Device */}
-                      <td className="py-3.5 px-4">
+                      <td className="py-4 px-4">
                         <span className="font-semibold text-white block">
                           {item.phoneModel}
                         </span>
-                        <div className="flex items-center gap-1.5 mt-0.5">
-                          <span className="text-[10px] text-accent font-label uppercase font-bold">
+                        <div className="flex flex-wrap items-center gap-1.5 mt-1">
+                          <span className="text-[10px] text-[#43C59E] font-label uppercase font-bold bg-[#007F5F]/20 px-1.5 py-0.2 rounded border border-[#43C59E]/30">
                             {item.phoneBrand}
                           </span>
                           {item.storage && (
-                            <span className="text-[10px] text-white/50">
+                            <span className="text-[10px] text-slate-300">
                               · {item.storage}
                             </span>
                           )}
@@ -511,13 +511,13 @@ export function AdminDashboard() {
 
                       {/* Phone Photo Thumbnail */}
                       <td
-                        className="py-3.5 px-3 text-center"
+                        className="py-4 px-3 text-center"
                         onClick={(e) => e.stopPropagation()}
                       >
                         {item.phoneImage ? (
                           <div
                             onClick={() => setPreviewImage(item.phoneImage || null)}
-                            className="relative group mx-auto h-11 w-11 rounded-xl overflow-hidden border border-white/20 bg-black/60 cursor-pointer shadow-md hover:ring-2 hover:ring-accent transition"
+                            className="relative group mx-auto h-11 w-11 rounded-xl overflow-hidden border border-white/20 bg-black/60 cursor-pointer shadow-md hover:ring-2 hover:ring-[#43C59E] transition"
                             title="Click to zoom device photo"
                           >
                             <img
@@ -530,67 +530,67 @@ export function AdminDashboard() {
                             </div>
                           </div>
                         ) : (
-                          <span className="text-[10px] text-white/30 italic">
+                          <span className="text-[10px] text-slate-500 italic">
                             No photo
                           </span>
                         )}
                       </td>
 
                       {/* Service Type */}
-                      <td className="py-3.5 px-4 max-w-xs">
-                        <span className="text-white/90 truncate block">
+                      <td className="py-4 px-4 max-w-xs">
+                        <span className="text-slate-200 font-medium truncate block">
                           {item.serviceType}
                         </span>
                         {item.problemDescription && (
-                          <span className="text-[10px] text-white/50 truncate block mt-0.5">
+                          <span className="text-[10px] text-slate-400 truncate block mt-0.5">
                             {item.problemDescription}
                           </span>
                         )}
                       </td>
 
                       {/* Amount / Payout */}
-                      <td className="py-3.5 px-4 font-mono font-bold text-gold">
+                      <td className="py-4 px-4 font-mono font-bold text-[#F59E0B]">
                         {item.estimatedAmount > 0 ? (
                           `₹${item.estimatedAmount.toLocaleString("en-IN")}`
                         ) : (
-                          <span className="text-white/40 font-normal">Custom Quote</span>
+                          <span className="text-slate-400 font-normal">Custom Quote</span>
                         )}
                       </td>
 
-                      {/* Status */}
-                      <td className="py-3.5 px-4" onClick={(e) => e.stopPropagation()}>
+                      {/* Status Dropdown */}
+                      <td className="py-4 px-4" onClick={(e) => e.stopPropagation()}>
                         <select
                           value={item.status}
                           disabled={statusUpdating === item._id}
                           onChange={(e) => handleUpdateStatus(item._id, e.target.value)}
-                          className="rounded-lg bg-white/10 border border-white/15 px-2 py-1 text-xs text-white outline-none focus:border-brand cursor-pointer font-label"
+                          className="rounded-lg bg-black/50 border border-white/20 px-2.5 py-1 text-xs text-white outline-none focus:border-[#43C59E] cursor-pointer font-label transition"
                         >
-                          <option value="Pending" className="bg-ink text-amber-400">
-                            Pending
+                          <option value="Pending" className="bg-[#0F172A] text-amber-400 font-semibold py-1">
+                            Pending Review
                           </option>
-                          <option value="Confirmed" className="bg-ink text-blue-400">
+                          <option value="Confirmed" className="bg-[#0F172A] text-blue-400 font-semibold py-1">
                             Confirmed
                           </option>
-                          <option value="In Progress" className="bg-ink text-purple-400">
+                          <option value="In Progress" className="bg-[#0F172A] text-purple-400 font-semibold py-1">
                             In Progress
                           </option>
-                          <option value="Completed" className="bg-ink text-emerald-400">
-                            Completed
+                          <option value="Completed" className="bg-[#0F172A] text-emerald-400 font-semibold py-1">
+                            Completed / Paid
                           </option>
-                          <option value="Cancelled" className="bg-ink text-rose-400">
+                          <option value="Cancelled" className="bg-[#0F172A] text-rose-400 font-semibold py-1">
                             Cancelled
                           </option>
                         </select>
                       </td>
 
                       {/* Actions */}
-                      <td className="py-3.5 px-4 text-right" onClick={(e) => e.stopPropagation()}>
+                      <td className="py-4 px-4 text-right" onClick={(e) => e.stopPropagation()}>
                         <div className="inline-flex items-center gap-1.5">
                           <button
                             type="button"
                             onClick={() => setSelectedRequest(item)}
                             title="View Full Details"
-                            className="p-1.5 rounded-lg bg-white/5 hover:bg-white/15 text-white/70 hover:text-white transition cursor-pointer"
+                            className="p-1.5 rounded-lg bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition cursor-pointer border border-white/10"
                           >
                             <Eye className="h-3.5 w-3.5" />
                           </button>
@@ -598,7 +598,7 @@ export function AdminDashboard() {
                             type="button"
                             onClick={() => handleDeleteRequest(item._id, item.ticketNumber)}
                             title="Delete Record"
-                            className="p-1.5 rounded-lg bg-white/5 hover:bg-rose-500/20 text-white/50 hover:text-rose-300 transition cursor-pointer"
+                            className="p-1.5 rounded-lg bg-white/5 hover:bg-rose-500/20 text-slate-400 hover:text-rose-300 transition cursor-pointer border border-white/10"
                           >
                             <Trash2 className="h-3.5 w-3.5" />
                           </button>
@@ -615,12 +615,12 @@ export function AdminDashboard() {
 
       {/* Full Customer & Order Details Modal */}
       {selectedRequest && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-in fade-in duration-200">
-          <div className="relative w-full max-w-2xl rounded-3xl bg-gradient-to-b from-ink via-zinc-950 to-black p-6 md:p-8 border border-white/20 shadow-2xl text-white max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 animate-in fade-in duration-200">
+          <div className="relative w-full max-w-3xl rounded-3xl glass-card-admin p-6 md:p-8 border border-[#43C59E]/30 shadow-2xl text-white max-h-[90vh] overflow-y-auto">
             {/* Close button */}
             <button
               onClick={() => setSelectedRequest(null)}
-              className="absolute right-5 top-5 p-2 text-white/60 hover:text-white rounded-full bg-white/10 transition cursor-pointer"
+              className="absolute right-5 top-5 p-2 text-slate-400 hover:text-white rounded-full bg-white/10 hover:bg-white/20 transition cursor-pointer border border-white/10"
             >
               <X className="h-5 w-5" />
             </button>
@@ -628,7 +628,7 @@ export function AdminDashboard() {
             {/* Modal Header */}
             <div className="border-b border-white/10 pb-4 mb-6">
               <div className="flex items-center gap-2">
-                <span className="font-mono text-sm font-bold text-accent">
+                <span className="font-mono text-sm font-bold text-[#43C59E]">
                   {selectedRequest.ticketNumber}
                 </span>
                 {renderStatusBadge(selectedRequest.status)}
@@ -636,7 +636,7 @@ export function AdminDashboard() {
               <h3 className="font-display text-2xl font-bold text-white mt-1">
                 Order & Customer Dossier
               </h3>
-              <span className="text-xs text-white/50">
+              <span className="text-xs text-slate-400 mt-0.5 block">
                 Created on {new Date(selectedRequest.createdAt).toLocaleString("en-IN")}
               </span>
             </div>
@@ -644,32 +644,32 @@ export function AdminDashboard() {
             {/* Details Grid */}
             <div className="grid gap-6 md:grid-cols-2 text-xs font-display">
               {/* Customer Info */}
-              <div className="rounded-2xl bg-white/5 p-4 border border-white/10 space-y-2.5">
-                <span className="font-label text-[10px] uppercase tracking-wider text-accent font-bold block">
+              <div className="rounded-2xl bg-black/40 p-4 border border-white/10 space-y-3">
+                <span className="font-label text-[10px] uppercase tracking-wider text-[#43C59E] font-bold block border-b border-white/10 pb-1.5">
                   Customer Information
                 </span>
                 <div className="flex justify-between">
-                  <span className="text-white/60">Name:</span>
+                  <span className="text-slate-400">Name:</span>
                   <span className="font-semibold text-white">{selectedRequest.customerName}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-white/60">Phone:</span>
+                  <span className="text-slate-400">Phone:</span>
                   <div className="flex items-center gap-2">
-                    <span className="font-mono font-bold text-accent text-sm">
+                    <span className="font-mono font-bold text-[#43C59E] text-sm">
                       {selectedRequest.phoneNumber}
                     </span>
                     <a
                       href={`tel:${selectedRequest.phoneNumber}`}
-                      className="rounded-lg bg-white/10 hover:bg-white/20 px-2.5 py-1 text-xs text-white flex items-center gap-1 transition border border-white/15"
+                      className="rounded-lg bg-white/10 hover:bg-white/20 px-2 py-0.5 text-xs text-white flex items-center gap-1 transition border border-white/15"
                       title="Direct phone call"
                     >
                       <Phone className="h-3 w-3 text-emerald-400" /> Call
                     </a>
                     <a
-                      href={`https://wa.me/91${selectedRequest.phoneNumber.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(selectedRequest.customerName)}%2C%20Sagar%20Tech%20team%20here%20regarding%20ticket%20${selectedRequest.ticketNumber}.`}
+                      href={`https://wa.me/91${selectedRequest.phoneNumber.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(selectedRequest.customerName)}%2C%20Revora%20team%20here%20regarding%20ticket%20${selectedRequest.ticketNumber}.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 px-2.5 py-1 text-xs font-semibold flex items-center gap-1 border border-emerald-500/30 transition"
+                      className="rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 px-2 py-0.5 text-xs font-semibold flex items-center gap-1 border border-emerald-500/30 transition"
                       title="Open WhatsApp chat"
                     >
                       WhatsApp
@@ -677,14 +677,14 @@ export function AdminDashboard() {
                   </div>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-white/60">Email:</span>
+                  <span className="text-slate-400">Email:</span>
                   <span className="font-semibold text-white">
                     {selectedRequest.email || "Not specified"}
                   </span>
                 </div>
                 {selectedRequest.address && (
                   <div className="flex justify-between">
-                    <span className="text-white/60">Address:</span>
+                    <span className="text-slate-400">Address:</span>
                     <span className="font-semibold text-white text-right max-w-[60%]">
                       {selectedRequest.address}
                     </span>
@@ -693,28 +693,28 @@ export function AdminDashboard() {
               </div>
 
               {/* Device Details */}
-              <div className="rounded-2xl bg-white/5 p-4 border border-white/10 space-y-2.5">
-                <span className="font-label text-[10px] uppercase tracking-wider text-accent font-bold block">
+              <div className="rounded-2xl bg-black/40 p-4 border border-white/10 space-y-3">
+                <span className="font-label text-[10px] uppercase tracking-wider text-[#43C59E] font-bold block border-b border-white/10 pb-1.5">
                   Device Specifications
                 </span>
                 <div className="flex justify-between">
-                  <span className="text-white/60">Brand:</span>
+                  <span className="text-slate-400">Brand:</span>
                   <span className="font-semibold text-white">{selectedRequest.phoneBrand}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-white/60">Model:</span>
+                  <span className="text-slate-400">Model:</span>
                   <span className="font-semibold text-white">{selectedRequest.phoneModel}</span>
                 </div>
                 {selectedRequest.storage && (
                   <div className="flex justify-between">
-                    <span className="text-white/60">Storage:</span>
+                    <span className="text-slate-400">Storage:</span>
                     <span className="font-semibold text-white">{selectedRequest.storage}</span>
                   </div>
                 )}
                 {selectedRequest.deviceCondition && (
                   <div className="flex justify-between">
-                    <span className="text-white/60">Condition:</span>
-                    <span className="font-semibold text-white capitalize">
+                    <span className="text-slate-400">Condition:</span>
+                    <span className="font-semibold text-amber-300 capitalize">
                       {selectedRequest.deviceCondition.replace("_", " ")}
                     </span>
                   </div>
@@ -723,16 +723,16 @@ export function AdminDashboard() {
 
               {/* Customer Uploaded Device Photo */}
               {selectedRequest.phoneImage && (
-                <div className="md:col-span-2 rounded-2xl bg-white/5 p-4 border border-white/10 space-y-2.5">
+                <div className="md:col-span-2 rounded-2xl bg-black/40 p-4 border border-white/10 space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-label text-[10px] uppercase tracking-wider text-accent font-bold flex items-center gap-1.5">
+                    <span className="font-label text-[10px] uppercase tracking-wider text-[#43C59E] font-bold flex items-center gap-1.5">
                       <Camera className="h-3.5 w-3.5" />
                       <span>Customer Uploaded Device Photo</span>
                     </span>
                     <button
                       type="button"
                       onClick={() => setPreviewImage(selectedRequest.phoneImage || null)}
-                      className="inline-flex items-center gap-1 text-[11px] text-accent hover:text-white transition font-label cursor-pointer"
+                      className="inline-flex items-center gap-1 text-[11px] text-[#43C59E] hover:text-white transition font-label cursor-pointer"
                     >
                       <Maximize2 className="h-3 w-3" />
                       <span>Full Resolution</span>
@@ -747,7 +747,7 @@ export function AdminDashboard() {
                       alt="Customer uploaded device"
                       className="max-h-64 w-auto object-contain mx-auto group-hover:scale-105 transition duration-300 rounded-lg shadow-lg"
                     />
-                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition gap-2">
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition gap-2">
                       <span className="rounded-full bg-black/80 px-3.5 py-1.5 text-xs text-white flex items-center gap-1.5 border border-white/20 shadow-lg">
                         <Eye className="h-3.5 w-3.5" /> Click to Zoom Photo
                       </span>
@@ -757,26 +757,26 @@ export function AdminDashboard() {
               )}
 
               {/* Service & Logistics */}
-              <div className="md:col-span-2 rounded-2xl bg-white/5 p-4 border border-white/10 space-y-3">
-                <span className="font-label text-[10px] uppercase tracking-wider text-accent font-bold block">
+              <div className="md:col-span-2 rounded-2xl bg-black/40 p-4 border border-white/10 space-y-3">
+                <span className="font-label text-[10px] uppercase tracking-wider text-[#43C59E] font-bold block border-b border-white/10 pb-1.5">
                   Service & Logistics Breakdown
                 </span>
                 <div className="grid sm:grid-cols-3 gap-3 text-xs">
                   <div>
-                    <span className="text-white/60 block">Service Type:</span>
+                    <span className="text-slate-400 block">Service Type:</span>
                     <span className="font-semibold text-white mt-0.5 block">
                       {selectedRequest.serviceType}
                     </span>
                   </div>
                   <div>
-                    <span className="text-white/60 block">Preferred Logistics:</span>
+                    <span className="text-slate-400 block">Preferred Logistics:</span>
                     <span className="font-semibold text-white mt-0.5 block">
                       {selectedRequest.preferredOption}
                     </span>
                   </div>
                   <div>
-                    <span className="text-white/60 block">Payout / Valuation:</span>
-                    <span className="font-mono font-bold text-gold mt-0.5 block">
+                    <span className="text-slate-400 block">Payout / Valuation:</span>
+                    <span className="font-mono font-bold text-[#F59E0B] mt-0.5 block">
                       {selectedRequest.estimatedAmount > 0
                         ? `₹${selectedRequest.estimatedAmount.toLocaleString("en-IN")}`
                         : "Custom Quote"}
@@ -785,8 +785,8 @@ export function AdminDashboard() {
                 </div>
 
                 <div className="pt-2 border-t border-white/10">
-                  <span className="text-white/60 block">Reported Symptoms & Notes:</span>
-                  <p className="mt-1 p-2.5 rounded-xl bg-black/40 text-white/80 leading-relaxed border border-white/10">
+                  <span className="text-slate-400 block">Reported Symptoms & Notes:</span>
+                  <p className="mt-1 p-3 rounded-xl bg-black/60 text-slate-200 leading-relaxed border border-white/10 font-mono text-xs">
                     {selectedRequest.problemDescription || "None provided by customer."}
                   </p>
                 </div>
@@ -796,19 +796,19 @@ export function AdminDashboard() {
             {/* Quick Status Control */}
             <div className="mt-6 pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-2 w-full sm:w-auto">
-                <span className="text-xs text-white/70 font-label">Change Status:</span>
+                <span className="text-xs text-slate-300 font-label">Change Status:</span>
                 <select
                   value={selectedRequest.status}
                   onChange={(e) =>
                     handleUpdateStatus(selectedRequest._id, e.target.value)
                   }
-                  className="rounded-xl bg-white/10 border border-white/20 px-3 py-2 text-xs text-white outline-none focus:border-brand cursor-pointer font-label"
+                  className="rounded-xl bg-black/50 border border-white/20 px-3 py-2 text-xs text-white outline-none focus:border-[#43C59E] cursor-pointer font-label"
                 >
-                  <option value="Pending" className="bg-ink text-white">Pending</option>
-                  <option value="Confirmed" className="bg-ink text-white">Confirmed</option>
-                  <option value="In Progress" className="bg-ink text-white">In Progress</option>
-                  <option value="Completed" className="bg-ink text-white">Completed</option>
-                  <option value="Cancelled" className="bg-ink text-white">Cancelled</option>
+                  <option value="Pending" className="bg-[#0F172A] text-amber-400 font-semibold py-1">Pending Review</option>
+                  <option value="Confirmed" className="bg-[#0F172A] text-blue-400 font-semibold py-1">Confirmed</option>
+                  <option value="In Progress" className="bg-[#0F172A] text-purple-400 font-semibold py-1">In Progress</option>
+                  <option value="Completed" className="bg-[#0F172A] text-emerald-400 font-semibold py-1">Completed</option>
+                  <option value="Cancelled" className="bg-[#0F172A] text-rose-400 font-semibold py-1">Cancelled</option>
                 </select>
               </div>
 
@@ -816,7 +816,7 @@ export function AdminDashboard() {
                 <button
                   type="button"
                   onClick={() => setSelectedRequest(null)}
-                  className="w-full sm:w-auto rounded-full bg-white/10 px-5 py-2 text-xs font-semibold hover:bg-white/20 transition cursor-pointer font-label"
+                  className="w-full sm:w-auto rounded-full bg-white/10 hover:bg-white/20 border border-white/15 px-6 py-2 text-xs font-semibold text-white transition cursor-pointer font-label"
                 >
                   Close Dossier
                 </button>
@@ -833,12 +833,12 @@ export function AdminDashboard() {
           onClick={() => setPreviewImage(null)}
         >
           <div
-            className="relative max-w-4xl w-full max-h-[90vh] rounded-3xl overflow-hidden border border-white/20 bg-zinc-950 p-4 shadow-2xl flex flex-col items-center"
+            className="relative max-w-4xl w-full max-h-[90vh] rounded-3xl overflow-hidden border border-white/20 bg-[#0F172A] p-4 shadow-2xl flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="w-full flex items-center justify-between pb-3 border-b border-white/10 mb-3">
               <div className="flex items-center gap-2">
-                <div className="p-1.5 rounded-lg bg-accent/20 text-accent">
+                <div className="p-1.5 rounded-lg bg-[#007F5F]/30 text-[#43C59E] border border-[#43C59E]/30">
                   <Camera className="h-4 w-4" />
                 </div>
                 <span className="font-display font-bold text-sm text-white">
@@ -849,7 +849,7 @@ export function AdminDashboard() {
                 <a
                   href={previewImage}
                   download="customer-device-photo.jpg"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-white/10 hover:bg-white/20 px-3.5 py-1.5 text-xs text-white transition font-label cursor-pointer"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-white/10 hover:bg-white/20 px-3.5 py-1.5 text-xs text-white transition font-label cursor-pointer border border-white/10"
                 >
                   <Download className="h-3.5 w-3.5" />
                   <span>Download</span>
@@ -857,7 +857,7 @@ export function AdminDashboard() {
                 <button
                   type="button"
                   onClick={() => setPreviewImage(null)}
-                  className="p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition cursor-pointer"
+                  className="p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition cursor-pointer border border-white/10"
                 >
                   <X className="h-4 w-4" />
                 </button>

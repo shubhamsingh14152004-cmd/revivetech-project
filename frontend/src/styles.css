@@ -114,6 +114,15 @@
     radial-gradient(at 100% 100%, rgba(229, 231, 235, 0.4) 0px, transparent 50%);
 }
 
+@utility dusk-admin {
+  background-color: #0A1412;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 127, 95, 0.22) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(16, 42, 38, 0.6) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(67, 197, 158, 0.08) 0px, transparent 70%);
+  background-attachment: fixed;
+}
+
 @utility surface-card {
   background-color: #FFFFFF;
   border: 1px solid #E5E7EB;
@@ -124,6 +133,28 @@
   background-color: #FFFFFF;
   border: 1px solid #E5E7EB;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+@utility glass-card-admin {
+  background-color: rgba(16, 30, 27, 0.88);
+  border: 1px solid rgba(67, 197, 158, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px);
+}
+
+@utility chrome-plate {
+  background: linear-gradient(135deg, #43C59E 0%, #007F5F 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 127, 95, 0.4);
+}
+
+@utility text-gold {
+  color: #F59E0B;
+}
+
+@utility sun-orb {
+  background: radial-gradient(circle, rgba(67, 197, 158, 0.35) 0%, rgba(0, 127, 95, 0.1) 70%, transparent 100%);
+  filter: blur(40px);
 }
 
 .glass-card-hover {
