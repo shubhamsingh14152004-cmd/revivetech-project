@@ -11,6 +11,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Toaster } from "../components/ui/sonner";
 
 import appCss from "../styles.css?url";
+import { reportLovableError } from "../lib/lovable-error-reporting";
 import { initGA } from "../lib/analytics";
 
 function NotFoundComponent() {
@@ -38,6 +39,9 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error("Root Route Error:", error);
   const router = useRouter();
+  useEffect(() => {
+    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4 py-8">

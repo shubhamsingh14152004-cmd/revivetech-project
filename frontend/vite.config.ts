@@ -1,20 +1,14 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-import tailwindcss from "@tailwindcss/vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+// @lovable.dev/vite-tanstack-config already includes:
+//   - TanStack devtools (dev-only, first), tanstackStart, viteReact, tailwindcss, tsConfigPaths,
+//     nitro (build-only), VITE_* env injection, @ path alias, React/TanStack dedupe, error logger.
+import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  plugins: [
-    tsconfigPaths(),
-    tanstackStart({
-      server: { entry: "server" },
-    }),
-    react(),
-    tailwindcss(),
-  ],
+  tanstackStart: {
+    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
+    server: { entry: "server" },
+  },
   nitro: {
     preset: process.env["NITRO_PRESET"] || "vercel",
   },
 });
-
