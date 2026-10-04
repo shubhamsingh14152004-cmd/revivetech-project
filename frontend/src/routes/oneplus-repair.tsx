@@ -115,7 +115,7 @@ export const Route = createFileRoute("/oneplus-repair")({
       },
       {
         property: "og:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
         name: "twitter:card",

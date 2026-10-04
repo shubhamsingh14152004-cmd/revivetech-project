@@ -58,7 +58,7 @@ export const Route = createFileRoute("/sell-old-phone")({
   head: () => ({
     meta: [
       {
-        title: "Sell Old Mobile Phone Online — Instant Cash & Free Doorstep Pickup | Revora",
+        title: "Sell Old Mobile Phone — Best Cash Buyback & Doorstep Pickup | Revora",
       },
       {
         name: "description",
@@ -72,12 +72,12 @@ export const Route = createFileRoute("/sell-old-phone")({
       },
       {
         property: "og:title",
-        content: "Sell Old Mobile Phone Online — Instant Cash & Doorstep Pickup | Revora",
+        content: "Sell Old Mobile Phone — Best Cash Buyback & Doorstep Pickup | Revora",
       },
       {
         property: "og:description",
         content:
-          "Get the best valuation for your old or used smartphone. Free doorstep pickup in Mumbai & across India with instant UPI transfer.",
+          "Sell your old or second-hand smartphone for top cash payout. Schedule free doorstep evaluation, enjoy instant UPI payment, and 100% certified data erasure with Revora.",
       },
       {
         property: "og:url",
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/sell-old-phone")({
       },
       {
         property: "og:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
         name: "twitter:card",

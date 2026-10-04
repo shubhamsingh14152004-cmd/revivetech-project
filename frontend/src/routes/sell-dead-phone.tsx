@@ -57,7 +57,7 @@ export const Route = createFileRoute("/sell-dead-phone")({
   head: () => ({
     meta: [
       {
-        title: "Sell Dead Phone for Cash — Band Phone Becho Online | Revora",
+        title: "Sell Dead Phone Online — Band Phone Becho for Instant Cash | Revora",
       },
       {
         name: "description",
@@ -71,12 +71,12 @@ export const Route = createFileRoute("/sell-dead-phone")({
       },
       {
         property: "og:title",
-        content: "Sell Dead Phone for Instant Cash | Revora",
+        content: "Sell Dead Phone Online — Band Phone Becho for Instant Cash | Revora",
       },
       {
         property: "og:description",
         content:
-          "Don't throw away a dead phone! Get fair market salvage cash for phones that won't power on. Free doorstep pickup & instant UPI payout.",
+          "Sell your dead mobile phone that won't turn on for instant cash. Fair salvage payout for non-working, short-circuited or liquid damaged smartphones with free doorstep pickup.",
       },
       {
         property: "og:url",
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/sell-dead-phone")({
       },
       {
         property: "og:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
         name: "twitter:card",
@@ -100,7 +100,7 @@ export const Route = createFileRoute("/sell-dead-phone")({
       },
       {
         name: "twitter:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/sell-dead-phone` }],

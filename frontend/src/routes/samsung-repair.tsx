@@ -95,7 +95,7 @@ const FAQS = [
   {
     question: "Is there a warranty on Samsung repairs?",
     answer:
-      "Every Samsung Galaxy repair comes with Sagar Tech's comprehensive 90-Day VIP Warranty covering touch functionality and display performance against defects.",
+      "Every Samsung Galaxy repair comes with Revora's comprehensive 90-Day VIP Warranty covering touch functionality and display performance against defects.",
   },
 ];
 
@@ -130,7 +130,7 @@ export const Route = createFileRoute("/samsung-repair")({
       },
       {
         property: "og:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
         name: "twitter:card",

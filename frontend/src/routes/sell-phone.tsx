@@ -62,7 +62,7 @@ export const Route = createFileRoute("/sell-phone")({
   head: () => ({
     meta: [
       {
-        title: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | Revora",
+        title: "Sell Used Phone Price Calculator — Instant Quote & Cash Payout | Revora",
       },
       {
         name: "description",
@@ -76,12 +76,12 @@ export const Route = createFileRoute("/sell-phone")({
       },
       {
         property: "og:title",
-        content: "Sell Old Phone Online — Purana Phone Becho for Instant Cash | Revora",
+        content: "Sell Used Phone Price Calculator — Instant Quote & Cash Payout | Revora",
       },
       {
         property: "og:description",
         content:
-          "Instant cash valuation for your old or dead mobile phone. Free doorstep pickup & immediate UPI payout across India.",
+          "Calculate your used smartphone's instant cash trade-in value online with Revora. Get a live price quote, free doorstep pickup in Mumbai & India, and instant UPI payout.",
       },
       {
         property: "og:url",
@@ -89,7 +89,7 @@ export const Route = createFileRoute("/sell-phone")({
       },
       {
         property: "og:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
         name: "twitter:card",
@@ -142,9 +142,9 @@ function SellPhonePage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#102A26] tracking-tight leading-tight">
-            Sell Old, Broken &{" "}
+            Used Phone Price Calculator &{" "}
             <span className="text-[#007F5F]">
-              Dead Phones for Instant Cash
+              Instant Cash Trade-In
             </span>
           </h1>
 

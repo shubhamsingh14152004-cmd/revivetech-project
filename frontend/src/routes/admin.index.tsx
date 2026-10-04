@@ -5,7 +5,7 @@ export const Route = createFileRoute("/admin/")({
   head: () => ({
     meta: [
       {
-        title: "Cleanroom Desk — Sagar Tech Operations Portal",
+        title: "Cleanroom Desk — Revora Operations Portal",
       },
       {
         name: "robots",

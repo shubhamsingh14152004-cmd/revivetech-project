@@ -84,7 +84,7 @@ export const Route = createFileRoute("/dead-phone-repair")({
       },
       {
         property: "og:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
         name: "twitter:card",

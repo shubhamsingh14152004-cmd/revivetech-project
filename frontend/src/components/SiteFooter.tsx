@@ -98,7 +98,7 @@ export function SiteFooter() {
                   href="tel:8591770877"
                   onClick={handleCall}
                   className="hover:text-accent font-mono font-bold"
-                  title="Call Sagar Tech"
+                  title="Call Revora"
                 >
                   +91 8591770877
                 </a>
@@ -111,7 +111,7 @@ export function SiteFooter() {
                   rel="noopener noreferrer"
                   onClick={handleWhatsApp}
                   className="hover:text-emerald-400 font-mono font-bold"
-                  title="WhatsApp Sagar Tech"
+                  title="WhatsApp Revora"
                 >
                   +91 8591770877
                 </a>
@@ -121,7 +121,7 @@ export function SiteFooter() {
                 <a
                   href="mailto:supportsellphone@gmail.com"
                   className="hover:text-white"
-                  title="Email Sagar Tech Support"
+                  title="Email Revora Support"
                 >
                   supportsellphone@gmail.com
                 </a>
@@ -288,7 +288,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link to="/about" className="hover:text-white transition">
-                  About Sagar Tech Lab
+                  About Revora Lab
                 </Link>
               </li>
               <li>

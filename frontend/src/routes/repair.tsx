@@ -79,14 +79,14 @@ export const Route = createFileRoute("/repair")({
       },
       { property: "og:url", content: `${SITE_URL}/repair` },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: heroPhone },
+      { property: "og:image", content: `${SITE_URL}/images/hero-phone.jpg` },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Same-Day Mobile Phone Repair | Revora" },
       {
         name: "twitter:description",
         content: "OEM screen replacement, battery fixes & motherboard micro-soldering. Free doorstep pickup.",
       },
-      { name: "twitter:image", content: heroPhone },
+      { name: "twitter:image", content: `${SITE_URL}/images/hero-phone.jpg` },
     ],
     links: [
       { rel: "canonical", href: `${SITE_URL}/repair` },

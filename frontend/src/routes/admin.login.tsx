@@ -5,7 +5,7 @@ export const Route = createFileRoute("/admin/login")({
   head: () => ({
     meta: [
       {
-        title: "Staff Login — Sagar Tech Operations Portal",
+        title: "Staff Login — Revora Operations Portal",
       },
       {
         name: "robots",

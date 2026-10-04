@@ -95,7 +95,7 @@ export const Route = createFileRoute("/mobile-repair-mumbai")({
       },
       {
         property: "og:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
         name: "twitter:card",

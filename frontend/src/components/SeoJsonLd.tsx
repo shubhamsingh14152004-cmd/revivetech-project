@@ -60,10 +60,10 @@ export function getLocalBusinessSchema() {
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#business`,
     name: BUSINESS_NAME,
-    alternateName: "Sagar Tech — SellRepairPhone",
+    alternateName: "Revora — SellRepairPhone",
     url: SITE_URL,
-    logo: `${SITE_URL}/favicon.svg`,
-    image: `${SITE_URL}/hero-phone.jpg`,
+    logo: `${SITE_URL}/images/revora-logo-official-transparent.png`,
+    image: `${SITE_URL}/images/revora-logo-official-transparent.png`,
     description:
       "Sell old, used, damaged or dead mobile phones for top cash and book 45-minute doorstep phone repairs in Mumbai and across India with 90-day warranty.",
     telephone: BUSINESS_PHONE,

@@ -216,12 +216,12 @@ export function AdminDashboard() {
         <div className="mx-auto max-w-7xl flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="chrome-plate grid h-9 w-9 place-items-center rounded-xl shadow-lg">
-              <span className="font-label font-bold text-ink text-base">S</span>
+              <span className="font-label font-bold text-ink text-base">R</span>
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-display font-bold text-base text-white tracking-tight">
-                  Sagar Tech Operations
+                  Revora Operations
                 </span>
                 <span className="rounded-md bg-brand/20 px-2 py-0.5 text-[10px] font-label font-bold text-brand uppercase tracking-wider border border-brand/30">
                   Admin v2.0

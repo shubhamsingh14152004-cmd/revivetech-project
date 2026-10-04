@@ -105,7 +105,7 @@ const FAQS = [
   {
     question: "What warranty comes with iPhone repairs?",
     answer:
-      "Every iPhone repair comes backed by Sagar Tech's 90-Day VIP Warranty covering touch responsiveness, display flickering, and component integrity.",
+      "Every iPhone repair comes backed by Revora's 90-Day VIP Warranty covering touch responsiveness, display flickering, and component integrity.",
   },
 ];
 
@@ -140,7 +140,7 @@ export const Route = createFileRoute("/iphone-repair")({
       },
       {
         property: "og:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
         name: "twitter:card",

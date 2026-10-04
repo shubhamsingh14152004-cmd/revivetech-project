@@ -57,7 +57,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
   head: () => ({
     meta: [
       {
-        title: "Sell Dead Phone for Cash — Dead Mobile Becho | Revora",
+        title: "Dead Mobile Device Salvage & Recycling Buyback Program | Revora",
       },
       {
         name: "description",
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
       },
       {
         property: "og:title",
-        content: "Sell Dead Phone for Cash — Dead Mobile Becho | Revora",
+        content: "Dead Mobile Device Salvage & Recycling Buyback Program | Revora",
       },
       {
         property: "og:description",
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
       },
       {
         property: "og:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
         name: "twitter:card",
@@ -142,14 +142,14 @@ function DeadPhoneBuybackPage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#102A26] tracking-tight leading-tight">
-            Sell Dead Phone for Cash —{" "}
+            Dead Smartphone Salvage &{" "}
             <span className="text-[#007F5F]">
-              Band Phone Becho Online
+              Component Buyback Program
             </span>
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
-            Don't throw away your dead phone! Even if your mobile does not power on, has a shattered display, or motherboard failure, Revora buys it for top salvage cash with on-the-spot UPI payment and zero doorstep pickup fees.
+            Recycle non-repairable dead smartphones for component salvage value. Revora provides NIST 800-88 certified hardware sanitization, free doorstep collection, and eco-certified e-waste recovery across India.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-600">

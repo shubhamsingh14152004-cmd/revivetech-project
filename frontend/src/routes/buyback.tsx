@@ -79,7 +79,7 @@ export const Route = createFileRoute("/buyback")({
       },
       {
         property: "og:image",
-        content: heroPhone,
+        content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
         name: "twitter:card",
