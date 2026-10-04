@@ -255,13 +255,12 @@ export function TradeInCalculator() {
             Calculate Used & Dead Phone Payout Value
           </h3>
           <p className="font-display text-sm text-[#6B7280] mt-1 max-w-xl">
-            Even if it won't boot, is water-soaked, or shattered into pieces.
-            Select your brand, write your model, and request free doorstep pickup with top cash payout.
+            Select your brand, model, storage, and condition to request free doorstep pickup with top cash payout.
           </p>
         </div>
 
         <div className="flex items-center gap-2 rounded-2xl bg-[#FAFAF7] px-4 py-2.5 border border-[#E5E7EB] shrink-0 shadow-xs">
-          <div className="h-2 w-2 rounded-full bg-[#007F5F] live-pulse" />
+          <div className="h-2 w-2 rounded-full bg-[#007F5F] animate-pulse" />
           <span className="font-label text-xs text-[#102A26] font-medium">
             Doorstep Service Active
           </span>
@@ -269,81 +268,12 @@ export function TradeInCalculator() {
       </div>
 
       {/* Main Grid */}
-      <div className="relative z-10 grid gap-8 lg:grid-cols-12 mt-8">
-        {/* Left Column: Selectors */}
+      <div className="relative z-10 grid gap-8 lg:grid-cols-12 items-start mt-8">
+        {/* Left Column: Primary Buyback Form (~58-60% width) */}
         <div className="lg:col-span-7 space-y-6">
-          {/* Attractive Buyback Pamphlet / Marketing Showcase Card */}
-          <div className="relative overflow-hidden rounded-2xl border border-[#007F5F]/20 bg-[#DDF5EA]/60 p-5 shadow-xs">
-            {/* Pamphlet Top Badge */}
-            <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 border-b border-[#007F5F]/15 pb-3">
-              <div className="inline-flex items-center gap-1.5 rounded-full bg-[#007F5F] px-3 py-1 text-[11px] font-bold text-white font-label shadow-xs">
-                <Award className="h-3.5 w-3.5 text-white" />
-                <span>OFFICIAL BUYBACK PAMPHLET</span>
-              </div>
-              <div className="inline-flex items-center gap-1.5 text-xs text-[#005B46] font-semibold font-label">
-                <span className="h-2 w-2 rounded-full bg-[#007F5F] live-pulse" />
-                <span>Highest Cash Guaranteed</span>
-              </div>
-            </div>
-
-            {/* Pamphlet Headline */}
-            <div className="relative z-10 mt-3.5">
-              <h4 className="font-display text-lg sm:text-xl font-extrabold text-[#102A26] tracking-tight flex items-center gap-2">
-                <Flame className="h-5 w-5 text-[#007F5F] shrink-0" />
-                <span>Sell ANY Dead, Broken or Water-Damaged Phone</span>
-              </h4>
-              <p className="font-display text-xs sm:text-sm text-[#475569] mt-1 leading-relaxed">
-                Motherboard burnt? Screen crushed? Dropped in water? We buy it for instant cash, guaranteed within 15 minutes!
-              </p>
-            </div>
-
-            {/* Pamphlet 4 Pillars Grid */}
-            <div className="relative z-10 mt-4 grid grid-cols-2 gap-2.5 sm:gap-3 font-display">
-              <div className="flex items-start gap-2.5 rounded-xl bg-white border border-[#E5E7EB] p-2.5 shadow-2xs">
-                <div className="rounded-lg bg-[#DDF5EA] p-1.5 text-[#005B46] shrink-0">
-                  <IndianRupee className="h-4 w-4" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-[#102A26]">Top Cash Payout</div>
-                  <div className="text-[11px] text-[#6B7280]">Highest valuation for dead flagship phones</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 rounded-xl bg-white border border-[#E5E7EB] p-2.5 shadow-2xs">
-                <div className="rounded-lg bg-[#DDF5EA] p-1.5 text-[#005B46] shrink-0">
-                  <Clock className="h-4 w-4" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-[#102A26]">15-Min Instant Pay</div>
-                  <div className="text-[11px] text-[#6B7280]">Direct UPI (GPay/PhonePe) or Cash</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 rounded-xl bg-white border border-[#E5E7EB] p-2.5 shadow-2xs">
-                <div className="rounded-lg bg-[#DDF5EA] p-1.5 text-[#005B46] shrink-0">
-                  <Truck className="h-4 w-4" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-[#102A26]">Free Doorstep Pickup</div>
-                  <div className="text-[11px] text-[#6B7280]">100% insured, no pickup fees</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 rounded-xl bg-white border border-[#E5E7EB] p-2.5 shadow-2xs">
-                <div className="rounded-lg bg-[#DDF5EA] p-1.5 text-[#005B46] shrink-0">
-                  <ShieldCheck className="h-4 w-4" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-[#102A26]">Military Data Wipe</div>
-                  <div className="text-[11px] text-[#6B7280]">DoD certified total privacy safety</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 1. Mobile Brand Selector (Requested Brands) */}
+          {/* 1. Mobile Brand Selector */}
           <div>
-            <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] mb-2.5">
+            <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] mb-2">
               1. Select Mobile Brand
             </label>
             <select
@@ -365,7 +295,7 @@ export function TradeInCalculator() {
             </select>
           </div>
 
-          {/* 2. Write Model Name Manually */}
+          {/* 2. Write Model Name */}
           <div>
             <div className="flex items-center justify-between mb-2">
               <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26]">
@@ -394,7 +324,7 @@ export function TradeInCalculator() {
 
           {/* 3. Storage Selector */}
           <div>
-            <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] mb-2.5">
+            <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] mb-2">
               3. Storage Capacity
             </label>
             <div className="flex flex-wrap gap-2.5">
@@ -417,7 +347,7 @@ export function TradeInCalculator() {
 
           {/* 4. Device Condition */}
           <div>
-            <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] mb-2.5">
+            <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] mb-2">
               4. Device Condition
             </label>
             <div className="grid sm:grid-cols-2 gap-3">
@@ -443,8 +373,7 @@ export function TradeInCalculator() {
                   )}
                 </div>
                 <p className="font-display text-xs text-[#6B7280] mt-1.5 leading-relaxed">
-                  No power, water contact, black screen, or board failure. Still
-                  guaranteed cash!
+                  No power, water damage, black screen, or motherboard issues.
                 </p>
               </button>
 
@@ -462,7 +391,7 @@ export function TradeInCalculator() {
                   <div className="flex items-center gap-2">
                     <AlertTriangle className="h-4 w-4 text-amber-500" />
                     <span className="font-display font-semibold text-sm text-[#102A26]">
-                      Cracked OLED / Touch Broken
+                      Cracked Screen / Touch Broken
                     </span>
                   </div>
                   {condition === "broken_screen" && (
@@ -470,8 +399,7 @@ export function TradeInCalculator() {
                   )}
                 </div>
                 <p className="font-display text-xs text-[#6B7280] mt-1.5 leading-relaxed">
-                  Powers on, but display has colored lines, black spots, or
-                  shattered glass.
+                  Powers on, but screen has lines, spots, or cracked glass.
                 </p>
               </button>
 
@@ -497,8 +425,7 @@ export function TradeInCalculator() {
                   )}
                 </div>
                 <p className="font-display text-xs text-[#6B7280] mt-1.5 leading-relaxed">
-                  Fully operational, deep housing dents, degraded battery, or
-                  camera glass cracks.
+                  Works fine, but heavy scratches, body dents, or battery drain.
                 </p>
               </button>
 
@@ -524,8 +451,7 @@ export function TradeInCalculator() {
                   )}
                 </div>
                 <p className="font-display text-xs text-[#6B7280] mt-1.5 leading-relaxed">
-                  Flawless screen, powers on instantly, normal battery health,
-                  all features pass.
+                  Fully functional with minimal signs of wear and good battery.
                 </p>
               </button>
             </div>
@@ -533,17 +459,17 @@ export function TradeInCalculator() {
 
           {/* 5. Upload Phone Image */}
           <div>
-            <div className="flex items-center justify-between mb-2.5">
-              <label className="block font-label text-xs font-bold uppercase tracking-wider text-white/70">
-                5. Upload Photo of Phone
+            <div className="flex items-center justify-between mb-2">
+              <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26]">
+                5. Upload Photo of Phone (Optional)
               </label>
-              <span className="text-[11px] text-accent font-label">
+              <span className="text-[11px] text-[#007F5F] font-label font-semibold">
                 Front, Back, or Damage Proof
               </span>
             </div>
 
             {!phoneImage ? (
-              <label className="relative flex flex-col items-center justify-center p-6 rounded-2xl border-2 border-dashed border-white/20 bg-white/5 hover:bg-white/10 hover:border-accent transition cursor-pointer group">
+              <label className="relative flex flex-col items-center justify-center p-5 rounded-2xl border-2 border-dashed border-[#E5E7EB] bg-[#FAFAF7] hover:bg-[#DDF5EA]/30 hover:border-[#007F5F] transition cursor-pointer group">
                 <input
                   type="file"
                   accept="image/*"
@@ -551,26 +477,26 @@ export function TradeInCalculator() {
                   disabled={isProcessingImage}
                   className="hidden"
                 />
-                <div className="rounded-full bg-accent/20 p-3 text-accent group-hover:scale-110 transition">
+                <div className="rounded-full bg-[#DDF5EA] p-2.5 text-[#007F5F] group-hover:scale-110 transition">
                   {isProcessingImage ? (
-                    <Loader2 className="h-6 w-6 animate-spin" />
+                    <Loader2 className="h-5 w-5 animate-spin" />
                   ) : (
-                    <Camera className="h-6 w-6" />
+                    <Camera className="h-5 w-5" />
                   )}
                 </div>
-                <span className="font-display font-semibold text-sm text-white mt-2.5">
+                <span className="font-display font-semibold text-xs text-[#102A26] mt-2">
                   {isProcessingImage
-                    ? "Optimizing phone photo…"
-                    : "Click to upload phone photo (or drag & drop)"}
+                    ? "Processing photo…"
+                    : "Click to upload phone photo"}
                 </span>
-                <span className="font-display text-xs text-white/50 mt-1">
-                  Supports JPG, PNG, WEBP (Max 15MB) · Speeds up instant approval
+                <span className="font-display text-[11px] text-[#6B7280] mt-0.5">
+                  JPG, PNG, WEBP (Max 15MB)
                 </span>
               </label>
             ) : (
-              <div className="rounded-2xl border border-white/20 bg-white/10 p-3.5 flex items-center justify-between gap-4">
+              <div className="rounded-2xl border border-[#E5E7EB] bg-[#FAFAF7] p-3 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="relative h-16 w-16 rounded-xl overflow-hidden border border-white/20 bg-black shrink-0">
+                  <div className="relative h-14 w-14 rounded-xl overflow-hidden border border-[#E5E7EB] bg-black shrink-0">
                     <img
                       src={phoneImage}
                       alt="Uploaded phone"
@@ -578,22 +504,19 @@ export function TradeInCalculator() {
                     />
                   </div>
                   <div>
-                    <div className="flex items-center gap-1.5 text-emerald-400 font-label text-xs font-bold">
+                    <div className="flex items-center gap-1.5 text-[#007F5F] font-label text-xs font-bold">
                       <CheckCircle2 className="h-3.5 w-3.5" />
                       <span>Phone Photo Attached</span>
                     </div>
-                    <span className="font-display text-xs text-white/80 block mt-0.5 truncate max-w-xs">
+                    <span className="font-display text-xs text-[#102A26] block mt-0.5 truncate max-w-xs">
                       {imageFileName || "phone-device-photo.jpg"}
-                    </span>
-                    <span className="text-[10px] text-white/50">
-                      Visible in technician admin review
                     </span>
                   </div>
                 </div>
                 <button
                   type="button"
                   onClick={handleRemovePhoto}
-                  className="rounded-full p-2 bg-white/10 hover:bg-rose-500/20 hover:text-rose-300 text-white/70 transition cursor-pointer"
+                  className="rounded-full p-2 bg-white hover:bg-rose-50 text-[#6B7280] hover:text-rose-600 transition cursor-pointer border border-[#E5E7EB]"
                   title="Remove photo"
                 >
                   <Trash2 className="h-4 w-4" />
@@ -602,18 +525,40 @@ export function TradeInCalculator() {
             )}
           </div>
 
-          {/* 6. Customer Mobile Number */}
-          <div className="p-4 rounded-2xl bg-[#FAFAF7] border border-[#E5E7EB] space-y-2.5">
+          {/* Retail Box Checkbox */}
+          <div className="flex items-center justify-between p-3.5 rounded-xl bg-[#FAFAF7] border border-[#E5E7EB]">
+            <div className="flex items-center gap-2.5">
+              <input
+                type="checkbox"
+                id="originalBox"
+                checked={hasOriginalBox}
+                onChange={(e) => setHasOriginalBox(e.target.checked)}
+                className="h-4 w-4 rounded accent-[#007F5F] cursor-pointer"
+              />
+              <label
+                htmlFor="originalBox"
+                className="font-display text-xs text-[#102A26] cursor-pointer"
+              >
+                Include original retail box & charging cable (Extra Bonus)
+              </label>
+            </div>
+            <span className="font-label text-xs font-bold text-[#007F5F]">
+              Bonus
+            </span>
+          </div>
+
+          {/* 6. Customer Mobile Number & CTA */}
+          <div className="p-4 rounded-2xl bg-[#FAFAF7] border border-[#E5E7EB] space-y-3">
             <div className="flex items-center justify-between">
               <label className="block font-label text-xs font-bold uppercase tracking-wider text-[#102A26] flex items-center gap-1.5">
                 <Phone className="h-3.5 w-3.5 text-[#007F5F]" />
-                <span>6. Mobile Number for Pickup & Cash Payout *</span>
+                <span>6. Mobile Number for Free Doorstep Pickup *</span>
               </label>
               <span
                 className={`text-[11px] font-mono font-bold px-2 py-0.5 rounded-full border ${
                   custPhone.replace(/\D/g, "").length === 10
                     ? "bg-[#DDF5EA] text-[#005B46] border-[#007F5F]/30"
-                    : "bg-[#FAFAF7] text-[#007F5F] border-[#E5E7EB]"
+                    : "bg-white text-[#6B7280] border-[#E5E7EB]"
                 }`}
               >
                 {custPhone.replace(/\D/g, "").length === 10
@@ -635,121 +580,142 @@ export function TradeInCalculator() {
                   setCustPhone(cleaned);
                 }}
                 placeholder="Enter 10-digit mobile number"
-                className="w-full rounded-xl border border-[#E5E7EB] bg-white pl-20 pr-4 py-2.5 text-sm text-[#102A26] placeholder:text-[#94A3B8] outline-none transition font-mono tracking-wider focus:border-[#007F5F] focus:ring-1 focus:ring-[#007F5F]"
+                className="w-full rounded-xl border border-[#E5E7EB] bg-white pl-20 pr-4 py-3 text-sm text-[#102A26] placeholder:text-[#94A3B8] outline-none transition font-mono tracking-wider focus:border-[#007F5F] focus:ring-2 focus:ring-[#007F5F]/20 shadow-2xs"
               />
             </div>
-            <p className="font-display text-[11px] text-[#6B7280]">
-              Our verified cleanroom technician will call this 10-digit number for doorstep pickup & instant payment.
-            </p>
-          </div>
 
-          {/* Addons toggle */}
-          <div className="flex items-center justify-between p-3.5 rounded-xl bg-[#FAFAF7] border border-[#E5E7EB]">
-            <div className="flex items-center gap-2.5">
-              <input
-                type="checkbox"
-                id="originalBox"
-                checked={hasOriginalBox}
-                onChange={(e) => setHasOriginalBox(e.target.checked)}
-                className="h-4 w-4 rounded accent-[#007F5F] cursor-pointer"
-              />
-              <label
-                htmlFor="originalBox"
-                className="font-display text-xs text-[#102A26] cursor-pointer"
-              >
-                Include original retail box & charging cable (Extra Bonus Payout)
-              </label>
-            </div>
-            <span className="font-label text-xs font-bold text-[#007F5F]">
-              Bonus
-            </span>
-          </div>
-        </div>
-
-        {/* Right Column: Live Offer Card */}
-        <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl bg-[#FAFAF7] p-6 border border-[#E5E7EB] shadow-xs relative overflow-hidden">
-          <div className="space-y-5">
-            <div className="flex items-center justify-between">
-              <span className="font-label text-xs uppercase tracking-wider text-[#6B7280]">
-                Device Summary
-              </span>
-              <span className="font-label text-xs text-[#005B46] font-semibold bg-[#DDF5EA] px-2.5 py-0.5 rounded-full border border-[#007F5F]/20">
-                Free Doorstep Pickup
-              </span>
-            </div>
-
-            {/* Selected device summary info */}
-            <div className="rounded-2xl bg-white p-4 border border-[#E5E7EB]">
-              <span className="font-label text-[10px] uppercase tracking-wider text-[#6B7280] block">
-                Selling Device
-              </span>
-              <h4 className="font-display text-base font-bold text-[#102A26] mt-1 flex items-center gap-2">
-                <span>{currentBrand.icon}</span>
-                <span>
-                  {modelName.trim()
-                    ? `${currentBrand.name} ${modelName.trim()}`
-                    : `${currentBrand.name} (Enter Model Name)`}
-                </span>
-                <span className="text-[#6B7280] text-sm font-normal">
-                  ({storage})
-                </span>
-              </h4>
-              <p className="font-display text-xs text-[#007F5F] font-semibold mt-1 capitalize">
-                Condition: {condition.replace("_", " ")}
-              </p>
-            </div>
-
-            {/* Photo Attached Pill */}
-            {phoneImage && (
-              <div className="flex items-center gap-2 rounded-xl bg-[#DDF5EA] border border-[#007F5F]/30 p-2 text-xs text-[#005B46] font-label">
-                <ImageIcon className="h-4 w-4 text-[#007F5F] shrink-0" />
-                <span>Device Photo Attached & Ready</span>
-              </div>
-            )}
-
-            {/* Payout & Pickup Valuation Card (Offer Amount Hidden) */}
-            <div className="rounded-2xl bg-[#DDF5EA] p-5 border border-[#007F5F]/20 text-center relative overflow-hidden">
-              <div className="inline-flex items-center gap-1.5 rounded-full bg-[#007F5F] px-3 py-1 text-xs font-bold text-white mb-2">
-                <CheckCircle2 className="h-3.5 w-3.5" />
-                HIGHEST CASH PAYOUT GUARANTEED
-              </div>
-              <h4 className="font-display text-xl sm:text-2xl font-black text-[#102A26] tracking-tight">
-                Free Doorstep Pickup & Payout
-              </h4>
-              <p className="font-display text-xs text-[#475569] mt-1.5 max-w-sm mx-auto">
-                No hidden deductions. Our technician visits your doorstep, verifies the device, and transfers payment instantly via UPI or Cash!
-              </p>
-            </div>
-
-            {/* Benefit Checkmarks */}
-            <div className="space-y-2 text-xs font-display text-[#102A26]">
-              <div className="flex items-center gap-2">
-                <Truck className="h-4 w-4 text-[#007F5F] shrink-0" />
-                <span>Free Prepaid Insured Shipping Kit or Doorstep Pickup</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="h-4 w-4 text-[#007F5F] shrink-0" />
-                <span>NIST 800-88 Certified Military Data Wipe included</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <IndianRupee className="h-4 w-4 text-[#007F5F] shrink-0" />
-                <span>Instant Payout via UPI (GPay/PhonePe), Bank Transfer or Cash</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-6 pt-5 border-t border-[#E5E7EB]">
             <button
               type="button"
               onClick={handleOpenLockModal}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#007F5F] hover:bg-[#005B46] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition font-label cursor-pointer"
+              className="w-full mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#007F5F] hover:bg-[#005B46] px-6 py-3.5 text-sm font-bold text-white shadow-md transition font-label cursor-pointer"
             >
               <span>Request Free Doorstep Pickup & Cash</span>
               <ArrowRight className="h-4 w-4" />
             </button>
-            <p className="font-display text-[11px] text-center text-[#6B7280] mt-2.5">
-              Zero obligation · 100% Free doorstep pickup & payout
+          </div>
+        </div>
+
+        {/* Right Column: How It Works Guide (~40-42% width) */}
+        <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl bg-white p-6 md:p-8 border border-[#E5E7EB] shadow-sm">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#DDF5EA] px-3.5 py-1 text-xs font-semibold text-[#005B46] font-label border border-[#007F5F]/20 mb-3">
+              <Sparkles className="h-3.5 w-3.5 text-[#007F5F]" />
+              Simple & Transparent Process
+            </div>
+            <h3 className="font-display text-2xl font-bold text-[#102A26]">
+              How It Works
+            </h3>
+            <p className="font-display text-sm text-[#6B7280] mt-1">
+              Sell your old phone in 4 simple steps.
             </p>
+
+            {/* 4 Vertical Steps */}
+            <div className="relative mt-7 space-y-6">
+              {/* Connecting vertical line */}
+              <div className="absolute left-[19px] top-4 bottom-4 w-0.5 bg-[#DDF5EA]" />
+
+              {/* Step 1 */}
+              <div className="relative flex items-start gap-4">
+                <div className="relative z-10 grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#007F5F] text-white font-mono font-bold text-sm shadow-xs">
+                  1
+                </div>
+                <div className="pt-0.5">
+                  <div className="flex items-center gap-2">
+                    <Smartphone className="h-4 w-4 text-[#007F5F]" />
+                    <h4 className="font-display text-sm font-bold text-[#102A26]">
+                      Enter Your Phone Details
+                    </h4>
+                  </div>
+                  <p className="font-display text-xs text-[#6B7280] mt-1 leading-relaxed">
+                    Select your brand, model, storage, and phone condition.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="relative flex items-start gap-4">
+                <div className="relative z-10 grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#007F5F] text-white font-mono font-bold text-sm shadow-xs">
+                  2
+                </div>
+                <div className="pt-0.5">
+                  <div className="flex items-center gap-2">
+                    <IndianRupee className="h-4 w-4 text-[#007F5F]" />
+                    <h4 className="font-display text-sm font-bold text-[#102A26]">
+                      Get Your Best Quote
+                    </h4>
+                  </div>
+                  <p className="font-display text-xs text-[#6B7280] mt-1 leading-relaxed">
+                    Review your phone's estimated value and available selling options.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="relative flex items-start gap-4">
+                <div className="relative z-10 grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#007F5F] text-white font-mono font-bold text-sm shadow-xs">
+                  3
+                </div>
+                <div className="pt-0.5">
+                  <div className="flex items-center gap-2">
+                    <Truck className="h-4 w-4 text-[#007F5F]" />
+                    <h4 className="font-display text-sm font-bold text-[#102A26]">
+                      Schedule Free Pickup
+                    </h4>
+                  </div>
+                  <p className="font-display text-xs text-[#6B7280] mt-1 leading-relaxed">
+                    Choose a convenient doorstep pickup or the available shipping option.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="relative flex items-start gap-4">
+                <div className="relative z-10 grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#007F5F] text-white font-mono font-bold text-sm shadow-xs">
+                  4
+                </div>
+                <div className="pt-0.5">
+                  <div className="flex items-center gap-2">
+                    <Zap className="h-4 w-4 text-[#007F5F]" />
+                    <h4 className="font-display text-sm font-bold text-[#102A26]">
+                      Get Paid Instantly
+                    </h4>
+                  </div>
+                  <p className="font-display text-xs text-[#6B7280] mt-1 leading-relaxed">
+                    Our team checks your phone and confirms the final value. Receive payment through UPI, bank transfer, or cash according to the selected service.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Small Reassurance Section */}
+          <div className="mt-8 pt-6 border-t border-[#E5E7EB] bg-[#FAFAF7] rounded-2xl p-4">
+            <div className="grid grid-cols-3 gap-2 text-center">
+              <div className="flex flex-col items-center">
+                <div className="grid h-8 w-8 place-items-center rounded-full bg-[#DDF5EA] text-[#007F5F] mb-1.5">
+                  <Truck className="h-4 w-4" />
+                </div>
+                <span className="font-display text-[11px] font-bold text-[#102A26]">
+                  Free Doorstep Pickup
+                </span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="grid h-8 w-8 place-items-center rounded-full bg-[#DDF5EA] text-[#007F5F] mb-1.5">
+                  <ShieldCheck className="h-4 w-4" />
+                </div>
+                <span className="font-display text-[11px] font-bold text-[#102A26]">
+                  Secure Data Wipe
+                </span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="grid h-8 w-8 place-items-center rounded-full bg-[#DDF5EA] text-[#007F5F] mb-1.5">
+                  <CheckCircle2 className="h-4 w-4" />
+                </div>
+                <span className="font-display text-[11px] font-bold text-[#102A26]">
+                  No Hidden Fees
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

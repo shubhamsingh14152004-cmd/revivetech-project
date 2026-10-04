@@ -18,7 +18,7 @@ export function SeoJsonLd({ schema }: SeoJsonLdProps) {
   );
 }
 
-export const SITE_URL = "https://sellrepairphone.org";
+export const SITE_URL = "https://www.sellrepairphone.org";
 export const BUSINESS_NAME = "Revora — Sagar Tech Mobile Repair & Buyback";
 export const BUSINESS_PHONE = "+91 8591770877";
 export const BUSINESS_PHONE_RAW = "8591770877";

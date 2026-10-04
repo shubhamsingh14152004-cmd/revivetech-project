@@ -265,36 +265,23 @@ function Index() {
             </div>
           </div>
 
-          {/* Right Column (Hero Visual Card with Internal Floating Overlay Cards) */}
+          {/* Right Column (Hero Visual Card with Straight, Upright Cartoon Video - Watermark Clipped) */}
           <div className="lg:col-span-5 relative mx-auto w-full max-w-md lg:max-w-none">
             <div className="relative rounded-3xl bg-white p-2.5 sm:p-3 border border-[#E5E7EB] shadow-lg overflow-hidden">
-              <img
-                src={heroPhone}
-                alt="Revora mobile phone repair and old phone buyback"
-                width={1024}
-                height={1280}
-                loading="eager"
-                fetchPriority="high"
-                className="aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] w-full overflow-hidden rounded-2xl object-cover border border-[#E5E7EB]"
-              />
-
-              {/* Internalized Overlay Badges (contained strictly inside the right visual column) */}
-              <div className="absolute inset-x-5 bottom-5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2">
-                <div className="rounded-xl bg-white/95 backdrop-blur-md p-2.5 sm:p-3 shadow-md border border-[#E5E7EB]">
-                  <p className="font-label text-[9px] uppercase tracking-wider text-[#6B7280] font-bold">
-                    Instant Payout
-                  </p>
-                  <p className="font-display text-sm font-extrabold text-[#102A26]">Top Cash for Dead Phones</p>
-                </div>
-
-                <div className="rounded-xl bg-white/95 backdrop-blur-md p-2.5 sm:p-3 shadow-md border border-[#E5E7EB]">
-                  <div className="flex items-center gap-1 text-[#007F5F] font-label text-[9px] font-bold">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#007F5F] animate-pulse" />
-                    <span>Cleanroom QC Passed</span>
-                  </div>
-                  <p className="font-display text-xs font-bold text-[#102A26] mt-0.5">
-                    90-Day VIP Warranty
-                  </p>
+              <div className="relative w-full overflow-hidden rounded-2xl border border-[#E5E7EB] bg-[#005B46]/5">
+                <div className="relative w-full overflow-hidden rounded-2xl aspect-[4/3] sm:aspect-square lg:aspect-[4/3]">
+                  <video
+                    src="/videos/revora-animation.mp4"
+                    poster={heroPhone}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover scale-[1.09] -translate-x-[2%] -translate-y-[2%] rounded-2xl block mx-auto"
+                  >
+                    <track kind="captions" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </div>
@@ -314,11 +301,10 @@ function Index() {
               key={tab.id}
               href={`#${tab.target}`}
               onClick={() => setActiveTab(tab.id as any)}
-              className={`rounded-2xl px-4 py-2.5 text-xs font-bold font-display transition cursor-pointer ${
-                activeTab === tab.id
+              className={`rounded-2xl px-4 py-2.5 text-xs font-bold font-display transition cursor-pointer ${activeTab === tab.id
                   ? "bg-[#007F5F] text-white shadow-xs"
                   : "text-[#102A26] hover:bg-[#FAFAF7]"
-              }`}
+                }`}
             >
               {tab.label}
             </a>
