@@ -109,6 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "preload", href: "/images/revora-icon-official-transparent.png", as: "image" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -152,6 +153,55 @@ function ClientOnlyToaster() {
   return <Toaster richColors position="top-right" />;
 }
 
+function LoadingScreen() {
+  const [visible, setVisible] = useState(true);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFading(true);
+      setTimeout(() => setVisible(false), 400);
+    }, 250);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <div
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#FAFAF7] transition-opacity duration-400 ${
+        fading ? "opacity-0 pointer-events-none" : "opacity-100"
+      }`}
+    >
+      <div className="relative flex flex-col items-center gap-4 text-center px-4">
+        {/* Revora Glowing Icon Badge */}
+        <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-[#DDF5EA] p-3 shadow-lg shadow-[#007F5F]/15 animate-pulse border border-[#43C59E]/30">
+          <img
+            src="/images/revora-icon-official-transparent.png"
+            alt="Revora Logo"
+            className="h-14 w-14 object-contain"
+          />
+        </div>
+
+        {/* Brand Name & Tagline */}
+        <div className="flex flex-col items-center">
+          <span className="font-display text-2xl font-bold tracking-tight text-[#102A26]">
+            Revora
+          </span>
+          <span className="font-label text-[10px] font-bold uppercase tracking-widest text-[#007F5F] mt-0.5">
+            Sell · Repair · Recycle
+          </span>
+        </div>
+
+        {/* Smooth Preloader Progress Bar */}
+        <div className="w-40 h-1 bg-[#E5E7EB] rounded-full overflow-hidden mt-2 relative">
+          <div className="h-full bg-[#007F5F] rounded-full animate-progress" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
@@ -162,6 +212,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <LoadingScreen />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <ClientOnlyToaster />
