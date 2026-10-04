@@ -1,0 +1,10 @@
+{
+  "name": "revivetech-project-root",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "build": "npm run build --prefix frontend && node -e \"require('fs').cpSync('frontend/.vercel', '.vercel', {recursive: true})\""
+  }
+}

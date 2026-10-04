@@ -11,7 +11,6 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Toaster } from "../components/ui/sonner";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { initGA } from "../lib/analytics";
 
 function NotFoundComponent() {
@@ -39,9 +38,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error("Root Route Error:", error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4 py-8">
@@ -92,16 +88,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#007F5F" },
-      { title: "Revora — Sell Your Old Phone. Get Paid. Simple." },
-      { name: "description", content: "Sell your old smartphone or book a repair with a simple, convenient experience on Revora. Top cash buyback for used or dead phones & 90-day warranty across India." },
+      { title: "Revora | Sell Old & Dead Phones for Cash in Mumbai" },
+      { name: "description", content: "Sell old, broken, or dead phones for cash with Revora. Get a phone valuation, arrange convenient pickup, and explore phone repair services across Mumbai and nearby areas." },
       { name: "author", content: "Revora — Sagar Tech Mobile Repair & Buyback" },
       { property: "og:site_name", content: "Revora" },
-      { property: "og:title", content: "Revora — Sell Your Old Phone. Get Paid. Simple." },
-      { property: "og:description", content: "Sell your old smartphone or book a repair with a simple, convenient experience on Revora. Top cash buyback for used or dead phones & 90-day warranty across India." },
+      { property: "og:title", content: "Revora | Sell Old & Dead Phones for Cash in Mumbai" },
+      { property: "og:description", content: "Sell old, broken, or dead phones for cash with Revora. Get a phone valuation, arrange convenient pickup, and explore phone repair services across Mumbai and nearby areas." },
+      { property: "og:url", content: "https://www.sellrepairphone.org" },
+      { property: "og:image", content: "https://www.sellrepairphone.org/images/revora-logo-full.png" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@RevoraIndia" },
+      { name: "twitter:title", content: "Revora | Sell Old & Dead Phones for Cash in Mumbai" },
+      { name: "twitter:description", content: "Sell old, broken, or dead phones for cash with Revora. Get instant valuation, free doorstep pickup & 45-min repair." },
+      { name: "twitter:image", content: "https://www.sellrepairphone.org/images/revora-logo-full.png" },
     ],
     links: [
       {
@@ -114,8 +115,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&display=swap",
       },
+      { rel: "icon", href: "/favicon.png", type: "image/png", sizes: "32x32" },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "alternate icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+      { rel: "manifest", href: "/site.webmanifest" },
+      { rel: "canonical", href: "https://www.sellrepairphone.org" },
     ],
   }),
   shellComponent: RootShell,

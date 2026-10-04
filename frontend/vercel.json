@@ -1,17 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm run build",
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "sellrepairphone.org"
-        }
-      ],
-      "destination": "https://www.sellrepairphone.org/:path*",
-      "permanent": true
-    }
-  ]
+  "buildCommand": "npm run build"
 }

@@ -1,29 +1,42 @@
-# Welcome to your Lovable project
+# Revora — Sell Old Phone & Doorstep Mobile Repair Platform
 
-This project was built with [Lovable](https://lovable.dev).
+Production Website: [https://www.sellrepairphone.org/](https://www.sellrepairphone.org/)
 
-## Build with Lovable
+Revora is a modern re-commerce and mobile repair platform serving Mumbai and across India.
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Key Features
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Instant Phone Valuation & Dead Phone Buyback**: Instant price estimates for used, damaged, broken, or non-working phones with free doorstep pickup.
+- **Precision Cleanroom Mobile Repair**: 45-minute turnaround for screen replacement, battery swap, charging port repair, and water damage recovery with a 90-day warranty.
+- **Multi-Brand Support**: iPhone, Samsung, OnePlus, Xiaomi, Vivo, Oppo, Realme, Motorola, Google Pixel, and Android devices.
 
-## Development
+## Project Architecture
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+- **Frontend**: React 19, TypeScript, Vite, Tailwind CSS v4, TanStack Start & Router.
+- **Backend API**: Node.js, Express, MongoDB (Mongoose), JWT Authentication.
 
+## Local Development Setup
+
+### 1. Backend Server
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+cd backend
+npm install
 npm run dev
 ```
+Runs on `http://localhost:5000` (`http://localhost:5000/health`).
 
-## Built with
+### 2. Frontend Application
+```sh
+cd frontend
+npm install
+npm run dev
+```
+Runs on `http://localhost:8080/`.
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+## Production Build
+
+```sh
+cd frontend
+npm run build
+```
+Creates production assets ready for deployment on Vercel or Node.js SSR environments.
