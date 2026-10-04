@@ -113,7 +113,7 @@ export const Route = createFileRoute("/iphone-repair")({
   head: () => ({
     meta: [
       {
-        title: "iPhone Repair Near Me — Apple Screen & Battery Replacement | SellRepairPhone",
+        title: "iPhone Repair Near Me — Apple Screen & Battery Replacement | Revora",
       },
       {
         name: "description",
@@ -127,7 +127,7 @@ export const Route = createFileRoute("/iphone-repair")({
       },
       {
         property: "og:title",
-        content: "iPhone Repair Near Me — Apple Screen & Battery Replacement | SellRepairPhone",
+        content: "iPhone Repair Near Me — Apple Screen & Battery Replacement | Revora",
       },
       {
         property: "og:description",

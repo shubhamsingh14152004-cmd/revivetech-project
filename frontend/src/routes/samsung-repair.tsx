@@ -103,7 +103,7 @@ export const Route = createFileRoute("/samsung-repair")({
   head: () => ({
     meta: [
       {
-        title: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | SellRepairPhone",
+        title: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | Revora",
       },
       {
         name: "description",
@@ -117,7 +117,7 @@ export const Route = createFileRoute("/samsung-repair")({
       },
       {
         property: "og:title",
-        content: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | SellRepairPhone",
+        content: "Samsung Repair Near Me — Galaxy Screen, Green Line & Battery Fix | Revora",
       },
       {
         property: "og:description",

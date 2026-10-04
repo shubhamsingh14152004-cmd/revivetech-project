@@ -41,12 +41,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Revora — Sell Your Old Phone. Get Paid. Simple.",
+        title: "Revora — Sell Your Old Phone & Get It Repaired",
       },
       {
         name: "description",
         content:
-          "Sell your old smartphone or book a repair with a simple, convenient experience on Revora. Top cash payout for used & dead phones plus 90-day repair warranty.",
+          "Sell your old, used, damaged, or dead smartphone for top cash payouts or book 45-minute doorstep mobile repair with Revora across Mumbai & nearby areas.",
       },
       {
         name: "keywords",
@@ -55,18 +55,18 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Revora — Sell Your Old Phone. Get Paid. Simple.",
+        content: "Revora — Sell Your Old Phone & Get It Repaired",
       },
       {
         property: "og:description",
         content:
-          "Sell your old smartphone or book a repair with a simple, convenient experience on Revora. Instant payment & free doorstep pickup.",
+          "Sell your old, used, damaged, or dead smartphone for top cash payouts or book 45-minute doorstep mobile repair with Revora across Mumbai & nearby areas.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
-      { property: "og:image", content: heroPhone },
+      { property: "og:image", content: "https://sellrepairphone.org/images/revora-logo-official-transparent.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: heroPhone },
+      { name: "twitter:image", content: "https://sellrepairphone.org/images/revora-logo-official-transparent.png" },
     ],
     links: [{ rel: "canonical", href: SITE_URL }],
   }),
