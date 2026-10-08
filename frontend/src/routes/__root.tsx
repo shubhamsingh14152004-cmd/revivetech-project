@@ -97,28 +97,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Revora — Sell Your Old Phone & Get It Repaired" },
       { property: "og:description", content: "Sell your old, used, damaged, or dead smartphone for top cash payouts or book 45-minute doorstep mobile repair with Revora across Mumbai & nearby areas." },
       { property: "og:url", content: "https://sellrepairphone.org/" },
-      { property: "og:image", content: "https://sellrepairphone.org/images/revora-logo-official-transparent.png" },
+      { property: "og:image", content: "https://sellrepairphone.org/images/revora-logo-transparent.png" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@RevoraIndia" },
       { name: "twitter:title", content: "Revora — Sell Your Old Phone & Get It Repaired" },
       { name: "twitter:description", content: "Sell old, broken, or dead phones for cash with Revora. Get instant valuation, free doorstep pickup & 45-min repair." },
-      { name: "twitter:image", content: "https://sellrepairphone.org/images/revora-logo-official-transparent.png" },
+      { name: "twitter:image", content: "https://sellrepairphone.org/images/revora-logo-transparent.png" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "preload", href: "/images/revora-icon-official-transparent.png", as: "image" },
+      { rel: "preload", href: "/images/revora-logo-transparent.png", as: "image" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { rel: "icon", href: "/favicon.png", type: "image/png", sizes: "64x64" },
       { rel: "icon", href: "/favicon.ico", sizes: "48x48" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
       { rel: "manifest", href: "/site.webmanifest" },
@@ -178,7 +178,7 @@ function LoadingScreen() {
         {/* Revora Glowing Icon Badge */}
         <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-[#DDF5EA] p-3 shadow-lg shadow-[#007F5F]/15 animate-pulse border border-[#43C59E]/30">
           <img
-            src="/images/revora-icon-official-transparent.png"
+            src="/images/revora-logo-transparent.png"
             alt="Revora Logo"
             className="h-14 w-14 object-contain"
           />

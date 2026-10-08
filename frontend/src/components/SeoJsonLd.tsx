@@ -36,7 +36,7 @@ export function getOrganizationSchema() {
     name: BUSINESS_NAME,
     alternateName: "Revora — Sell Your Old Phone & Get It Repaired",
     url: SITE_URL,
-    logo: `${SITE_URL}/images/revora-logo-official-transparent.png`,
+    logo: `${SITE_URL}/images/revora-logo-transparent.png`,
     telephone: BUSINESS_PHONE,
     email: BUSINESS_EMAIL,
     contactPoint: [
@@ -62,8 +62,8 @@ export function getLocalBusinessSchema() {
     name: BUSINESS_NAME,
     alternateName: "Revora — SellRepairPhone",
     url: SITE_URL,
-    logo: `${SITE_URL}/images/revora-logo-official-transparent.png`,
-    image: `${SITE_URL}/images/revora-logo-official-transparent.png`,
+    logo: `${SITE_URL}/images/revora-logo-transparent.png`,
+    image: `${SITE_URL}/images/revora-logo-transparent.png`,
     description:
       "Sell old, used, damaged or dead mobile phones for top cash and book 45-minute doorstep phone repairs in Mumbai and across India with 90-day warranty.",
     telephone: BUSINESS_PHONE,
