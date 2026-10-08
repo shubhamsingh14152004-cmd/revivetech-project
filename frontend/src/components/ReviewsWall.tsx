@@ -18,46 +18,46 @@ const REVIEWS_DATA: Review[] = [
   {
     id: "rev-1",
     category: "sell",
-    author: "Marcus Vance",
+    author: "Rahul Shukla",
     location: "Bengaluru, KA",
     device: "iPhone 14 Pro Max (Submerged in Lake)",
     rating: 5,
     date: "2 days ago",
     highlightBadge: "Instant ₹4,200 Payout",
     review:
-      "My phone sat at the bottom of a lake for 3 hours and wouldn't power on. Service center told me to scrap it for ₹0. Sagar Tech gave me ₹4,200 within 24 hours of receiving the box. Truly unreal service!",
+      "My phone sat at the bottom of a lake for 3 hours and wouldn't power on. Service center told me to scrap it for ₹0. Revora gave me ₹4,200 within 24 hours of receiving the box. Truly unreal service!",
     payoutOrSaved: "Paid ₹4,200 via UPI",
   },
   {
     id: "rev-2",
     category: "repair",
-    author: "Jessica Lin",
+    author: "Priya Singh",
     location: "Mumbai, MH",
     device: "Galaxy S23 Ultra (Shattered OLED)",
     rating: 5,
     date: "Yesterday",
     highlightBadge: "42-Min Cleanroom Fix",
     review:
-      "Dropped my phone down concrete metro stairs. Dropped it off at Sagar Tech during lunch and had it back glowing like brand new in 42 minutes. True OEM display and fingerprint unlock works seamlessly.",
+      "Dropped my phone down concrete metro stairs. Dropped it off at Revora during lunch and had it back glowing like brand new in 42 minutes. True OEM display and fingerprint unlock works seamlessly.",
     payoutOrSaved: "Saved ₹35,000 vs replacement",
   },
   {
     id: "rev-3",
     category: "buy",
-    author: "Tyler Brooks",
+    author: "Rohan Gaikwad",
     location: "Delhi NCR",
     device: "Certified Grade A+ Pixel 8 Pro",
     rating: 5,
     date: "3 days ago",
     highlightBadge: "100% Battery Health",
     review:
-      "Bought a pre-loved Pixel 8 Pro for ₹32,000 less than retail. Arrived sealed in a custom Sagar Tech box with 100% battery capacity and not a single scratch anywhere. 10/10.",
+      "Bought a pre-loved Pixel 8 Pro for ₹32,000 less than retail. Arrived sealed in a custom Revora box with 100% battery capacity and not a single scratch anywhere. 10/10.",
     payoutOrSaved: "Saved ₹32,000",
   },
   {
     id: "rev-4",
     category: "sell",
-    author: "Samantha Ray",
+    author: "Neha Deshpande",
     location: "Hyderabad, TS",
     device: "iPhone 13 (Dead Logic Board)",
     rating: 5,
@@ -70,7 +70,7 @@ const REVIEWS_DATA: Review[] = [
   {
     id: "rev-5",
     category: "repair",
-    author: "Daniel O'Connor",
+    author: "Aditya Shinde",
     location: "Pune, MH",
     device: "OnePlus 11 (Swollen Battery & USB Port)",
     rating: 5,
@@ -83,14 +83,14 @@ const REVIEWS_DATA: Review[] = [
   {
     id: "rev-6",
     category: "buy",
-    author: "Rachel Kim",
+    author: "Sneha Singh",
     location: "Chennai, TN",
     device: "Certified Galaxy Z Fold 5",
     rating: 5,
     date: "1 week ago",
     highlightBadge: "1-Year Shield Guarantee",
     review:
-      "Was nervous buying a refurbished folding phone, but Sagar Tech's 100-point inspection certificate put my mind at ease. Hinge is tight and screens are immaculate.",
+      "Was nervous buying a refurbished folding phone, but Revora's 100-point inspection certificate put my mind at ease. Hinge is tight and screens are immaculate.",
     payoutOrSaved: "Saved ₹65,000 vs brand new",
   },
 ];
@@ -113,7 +113,7 @@ export function ReviewsWall() {
             4.9 / 5.0 Rated Across 12,000+ Revivals
           </div>
           <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-[#102A26]">
-            Verified Customer Stories
+            Customer Stories
           </h3>
           <p className="font-display text-sm text-[#6B7280] mt-1 max-w-xl">
             Real payouts, cleanroom repairs, and certified device deliveries.

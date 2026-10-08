@@ -106,7 +106,7 @@ export function SiteFooter() {
               <div className="flex items-center gap-2 text-white/80">
                 <WhatsAppIcon className="h-3.5 w-3.5 fill-emerald-400 shrink-0" />
                 <a
-                  href="https://wa.me/918591770877?text=Hi%20Sagar%20Tech%2C%20I%20have%20an%20inquiry%20regarding%20phone%20repair%20or%20buyback."
+                  href="https://wa.me/918591770877?text=Hi%20Revora%2C%20I%20have%20an%20inquiry%20regarding%20phone%20repair%20or%20buyback."
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleWhatsApp}
