@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroPhone from "../assets/hero-phone.jpg";
 import { TradeInCalculator } from "../components/TradeInCalculator";
 import { DiagnosticWizard } from "../components/DiagnosticWizard";

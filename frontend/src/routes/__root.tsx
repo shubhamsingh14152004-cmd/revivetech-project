@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Toaster } from "../components/ui/sonner";
@@ -35,9 +36,10 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error("Root Route Error:", error);
   const router = useRouter();
+  const err = error instanceof Error ? error : new Error(String(error || "Unknown error"));
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4 py-8">
@@ -49,12 +51,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
 
-        {error && (
+        {err && (
           <div className="mt-4 text-left p-4 rounded-xl bg-destructive/10 border border-destructive/20 text-xs font-mono text-destructive overflow-auto max-h-60">
-            <p className="font-bold">{error.name}: {error.message}</p>
-            {error.stack && (
+            <p className="font-bold">{err.name}: {err.message}</p>
+            {err.stack && (
               <pre className="mt-2 text-[11px] whitespace-pre-wrap opacity-80">
-                {error.stack}
+                {err.stack}
               </pre>
             )}
           </div>

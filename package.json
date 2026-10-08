@@ -5,6 +5,6 @@
     "node": "22.x"
   },
   "scripts": {
-    "build": "npm run build --prefix frontend && node -e \"require('fs').cpSync('frontend/.vercel', '.vercel', {recursive: true})\""
+    "build": "node -e \"require('fs').rmSync('frontend/.vercel', {recursive: true, force: true}); require('fs').rmSync('frontend/dist', {recursive: true, force: true}); require('fs').rmSync('frontend/node_modules/.nitro', {recursive: true, force: true}); require('fs').rmSync('frontend/node_modules/.vite', {recursive: true, force: true}); require('fs').rmSync('.vercel', {recursive: true, force: true})\" && npm run build --prefix frontend && node -e \"require('fs').cpSync('frontend/.vercel', '.vercel', {recursive: true})\""
   }
 }
