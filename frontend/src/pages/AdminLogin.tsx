@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "@tanstack/react-router";
-import { api, getAdminToken } from "../services/api";
+import React, { useState, useEffect } from"react";
+import { useNavigate, Link } from"@tanstack/react-router";
+import { api, getAdminToken } from"../services/api";
 import {
   Lock,
   Mail,
@@ -9,8 +9,8 @@ import {
   Loader2,
   AlertCircle,
   ArrowLeft,
-} from "lucide-react";
-import { toast } from "sonner";
+} from"lucide-react";
+import { toast } from"sonner";
 
 export function AdminLogin() {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ export function AdminLogin() {
   useEffect(() => {
     // If already authenticated, jump to dashboard
     if (getAdminToken()) {
-      navigate({ to: "/admin" });
+      navigate({ to:"/admin" });
     }
   }, [navigate]);
 
@@ -35,12 +35,12 @@ export function AdminLogin() {
       const res = await api.adminLogin(email.trim(), password);
       if (res.success) {
         toast.success("Welcome back, Administrator!", {
-          description: "Authenticated securely with JWT session.",
+          description:"Authenticated securely with JWT session.",
         });
-        navigate({ to: "/admin" });
+        navigate({ to:"/admin" });
       }
     } catch (err: any) {
-      setErrorMsg(err.message || "Invalid credentials. Please check your email and password.");
+      setErrorMsg(err.message ||"Invalid credentials. Please check your email and password.");
     } finally {
       setIsLoading(false);
     }
@@ -57,7 +57,7 @@ export function AdminLogin() {
         <div className="mb-6">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-xs font-label text-emerald-200/70 hover:text-emerald-300 transition"
+            className="inline-flex items-center gap-2 text-xs  text-emerald-200/70 hover:text-emerald-300 transition"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
             <span>Back to Public Storefront</span>
@@ -65,26 +65,26 @@ export function AdminLogin() {
         </div>
 
         {/* Login Card */}
-        <div className="rounded-3xl glass-card-admin p-8 md:p-10 border border-[#43C59E]/30 shadow-2xl backdrop-blur-2xl">
+        <div className="rounded-3xl glass-card-admin p-8 md:p-10 border border-brand/30 shadow-2xl backdrop-blur-2xl">
           {/* Header */}
           <div className="text-center mb-8">
             <div className="mx-auto chrome-plate grid h-14 w-14 place-items-center rounded-2xl shadow-xl mb-4">
               <ShieldCheck className="h-7 w-7 text-white" />
             </div>
-            <span className="font-label text-[10px] uppercase tracking-widest text-[#43C59E] font-bold">
+            <span className="text-[10px] uppercase tracking-widest text-brand font-bold">
               Cleanroom Management Portal
             </span>
-            <h1 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-white mt-1">
+            <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white mt-1">
               Staff Admin Login
             </h1>
-            <p className="font-display text-xs text-slate-300 mt-1.5">
+            <p className="text-xs text-slate-300 mt-1.5">
               Enter your credentials to access the repair orders & trade-in triage desk.
             </p>
           </div>
 
           {/* Error Banner */}
           {errorMsg && (
-            <div className="mb-6 flex items-start gap-2.5 rounded-2xl bg-rose-500/20 p-4 border border-rose-500/30 text-rose-200 text-xs font-display animate-in fade-in">
+            <div className="mb-6 flex items-start gap-2.5 rounded-2xl bg-rose-500/20 p-4 border border-rose-500/30 text-rose-200 text-xs  animate-in fade-in">
               <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
               <span>{errorMsg}</span>
             </div>
@@ -93,7 +93,7 @@ export function AdminLogin() {
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block font-display text-xs font-medium text-slate-200 mb-1.5">
+              <label className="block  text-xs font-medium text-slate-200 mb-1.5">
                 Staff Email Address
               </label>
               <div className="relative">
@@ -104,13 +104,13 @@ export function AdminLogin() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="admin@revora.com"
-                  className="w-full rounded-xl border border-white/15 bg-black/40 pl-10 pr-4 py-2.5 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-[#43C59E] focus:ring-2 focus:ring-[#43C59E]/20"
+                  className="w-full rounded-xl border border-white/15 bg-black/40 pl-10 pr-4 py-2.5 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block font-display text-xs font-medium text-slate-200 mb-1.5">
+              <label className="block  text-xs font-medium text-slate-200 mb-1.5">
                 Password
               </label>
               <div className="relative">
@@ -121,7 +121,7 @@ export function AdminLogin() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••••••"
-                  className="w-full rounded-xl border border-white/15 bg-black/40 pl-10 pr-4 py-2.5 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-[#43C59E] focus:ring-2 focus:ring-[#43C59E]/20"
+                  className="w-full rounded-xl border border-white/15 bg-black/40 pl-10 pr-4 py-2.5 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
                 />
               </div>
             </div>
@@ -129,7 +129,7 @@ export function AdminLogin() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#007F5F] py-3.5 text-sm font-bold text-white shadow-lg shadow-[#007F5F]/40 hover:bg-[#005B46] font-label cursor-pointer transition disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-brand py-3.5 text-sm font-bold text-white shadow-lg shadow-brand/40 hover:bg-brand-ink  cursor-pointer transition disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <>
@@ -147,7 +147,7 @@ export function AdminLogin() {
         </div>
 
         {/* Security watermark */}
-        <p className="font-label text-center text-[10px] text-emerald-400/50 uppercase tracking-widest mt-6">
+        <p className="text-center text-[10px] text-emerald-400/50 uppercase tracking-widest mt-6">
           🔒 NIST 800-88 & JWT 256-Bit Encrypted Cleanroom Admin
         </p>
       </div>

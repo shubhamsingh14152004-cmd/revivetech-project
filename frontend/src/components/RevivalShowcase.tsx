@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback } from"react";
 import {
   Sparkles,
   SlidersHorizontal,
@@ -8,7 +8,7 @@ import {
   Wrench,
   IndianRupee,
   ArrowRight,
-} from "lucide-react";
+} from"lucide-react";
 
 interface CaseStudy {
   id: string;
@@ -29,79 +29,79 @@ interface CaseStudy {
 
 const CASE_STUDIES: CaseStudy[] = [
   {
-    id: "case-1",
-    title: "Liquid Submersion & Shattered Glass",
-    device: "iPhone 15 Pro Max",
-    issue: "Full Saltwater Infiltration + Crushed OLED",
+    id:"case-1",
+    title:"Liquid Submersion & Shattered Glass",
+    device:"iPhone 15 Pro Max",
+    issue:"Full Saltwater Infiltration + Crushed OLED",
     symptoms: [
-      "Zero boot response / Black screen",
-      "Corrosion on VDD_MAIN power rail",
-      "Sapphire camera ring smashed",
+"Zero boot response / Black screen",
+"Corrosion on VDD_MAIN power rail",
+"Sapphire camera ring smashed",
     ],
     repairsMade: [
-      "Ultrasonic de-salinization cleanroom bath",
-      "Replaced Power IC & Tristar chip",
-      "OEM 120Hz Super Retina XDR replacement",
-      "IP68 waterproof seal re-vulcanized",
+"Ultrasonic de-salinization cleanroom bath",
+"Replaced Power IC & Tristar chip",
+"OEM 120Hz Super Retina XDR replacement",
+"IP68 waterproof seal re-vulcanized",
     ],
-    timeTaken: "48 mins",
+    timeTaken:"48 mins",
     costSaved: 85000,
-    beforeLabel: "DEAD / SMASHED",
-    afterLabel: "REVIVED & MINT",
-    beforeDesc: "Completely unresponsive. Apple Store quoted ₹1,19,900 replacement.",
-    afterDesc: "Revived with 100% data intact and fresh 100% battery health.",
-    beforeBg: "from-red-950/80 via-zinc-950 to-black",
-    afterBg: "from-amber-950/80 via-zinc-900 to-black",
+    beforeLabel:"DEAD / SMASHED",
+    afterLabel:"REVIVED & MINT",
+    beforeDesc:"Completely unresponsive. Apple Store quoted ₹1,19,900 replacement.",
+    afterDesc:"Revived with 100% data intact and fresh 100% battery health.",
+    beforeBg:"from-red-950/80 via-zinc-950 to-black",
+    afterBg:"from-amber-950/80 via-zinc-900 to-black",
   },
   {
-    id: "case-2",
-    title: "Run Over by Car & Bent Chassis",
-    device: "Samsung Galaxy S24 Ultra",
-    issue: "Crushed Dynamic AMOLED & Bent Frame",
+    id:"case-2",
+    title:"Run Over by Car & Bent Chassis",
+    device:"Samsung Galaxy S24 Ultra",
+    issue:"Crushed Dynamic AMOLED & Bent Frame",
     symptoms: [
-      "Flickering green line glitch",
-      "Digitizer dead across bottom 70%",
-      "Titanium bezel bent by 4.2mm",
+"Flickering green line glitch",
+"Digitizer dead across bottom 70%",
+"Titanium bezel bent by 4.2mm",
     ],
     repairsMade: [
-      "Precision frame realignment & cold press",
-      "Genuine Samsung Gorilla Armor AMOLED installed",
-      "Periscope telephoto lens recalibration",
-      "S-Pen digitizer coil replace",
+"Precision frame realignment & cold press",
+"Genuine Samsung Gorilla Armor AMOLED installed",
+"Periscope telephoto lens recalibration",
+"S-Pen digitizer coil replace",
     ],
-    timeTaken: "38 mins",
+    timeTaken:"38 mins",
     costSaved: 72000,
-    beforeLabel: "CRUSHED OLED",
-    afterLabel: "PRISTINE TITANIUM",
-    beforeDesc: "Unusable touch screen with deep structural chassis deformation.",
-    afterDesc: "Flawless touch, calibrated HDR color gamut, perfect stylus tracking.",
-    beforeBg: "from-purple-950/80 via-zinc-950 to-black",
-    afterBg: "from-indigo-950/80 via-zinc-900 to-black",
+    beforeLabel:"CRUSHED OLED",
+    afterLabel:"PRISTINE TITANIUM",
+    beforeDesc:"Unusable touch screen with deep structural chassis deformation.",
+    afterDesc:"Flawless touch, calibrated HDR color gamut, perfect stylus tracking.",
+    beforeBg:"from-purple-950/80 via-zinc-950 to-black",
+    afterBg:"from-indigo-950/80 via-zinc-900 to-black",
   },
   {
-    id: "case-3",
-    title: "NAND Flash Panic & Bootloop",
-    device: "Google Pixel 8 Pro",
-    issue: "Dead Logic Board Short Circuit",
+    id:"case-3",
+    title:"NAND Flash Panic & Bootloop",
+    device:"Google Pixel 8 Pro",
+    issue:"Dead Logic Board Short Circuit",
     symptoms: [
-      "Stuck on Google logo loop",
-      "Short circuit on Tensor G3 power line",
-      "Thermal sensor failure",
+"Stuck on Google logo loop",
+"Short circuit on Tensor G3 power line",
+"Thermal sensor failure",
     ],
     repairsMade: [
-      "Cleanroom microscopic soldering",
-      "NAND memory chip re-balling",
-      "Thermal paste & graphite dissipation replaced",
-      "Tensor G3 power management reflow",
+"Cleanroom microscopic soldering",
+"NAND memory chip re-balling",
+"Thermal paste & graphite dissipation replaced",
+"Tensor G3 power management reflow",
     ],
-    timeTaken: "55 mins",
+    timeTaken:"55 mins",
     costSaved: 58000,
-    beforeLabel: "BOOTLOOP BRICK",
-    afterLabel: "100% OPERATIONAL",
-    beforeDesc: "Constant rebooting and overheating. Customer was told data was lost.",
-    afterDesc: "Zero data lost, all photos recovered, runs smooth and cool.",
-    beforeBg: "from-blue-950/80 via-zinc-950 to-black",
-    afterBg: "from-emerald-950/80 via-zinc-900 to-black",
+    beforeLabel:"BOOTLOOP BRICK",
+    afterLabel:"100% OPERATIONAL",
+    beforeDesc:"Constant rebooting and overheating. Customer was told data was lost.",
+    afterDesc:"Zero data lost, all photos recovered, runs smooth and cool.",
+    beforeBg:"from-blue-950/80 via-zinc-950 to-black",
+    afterBg:"from-emerald-950/80 via-zinc-900 to-black",
   },
 ];
 
@@ -146,18 +146,18 @@ export function RevivalShowcase() {
   };
 
   return (
-    <div className="relative rounded-3xl bg-white p-6 md:p-10 overflow-hidden border border-[#E5E7EB] shadow-lg">
+    <div className="relative rounded-3xl bg-white p-6 md:p-10 overflow-hidden border border-line shadow-lg">
       {/* Header */}
-      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6">
+      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-line pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#DDF5EA] px-3.5 py-1 text-xs font-semibold text-[#005B46] font-label border border-[#43C59E]/30">
-            <SlidersHorizontal className="h-3.5 w-3.5 text-[#007F5F]" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-brand-tint px-3.5 py-1 text-xs font-semibold text-brand-ink  border border-brand/30">
+            <SlidersHorizontal className="h-3.5 w-3.5 text-brand" />
             Interactive Revival Comparison Lab
           </div>
-          <h3 className="font-display text-2xl md:text-3xl font-bold mt-2 text-[#102A26]">
+          <h3 className="text-2xl md:text-3xl font-bold mt-2 text-ink">
             See the Magic: Drag Before & After
           </h3>
-          <p className="font-display text-sm text-[#6B7280] mt-1 max-w-xl">
+          <p className="text-sm text-muted mt-1 max-w-xl">
             Drag the chrome slider left and right to inspect real phone revivals
             carried out on our micro-soldering and cleanroom benches.
           </p>
@@ -173,13 +173,13 @@ export function RevivalShowcase() {
                 setActiveCaseIndex(idx);
                 setSliderPos(50);
               }}
-              className={`rounded-xl px-3.5 py-2 text-xs font-semibold font-display border transition cursor-pointer ${
+              className={`rounded-xl px-3.5 py-2 text-xs font-semibold  border transition cursor-pointer ${
                 activeCaseIndex === idx
-                  ? "bg-[#007F5F] text-white border-[#007F5F] shadow-xs font-bold"
-                  : "bg-white text-[#102A26] border-[#E5E7EB] hover:bg-[#FAFAF7]"
+                  ?"bg-brand text-white border-brand shadow-xs font-bold"
+                  :"bg-white text-ink border-line hover:bg-background"
               }`}
             >
-              Case #{idx + 1}: {c.device.split(" ")[0]}
+              Case #{idx + 1}: {c.device.split("")[0]}
             </button>
           ))}
         </div>
@@ -196,50 +196,50 @@ export function RevivalShowcase() {
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onTouchMove={handleTouchMove}
-            className="relative h-80 sm:h-96 w-full rounded-3xl overflow-hidden cursor-ew-resize select-none border border-[#E5E7EB] shadow-lg"
+            className="relative h-80 sm:h-96 w-full rounded-3xl overflow-hidden cursor-ew-resize select-none border border-line shadow-lg"
           >
-            {/* "After" Layer (Background) */}
+            {/*"After" Layer (Background) */}
             <div
               className={`absolute inset-0 bg-gradient-to-br ${currentCase.afterBg} flex flex-col justify-between p-6 sm:p-8`}
             >
               <div className="flex justify-end">
-                <span className="rounded-full bg-emerald-500/20 px-3 py-1 font-label text-xs font-bold text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+                <span className="rounded-full bg-emerald-500/20 px-3 py-1  text-xs font-bold text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
                   <Sparkles className="h-3.5 w-3.5" />
                   {currentCase.afterLabel}
                 </span>
               </div>
               <div className="text-right max-w-xs ml-auto">
-                <p className="font-label text-xs text-emerald-400 font-bold uppercase tracking-wider">
+                <p className="text-xs text-emerald-400 font-bold uppercase tracking-wider">
                   Post-Revival Result
                 </p>
-                <h4 className="font-display text-xl sm:text-2xl font-bold text-white mt-1">
+                <h4 className="text-xl sm:text-2xl font-bold text-white mt-1">
                   {currentCase.device}
                 </h4>
-                <p className="font-display text-xs text-white/75 mt-1">
+                <p className="text-xs text-white/75 mt-1">
                   {currentCase.afterDesc}
                 </p>
               </div>
             </div>
 
-            {/* "Before" Layer (Clipped Foreground) */}
+            {/*"Before" Layer (Clipped Foreground) */}
             <div
               style={{ width: `${sliderPos}%` }}
               className={`absolute inset-y-0 left-0 bg-gradient-to-br ${currentCase.beforeBg} overflow-hidden border-r-2 border-white/80 flex flex-col justify-between p-6 sm:p-8 transition-[width] duration-75`}
             >
               <div>
-                <span className="rounded-full bg-red-500/20 px-3 py-1 font-label text-xs font-bold text-red-400 border border-red-500/30 flex items-center gap-1.5 w-fit">
+                <span className="rounded-full bg-red-500/20 px-3 py-1  text-xs font-bold text-red-400 border border-red-500/30 flex items-center gap-1.5 w-fit">
                   <AlertOctagon className="h-3.5 w-3.5" />
                   {currentCase.beforeLabel}
                 </span>
               </div>
               <div className="max-w-xs min-w-[220px]">
-                <p className="font-label text-xs text-red-400 font-bold uppercase tracking-wider">
+                <p className="text-xs text-red-400 font-bold uppercase tracking-wider">
                   Initial Condition
                 </p>
-                <h4 className="font-display text-xl sm:text-2xl font-bold text-white mt-1">
+                <h4 className="text-xl sm:text-2xl font-bold text-white mt-1">
                   {currentCase.issue}
                 </h4>
-                <p className="font-display text-xs text-white/75 mt-1">
+                <p className="text-xs text-white/75 mt-1">
                   {currentCase.beforeDesc}
                 </p>
               </div>
@@ -256,28 +256,28 @@ export function RevivalShowcase() {
             </div>
 
             {/* Hint overlay */}
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-[10px] font-label text-white/70 backdrop-blur-md pointer-events-none border border-white/10">
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-[10px]  text-white/70 backdrop-blur-md pointer-events-none border border-white/10">
               👈 Drag slider to compare 👉
             </div>
           </div>
         </div>
 
         {/* Right Column: Lab Diagnostics & Replaced Parts */}
-        <div className="lg:col-span-5 rounded-2xl bg-[#FAFAF7] p-6 border border-[#E5E7EB] space-y-5">
-          <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-4">
+        <div className="lg:col-span-5 rounded-2xl bg-background p-6 border border-line space-y-5">
+          <div className="flex items-center justify-between border-b border-line pb-4">
             <div>
-              <span className="font-label text-xs text-[#007F5F] font-bold uppercase">
+              <span className="text-xs text-brand font-bold uppercase">
                 Case Study #{activeCaseIndex + 1}
               </span>
-              <h4 className="font-display text-lg font-bold text-[#102A26]">
+              <h4 className="text-lg font-bold text-ink">
                 {currentCase.title}
               </h4>
             </div>
             <div className="text-right">
-              <span className="font-label text-xs text-[#6B7280] block">
+              <span className="text-xs text-muted block">
                 Turnaround Time
               </span>
-              <span className="font-display text-sm font-bold text-[#007F5F] flex items-center gap-1 justify-end">
+              <span className="text-sm font-bold text-brand flex items-center gap-1 justify-end">
                 <Clock className="h-3.5 w-3.5" />
                 {currentCase.timeTaken}
               </span>
@@ -286,10 +286,10 @@ export function RevivalShowcase() {
 
           {/* Damage Symptoms */}
           <div>
-            <span className="font-label text-xs font-bold uppercase tracking-wider text-rose-700 block mb-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-rose-700 block mb-2">
               ⚠️ Diagnostic Bench Findings:
             </span>
-            <ul className="space-y-1.5 font-display text-xs text-[#102A26]">
+            <ul className="space-y-1.5  text-xs text-ink">
               {currentCase.symptoms.map((s, idx) => (
                 <li key={idx} className="flex items-start gap-2">
                   <span className="text-rose-600">•</span>
@@ -301,13 +301,13 @@ export function RevivalShowcase() {
 
           {/* Repairs Completed */}
           <div>
-            <span className="font-label text-xs font-bold uppercase tracking-wider text-[#007F5F] block mb-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-2">
               🛠️ Micro-Fixes Executed:
             </span>
-            <ul className="space-y-1.5 font-display text-xs text-[#102A26]">
+            <ul className="space-y-1.5  text-xs text-ink">
               {currentCase.repairsMade.map((r, idx) => (
                 <li key={idx} className="flex items-start gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#007F5F] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-brand shrink-0 mt-0.5" />
                   <span>{r}</span>
                 </li>
               ))}
@@ -315,18 +315,18 @@ export function RevivalShowcase() {
           </div>
 
           {/* Value saved banner */}
-          <div className="rounded-xl bg-[#DDF5EA] border border-[#43C59E]/30 p-3.5 flex items-center justify-between font-display text-xs">
+          <div className="rounded-xl bg-brand-tint border border-brand/30 p-3.5 flex items-center justify-between  text-xs">
             <div>
-              <span className="text-[#005B46] block">
+              <span className="text-brand-ink block">
                 Customer Saved vs New Device:
               </span>
-              <span className="font-display text-xl font-bold text-[#007F5F]">
+              <span className="text-xl font-bold text-brand">
                 +₹{currentCase.costSaved.toLocaleString("en-IN")}
               </span>
             </div>
             <a
               href="#quote"
-              className="inline-flex items-center gap-1 text-xs font-bold text-[#005B46] hover:text-[#007F5F] font-label transition"
+              className="inline-flex items-center gap-1 text-xs font-bold text-brand-ink hover:text-brand  transition"
             >
               Revive Yours →
             </a>

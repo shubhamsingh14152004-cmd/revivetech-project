@@ -3,9 +3,9 @@
 const getApiBaseUrl = (): string => {
   const envUrl = (import.meta.env["VITE_API_URL"] as string | undefined)?.trim();
   if (!envUrl) {
-    return "http://localhost:5000/api";
+    return"http://localhost:5000/api";
   }
-  const clean = envUrl.replace(/\/+$/, "");
+  const clean = envUrl.replace(/\/+$/,"");
   // Ensure the base URL ends with /api so endpoint paths resolve properly to /api/*
   return clean.endsWith("/api") ? clean : `${clean}/api`;
 };
@@ -46,7 +46,7 @@ export interface RepairRequestItem {
   deviceCondition: string;
   storage: string;
   phoneImage?: string;
-  status: "Pending" | "Confirmed" | "In Progress" | "Completed" | "Cancelled";
+  status:"Pending" |"Confirmed" |"In Progress" |"Completed" |"Cancelled";
   adminNotes: string;
   createdAt: string;
   updatedAt: string;
@@ -76,20 +76,20 @@ export interface ApiResponse<T = any> {
 
 // Helper to get token
 export const getAdminToken = (): string | null => {
-  if (typeof window === "undefined") return null;
+  if (typeof window ==="undefined") return null;
   return localStorage.getItem("revivetech_admin_token");
 };
 
 // Helper to store token
 export const setAdminToken = (token: string): void => {
-  if (typeof window !== "undefined") {
+  if (typeof window !=="undefined") {
     localStorage.setItem("revivetech_admin_token", token);
   }
 };
 
 // Helper to clear token
 export const clearAdminToken = (): void => {
-  if (typeof window !== "undefined") {
+  if (typeof window !=="undefined") {
     localStorage.removeItem("revivetech_admin_token");
     localStorage.removeItem("revivetech_admin_user");
   }
@@ -100,10 +100,10 @@ async function request<T = any>(
   endpoint: string,
   options: RequestInit = {}
 ): Promise<ApiResponse<T>> {
-  const url = `${API_BASE_URL.replace(/\/$/, "")}/${endpoint.replace(/^\//, "")}`;
+  const url = `${API_BASE_URL.replace(/\/$/,"")}/${endpoint.replace(/^\//,"")}`;
 
   const headers: Record<string, string> = {
-    "Content-Type": "application/json",
+"Content-Type":"application/json",
     ...(options.headers as Record<string, string>),
   };
 
@@ -131,7 +131,7 @@ async function request<T = any>(
     return data;
   } catch (err: any) {
     // Check for network errors
-    if (err.name === "TypeError" && err.message.includes("fetch")) {
+    if (err.name ==="TypeError" && err.message.includes("fetch")) {
       throw new Error(
         `Unable to reach backend server at ${API_BASE_URL}. Ensure the backend is running.`
       );
@@ -149,7 +149,7 @@ export const api = {
   // Public: Submit customer repair or trade-in request
   submitRepairRequest: async (payload: RepairRequestPayload) => {
     return request<RepairRequestItem>("repairs", {
-      method: "POST",
+      method:"POST",
       body: JSON.stringify(payload),
     });
   },
@@ -157,18 +157,18 @@ export const api = {
   // Admin: Login
   adminLogin: async (email: string, password: string) => {
     const res = await request<{ admin: AdminUser; token: string }>(
-      "auth/login",
+"auth/login",
       {
-        method: "POST",
+        method:"POST",
         body: JSON.stringify({ email, password }),
       }
     );
 
     if (res.success && res.data?.token) {
       setAdminToken(res.data.token);
-      if (typeof window !== "undefined" && res.data.admin) {
+      if (typeof window !=="undefined" && res.data.admin) {
         localStorage.setItem(
-          "revivetech_admin_user",
+"revivetech_admin_user",
           JSON.stringify(res.data.admin)
         );
       }
@@ -199,12 +199,12 @@ export const api = {
     limit?: number;
   }) => {
     const query = new URLSearchParams();
-    if (params?.status && params.status !== "all") query.set("status", params.status);
+    if (params?.status && params.status !=="all") query.set("status", params.status);
     if (params?.search) query.set("search", params.search);
     if (params?.page) query.set("page", params.page.toString());
     if (params?.limit) query.set("limit", params.limit.toString());
 
-    const qs = query.toString() ? `?${query.toString()}` : "";
+    const qs = query.toString() ? `?${query.toString()}` :"";
     return request<{
       requests: RepairRequestItem[];
       pagination: { total: number; page: number; pages: number; limit: number };
@@ -223,7 +223,7 @@ export const api = {
     adminNotes?: string
   ) => {
     return request<RepairRequestItem>(`repairs/${id}`, {
-      method: "PUT",
+      method:"PUT",
       body: JSON.stringify({ status, adminNotes }),
     });
   },
@@ -231,7 +231,7 @@ export const api = {
   // Admin: Delete request
   deleteRepair: async (id: string) => {
     return request<{ id: string; ticketNumber: string }>(`repairs/${id}`, {
-      method: "DELETE",
+      method:"DELETE",
     });
   },
 };

@@ -1,15 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { AdminLogin } from "../pages/AdminLogin";
+import { createFileRoute } from"@tanstack/react-router";
+import { AdminLogin } from"../pages/AdminLogin";
 
 export const Route = createFileRoute("/admin/login")({
   head: () => ({
     meta: [
       {
-        title: "Staff Login — Revora Operations Portal",
+        title:"Staff Login — Revora Operations Portal",
       },
       {
-        name: "robots",
-        content: "noindex, nofollow",
+        name:"robots",
+        content:"noindex, nofollow",
       },
     ],
   }),

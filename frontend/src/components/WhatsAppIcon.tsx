@@ -1,10 +1,10 @@
-import React from "react";
+import React from"react";
 
 interface WhatsAppIconProps {
   className?: string;
 }
 
-export function WhatsAppIcon({ className = "h-4 w-4" }: WhatsAppIconProps) {
+export function WhatsAppIcon({ className ="h-4 w-4" }: WhatsAppIconProps) {
   return (
     <svg
       viewBox="0 0 24 24"

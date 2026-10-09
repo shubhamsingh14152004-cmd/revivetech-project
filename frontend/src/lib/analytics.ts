@@ -16,13 +16,13 @@ export const GA_MEASUREMENT_ID = (
  * Initializes GA4 scripts dynamically in the browser if a Measurement ID is provided.
  */
 export function initGA(): void {
-  if (typeof window === "undefined" || !GA_MEASUREMENT_ID) return;
+  if (typeof window ==="undefined" || !GA_MEASUREMENT_ID) return;
 
   // Prevent duplicate script injection
   if (document.getElementById("ga4-script")) return;
 
   const script = document.createElement("script");
-  script.id = "ga4-script";
+  script.id ="ga4-script";
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
   document.head.appendChild(script);
@@ -44,21 +44,21 @@ export function initGA(): void {
  */
 export function trackEvent(
   eventName:
-    | "repair_booking_started"
-    | "repair_booking_completed"
-    | "sell_phone_started"
-    | "sell_phone_completed"
-    | "whatsapp_click"
-    | "phone_call_click"
-    | "contact_form_submit"
-    | "navigation_click"
-    | "triage_started",
+    |"repair_booking_started"
+    |"repair_booking_completed"
+    |"sell_phone_started"
+    |"sell_phone_completed"
+    |"whatsapp_click"
+    |"phone_call_click"
+    |"contact_form_submit"
+    |"navigation_click"
+    |"triage_started",
   params: Record<string, any> = {}
 ): void {
-  if (typeof window === "undefined") return;
+  if (typeof window ==="undefined") return;
 
   try {
-    if (typeof window.gtag === "function") {
+    if (typeof window.gtag ==="function") {
       window.gtag("event", eventName, {
         ...params,
         timestamp: new Date().toISOString(),

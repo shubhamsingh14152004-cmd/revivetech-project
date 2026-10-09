@@ -1,14 +1,14 @@
-import React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiteHeader } from "../components/SiteHeader";
-import { SiteFooter } from "../components/SiteFooter";
+import React from"react";
+import { createFileRoute, Link } from"@tanstack/react-router";
+import { SiteHeader } from"../components/SiteHeader";
+import { SiteFooter } from"../components/SiteFooter";
 import {
   SeoJsonLd,
   getServiceSchema,
   getBreadcrumbSchema,
   getFaqSchema,
   SITE_URL,
-} from "../components/SeoJsonLd";
+} from"../components/SeoJsonLd";
 import {
   ShieldCheck,
   Zap,
@@ -21,48 +21,48 @@ import {
   BatteryCharging,
   AlertTriangle,
   Flame,
-} from "lucide-react";
-import heroPhone from "../assets/hero-phone.jpg";
+} from"lucide-react";
+import heroPhone from"../assets/hero-phone.jpg";
 
 const BATTERY_SYMPTOMS = [
   {
-    title: "Battery Health Below 80%",
-    desc: "Apple iOS and Android power diagnostics display service warnings and throttle processor clock speeds, resulting in laggy animations.",
+    title:"Battery Health Below 80%",
+    desc:"Apple iOS and Android power diagnostics display service warnings and throttle processor clock speeds, resulting in laggy animations.",
   },
   {
-    title: "Unexpected Shutdowns",
-    desc: "Device powers off abruptly at 20% to 40% battery charge under moderate loads like taking photos or making calls.",
+    title:"Unexpected Shutdowns",
+    desc:"Device powers off abruptly at 20% to 40% battery charge under moderate loads like taking photos or making calls.",
   },
   {
-    title: "Swollen or Bulging Battery",
-    desc: "The battery has expanded, pushing the screen or back cover away from the chassis. This is an urgent fire hazard requiring immediate safe disposal.",
+    title:"Swollen or Bulging Battery",
+    desc:"The battery has expanded, pushing the screen or back cover away from the chassis. This is an urgent fire hazard requiring immediate safe disposal.",
   },
   {
-    title: "Rapid Battery Drain",
-    desc: "The charge drops rapidly even in standby mode, requiring you to carry a power bank or charger everywhere.",
+    title:"Rapid Battery Drain",
+    desc:"The charge drops rapidly even in standby mode, requiring you to carry a power bank or charger everywhere.",
   },
 ];
 
 const FAQS = [
   {
-    question: "How long does a phone battery replacement take?",
+    question:"How long does a phone battery replacement take?",
     answer:
-      "A smartphone battery swap takes approximately 25 to 35 minutes on our static-safe workbench. Technicians test charge acceptance, thermals, and BMS calibration before handoff.",
+"A smartphone battery swap takes approximately 25 to 35 minutes on our static-safe workbench. Technicians test charge acceptance, thermals, and BMS calibration before handoff.",
   },
   {
-    question: "Do your replacement batteries show 100% health in iOS settings?",
+    question:"Do your replacement batteries show 100% health in iOS settings?",
     answer:
-      "Yes. For Apple iPhones, we calibrate replacement high-cycle battery cells or transfer the original BMS controller flex so your device recognizes maximum battery capacity without non-genuine warning popups.",
+"Yes. For Apple iPhones, we calibrate replacement high-cycle battery cells or transfer the original BMS controller flex so your device recognizes maximum battery capacity without non-genuine warning popups.",
   },
   {
-    question: "Is a swollen phone battery dangerous?",
+    question:"Is a swollen phone battery dangerous?",
     answer:
-      "Yes! A swollen lithium-ion battery indicates electrolyte breakdown and flammable gas accumulation. Continuing to charge a bulging battery can cause thermal runaway or fire. Do not puncture or press on it; bring it to Revora immediately for safe extraction and eco-disposal.",
+"Yes! A swollen lithium-ion battery indicates electrolyte breakdown and flammable gas accumulation. Continuing to charge a bulging battery can cause thermal runaway or fire. Do not puncture or press on it; bring it to Revora immediately for safe extraction and eco-disposal.",
   },
   {
-    question: "Phone ki battery jaldi khatam ho rahi hai: Battery change karne me kitna time lagta hai?",
+    question:"Phone ki battery jaldi khatam ho rahi hai: Battery change karne me kitna time lagta hai?",
     answer:
-      "Battery replacement sirf 25 se 35 minute me ho jata hai. Hum Grade-A OEM certified cells install karte hain jisse aapke phone ka battery backup bilkul naye jaisa ho jata hai aur 90-day VIP warranty milti hai.",
+"Battery replacement sirf 25 se 35 minute me ho jata hai. Hum Grade-A OEM certified cells install karte hain jisse aapke phone ka battery backup bilkul naye jaisa ho jata hai aur 90-day VIP warranty milti hai.",
   },
 ];
 
@@ -70,130 +70,130 @@ export const Route = createFileRoute("/battery-replacement")({
   head: () => ({
     meta: [
       {
-        title: "Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | Revora",
+        title:"Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | Revora",
       },
       {
-        name: "description",
+        name:"description",
         content:
-          "Phone ki battery kharab hai ya jaldi drain hoti hai? Fast phone battery replacement within 30 mins for iPhone, Samsung, OnePlus & Xiaomi with 90-day warranty & free doorstep pickup.",
+"Phone ki battery kharab hai ya jaldi drain hoti hai? Fast phone battery replacement within 30 mins for iPhone, Samsung, OnePlus & Xiaomi with 90-day warranty & free doorstep pickup.",
       },
       {
-        name: "keywords",
+        name:"keywords",
         content:
-          "phone ki battery kharab hai, mobile battery draining fast, phone battery replacement, mobile battery replacement near me, phone battery change, mobile battery change, phone battery problem, phone battery not charging",
+"phone ki battery kharab hai, mobile battery draining fast, phone battery replacement, mobile battery replacement near me, phone battery change, mobile battery change, phone battery problem, phone battery not charging",
       },
       {
-        property: "og:title",
-        content: "Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | Revora",
+        property:"og:title",
+        content:"Phone Battery Replacement Near Me — Phone Ki Battery Kharab Hai | Revora",
       },
       {
-        property: "og:description",
+        property:"og:description",
         content:
-          "Restore all-day battery life. Genuine high-cycle cells installed within 30 minutes with 90-day warranty.",
+"Restore all-day battery life. Genuine high-cycle cells installed within 30 minutes with 90-day warranty.",
       },
       {
-        property: "og:url",
+        property:"og:url",
         content: `${SITE_URL}/battery-replacement`,
       },
       {
-        property: "og:image",
+        property:"og:image",
         content: `${SITE_URL}/images/hero-phone.jpg`,
       },
       {
-        name: "twitter:card",
-        content: "summary_large_image",
+        name:"twitter:card",
+        content:"summary_large_image",
       },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/battery-replacement` }],
+    links: [{ rel:"canonical", href: `${SITE_URL}/battery-replacement` }],
   }),
   component: BatteryReplacementPage,
 });
 
 function BatteryReplacementPage() {
   const breadcrumbSchema = getBreadcrumbSchema([
-    { name: "Home", url: SITE_URL },
-    { name: "Repair", url: `${SITE_URL}/repair` },
-    { name: "Battery Replacement", url: `${SITE_URL}/battery-replacement` },
+    { name:"Home", url: SITE_URL },
+    { name:"Repair", url: `${SITE_URL}/repair` },
+    { name:"Battery Replacement", url: `${SITE_URL}/battery-replacement` },
   ]);
 
   const serviceSchema = getServiceSchema({
-    name: "Smartphone Battery Replacement Service",
+    name:"Smartphone Battery Replacement Service",
     description:
-      "Professional replacement of degraded, rapid-draining, or swollen mobile phone batteries with certified high-cycle capacity cells.",
-    serviceType: "Mobile Battery Repair",
+"Professional replacement of degraded, rapid-draining, or swollen mobile phone batteries with certified high-cycle capacity cells.",
+    serviceType:"Mobile Battery Repair",
     url: `${SITE_URL}/battery-replacement`,
   });
 
   const faqSchema = getFaqSchema(FAQS);
 
   return (
-    <div className="min-h-screen bg-[#FAFAF7] text-[#102A26] flex flex-col selection:bg-[#007F5F] selection:text-white">
+    <div className="min-h-screen bg-background text-ink flex flex-col selection:bg-brand selection:text-white">
       <SeoJsonLd schema={[breadcrumbSchema, serviceSchema, faqSchema]} />
       <SiteHeader />
 
       <main className="flex-1">
         {/* Breadcrumb Navigation */}
-        <div className="border-b border-[#E5E7EB] bg-white py-3">
+        <div className="border-b border-line bg-white py-3">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-500 flex items-center gap-2">
-            <Link to="/" className="hover:text-[#007F5F] transition-colors">
+            <Link to="/" className="hover:text-brand transition-colors">
               Home
             </Link>
             <span>/</span>
-            <Link to="/repair" className="hover:text-[#007F5F] transition-colors">
+            <Link to="/repair" className="hover:text-brand transition-colors">
               Repair
             </Link>
             <span>/</span>
-            <span className="text-[#007F5F] font-medium">Battery Replacement</span>
+            <span className="text-brand font-medium">Battery Replacement</span>
           </div>
         </div>
 
         {/* Hero Section */}
-        <section className="relative py-14 md:py-20 overflow-hidden border-b border-[#E5E7EB] bg-gradient-to-b from-[#DDF5EA]/50 via-[#FAFAF7] to-[#FAFAF7]">
+        <section className="relative py-14 md:py-20 overflow-hidden border-b border-line bg-gradient-to-b from-brand-tint/50 via-background to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DDF5EA] border border-[#43C59E]/30 text-[#005B46] text-xs font-semibold mb-6">
-              <Zap className="w-3.5 h-3.5 text-[#007F5F]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint border border-brand/30 text-brand-ink text-xs font-semibold mb-6">
+              <Zap className="w-3.5 h-3.5 text-brand" />
               High-Capacity Grade-A Cells • Full Day Battery Life Restored
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#102A26] tracking-tight leading-tight">
-              Express Phone{" "}
-              <span className="text-[#007F5F]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink tracking-tight leading-tight">
+              Express Phone{""}
+              <span className="text-brand">
                 Battery Replacement
               </span>
             </h1>
 
-            <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-muted leading-relaxed">
               Tired of constant low battery anxiety and mid-day shutdowns? Revora installs high-density lithium cells engineered for maximum longevity and factory thermal stability, completed in just 30 minutes.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
                 to="/repair"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#007F5F] hover:bg-[#005B46] text-white font-semibold text-sm shadow-md shadow-[#007F5F]/20 transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand hover:bg-brand-ink text-white font-semibold text-sm shadow-md shadow-brand/20 transition-all hover:scale-105"
               >
                 <Wrench className="w-4 h-4" />
                 <span>Book Battery Swap Online</span>
               </Link>
               <a
                 href="tel:+918591770877"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-[#E5E7EB] text-[#102A26] font-semibold text-sm transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-line text-ink font-semibold text-sm transition-all"
               >
-                <PhoneCall className="w-4 h-4 text-[#007F5F]" />
+                <PhoneCall className="w-4 h-4 text-brand" />
                 <span>Call Technician: +91 8591770877</span>
               </a>
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-600">
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#007F5F]" />
+                <Clock className="w-4 h-4 text-brand" />
                 <span>25-35 Mins Fix</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#007F5F]" />
+                <ShieldCheck className="w-4 h-4 text-brand" />
                 <span>90-Day VIP Warranty</span>
               </div>
               <div className="flex items-center gap-2">
-                <BatteryCharging className="w-4 h-4 text-[#007F5F]" />
+                <BatteryCharging className="w-4 h-4 text-brand" />
                 <span>100% Health Recalibration</span>
               </div>
             </div>
@@ -203,7 +203,7 @@ function BatteryReplacementPage() {
         {/* Warning Symptoms */}
         <section className="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#102A26]">
+            <h2 className="text-2xl sm:text-3xl font-bold text-ink">
               Signs Your Smartphone Battery Needs Urgent Replacement
             </h2>
             <p className="text-slate-500 text-sm mt-2">
@@ -215,13 +215,13 @@ function BatteryReplacementPage() {
             {BATTERY_SYMPTOMS.map((symp, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-[#E5E7EB] p-6 rounded-2xl flex flex-col justify-between hover:border-[#007F5F] transition-colors shadow-xs"
+                className="bg-white border border-line p-6 rounded-2xl flex flex-col justify-between hover:border-brand transition-colors shadow-xs"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#DDF5EA] border border-[#43C59E]/30 flex items-center justify-center text-[#007F5F] mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-brand-tint border border-brand/30 flex items-center justify-center text-brand mb-4">
                     <BatteryCharging className="w-5 h-5" />
                   </div>
-                  <h3 className="text-base font-bold text-[#102A26] mb-2">{symp.title}</h3>
+                  <h3 className="text-base font-bold text-ink mb-2">{symp.title}</h3>
                   <p className="text-xs text-slate-600 leading-relaxed">{symp.desc}</p>
                 </div>
               </div>
@@ -230,9 +230,9 @@ function BatteryReplacementPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-14 bg-[#FAFAF7] border-t border-[#E5E7EB]">
+        <section className="py-14 bg-background border-t border-line">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#102A26] text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-ink text-center mb-8">
               Battery Replacement FAQs
             </h2>
 
@@ -240,15 +240,15 @@ function BatteryReplacementPage() {
               {FAQS.map((faq, index) => (
                 <details
                   key={index}
-                  className="group bg-white border border-[#E5E7EB] rounded-xl p-5 open:bg-slate-50 transition-colors shadow-xs"
+                  className="group bg-white border border-line rounded-xl p-5 open:bg-slate-50 transition-colors shadow-xs"
                 >
-                  <summary className="font-semibold text-[#102A26] cursor-pointer flex items-center justify-between text-base">
+                  <summary className="font-semibold text-ink cursor-pointer flex items-center justify-between text-base">
                     <span>{faq.question}</span>
-                    <span className="text-[#007F5F] group-open:rotate-180 transition-transform ml-4">
+                    <span className="text-brand group-open:rotate-180 transition-transform ml-4">
                       ▼
                     </span>
                   </summary>
-                  <p className="mt-3 text-sm text-[#475569] leading-relaxed border-t border-[#E5E7EB] pt-3">
+                  <p className="mt-3 text-sm text-muted leading-relaxed border-t border-line pt-3">
                     {faq.answer}
                   </p>
                 </details>

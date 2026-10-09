@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "@tanstack/react-router";
+import React from"react";
+import { Link } from"@tanstack/react-router";
 import {
   Phone,
   Mail,
@@ -9,21 +9,21 @@ import {
   CheckCircle2,
   Lock,
   Truck,
-} from "lucide-react";
-import { WhatsAppIcon } from "./WhatsAppIcon";
-import { trackEvent } from "../lib/analytics";
+} from"lucide-react";
+import { WhatsAppIcon } from"./WhatsAppIcon";
+import { trackEvent } from"../lib/analytics";
 
 export function SiteFooter() {
   const handleCall = () => {
-    trackEvent("phone_call_click", { source: "footer_call_link" });
+    trackEvent("phone_call_click", { source:"footer_call_link" });
   };
 
   const handleWhatsApp = () => {
-    trackEvent("whatsapp_click", { source: "footer_whatsapp_link" });
+    trackEvent("whatsapp_click", { source:"footer_whatsapp_link" });
   };
 
   return (
-    <footer className="w-full bg-[#005B46] border-t border-[#43C59E]/30 text-xs text-[#DDF5EA]/90 font-display pt-12 pb-14 mt-20">
+    <footer className="w-full bg-brand-ink border-t border-brand/30 text-xs text-brand-tint/90  pt-12 pb-14 mt-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top Trust Badges */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-10 border-b border-white/10 text-xs">
@@ -38,7 +38,7 @@ export function SiteFooter() {
           </div>
 
           <div className="flex items-center gap-2.5">
-            <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-accent/20 text-accent">
+            <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-accent/20">
               <Clock className="h-4 w-4" />
             </div>
             <div>
@@ -58,7 +58,7 @@ export function SiteFooter() {
           </div>
 
           <div className="flex items-center gap-2.5">
-            <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-blue-500/20 text-blue-400">
+            <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-blue-500/20">
               <Lock className="h-4 w-4" />
             </div>
             <div>
@@ -86,18 +86,18 @@ export function SiteFooter() {
             {/* Consistent NAP Presentation */}
             <div className="pt-2 space-y-2 text-xs">
               <div className="flex items-start gap-2 text-white/80">
-                <MapPin className="h-4 w-4 shrink-0 text-accent mt-0.5" />
+                <MapPin className="h-4 w-4 shrink-0  mt-0.5" />
                 <span>
                   <strong className="text-white block">Service Hub & Dispatch:</strong>
                   Doorstep Express Courier Pickup & Cleanroom Facility, India
                 </span>
               </div>
               <div className="flex items-center gap-2 text-white/80">
-                <Phone className="h-3.5 w-3.5 text-gold shrink-0" />
+                <Phone className="h-3.5 w-3.5  shrink-0" />
                 <a
                   href="tel:8591770877"
                   onClick={handleCall}
-                  className="hover:text-accent font-mono font-bold"
+                  className="hover:  font-bold"
                   title="Call Revora"
                 >
                   +91 8591770877
@@ -110,14 +110,14 @@ export function SiteFooter() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleWhatsApp}
-                  className="hover:text-emerald-400 font-mono font-bold"
+                  className="hover:text-emerald-400  font-bold"
                   title="WhatsApp Revora"
                 >
                   +91 8591770877
                 </a>
               </div>
               <div className="flex items-center gap-2 text-white/80">
-                <Mail className="h-3.5 w-3.5 text-accent shrink-0" />
+                <Mail className="h-3.5 w-3.5  shrink-0" />
                 <a
                   href="mailto:supportsellphone@gmail.com"
                   className="hover:text-white"
@@ -135,7 +135,7 @@ export function SiteFooter() {
 
           {/* Column 2: Sell & Buyback Services */}
           <div>
-            <h4 className="font-label text-xs font-bold uppercase text-white tracking-wider mb-3 text-gold">
+            <h4 className="text-xs font-bold uppercase text-white tracking-wider mb-3">
               Sell & Buyback
             </h4>
             <ul className="space-y-2 text-xs text-white/70">
@@ -145,7 +145,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link to="/sell-damaged-phone" className="hover:text-white transition text-amber-300">
+                <Link to="/sell-damaged-phone" className="hover:text-white transition">
                   Sell Damaged & Broken Phone
                 </Link>
               </li>
@@ -174,7 +174,7 @@ export function SiteFooter() {
 
           {/* Column 3: Repair Services */}
           <div>
-            <h4 className="font-label text-xs font-bold uppercase text-white tracking-wider mb-3 text-brand">
+            <h4 className="text-xs font-bold uppercase text-white tracking-wider mb-3 text-brand">
               Repair Services
             </h4>
             <ul className="space-y-2 text-xs text-white/70">
@@ -184,7 +184,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link to="/mobile-repair-mumbai" className="hover:text-white transition text-accent font-semibold">
+                <Link to="/mobile-repair-mumbai" className="hover:text-white transition  font-semibold">
                   Mobile Repair in Mumbai Hub
                 </Link>
               </li>
@@ -223,7 +223,7 @@ export function SiteFooter() {
 
           {/* Column 4: Brand Hubs */}
           <div>
-            <h4 className="font-label text-xs font-bold uppercase text-white tracking-wider mb-3 text-accent">
+            <h4 className="text-xs font-bold uppercase text-white tracking-wider mb-3">
               Supported Brands
             </h4>
             <ul className="space-y-2 text-xs text-white/70">
@@ -277,12 +277,12 @@ export function SiteFooter() {
 
           {/* Column 5: Company & Help */}
           <div>
-            <h4 className="font-label text-xs font-bold uppercase text-white tracking-wider mb-3">
+            <h4 className="text-xs font-bold uppercase text-white tracking-wider mb-3">
               Guides & Help
             </h4>
             <ul className="space-y-2 text-xs text-white/70">
               <li>
-                <Link to="/blog" className="hover:text-white transition font-semibold text-accent">
+                <Link to="/blog" className="hover:text-white transition font-semibold">
                   Repair & Buyback Guides
                 </Link>
               </li>
@@ -297,7 +297,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="hover:text-white transition font-medium text-amber-300">
+                <Link to="/privacy" className="hover:text-white transition font-medium">
                   Privacy Policy & Data Security
                 </Link>
               </li>
@@ -315,7 +315,7 @@ export function SiteFooter() {
                 <a
                   href="/admin/login"
                   rel="nofollow"
-                  className="hover:text-accent font-semibold flex items-center gap-1 mt-4 text-white/50 hover:text-white"
+                  className="hover: font-semibold flex items-center gap-1 mt-4 text-white/50 hover:text-white"
                 >
                   <Lock className="h-3 w-3" />
                   <span>Staff Cleanroom Portal</span>
