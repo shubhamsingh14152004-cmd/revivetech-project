@@ -19,7 +19,7 @@ export const Route = createFileRoute("/terms")({
       {
         name:"description",
         content:
-"Revora Terms of Service: Device trade-in valuation terms, ownership verification requirements, doorstep repair conditions, and 90-Day VIP Warranty terms.",
+"Revora Terms of Service: Device trade-in valuation terms, ownership verification requirements, doorstep repair conditions, and 90-Day Priority Warranty terms.",
       },
       {
         name:"keywords",
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/terms")({
       {
         property:"og:description",
         content:
-"Read Revora's official service terms, trade-in quote policies, and 90-Day VIP Warranty guidelines.",
+"Read Revora's official service terms, trade-in quote policies, and 90-Day Priority Warranty guidelines.",
       },
       {
         property:"og:url",
@@ -115,10 +115,10 @@ function TermsPage() {
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-ink flex items-center gap-2">
               <Wrench className="w-5 h-5 text-brand" />
-              <span>2. 90-Day VIP Repair Warranty Terms</span>
+              <span>2. 90-Day Priority Repair Warranty Terms</span>
             </h2>
             <p>
-              Every certified screen, battery, or hardware component repair performed by Revora is backed by our official <strong className="text-ink">90-Day VIP Warranty</strong>:
+              Every certified screen, battery, or hardware component repair performed by Revora is backed by our official <strong className="text-ink">90-Day Priority Warranty</strong>:
             </p>
             <ul className="space-y-2 pl-5 list-disc text-muted">
               <li>
