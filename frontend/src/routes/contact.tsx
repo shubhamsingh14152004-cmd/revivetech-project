@@ -31,7 +31,7 @@ export const Route = createFileRoute("/contact")({
  head: () => ({
  meta: [
  {
- title:"Contact Revora — Customer Support, Doorstep Pickup & Service Desk",
+ title:"Contact Revora | Phone Repair & Buyback Support",
  },
  {
  name:"description",
@@ -45,12 +45,12 @@ export const Route = createFileRoute("/contact")({
  },
  {
  property:"og:title",
- content:"Contact Revora — Customer Support, Doorstep Pickup & Service Desk",
+ content:"Contact Revora | Phone Repair & Buyback Support",
  },
  {
  property:"og:description",
  content:
-"Need help with phone repair or selling your device? Connect with Revora via phone, WhatsApp, or instant message.",
+"Contact Revora about phone repair and buyback in Mumbai, Navi Mumbai, and Thane. Call, WhatsApp, or email us to confirm availability.",
  },
  {
  property:"og:url",
@@ -158,7 +158,7 @@ function ContactPage() {
  </h1>
 
  <p className="mt-4 text-base sm:text-lg text-muted leading-relaxed">
- Have questions about repairing your broken screen, need a custom bulk device valuation, or want to follow up on a doorstep pickup? Our technical team is available 7 days a week.
+ Have questions about phone repair or selling your device? Contact Revora to ask about assessment, availability, and next steps in Mumbai, Navi Mumbai, or Thane.
  </p>
  </div>
  </section>
@@ -170,7 +170,7 @@ function ContactPage() {
  <div className="space-y-6">
  <h2 className="text-2xl font-bold text-ink">Direct Communication Channels</h2>
  <p className="text-sm text-muted leading-relaxed">
- Reach us immediately via direct telephone call or WhatsApp message for instant quotes and slot reservation.
+ Call, WhatsApp, or email us with your phone model and location. We can confirm service availability and explain the next steps.
  </p>
 
  <div className="space-y-4">
@@ -187,7 +187,7 @@ function ContactPage() {
  Direct Support Line
  </div>
  <div className="text-lg font-bold text-ink mt-0.5">+91 8591770877</div>
- <p className="text-xs text-muted mt-1">Available 9:00 AM – 9:00 PM IST (Mon - Sun)</p>
+ <p className="text-xs text-muted mt-1">Contact us to confirm current availability.</p>
  </div>
  </a>
 
@@ -206,7 +206,7 @@ function ContactPage() {
  WhatsApp Quick Chat
  </div>
  <div className="text-lg font-bold text-ink mt-0.5">+91 8591770877</div>
- <p className="text-xs text-muted mt-1">Send photos of damaged screens for instant photo valuation</p>
+ <p className="text-xs text-muted mt-1">Share your phone model, condition, and location to ask about an assessment.</p>
  </div>
  </a>
 

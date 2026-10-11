@@ -82,7 +82,7 @@ export const Route = createFileRoute("/sell-water-damaged-phone")({
       },
       {
         property: "og:image",
-        content: `${SITE_URL}/images/revora-logo-transparent.png`,
+        content: `${SITE_URL}/images/revora-logo-horizontal.png`,
       },
       {
         name: "twitter:card",
@@ -99,7 +99,7 @@ export const Route = createFileRoute("/sell-water-damaged-phone")({
       },
       {
         name: "twitter:image",
-        content: `${SITE_URL}/images/revora-logo-transparent.png`,
+        content: `${SITE_URL}/images/revora-logo-horizontal.png`,
       },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/sell-water-damaged-phone` }],
