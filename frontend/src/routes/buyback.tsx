@@ -99,10 +99,10 @@ function BuybackPage() {
  ]);
 
  const serviceSchema = getServiceSchema({
- name:"Smartphone Buyback & IT Asset Disposition (ITAD)",
+ name:"Smartphone buyback enquiries",
  description:
-"Enterprise and individual smartphone trade-in and buyback solutions with verified data destruction and instant payouts.",
- serviceType:"Electronics Buyback & Recycling",
+"Phone buyback enquiries for individuals and organizations. Confirm assessment availability, any final offer, payment, and data-handling terms with Revora.",
+ serviceType:"Mobile phone buyback enquiries",
  url: `${SITE_URL}/buyback`,
  });
 
@@ -129,32 +129,30 @@ function BuybackPage() {
  <section className="relative py-10 text-center max-w-3xl mx-auto mb-10">
  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint border border-brand/30 text-brand-ink text-xs font-semibold mb-6">
  <Recycle className="w-3.5 h-3.5 text-brand" />
- Circular Economy • Zero-Landfill Mobile Recycling
+ Phone buyback enquiries
  </div>
 
  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink tracking-tight leading-tight">
- Enterprise & Individual{""}
- <span className="text-brand">
- Phone Buyback Program
- </span>
+ Phone Buyback{""}
+ <span className="text-brand">Enquiries</span>
  </h1>
 
  <p className="mt-4 text-base sm:text-lg text-muted leading-relaxed">
- Maximize the residual recovery value of obsolete or defective smartphones. We service individuals upgrading their daily driver and enterprises cycling company mobile fleets with verifiable chain-of-custody documentation.
+ Share your device model, condition, and location to ask about an assessment. We can confirm current availability, any final offer, and applicable terms before you decide.
  </p>
 
  <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-600">
  <div className="flex items-center gap-2">
  <ShieldCheck className="w-4 h-4 text-brand" />
- <span>Certified NIST 800-88 Wiping</span>
+ <span>Mumbai · Navi Mumbai · Thane</span>
  </div>
  <div className="flex items-center gap-2">
  <FileText className="w-4 h-4 text-brand" />
- <span>Asset Disposition Certificates</span>
+ <span>Availability confirmed by enquiry</span>
  </div>
  <div className="flex items-center gap-2">
  <Coins className="w-4 h-4 text-brand" />
- <span>Instant Bulk / Single Liquidation</span>
+ <span>Device assessment on request</span>
  </div>
  </div>
  </section>
@@ -163,10 +161,10 @@ function BuybackPage() {
  <section className="py-8 mb-14">
  <div className="mb-8 text-center">
  <h2 className="text-2xl sm:text-3xl font-bold text-ink">
- Instant Buyback Valuation
+ Request a Buyback Assessment
  </h2>
  <p className="text-slate-500 text-sm mt-2 max-w-xl mx-auto">
- Get an instant assured buyback price for consumer phones right now.
+ Share your device details to ask about assessment availability. Any estimate may change after the device is assessed.
  </p>
  </div>
 
@@ -185,29 +183,29 @@ function BuybackPage() {
  Corporate IT Asset Disposition (ITAD) for Mobile Devices
  </h2>
  <p className="text-slate-600 text-sm sm:text-base mt-4 leading-relaxed">
- Upgrading your company sales team phones or retiring executive iPhones? Revora handles complete end-to-end logistics, serialized inventory audits, cryptographic flash storage sanitization, and bulk wire transfer settlement.
+ For bulk device enquiries, share the device count, models, condition, and location. Revora can confirm whether an assessment is available and discuss documentation, data handling, logistics, and payment terms.
  </p>
 
  <div className="mt-6 space-y-3">
  <div className="flex items-start gap-3">
  <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5" />
  <div>
- <h4 className="text-sm font-semibold text-ink">Cryptographic Data Erasure</h4>
- <p className="text-xs text-slate-600">Complete sanitization exceeding international privacy compliance standards (GDPR, HIPAA, and Indian DPDP Act).</p>
+ <h4 className="text-sm font-semibold text-ink">Data handling</h4>
+ <p className="text-xs text-slate-600">Back up and remove personal data before handover where possible. Contact us to confirm how non-working devices are handled.</p>
  </div>
  </div>
  <div className="flex items-start gap-3">
  <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5" />
  <div>
- <h4 className="text-sm font-semibold text-ink">Serialized Asset Reconciliation</h4>
- <p className="text-xs text-slate-600">Detailed itemized manifests tracking IMEI, brand, model, battery health, and liquidation pricing.</p>
+ <h4 className="text-sm font-semibold text-ink">Device information</h4>
+ <p className="text-xs text-slate-600">Share model, quantity, condition, and location so we can discuss assessment availability.</p>
  </div>
  </div>
  <div className="flex items-start gap-3">
  <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5" />
  <div>
- <h4 className="text-sm font-semibold text-ink">Insured Pan-India Logistics</h4>
- <p className="text-xs text-slate-600">Tamper-evident transit boxes with insured direct collection from branch offices nationwide.</p>
+ <h4 className="text-sm font-semibold text-ink">Service terms</h4>
+ <p className="text-xs text-slate-600">Confirm service area, collection options, documentation, and payment terms with Revora before proceeding.</p>
  </div>
  </div>
  </div>
@@ -231,24 +229,24 @@ function BuybackPage() {
 
  <div className="grid grid-cols-2 gap-4">
  <div className="bg-background border border-line p-6 rounded-2xl">
- <div className="text-3xl font-extrabold text-brand">100%</div>
- <div className="text-xs text-ink font-semibold mt-1">Data Erasure assurance</div>
- <p className="text-[11px] text-slate-600 mt-2">Certified tamper-proof destruction certificates generated for each serial number.</p>
+ <div className="text-lg font-extrabold text-brand">Assessment</div>
+ <div className="text-xs text-ink font-semibold mt-1">By device and condition</div>
+ <p className="text-[11px] text-slate-600 mt-2">Contact Revora to confirm how your phone can be assessed.</p>
  </div>
  <div className="bg-background border border-line p-6 rounded-2xl">
- <div className="text-3xl font-extrabold text-brand-ink">24h</div>
- <div className="text-xs text-ink font-semibold mt-1">Audit Settlement</div>
- <p className="text-[11px] text-slate-600 mt-2">Swift inspection and immediate corporate wire transfer upon device receipt.</p>
+ <div className="text-lg font-extrabold text-brand-ink">Final offer</div>
+ <div className="text-xs text-ink font-semibold mt-1">Confirm before handover</div>
+ <p className="text-[11px] text-slate-600 mt-2">Confirm payment method and applicable terms with Revora.</p>
  </div>
  <div className="bg-background border border-line p-6 rounded-2xl">
- <div className="text-3xl font-extrabold text-brand">0%</div>
- <div className="text-xs text-ink font-semibold mt-1">Landfill Impact</div>
- <p className="text-[11px] text-slate-600 mt-2">All unrecoverable components routed through authorized green e-waste smelters.</p>
+ <div className="text-lg font-extrabold text-brand">Service area</div>
+ <div className="text-xs text-ink font-semibold mt-1">Mumbai region</div>
+ <p className="text-[11px] text-slate-600 mt-2">Ask us to confirm availability for your location.</p>
  </div>
  <div className="bg-background border border-line p-6 rounded-2xl">
- <div className="text-3xl font-extrabold text-brand-ink">Top-Tier</div>
- <div className="text-xs text-ink font-semibold mt-1">Valuation Matrix</div>
- <p className="text-[11px] text-slate-600 mt-2">Direct-to-refurbisher pipeline eliminates middlemen markdowns.</p>
+ <div className="text-lg font-extrabold text-brand-ink">Estimate</div>
+ <div className="text-xs text-ink font-semibold mt-1">Not a final offer</div>
+ <p className="text-[11px] text-slate-600 mt-2">The final offer may depend on an in-person device assessment.</p>
  </div>
  </div>
  </div>

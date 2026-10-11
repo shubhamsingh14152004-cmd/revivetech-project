@@ -67,7 +67,7 @@ function SellBrandComponent() {
     name: `Sell Old ${brand.name} Phone`,
     description: `Sell your used, broken, or dead ${brand.name} mobile phone for the direct WhatsApp quote.`,
     url: `${SITE_URL}/sell/${brand.id}`,
-    image: `https://www.sellrepairphone.org/images/revora-logo-transparent.png`
+    image: `https://www.sellrepairphone.org/images/revora-logo-horizontal.png`
   });
 
   const breadcrumbs = getBreadcrumbSchema([

@@ -79,7 +79,7 @@ export const Route = createFileRoute("/phone-repair-navi-mumbai")({
       },
       {
         property: "og:image",
-        content: `${SITE_URL}/images/revora-logo-transparent.png`,
+        content: `${SITE_URL}/images/revora-logo-horizontal.png`,
       },
       {
         name: "twitter:card",
@@ -95,7 +95,7 @@ export const Route = createFileRoute("/phone-repair-navi-mumbai")({
       },
       {
         name: "twitter:image",
-        content: `${SITE_URL}/images/revora-logo-transparent.png`,
+        content: `${SITE_URL}/images/revora-logo-horizontal.png`,
       },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/phone-repair-navi-mumbai` }],

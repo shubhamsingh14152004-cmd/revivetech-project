@@ -65,7 +65,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.sellrepairphone.org/" },
-      { property: "og:image", content: "https://www.sellrepairphone.org/images/revora-logo-transparent.png" },
+      { property: "og:image", content: "https://www.sellrepairphone.org/images/revora-logo-horizontal.png" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
@@ -76,7 +76,7 @@ export const Route = createFileRoute("/")({
         content:
           "Sell your smartphone or book doorstep mobile repair with Revora across Mumbai, Navi Mumbai and Thane. Request a direct quote and pickup on WhatsApp.",
       },
-      { name: "twitter:image", content: "https://www.sellrepairphone.org/images/revora-logo-transparent.png" },
+      { name: "twitter:image", content: "https://www.sellrepairphone.org/images/revora-logo-horizontal.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.sellrepairphone.org/" }],
   }),
@@ -94,7 +94,7 @@ function Index() {
  const [quoteDetails, setQuoteDetails] = useState("");
  const [isSubmittingQuote, setIsSubmittingQuote] = useState(false);
 
- // Repair Modal states (Free Doorstep & Free Glass Protector & Cover)
+ // Repair request modal state
  const [isRepairModalOpen, setIsRepairModalOpen] = useState(false);
  const [repairCustomerName, setRepairCustomerName] = useState("");
  const [repairPhone, setRepairPhone] = useState("");
@@ -121,16 +121,16 @@ function Index() {
  phoneNumber: repairPhone.trim(),
  phoneModel: repairModel.trim() ||"Phone Repair",
  serviceType:"Repair your phone",
- problemDescription: `${repairIssue.trim() ||"General Repair"} · Claimed Offer: Free Doorstep Service + Free Glass Protector & Cover`,
+ problemDescription: repairIssue.trim() || "General repair enquiry",
  address: repairAddress.trim(),
- preferredOption:"Free Doorstep Service",
+ preferredOption:"Phone repair assessment",
  });
 
  const ticket =
  response.data?.ticketNumber ||
  `RT-REP-${Math.floor(1000 + Math.random() * 9000)}`;
- toast.success(` Repair Booked & Benefits Claimed! Ref #${ticket}`, {
- description: `Free Doorstep Pickup scheduled. Free Glass Protector & Cover reserved for ${repairPhone}!`,
+ toast.success(`Repair request submitted · Ref #${ticket}`, {
+ description: `Revora will follow up about your repair enquiry at ${repairPhone}.`,
  duration: 7000,
  });
 
@@ -166,8 +166,8 @@ function Index() {
  });
 
  const ticket = response.data?.ticketNumber || `RT-Priority-${Math.floor(1000 + Math.random() * 9000)}`;
- toast.success(` Quote Request Registered! Ref #${ticket}`, {
- description: `A senior technician will text ${quotePhone} within 15 minutes with a fixed price.`,
+ toast.success(`Enquiry submitted · Ref #${ticket}`, {
+ description: `Revora will follow up about your phone enquiry at ${quotePhone}.`,
  duration: 6000,
  });
  setQuoteName("");
@@ -339,31 +339,31 @@ function Index() {
  <FaqSection />
  </section>
 
- {/* SECTION 9: Custom Priority Quote & In-Store Appointment Request Form */}
+ {/* SECTION 9: Quote and service enquiry form */}
  <section id="quote" className="mx-auto max-w-6xl px-5 py-12 scroll-mt-24">
- {/* Promotional Highlight for Free Doorstep & Free Glass Protector & Cover */}
+ {/* Repair enquiry information */}
  <div className="mb-6 rounded-3xl bg-brand-tint p-6 md:p-8 border border-brand/30 shadow-lg relative overflow-hidden">
  <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 relative z-10">
  <div className="space-y-3 max-w-2xl">
  <div className="flex flex-wrap items-center gap-2">
  <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-xs font-bold text-brand-ink border border-brand/30">
  <Truck className="h-3.5 w-3.5 text-brand" />
- Free Doorstep Service
+ Service area
  </span>
  <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-xs font-bold text-brand-ink border border-brand/30">
  <Gift className="h-3.5 w-3.5 text-brand" />
- Free Glass Protector & Cover
+ Repair options
  </span>
  <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-xs font-bold text-ink border border-line">
  <Clock className="h-3.5 w-3.5 text-brand" />
- Repair within 24hrs
+ Availability varies
  </span>
  </div>
  <h3 className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight">
- Special Perk: Free Glass Protector & Cover on Every Phone Repair!
+ Ask about repair options for your phone
  </h3>
  <p className="text-sm text-brand-ink leading-relaxed">
- If you get your phone repaired here, you will get a <span className="text-brand font-bold underline">free glass protector and cover</span>. Plus, enjoy our <span className="text-brand font-bold underline">Free Doorstep Service</span> with zero pickup or drop charges!
+ Share your model, symptoms, and location. We can discuss assessment, current availability, pricing, and any applicable terms before you decide.
  </p>
  </div>
  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full lg:w-auto">
@@ -372,8 +372,8 @@ function Index() {
  onClick={openRepairPopup}
  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand hover:bg-brand-ink text-white px-6 py-3.5 text-sm font-bold shadow-md transition cursor-pointer"
  >
- <Gift className="h-4 w-4 text-white" />
- <span>Claim Perks & Book Repair</span>
+ <Wrench className="h-4 w-4 text-white" />
+ <span>Ask About Repair Options</span>
  </button>
  </div>
  </div>
@@ -383,7 +383,7 @@ function Index() {
  <div className="mb-8 max-w-xl relative z-10">
  <div className="inline-flex items-center gap-2 rounded-full bg-brand-tint px-3.5 py-1 text-xs font-semibold text-brand-ink border border-brand/30 mb-2">
  <PhoneCall className="h-3.5 w-3.5 text-brand" />
- 15-Minute Response assured
+ Contact Revora
  </div>
  <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-ink">
  Request a Custom Priority Tech Quote
@@ -492,7 +492,7 @@ function Index() {
  ) : (
  <>
  <Send className="h-4 w-4" />
- <span>Submit for Instant 15-Minute Review</span>
+ <span>Submit Enquiry</span>
  </>
  )}
  </button>
@@ -521,11 +521,11 @@ function Index() {
  Q: Purana phone ya dead phone bechna hai — kaise beche?
  </h3>
  <p className="text-muted leading-relaxed">
- Agar aapko purana ya band phone bechna hai, Revora par 1 minute me online valuation check kar sakte hain. Free doorstep pickup book karein aur pickup ke samay instant UPI cash payment paayein.
+ Agar aapko purana ya band phone bechna hai, model aur condition humein batayein. Hum assessment ki availability aur aage ke steps share karenge.
  </p>
  <div className="mt-3">
  <a href="/dead-phone-buyback" className="text-brand font-semibold hover:underline inline-flex items-center gap-1 text-xs">
- <span>Dead Phone Becho (Get Instant Quote)</span>
+ <span>Dead Phone Becho (Ask for Assessment)</span>
  <ArrowRight className="w-3 h-3" />
  </a>
  </div>
@@ -584,7 +584,7 @@ function Index() {
  {/* Floating Dock & AI Chat Support Widget */}
  <FloatingDock onOpenRepairModal={openRepairPopup} />
 
- {/* REPAIR OFFER POPUP MODAL: Free Doorstep Service + Free Glass Protector & Cover */}
+ {/* Repair request modal */}
  {isRepairModalOpen && (
  <div
  role="dialog"
@@ -606,15 +606,15 @@ function Index() {
  <X className="h-5 w-5" />
  </button>
 
- {/* Header Offer Badge */}
+ {/* Modal heading */}
  <div className="flex items-center gap-2 mb-3">
  <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-tint px-3 py-1 text-xs font-bold text-brand-ink border border-brand/30">
  <Gift className="h-3.5 w-3.5 text-brand" />
- EXCLUSIVE REPAIR PERKS
+ PHONE REPAIR ENQUIRY
  </span>
  <span className="inline-flex items-center gap-1 rounded-full bg-brand-tint px-2.5 py-1 text-xs font-bold text-brand-ink border border-brand/30">
  <Clock className="h-3 w-3 text-brand" />
- Repair in 24hrs
+ Availability varies
  </span>
  </div>
 
@@ -622,10 +622,10 @@ function Index() {
  Repair Your Phone
  </h2>
  <p className="text-xs sm:text-sm text-muted mt-1">
- Book certified lab repair with special customer bonuses.
+ Share your phone model and symptoms to ask about an assessment and available options.
  </p>
 
- {/* Highlight Box with Free Doorstep and Free Gifts */}
+ {/* Assessment guidance */}
  <div className="mt-4 rounded-2xl bg-background p-4 border border-line shadow-xs space-y-3">
  <div className="flex items-start gap-3">
  <div className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-brand-tint text-brand border border-brand/30">
@@ -633,10 +633,10 @@ function Index() {
  </div>
  <div>
  <h4 className="text-sm font-bold text-ink">
- Free Doorstep Service
+ Assessment and service area
  </h4>
  <p className="text-xs text-muted">
- Zero pickup & delivery fees! Our certified tech collects your phone right at your doorstep.
+ Availability depends on your location and the service required. Contact us to confirm before booking.
  </p>
  </div>
  </div>
@@ -647,10 +647,10 @@ function Index() {
  </div>
  <div>
  <h4 className="text-sm font-bold text-ink">
- Free Glass Protector & Cover Included
+ Pricing and terms
  </h4>
  <p className="text-xs text-muted">
- If you get your phone repaired here, you will get a <span className="text-brand font-bold underline">free glass protector and cover</span>!
+ Repair options, parts, pricing, and any applicable warranty depend on the device and fault. Confirm the details with Revora before proceeding.
  </p>
  </div>
  </div>
@@ -742,12 +742,12 @@ function Index() {
 
  <div>
  <label className="block text-[11px] font-medium text-ink mb-1">
- Doorstep Pickup Address / Area *
+ Location / Area *
  </label>
  <textarea
  rows={2}
  required
- placeholder="Enter your flat/house no., street, and locality for Free Doorstep Pickup"
+ placeholder="Enter your area so we can check service availability"
  value={repairAddress}
  onChange={(e) => setRepairAddress(e.target.value)}
  className="w-full rounded-xl border border-line bg-white px-3.5 py-2 text-xs text-ink placeholder:text-slate-400 focus:border-brand focus:outline-none resize-none"
@@ -762,20 +762,18 @@ function Index() {
  {isSubmittingRepair ? (
  <>
  <Loader2 className="h-4 w-4 animate-spin text-white" />
- <span>Booking Doorstep Service...</span>
+ <span>Submitting Enquiry...</span>
  </>
  ) : (
  <>
- <Gift className="h-4 w-4 text-white" />
- <span>Claim Free Gifts & Book Doorstep Repair</span>
+ <Wrench className="h-4 w-4 text-white" />
+ <span>Submit Repair Enquiry</span>
  </>
  )}
  </button>
 
  <p className="text-[10px] text-muted text-center flex items-center justify-center gap-2 pt-1">
- <span> Free Doorstep Pickup</span>
- <span>·</span>
- <span> Free Glass Protector & Cover</span>
+ <span>We will confirm service availability before arranging a repair.</span>
  </p>
  </form>
  </div>
