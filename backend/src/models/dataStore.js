@@ -45,7 +45,31 @@ const loadFileDb = () => {
       return initial;
     }
     const raw = fs.readFileSync(DB_FILE, "utf8");
-    return JSON.parse(raw);
+    const data = JSON.parse(raw);
+    const defaultPassword = process.env.DEFAULT_ADMIN_PASSWORD;
+    if (defaultPassword && Array.isArray(data.admins)) {
+      const defaultEmail = (process.env.DEFAULT_ADMIN_EMAIL || "admin@revivetech.com").toLowerCase().trim();
+      const existing = data.admins.find((a) => a.email && a.email.toLowerCase() === defaultEmail);
+      if (!existing) {
+        const salt = bcrypt.genSaltSync(10);
+        data.admins.push({
+          _id: `admin_master_${Date.now()}`,
+          name: process.env.DEFAULT_ADMIN_NAME || "ReviveTech Admin",
+          email: defaultEmail,
+          password: bcrypt.hashSync(defaultPassword, salt),
+          role: "superadmin",
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        });
+        saveFileDb(data);
+      } else if (!bcrypt.compareSync(defaultPassword, existing.password)) {
+        const salt = bcrypt.genSaltSync(10);
+        existing.password = bcrypt.hashSync(defaultPassword, salt);
+        existing.updatedAt = new Date().toISOString();
+        saveFileDb(data);
+      }
+    }
+    return data;
   } catch (e) {
     console.error("Local dev database read error:", e.message);
     return { admins: [], repairs: [], devices: [] };

@@ -116,6 +116,45 @@ export default {
         }
       }
 
+      // Forward remaining /api routes (e.g. /api/auth, /api/admin) to backend service
+      if (url.pathname.startsWith("/api/")) {
+        const backendOrigin = process.env["BACKEND_URL"] || "http://127.0.0.1:5000";
+        const targetUrl = new URL(url.pathname + url.search, backendOrigin);
+        try {
+          const headers = new Headers(request.headers);
+          headers.delete("host");
+
+          const requestInit: RequestInit = {
+            method: request.method,
+            headers,
+          };
+
+          if (request.method !== "GET" && request.method !== "HEAD") {
+            requestInit.body = await request.clone().arrayBuffer();
+          }
+
+          const proxyRes = await fetch(targetUrl.toString(), requestInit);
+
+          return new Response(proxyRes.body, {
+            status: proxyRes.status,
+            statusText: proxyRes.statusText,
+            headers: proxyRes.headers,
+          });
+        } catch (proxyErr: any) {
+          console.error("Backend proxy error:", proxyErr?.message || proxyErr);
+          return new Response(
+            JSON.stringify({
+              success: false,
+              message: "Cannot connect to backend server. Make sure the backend is running on port 5000.",
+            }),
+            {
+              status: 502,
+              headers: { "content-type": "application/json; charset=utf-8" },
+            }
+          );
+        }
+      }
+
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);

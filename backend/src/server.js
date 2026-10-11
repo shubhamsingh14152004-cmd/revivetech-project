@@ -155,7 +155,7 @@ apiRouter.use(async (req, res, next) => {
 });
 
 apiRouter.get("/health", async (req, res) => {
-  const adminCount = await db.admin.count().catch(() => -1);
+  const adminCount = await Admin.countDocuments().catch(() => -1);
   res.status(200).json({
     success: true,
     status: "healthy",
