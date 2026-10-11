@@ -8,6 +8,7 @@ import {
 } from"lucide-react";
 import { WhatsAppIcon } from"./WhatsAppIcon";
 import { trackEvent } from"../lib/analytics";
+import { waHref } from"../lib/whatsapp";
 
 interface ChatMessage {
  sender:"bot" |"user";
@@ -97,7 +98,7 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
 
  {/* Quick WhatsApp Button */}
  <a
- href="https://wa.me/918591770877?text=Hi%20Revora%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
+ href={waHref("PAGE_CONTEXT", { pageTitle: "Site-wide floating dock" })}
  target="_blank"
  rel="noopener noreferrer"
  onClick={() => trackEvent("whatsapp_click", { source:"floating_dock" })}

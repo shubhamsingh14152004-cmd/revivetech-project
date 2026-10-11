@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { waHref, fireWaAnalytics } from "../lib/whatsapp";
 import {
   Wrench,
   Clock,
@@ -25,17 +26,16 @@ interface RepairIssue {
   id: string;
   name: string;
   desc: string;
-  cost: number;
   timeMins: number;
 }
 
 const REPAIR_ISSUES: RepairIssue[] = [
-  { id: "screen", name: "Screen & OLED", desc: "Original grade HDR panel, water seal.", cost: 2499, timeMins: 35 },
-  { id: "battery", name: "Battery Replacement", desc: "100% genuine cycle-zero cell.", cost: 1199, timeMins: 25 },
-  { id: "water", name: "Liquid Damage", desc: "Ultrasonic wash & component dry-out.", cost: 1699, timeMins: 60 },
-  { id: "charging", name: "Charging Port", desc: "Fixes loose port & internal mic lines.", cost: 999, timeMins: 30 },
-  { id: "camera", name: "Rear Camera / Lens", desc: "OIS sensor and glass lens cover.", cost: 1499, timeMins: 40 },
-  { id: "motherboard", name: "Logic Board", desc: "Micro-soldering, short circuit trace fix.", cost: 2999, timeMins: 90 },
+  { id: "screen", name: "Screen & OLED", desc: "Original grade HDR panel, water seal.", timeMins: 35 },
+  { id: "battery", name: "Battery Replacement", desc: "100% genuine cycle-zero cell.", timeMins: 25 },
+  { id: "water", name: "Liquid Damage", desc: "Ultrasonic wash & component dry-out.", timeMins: 60 },
+  { id: "charging", name: "Charging Port", desc: "Fixes loose port & internal mic lines.", timeMins: 30 },
+  { id: "camera", name: "Rear Camera / Lens", desc: "OIS sensor and glass lens cover.", timeMins: 40 },
+  { id: "motherboard", name: "Logic Board", desc: "Micro-soldering, short circuit trace fix.", timeMins: 90 },
 ];
 
 const TIME_SLOTS = [
@@ -99,16 +99,6 @@ export function RepairBooking() {
     }
   };
 
-  const calculateTotal = () => {
-    let subtotal = 0;
-    selectedIssues.forEach((id) => {
-      const issue = REPAIR_ISSUES.find((item) => item.id === id);
-      if (issue) subtotal += issue.cost;
-    });
-    if (serviceSpeed === "van") subtotal += 499;
-    return subtotal;
-  };
-
   const calculateEstTime = () => {
     let totalTime = 0;
     selectedIssues.forEach((id) => {
@@ -127,7 +117,7 @@ export function RepairBooking() {
     if (cleanPhone.length !== 10) return toast.error("Phone number must be exactly 10 digits");
 
     const issueNames = selectedIssues.map((id) => REPAIR_ISSUES.find((item) => item.id === id)?.name).filter(Boolean).join(", ");
-    const serviceSpeedLabel = serviceSpeed === "van" ? "Mobile Van Dispatch (+₹499)" : serviceSpeed === "express" ? "In-Store Priority" : "Mail-In Kit";
+    const serviceSpeedLabel = serviceSpeed === "van" ? "Mobile Van Dispatch" : serviceSpeed === "express" ? "In-Store Priority" : "Mail-In Kit";
 
     setIsSubmitting(true);
     try {
@@ -137,7 +127,6 @@ export function RepairBooking() {
         phoneModel: deviceModel,
         serviceType: `Certified Repair (${serviceSpeedLabel})`,
         problemDescription: `Issues: ${issueNames || "General Diagnostic"} · Preferred Slot: ${selectedDate} at ${selectedTime}`,
-        estimatedAmount: calculateTotal(),
         preferredOption: serviceSpeedLabel,
       });
 
@@ -150,6 +139,24 @@ export function RepairBooking() {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleWhatsApp = () => {
+    const issueNames = selectedIssues.map((id) => REPAIR_ISSUES.find((item) => item.id === id)?.name).filter(Boolean) as string[];
+    const serviceSpeedLabel = serviceSpeed === "van" ? "Mobile Van Dispatch" : serviceSpeed === "express" ? "In-Store Lab" : "Mail-In Kit";
+    fireWaAnalytics("REPAIR", { brand: selectedBrand, model: deviceModel });
+    window.open(
+      waHref("REPAIR", {
+        brand: selectedBrand,
+        model: deviceModel,
+        issues: issueNames,
+        serviceType: serviceSpeedLabel,
+        slot: `${selectedDate} at ${selectedTime}`,
+        name: custName || undefined,
+      }),
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   const ModelSelectorContent = (
@@ -296,9 +303,9 @@ export function RepairBooking() {
             <label className="block text-[13px] font-bold text-ink mb-3 uppercase tracking-wider">Service Delivery</label>
             <div className="grid grid-cols-3 gap-3">
               {[
-                { id: "express", icon: Building, label: "In-Store Lab", sub: "Ready in 45m", price: "FREE" },
-                { id: "van", icon: Truck, label: "Mobile Van", sub: "At Your Door", price: "+₹499" },
-                { id: "mail", icon: Zap, label: "Mail-In Box", sub: "Prepaid Kit", price: "FREE" }
+                { id: "express", icon: Building, label: "In-Store Lab", sub: "Ready in 45m" },
+                { id: "van", icon: Truck, label: "Mobile Van", sub: "At Your Door" },
+                { id: "mail", icon: Zap, label: "Mail-In Box", sub: "Prepaid Kit" }
               ].map(opt => (
                 <button
                   key={opt.id}
@@ -311,7 +318,6 @@ export function RepairBooking() {
                   <opt.icon className={`h-6 w-6 mb-2 ${serviceSpeed === opt.id ? 'text-brand' : 'text-muted'}`} />
                   <span className="text-[13px] font-bold text-ink text-center leading-tight mb-1">{opt.label}</span>
                   <span className="text-[13px] text-muted text-center">{opt.sub}</span>
-                  <span className="text-[13px] text-brand font-bold mt-2">{opt.price}</span>
                 </button>
               ))}
             </div>
@@ -387,33 +393,45 @@ export function RepairBooking() {
                 </div>
               </div>
 
+              {/* Estimated time */}
               <div className="rounded-2xl bg-white p-5 border border-line space-y-3 text-[14px] mb-6 mt-auto">
                 <div className="flex justify-between text-muted">
                   <span>Services ({selectedIssues.length}):</span>
-                  <span className="font-bold text-ink">₹{(calculateTotal() - (serviceSpeed === "van" ? 499 : 0)).toLocaleString("en-IN")}</span>
+                  <span className="font-bold text-ink">{selectedIssues.map(id => REPAIR_ISSUES.find(i => i.id === id)?.name).filter(Boolean).join(", ")}</span>
                 </div>
-                {serviceSpeed === "van" && (
-                  <div className="flex justify-between text-muted">
-                    <span>Mobile Van:</span>
-                    <span className="font-bold text-brand">+₹499</span>
-                  </div>
-                )}
                 <div className="flex justify-between text-muted">
                   <span>Est. Time:</span>
                   <span className="font-bold text-ink">~{calculateEstTime()} mins</span>
                 </div>
-                <div className="border-t border-line/50 pt-3 mt-1 flex items-center justify-between text-base font-bold text-ink">
-                  <span>Total Estimate:</span>
-                  <span className="text-2xl text-brand">₹{calculateTotal().toLocaleString("en-IN")}</span>
+                <div className="border-t border-line/50 pt-3 mt-1 text-[13px] text-center text-brand font-bold">
+                  We will share the quote on WhatsApp
                 </div>
               </div>
+
+              {/* Primary: WhatsApp */}
+              <a
+                href={waHref("REPAIR", {
+                  brand: selectedBrand,
+                  model: deviceModel || undefined,
+                  issues: selectedIssues.map(id => REPAIR_ISSUES.find(i => i.id === id)?.name).filter(Boolean) as string[],
+                  serviceType: serviceSpeed === "van" ? "Mobile Van Dispatch" : serviceSpeed === "express" ? "In-Store Lab" : "Mail-In Kit",
+                  slot: `${selectedDate} at ${selectedTime}`,
+                  name: custName || undefined,
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => fireWaAnalytics("REPAIR", { brand: selectedBrand, model: deviceModel })}
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-brand hover:bg-brand-600 px-6 py-4 text-[15px] font-bold text-white transition focus-ring min-h-[48px] mb-3"
+              >
+                Get Quote on WhatsApp
+              </a>
 
               <button
                 type="submit"
                 disabled={isSubmitting || selectedIssues.length === 0}
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-brand hover:bg-brand-600 px-6 py-4 text-[15px] font-bold text-white transition focus-ring disabled:opacity-50 min-h-[48px]"
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-white border border-line hover:bg-background px-6 py-4 text-[14px] font-bold text-ink transition focus-ring disabled:opacity-50 min-h-[48px]"
               >
-                {isSubmitting ? <Loader2 className="h-5 w-5 animate-spin" /> : <><CheckCircle2 className="h-5 w-5" /> Book Repair Slot</>}
+                {isSubmitting ? <Loader2 className="h-5 w-5 animate-spin" /> : <><CheckCircle2 className="h-5 w-5" /> Book Pickup Slot</>}
               </button>
             </form>
           ) : (
@@ -431,7 +449,6 @@ export function RepairBooking() {
               <div className="rounded-2xl bg-white border border-line p-6 text-left text-[14px] space-y-3 max-w-sm mx-auto w-full shadow-sm">
                 <div className="flex justify-between"><span className="text-muted">Booking:</span><span className="font-bold text-brand">{bookingRef}</span></div>
                 <div className="flex justify-between"><span className="text-muted">Device:</span><span className="font-bold text-ink truncate max-w-[150px]">{deviceModel}</span></div>
-                <div className="flex justify-between"><span className="text-muted">Total:</span><span className="font-bold text-ink">₹{calculateTotal().toLocaleString("en-IN")}</span></div>
               </div>
 
               <button type="button" onClick={() => setIsBooked(false)} className="mx-auto rounded-xl bg-background border border-line hover:bg-line px-8 py-3.5 text-[14px] font-bold text-ink transition focus-ring min-h-[48px]">

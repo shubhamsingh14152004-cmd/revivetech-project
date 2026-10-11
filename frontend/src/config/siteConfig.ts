@@ -43,10 +43,6 @@ export function telHref() {
   return `tel:${siteConfig.phoneE164}`;
 }
 
-export function waHref(kind: keyof typeof siteConfig.whatsappMessages = "general") {
-  return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(siteConfig.whatsappMessages[kind])}`;
-}
-
 export function mailtoHref() {
   return `mailto:${siteConfig.email}`;
 }

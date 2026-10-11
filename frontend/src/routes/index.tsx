@@ -36,6 +36,7 @@ import {
  getWebSiteSchema,
  SITE_URL,
 } from"../components/SeoJsonLd";
+import { waHref } from"../lib/whatsapp";
 
 export const Route = createFileRoute("/")({
  head: () => ({
@@ -231,7 +232,7 @@ function Index() {
  <span>8591770877</span>
  </a>
  <a
- href="https://wa.me/918591770877?text=Hi%20Revora%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
+ href={waHref("GENERAL")}
  target="_blank"
  rel="noopener noreferrer"
  className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 hover:bg-emerald-100 px-3 py-1 font-bold text-emerald-800 border border-emerald-200 transition"
@@ -394,7 +395,7 @@ function Index() {
  <span>Call 8591770877</span>
  </a>
  <a
- href="https://wa.me/918591770877?text=Hi%20Revora%2C%20I%20want%20to%20sell%20or%20repair%20my%20phone."
+ href={waHref("GENERAL")}
  target="_blank"
  rel="noopener noreferrer"
  className="inline-flex items-center gap-1.5 rounded-xl bg-brand-tint hover:bg-[#cbf0df] border border-brand/30 px-3.5 py-1.5 text-xs font-bold text-brand-ink transition"
@@ -660,7 +661,7 @@ function Index() {
  </a>
 
  <a
- href="https://wa.me/918591770877?text=Hi%20Revora%2C%20I%20want%20to%20claim%20the%20Free%20Doorstep%20repair%20and%20Free%20Glass%20Protector%20%2B%20Cover%20offer."
+ href={waHref("REPAIR", { note: "Interested in the doorstep repair offer" })}
  target="_blank"
  rel="noopener noreferrer"
  className="flex-1 flex items-center justify-between gap-2 rounded-full bg-green-700 hover:bg-green-900 text-white pl-4 pr-1.5 py-1.5 shadow-xs border border-green-700 transition"

@@ -9,6 +9,7 @@ import {
  getFaqSchema,
  SITE_URL,
 } from"../components/SeoJsonLd";
+import { waHref } from"../lib/whatsapp";
 import {
  Truck,
  Wrench,
@@ -265,7 +266,7 @@ function DoorstepRepairPage() {
  <a href="tel:8591770877" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 text-ink font-bold hover:text-brand transition border border-line">
  <PhoneCall className="h-3 w-3 text-brand" /> 8591770877
  </a>
- <a href="https://wa.me/918591770877?text=Hi%20Revora%2C%20I%20want%20to%20book%20doorstep%20repair." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-tint text-brand-ink font-bold border border-brand/30">
+ <a href={waHref("REPAIR")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-tint text-brand-ink font-bold border border-brand/30">
  <WhatsAppIcon className="h-3 w-3 fill-brand" /> WhatsApp
  </a>
  </div>

@@ -8,7 +8,7 @@ import { Smartphone, Check, ChevronsUpDown, Search, ArrowRight, Truck, CheckCirc
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "./ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Drawer, DrawerContent, DrawerTrigger, DrawerTitle } from "./ui/drawer";
-import { waHref } from "../config/siteConfig";
+import { waHref, fireWaAnalytics } from "../lib/whatsapp";
 import { toast } from "sonner";
 import { api } from "../services/api";
 import { useIsMobile } from "../hooks/use-mobile";
@@ -150,26 +150,19 @@ export function TradeInCalculator({
     }
   };
 
-  const fireAnalytics = () => {
-    try {
-      if (typeof window !== "undefined" && (window as any).gtag) {
-        (window as any).gtag('event', 'whatsapp_quote', {
-          brand: selectedBrand?.name || brandId,
-          model: model,
-          condition: condition
-        });
-      }
-    } catch (e) {}
-  };
-
   const handleWhatsApp = () => {
-    fireAnalytics();
-    const yesno = hasBox ? "Yes" : "No";
     const brandName = selectedBrand?.name || brandId;
-    const pinStr = pincode ? pincode : "Not provided";
-    
-    const msg = `Hi Revora, I want to sell my phone.\nPhone: ${brandName} ${model} (${storage})\nCondition: ${condition}\nBox and charger: ${yesno}\nPincode: ${pinStr}\nPlease share the price.`;
-    window.open(waHref(msg), "_blank");
+    fireWaAnalytics("SELL", { brand: brandName, model, condition });
+    const href = waHref("SELL", {
+      brand: brandName,
+      model,
+      storage,
+      condition,
+      hasBox,
+      name: name || undefined,
+      pincode: pincode || undefined,
+    });
+    window.open(href, "_blank", "noopener,noreferrer");
   };
 
   const ModelSelectorContent = (

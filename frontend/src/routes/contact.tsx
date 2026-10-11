@@ -10,6 +10,7 @@ import {
  getBreadcrumbSchema,
  SITE_URL,
 } from"../components/SeoJsonLd";
+import { waHref } from"../lib/whatsapp";
 import {
  Phone,
  Mail,
@@ -191,7 +192,7 @@ function ContactPage() {
 
  {/* WhatsApp Card */}
  <a
- href="https://wa.me/918591770877"
+ href={waHref("GENERAL")}
  target="_blank"
  rel="noopener noreferrer"
  className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-line hover:border-brand transition-colors group shadow-xs"

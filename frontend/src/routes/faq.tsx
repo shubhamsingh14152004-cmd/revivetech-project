@@ -8,6 +8,7 @@ import {
  getBreadcrumbSchema,
  SITE_URL,
 } from"../components/SeoJsonLd";
+import { waHref } from"../lib/whatsapp";
 import {
  HelpCircle,
  Search,
@@ -276,7 +277,7 @@ function FaqPage() {
  <span>Call +91 8591770877</span>
  </a>
  <a
- href="https://wa.me/918591770877"
+ href={waHref("GENERAL")}
  target="_blank"
  rel="noopener noreferrer"
  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition-colors"
