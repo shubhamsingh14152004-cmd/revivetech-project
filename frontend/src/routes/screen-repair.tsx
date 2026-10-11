@@ -77,7 +77,7 @@ export const Route = createFileRoute("/screen-repair")({
  {
  name:"description",
  content:
-"Phone ki screen toot gayi? Fast mobile phone screen replacement. OEM OLED & glass repair for iPhone, Samsung, OnePlus & Xiaomi within 30-45 mins. 90-day warranty & free doorstep pickup.",
+"Phone ki screen toot gayi? Fast mobile phone screen replacement. OEM OLED & glass repair for iPhone, Samsung, OnePlus & Xiaomi with tested parts. 90-day warranty & free doorstep pickup.",
  },
  {
  name:"keywords",
@@ -91,7 +91,7 @@ export const Route = createFileRoute("/screen-repair")({
  {
  property:"og:description",
  content:
-"Cracked screen? Get same-day OEM screen replacement with 90-day warranty, zero data loss, and free doorstep collection.",
+"Cracked screen? Get OEM-grade screen replacement with 90-day warranty, zero data loss, and free doorstep collection.",
  },
  {
  property:"og:url",

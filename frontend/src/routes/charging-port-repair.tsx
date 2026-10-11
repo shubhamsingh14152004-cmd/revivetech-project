@@ -74,7 +74,7 @@ export const Route = createFileRoute("/charging-port-repair")({
  {
  name:"description",
  content:
-"Mobile charge nahi ho raha? Fast phone charging port repair & USB-C / Lightning replacement. Fix loose jack & moisture errors within 30-45 mins with 90-day warranty.",
+"Mobile charge nahi ho raha? Fast phone charging port repair & USB-C / Lightning replacement. Fix loose jack & moisture errors with precision diagnostics with 90-day warranty.",
  },
  {
  name:"keywords",

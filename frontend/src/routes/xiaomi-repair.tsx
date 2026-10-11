@@ -93,7 +93,7 @@ export const Route = createFileRoute("/xiaomi-repair")({
  {
  name:"description",
  content:
-"Expert Xiaomi, Redmi & POCO phone repair. POCO X3 CPU reballing, AMOLED screen replacement, 120W HyperCharge port & battery swap. 90-day warranty & same-day service.",
+"Expert Xiaomi, Redmi & POCO phone repair. POCO X3 CPU reballing, AMOLED screen replacement, 120W HyperCharge port & battery swap. 90-day warranty & doorstep service.",
  },
  {
  name:"keywords",

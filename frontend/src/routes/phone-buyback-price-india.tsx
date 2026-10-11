@@ -10,7 +10,7 @@ export const Route = createFileRoute("/phone-buyback-price-india")({
       { title: "Redirecting... | Revora" }
     ],
     links: [
-      { rel: "canonical", href: "https://sellrepairphone.org/sell-phone" }
+      { rel: "canonical", href: "https://www.sellrepairphone.org/sell-phone" }
     ]
   }),
   component: RedirectComponent,

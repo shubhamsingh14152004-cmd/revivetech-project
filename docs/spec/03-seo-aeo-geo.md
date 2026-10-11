@@ -9,7 +9,7 @@ Goal: rank in Google, be the answer in featured snippets and voice results (AEO)
 - `areaServed`: from config only. Do not list both cities and the whole country. If pan-India mail-in exists, model it as a separate Service with its own `areaServed`.
 - `sameAs`: only real profile URLs from `siteConfig.social` and a Google Business Profile URL when supplied.
 - Verify `@RevoraIndia`; remove `twitter:site` if no `siteConfig.social.x`.
-- Pick the canonical host. Apex `sellrepairphone.org` is used in sitemap and schema, so: 301 `www` to apex in `vercel.json`, relative internal links, absolute canonicals on apex. Confirm with `curl -I` for both hosts and `http` to `https`.
+- Pick the canonical host. The www host `https://www.sellrepairphone.org` is the canonical host everywhere (sitemap, schema, canonical tags, og:url, llms.txt, siteConfig). 301 apex to www in `vercel.json`, relative internal links, absolute canonicals on www. Confirm with `curl -I` for both hosts and `http` to `https`.
 
 ## 2. Technical SEO
 - Unique `<title>` (max 60 chars) and `<meta description>` (120 to 160 chars) on every indexable page, intent first, brand last, e.g. "Sell a Dead Phone in Mumbai: Free Pickup | Revora". Remove `<meta name="keywords">`.

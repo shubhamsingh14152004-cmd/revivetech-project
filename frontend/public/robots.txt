@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://sellrepairphone.org/sitemap.xml
+Sitemap: https://www.sellrepairphone.org/sitemap.xml

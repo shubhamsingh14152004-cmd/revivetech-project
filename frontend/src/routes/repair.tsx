@@ -27,7 +27,7 @@ import { NAV_BRANDS } from "../content/nav";
 
 const FAQS = [
  {
- question:"How fast is same-day mobile phone repair at Revora?",
+ question:"How fast is doorstep mobile phone repair at Revora?",
  answer:
 "Most screen replacements, battery swaps, and camera lens fixes take only 30 to 45 minutes on our certified lab benches. You can book an express slot online or request free doorstep courier collection.",
  },
@@ -62,12 +62,12 @@ export const Route = createFileRoute("/repair")({
  {
  name:"description",
  content:
-"Phone repair karwana hai? Expert mobile repair service. OEM screen replacement, battery swap & motherboard repair within 45 mins. Free doorstep pickup & 90-day warranty across India.",
+"Phone repair karwana hai? Expert mobile repair service. OEM screen replacement, battery swap & motherboard repair with tested parts. Free doorstep pickup & 90-day warranty across India.",
  },
  {
  name:"keywords",
  content:
-"phone repair near me, mobile repair near me, phone repair karwana hai, mobile repair karwana hai, phone thik karwana hai, band phone repair, phone chalu nahi ho raha repair, mobile screen replacement, phone battery replacement, same day phone repair",
+"phone repair near me, mobile repair near me, phone repair karwana hai, mobile repair karwana hai, phone thik karwana hai, band phone repair, phone chalu nahi ho raha repair, mobile screen replacement, phone battery replacement, doorstep phone repair",
  },
  {
  property:"og:title",
@@ -76,13 +76,13 @@ export const Route = createFileRoute("/repair")({
  {
  property:"og:description",
  content:
-"Need phone repair? Certified lab technicians fix cracked screens, dead batteries, and liquid damage within 45 mins. 90-day warranty & free doorstep pickup.",
+"Need phone repair? Certified lab technicians fix cracked screens, dead batteries, and liquid damage with tested parts. 90-day warranty & free doorstep pickup.",
  },
  { property:"og:url", content: `${SITE_URL}/repair` },
  { property:"og:type", content:"website" },
  { property:"og:image", content: `${SITE_URL}/images/hero-phone.jpg` },
  { name:"twitter:card", content:"summary_large_image" },
- { name:"twitter:title", content:"Same-Day Mobile Phone Repair | Revora" },
+ { name:"twitter:title", content:"Doorstep Mobile Phone Repair | Revora" },
  {
  name:"twitter:description",
  content:"OEM screen replacement, battery fixes & motherboard micro-soldering. Free doorstep pickup.",
@@ -100,7 +100,7 @@ function RepairPage() {
  const serviceSchema = getServiceSchema({
  name:"Mobile Phone Repair Service",
  description:
-"Certified same-day mobile phone screen replacement, battery swap, and motherboard micro-soldering with 90-day warranty and free doorstep courier collection.",
+"Certified doorstep mobile phone screen replacement, battery swap, and motherboard micro-soldering with 90-day warranty and free doorstep courier collection.",
  serviceType:"Mobile Phone Repair",
  url: `${SITE_URL}/repair`,
  });
@@ -149,7 +149,7 @@ function RepairPage() {
  <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-brand-ink">
  <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-line shadow-xs">
  <Clock className="h-3.5 w-3.5 text-brand" />
- <span>45-Min Express Turnaround</span>
+ <span>Express Turnaround</span>
  </div>
  <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-line shadow-xs">
  <ShieldCheck className="h-3.5 w-3.5 text-brand" />

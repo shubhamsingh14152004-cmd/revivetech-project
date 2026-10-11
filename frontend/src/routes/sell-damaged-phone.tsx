@@ -32,7 +32,7 @@ const FAQS = [
  {
  question:"Do you buy phones with cracked OLED screens or no display?",
  answer:
-"Yes. A cracked screen or black/flickering display does not make your phone worthless. We specialize in buying cracked and damaged phones across Mumbai and India with instant UPI payouts.",
+"Yes. A cracked screen or black/flickering display does not make your phone worthless. We specialize in buying cracked and damaged phones across Mumbai and India with instant UPI payments.",
  },
  {
  question:"Can I sell a phone that won't turn on or has water damage?",
@@ -60,7 +60,7 @@ export const Route = createFileRoute("/sell-damaged-phone")({
  {
  name:"description",
  content:
-"Sell your damaged, broken, cracked or non-working mobile phone for payout via UPI. Top valuation for shattered screens, water damage, and dead phones with free doorstep pickup.",
+"Sell your damaged, broken, cracked or non-working mobile phone with WhatsApp valuation. Top valuation for shattered screens, water damage, and dead phones with free doorstep pickup.",
  },
  {
  name:"keywords",
@@ -74,7 +74,7 @@ export const Route = createFileRoute("/sell-damaged-phone")({
  {
  property:"og:description",
  content:
-"Turn your broken, cracked, or water-damaged phone into payout via UPI. Doorstep pickup in Mumbai and across India with on-the-spot UPI payout.",
+"Turn your broken, cracked, or water-damaged phone into direct payment. Doorstep pickup in Mumbai and across India with on-the-spot payment.",
  },
  {
  property:"og:url",
@@ -127,7 +127,7 @@ function SellDamagedPhonePage() {
  <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
  <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-ink border border-brand/30 bg-brand-tint">
  <AlertTriangle className="h-3.5 w-3.5 text-brand" />
- <span>Broken Screen · Water Damage · Dead Motherboard · payout via UPI</span>
+ <span>Broken Screen · Water Damage · Dead Motherboard · direct payment</span>
  </div>
 
  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-ink leading-tight">

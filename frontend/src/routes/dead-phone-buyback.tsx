@@ -29,12 +29,12 @@ const FAQS = [
  {
  question:"Dead phone becho: Can I really get cash for a phone that won't turn on at all?",
  answer:
-"Yes! Even if your phone is completely dead (band phone / chalu nahi ho raha), its internal hardware components still hold real value. Original OLED flex circuits, camera modules, chassis housing, speakers, and micro-ICs can be salvaged for refurbishing or eco-recycling. Revora pays payout via UPI for dead phones via UPI or IMPS.",
+"Yes! Even if your phone is completely dead (band phone / chalu nahi ho raha), its internal hardware components still hold real value. Original OLED flex circuits, camera modules, chassis housing, speakers, and micro-ICs can be salvaged for refurbishing or eco-recycling. Revora pays UPI payment for dead phones via UPI or IMPS.",
  },
  {
  question:"Kharab phone kaise beche: How does doorstep dead phone selling work?",
  answer:
-"Selling your dead phone takes 3 simple steps: 1) Select your brand and model in our calculator above and choose 'Dead'. 2) Enter your 10-digit mobile number and address to book a free doorstep pickup. 3) Our logistics technician arrives, confirms the device model, and transfers the cash payout instantly to your bank or UPI before leaving.",
+"Selling your dead phone takes 3 simple steps: 1) Select your brand and model in our calculator above and choose 'Dead'. 2) Enter your 10-digit mobile number and address to book a free doorstep pickup. 3) Our logistics technician arrives, confirms the device model, and transfers the cash payment instantly to your bank or UPI before leaving.",
  },
  {
  question:"What about my personal photos and data inside the dead phone?",
@@ -62,7 +62,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
  {
  name:"description",
  content:
-"Dead phone becho for highest payout via UPI! Sell non-working, broken, water-damaged, or completely dead mobiles. Free doorstep pickup & instant UPI payment across India.",
+"Dead phone becho for fair value! Sell non-working, broken, water-damaged, or completely dead mobiles. Free doorstep pickup & instant UPI payment across India.",
  },
  {
  name:"keywords",
@@ -76,7 +76,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
  {
  property:"og:description",
  content:
-"Turn your dead smartphone into payout via UPI today. Free doorstep collection, transparent valuation, and immediate UPI payment.",
+"Turn your dead smartphone into UPI payment today. Free doorstep collection, transparent valuation, and immediate UPI payment.",
  },
  {
  property:"og:url",
@@ -106,7 +106,7 @@ function DeadPhoneBuybackPage() {
  const serviceSchema = getServiceSchema({
  name:"Dead Phone Buyback & Broken Mobile Purchasing",
  description:
-"Buyback service paying payout via UPI for completely non-functional, water-damaged, motherboard-dead, or broken screen smartphones with free doorstep collection.",
+"Buyback service paying UPI payment for completely non-functional, water-damaged, motherboard-dead, or broken screen smartphones with free doorstep collection.",
  serviceType:"Electronics Buyback & Recycling",
  url: `${SITE_URL}/dead-phone-buyback`,
  });
@@ -138,7 +138,7 @@ function DeadPhoneBuybackPage() {
  <section className="relative py-10 text-center max-w-3xl mx-auto mb-10">
  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint border border-brand/30 text-brand-ink text-xs font-semibold mb-6">
  <Coins className="w-3.5 h-3.5 text-brand" />
- payout via UPI for Dead & Broken Mobiles • Free Doorstep Collection
+ UPI payment for Dead & Broken Mobiles • Free Doorstep Collection
  </div>
 
  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink tracking-tight leading-tight">
@@ -175,7 +175,7 @@ function DeadPhoneBuybackPage() {
  Instant Dead Phone Price Calculator
  </h2>
  <p className="text-slate-500 text-sm mt-2 max-w-xl mx-auto">
- Select your brand and model below. Select 'Dead / Non-Functional' condition to lock in your payout.
+ Select your brand and model below. Select 'Dead / Non-Functional' condition to lock in your payment.
  </p>
  </div>
 

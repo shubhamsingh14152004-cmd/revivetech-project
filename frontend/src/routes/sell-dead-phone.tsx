@@ -57,12 +57,12 @@ export const Route = createFileRoute("/sell-dead-phone")({
  head: () => ({
  meta: [
  {
- title:"Sell Dead Phone Online — Band Phone Becho for payout via UPI | Revora",
+ title:"Sell Dead Phone Online — Band Phone Becho Online | Revora",
  },
  {
  name:"description",
  content:
-"Sell your dead mobile phone that won't turn on for payout via UPI. Fair salvage price for non-working, short-circuited, or motherboard-damaged smartphones with free doorstep pickup in Mumbai & India.",
+"Sell your dead mobile phone that won't turn on for fair value. Fair salvage price for non-working, short-circuited, or motherboard-damaged smartphones with free doorstep pickup in Mumbai & India.",
  },
  {
  name:"keywords",
@@ -71,12 +71,12 @@ export const Route = createFileRoute("/sell-dead-phone")({
  },
  {
  property:"og:title",
- content:"Sell Dead Phone Online — Band Phone Becho for payout via UPI | Revora",
+ content:"Sell Dead Phone Online — Band Phone Becho Online | Revora",
  },
  {
  property:"og:description",
  content:
-"Sell your dead mobile phone that won't turn on for payout via UPI. Fair salvage payout for non-working, short-circuited or liquid damaged smartphones with free doorstep pickup.",
+"Sell your dead mobile phone that won't turn on for fair value. Fair salvage value for non-working, short-circuited or liquid damaged smartphones with free doorstep pickup.",
  },
  {
  property:"og:url",
@@ -92,11 +92,11 @@ export const Route = createFileRoute("/sell-dead-phone")({
  },
  {
  name:"twitter:title",
- content:"Sell Dead Phone for payout via UPI | Revora",
+ content:"Sell Dead Phone for fair value | Revora",
  },
  {
  name:"twitter:description",
- content:"Get fair salvage cash for smartphones that won't turn on. Free doorstep pickup & instant UPI payout.",
+ content:"Get fair salvage cash for smartphones that won't turn on. Free doorstep pickup & instant payment.",
  },
  {
  name:"twitter:image",
@@ -112,7 +112,7 @@ function SellDeadPhonePage() {
  const serviceSchema = getServiceSchema({
  name:"Sell Dead Mobile Phone & Component Buyback",
  description:
-"Instant valuation and cash payout service for completely dead, shorted, or water-damaged smartphones that do not power on. Doorstep pickup in Mumbai and all-India coverage.",
+"Instant valuation and cash payment service for completely dead, shorted, or water-damaged smartphones that do not power on. Doorstep pickup in Mumbai and all-India coverage.",
  category:"https://schema.org/RecycleAction",
  url: `${SITE_URL}/sell-dead-phone`,
  });
@@ -133,16 +133,16 @@ function SellDeadPhonePage() {
  {/* Hero Section */}
  <section className="relative overflow-hidden pt-10 pb-16 text-center max-w-4xl mx-auto">
  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint border border-brand/30 text-xs font-semibold text-brand-ink mb-6">
- <Zap className="w-3.5 h-3.5 text-brand" /> Dead Phone Buyback • payout via UPI Payout
+ <Zap className="w-3.5 h-3.5 text-brand" /> Dead Phone Buyback • direct payment Payout
  </div>
  <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink mb-6 leading-tight">
  Sell Dead Phone That Won't Turn On —{""}
  <span className="text-brand">
- Band Phone Becho for payout via UPI
+ Band Phone Becho Online
  </span>
  </h1>
  <p className="text-base sm:text-lg text-muted max-w-3xl mx-auto mb-8 leading-relaxed">
- Don't leave dead smartphones sitting in your drawer. Whether your phone suffered water submersion, motherboard short-circuit, or power failure, we get its salvage value with <strong>free doorstep collection and payout via UPI or UPI payout</strong>.
+ Don't leave dead smartphones sitting in your drawer. Whether your phone suffered water submersion, motherboard short-circuit, or power failure, we get its salvage value with <strong>free doorstep collection and direct payment or UPI payment</strong>.
  </p>
 
  <div className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm text-slate-600 mb-10">
@@ -249,7 +249,7 @@ function SellDeadPhonePage() {
 
  <div className="p-6 rounded-2xl bg-background border border-line">
  <div className="text-2xl font-black text-brand mb-2">04</div>
- <h3 className="text-base font-bold text-ink mb-1">payout via UPI / UPI</h3>
+ <h3 className="text-base font-bold text-ink mb-1">direct payment / UPI</h3>
  <p className="text-xs text-slate-600">Payment credited to your Google Pay, PhonePe, Paytm or bank account on the spot.</p>
  </div>
  </div>

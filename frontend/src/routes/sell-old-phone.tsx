@@ -58,12 +58,12 @@ export const Route = createFileRoute("/sell-old-phone")({
  head: () => ({
  meta: [
  {
- title:"Sell Old Mobile Phone — Best Cash Buyback & Doorstep Pickup | Revora",
+ title:"Sell Old Mobile Phone — Doorstep Buyback & Doorstep Pickup | Revora",
  },
  {
  name:"description",
  content:
-"Sell your old mobile phone for the highest cash price. Free doorstep evaluation in Mumbai & India, instant UPI payment, and 100% certified data wipe. Value your used phone now.",
+"Sell your old mobile phone for the best value. Free doorstep evaluation in Mumbai & India, instant UPI payment, and 100% certified data wipe. Value your used phone now.",
  },
  {
  name:"keywords",
@@ -72,12 +72,12 @@ export const Route = createFileRoute("/sell-old-phone")({
  },
  {
  property:"og:title",
- content:"Sell Old Mobile Phone — Best Cash Buyback & Doorstep Pickup | Revora",
+ content:"Sell Old Mobile Phone — Doorstep Buyback & Doorstep Pickup | Revora",
  },
  {
  property:"og:description",
  content:
-"Sell your old or second-hand smartphone for a fair price payout. Schedule free doorstep evaluation, enjoy instant UPI payment, and 100% certified data erasure with Revora.",
+"Sell your old or second-hand smartphone with doorstep evaluation. Schedule free doorstep evaluation, enjoy instant UPI payment, and 100% certified data erasure with Revora.",
  },
  {
  property:"og:url",
@@ -130,7 +130,7 @@ function SellOldPhonePage() {
  <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
  <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-ink border border-brand/30 bg-brand-tint">
  <Coins className="h-3.5 w-3.5 text-brand" />
- <span>assured Highest Market Value · payout via UPI via UPI</span>
+ <span>assured Highest Market Value · quote via UPI via UPI</span>
  </div>
 
  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-ink leading-tight">
@@ -138,7 +138,7 @@ function SellOldPhonePage() {
  </h1>
 
  <p className="text-base sm:text-lg text-muted leading-relaxed max-w-2xl mx-auto">
- Get an payout via UPI valuation for your old, used, or second-hand smartphone. Enjoy complimentary doorstep pickup across Mumbai and all major cities in India with zero deduction hassle.
+ Get an quote via UPI valuation for your old, used, or second-hand smartphone. Enjoy complimentary doorstep pickup across Mumbai and all major cities in India with zero deduction hassle.
  </p>
 
  <div className="flex flex-wrap items-center justify-center gap-4 pt-2 text-xs font-semibold text-brand-ink">

@@ -7,10 +7,10 @@
       "has": [
         {
           "type": "host",
-          "value": "www.sellrepairphone.org"
+          "value": "sellrepairphone.org"
         }
       ],
-      "destination": "https://sellrepairphone.org/$1",
+      "destination": "https://www.sellrepairphone.org/$1",
       "permanent": true
     }
   ]

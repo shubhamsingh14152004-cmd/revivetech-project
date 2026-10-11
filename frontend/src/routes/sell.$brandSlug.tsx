@@ -29,7 +29,7 @@ export const Route = createFileRoute("/sell/$brandSlug")({
     
     const meta = [
       { title: `Sell Old ${brand.name} Phone Online | Best Resale Value | Revora` },
-      { name: "description", content: `Sell your used, broken, or dead ${brand.name} mobile phone for the highest cash payout. Get an instant quote for ${brand.name} models, free doorstep pickup, and secure data wipe.` },
+      { name: "description", content: `Sell your used, broken, or dead ${brand.name} mobile phone for the direct WhatsApp quote. Get an instant quote for ${brand.name} models, free doorstep pickup, and secure data wipe.` },
       { property: "og:title", content: `Sell Old ${brand.name} Phone Online | Best Resale Value | Revora` },
       { property: "og:description", content: `Calculate your used ${brand.name} smartphone's trade-in value online. Free pickup and payment.` },
       { property: "og:url", content: `${SITE_URL}/sell/${brand.id}` },
@@ -65,9 +65,9 @@ function SellBrandComponent() {
 
   const schema = getServiceSchema({
     name: `Sell Old ${brand.name} Phone`,
-    description: `Sell your used, broken, or dead ${brand.name} mobile phone for the highest cash payout.`,
+    description: `Sell your used, broken, or dead ${brand.name} mobile phone for the direct WhatsApp quote.`,
     url: `${SITE_URL}/sell/${brand.id}`,
-    image: `https://sellrepairphone.org/images/revora-logo-transparent.png`
+    image: `https://www.sellrepairphone.org/images/revora-logo-transparent.png`
   });
 
   const breadcrumbs = getBreadcrumbSchema([

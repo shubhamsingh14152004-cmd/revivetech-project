@@ -108,7 +108,7 @@ export const Route = createFileRoute("/samsung-repair")({
  {
  name:"description",
  content:
-"Official-grade Samsung Galaxy phone repair. Dynamic AMOLED screens, green line laser repair, Z Fold/Flip hinge fix & battery swap. 90-day warranty & same-day service.",
+"Official-grade Samsung Galaxy phone repair. Dynamic AMOLED screens, green line laser repair, Z Fold/Flip hinge fix & battery swap. 90-day warranty & doorstep service.",
  },
  {
  name:"keywords",

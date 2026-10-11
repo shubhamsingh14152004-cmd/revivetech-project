@@ -40,37 +40,46 @@ import { waHref } from"../lib/whatsapp";
 
 export const Route = createFileRoute("/")({
  head: () => ({
- meta: [
- {
- title:"Revora — Sell Your Old Phone & Get It Repaired",
- },
- {
- name:"description",
- content:
-"Sell your old, used, damaged, or dead smartphone for a fair price payouts or book 45-minute doorstep mobile repair with Revora across Mumbai & nearby areas.",
- },
- {
- name:"keywords",
- content:
-"Revora, sell old smartphone, sell used phone, phone repair Mumbai, doorstep mobile repair, sell dead phone, sell broken phone, purana mobile becho",
- },
- {
- property:"og:title",
- content:"Revora — Sell Your Old Phone & Get It Repaired",
- },
- {
- property:"og:description",
- content:
-"Sell your old, used, damaged, or dead smartphone for a fair price payouts or book 45-minute doorstep mobile repair with Revora across Mumbai & nearby areas.",
- },
- { property:"og:type", content:"website" },
- { property:"og:url", content: SITE_URL },
- { property:"og:image", content:"https://sellrepairphone.org/images/revora-logo-transparent.png" },
- { name:"twitter:card", content:"summary_large_image" },
- { name:"twitter:image", content:"https://sellrepairphone.org/images/revora-logo-transparent.png" },
- ],
- links: [{ rel:"canonical", href: SITE_URL }],
- }),
+    meta: [
+      {
+        title: "Revora | Sell Old Phones & Doorstep Mobile Repair",
+      },
+      {
+        name: "description",
+        content:
+          "Sell your smartphone or book doorstep mobile repair with Revora across Mumbai, Navi Mumbai and Thane. Request a direct quote and pickup on WhatsApp.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Revora, sell old smartphone, sell used phone, phone repair Mumbai, doorstep mobile repair, sell dead phone, sell broken phone, purana mobile becho",
+      },
+      {
+        property: "og:title",
+        content: "Revora | Sell Old Phones & Doorstep Mobile Repair",
+      },
+      {
+        property: "og:description",
+        content:
+          "Sell your smartphone or book doorstep mobile repair with Revora across Mumbai, Navi Mumbai and Thane. Request a direct quote and pickup on WhatsApp.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.sellrepairphone.org/" },
+      { property: "og:image", content: "https://www.sellrepairphone.org/images/revora-logo-transparent.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "Revora | Sell Old Phones & Doorstep Mobile Repair",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Sell your smartphone or book doorstep mobile repair with Revora across Mumbai, Navi Mumbai and Thane. Request a direct quote and pickup on WhatsApp.",
+      },
+      { name: "twitter:image", content: "https://www.sellrepairphone.org/images/revora-logo-transparent.png" },
+    ],
+    links: [{ rel: "canonical", href: "https://www.sellrepairphone.org/" }],
+  }),
  component: Index,
 });
 
@@ -189,7 +198,7 @@ function Index() {
  <div className="lg:col-span-7 flex flex-col items-start text-left">
  <div className="inline-flex items-center gap-2 rounded-full bg-brand-tint px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink border border-brand/30">
  <span className="h-2 w-2 rounded-full bg-brand shrink-0" />
- <span>lab Diagnostics · Instant Payouts · 45-Min Fix</span>
+ <span>lab Diagnostics · Doorstep Service · 90-Day Warranty</span>
  </div>
 
  <h1 className="mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-ink">
@@ -197,7 +206,7 @@ function Index() {
  </h1>
 
  <p className="mt-4 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-muted">
- Sell your old, used, damaged, or dead phone for a fair price payouts. Or book 45-minute doorstep mobile repair with complimentary tempered glass & cover and 90-day Priority warranty.
+ Sell your old, used, damaged, or dead phone with doorstep pickup across Mumbai, Navi Mumbai and Thane. Or book doorstep mobile repair with tested parts and 90-day warranty.
  </p>
 
  {/* Quick Action CTA Buttons */}
@@ -207,7 +216,7 @@ function Index() {
  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand hover:bg-brand-ink px-6 py-3.5 text-sm font-bold text-white shadow-md transition cursor-pointer text-center"
  >
  <IndianRupee className="h-4 w-4 text-white" />
- <span>Sell Phone (payout via UPI Quote)</span>
+ <span>Sell Phone (WhatsApp Quote)</span>
  </a>
  <button
  type="button"
@@ -354,7 +363,7 @@ function Index() {
  Special Perk: Free Glass Protector & Cover on Every Phone Repair!
  </h3>
  <p className="text-sm text-brand-ink leading-relaxed">
- If you get your phone repaired here, you will get a <span className="text-brand font-bold underline">free glass protector and cover</span>. Plus, enjoy our 100% complimentary <span className="text-brand font-bold underline">Free Doorstep Service</span> with zero pickup or drop charges!
+ If you get your phone repaired here, you will get a <span className="text-brand font-bold underline">free glass protector and cover</span>. Plus, enjoy our <span className="text-brand font-bold underline">Free Doorstep Service</span> with zero pickup or drop charges!
  </p>
  </div>
  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full lg:w-auto">

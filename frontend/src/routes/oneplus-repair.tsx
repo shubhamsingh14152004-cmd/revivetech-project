@@ -93,7 +93,7 @@ export const Route = createFileRoute("/oneplus-repair")({
  {
  name:"description",
  content:
-"Official-grade OnePlus phone repair. Fluid AMOLED screen replacement, green line laser fix, SuperVOOC charge port & battery swap. 90-day warranty & same-day service.",
+"Official-grade OnePlus phone repair. Fluid AMOLED screen replacement, green line laser fix, SuperVOOC charge port & battery swap. 90-day warranty & doorstep service.",
  },
  {
  name:"keywords",

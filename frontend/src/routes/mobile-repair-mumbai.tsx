@@ -44,9 +44,9 @@ const MUMBAI_LOCALITIES = [
 
 const FAQS = [
  {
- question:"Do you offer same-day mobile phone repair across all areas of Mumbai?",
+ question:"Do you offer fast mobile phone repair across all areas of Mumbai?",
  answer:
-"Yes! Our doorstep technicians cover Western Suburbs (Bandra to Borivali), Central Suburbs (Dadar to Mulund & Thane), Harbour Line, South Mumbai, and Navi Mumbai with fast same-day technician dispatch.",
+"Yes! Our doorstep technicians cover Western Suburbs (Bandra to Borivali), Central Suburbs (Dadar to Mulund & Thane), Harbour Line, South Mumbai, and Navi Mumbai with fast fast technician dispatch.",
  },
  {
  question:"How fast can a technician reach my location in Mumbai?",
@@ -69,12 +69,12 @@ export const Route = createFileRoute("/mobile-repair-mumbai")({
  head: () => ({
  meta: [
  {
- title:"Mobile Phone Repair in Mumbai — Same-Day Doorstep Service | Revora",
+ title:"Mobile Phone Repair in Mumbai — Professional Doorstep Service | Revora",
  },
  {
  name:"description",
  content:
-"Fast mobile phone repair in Mumbai. Same-day screen replacement, battery repair & dead phone fix at your home or office. Free doorstep visit in Andheri, Bandra, Borivali, Thane & Navi Mumbai.",
+"Fast mobile phone repair in Mumbai. Fast screen replacement, battery repair & dead phone fix at your home or office. Free doorstep visit in Andheri, Bandra, Borivali, Thane & Navi Mumbai.",
  },
  {
  name:"keywords",
@@ -83,12 +83,12 @@ export const Route = createFileRoute("/mobile-repair-mumbai")({
  },
  {
  property:"og:title",
- content:"Mobile Phone Repair in Mumbai — Same-Day Doorstep Service | Revora",
+ content:"Mobile Phone Repair in Mumbai — Professional Doorstep Service | Revora",
  },
  {
  property:"og:description",
  content:
-"Same-day mobile phone repairs & instant old phone buyback in Mumbai. Free doorstep visit, 45-minute fix & 90-day warranty.",
+"Fast mobile phone repairs & instant old phone buyback in Mumbai. Free doorstep visit, doorstep repair & 90-day warranty.",
  },
  {
  property:"og:url",
@@ -175,12 +175,12 @@ function MobileRepairMumbaiPage() {
  </h1>
 
  <p className="text-base sm:text-lg text-muted leading-relaxed max-w-2xl mx-auto">
- Book professional, same-day mobile phone repair services in Mumbai. We provide certified 45-minute screen replacement, battery fix, and dead motherboard repairs right at your doorstep with zero visiting fee.
+ Book professional, fast mobile phone repair services in Mumbai. We provide certified certified screen replacement, battery fix, and dead motherboard repairs right at your doorstep with zero visiting fee.
  </p>
 
  <div className="flex flex-wrap items-center justify-center gap-4 pt-2 text-xs font-semibold text-brand-ink">
  <span className="flex items-center gap-1.5"><Truck className="h-4 w-4 text-brand" /> Free Doorstep Visit in Mumbai</span>
- <span className="flex items-center gap-1.5"><Clock className="h-4 w-4 text-brand" /> 45-Minute Fix</span>
+ <span className="flex items-center gap-1.5"><Clock className="h-4 w-4 text-brand" /> Doorstep Repair</span>
  <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-brand" /> 90-Day Priority Warranty</span>
  </div>
  </div>

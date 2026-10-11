@@ -1,5 +1,6 @@
 export const siteConfig = {
   brandName: "Revora",
+  siteUrl: "https://www.sellrepairphone.org",
   business: {
     hasPublicAddress: false,
     address: "",

@@ -62,12 +62,12 @@ export const Route = createFileRoute("/doorstep-mobile-repair")({
  head: () => ({
  meta: [
  {
- title:"Doorstep Mobile Repair Near Me — 45-Min Service at Home | Revora",
+ title:"Doorstep Mobile Repair Near Me — Doorstep Service at Home | Revora",
  },
  {
  name:"description",
  content:
-"Book doorstep mobile phone repair in Mumbai & across India. Screen replacement, battery repair & charging port fix in 45 minutes. Free tempered glass, cover & 90-day warranty.",
+"Book doorstep mobile phone repair in Mumbai & across India. Screen replacement, battery repair & charging port fix at your location. Free tempered glass, cover & 90-day warranty.",
  },
  {
  name:"keywords",
@@ -76,12 +76,12 @@ export const Route = createFileRoute("/doorstep-mobile-repair")({
  },
  {
  property:"og:title",
- content:"Doorstep Mobile Repair Near Me — 45-Min Home Service | Revora",
+ content:"Doorstep Mobile Repair Near Me — Doorstep Home Service | Revora",
  },
  {
  property:"og:description",
  content:
-"Expert mobile phone repair at your home or office. Same-day 45-min fix with OEM parts, free tempered glass + cover, and 90-day warranty.",
+"Expert mobile phone repair at your home or office. Doorstep repair service with OEM parts, free tempered glass + cover, and 90-day warranty.",
  },
  {
  property:"og:url",
@@ -116,7 +116,7 @@ function DoorstepRepairPage() {
  const serviceSchema = getServiceSchema({
  name:"Doorstep Mobile Phone Repair Service",
  description:
-"Express same-day mobile phone repair at home or office with 45-minute turnaround and 90-day warranty.",
+"Express doorstep mobile phone repair at home or office with quick turnaround and 90-day warranty.",
  url: `${SITE_URL}/doorstep-mobile-repair`,
  });
 
@@ -283,7 +283,7 @@ function DoorstepRepairPage() {
  <div className="rounded-2xl bg-white p-5 border border-line space-y-2 shadow-xs">
  <Wrench className="h-6 w-6 text-brand" />
  <h3 className="text-base font-bold text-ink">Screen Replacement</h3>
- <p className="text-xs text-slate-600">OEM OLED and high-grade displays fitted in 45 minutes with free 9H tempered glass.</p>
+ <p className="text-xs text-slate-600">OEM OLED and high-grade displays fitted at your location with free 9H tempered glass.</p>
  </div>
  <div className="rounded-2xl bg-white p-5 border border-line space-y-2 shadow-xs">
  <Battery className="h-6 w-6 text-brand" />

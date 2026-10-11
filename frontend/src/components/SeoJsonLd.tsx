@@ -19,7 +19,7 @@ export function SeoJsonLd({ schema }: SeoJsonLdProps) {
  );
 }
 
-export const SITE_URL = "https://sellrepairphone.org";
+export const SITE_URL = "https://www.sellrepairphone.org";
 
 /**
  * Organization structured data
@@ -105,8 +105,9 @@ export function getWebSiteSchema() {
  "@context": "https://schema.org",
  "@type": "WebSite",
  "@id": `${SITE_URL}/#website`,
- name: siteConfig.brandName,
- url: SITE_URL,
+ name: "Revora",
+ alternateName: "sellrepairphone.org",
+ url: `${SITE_URL}/`,
  publisher: {
  "@id": `${SITE_URL}/#org`,
  },

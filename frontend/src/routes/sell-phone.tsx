@@ -30,7 +30,7 @@ const FAQS = [
  {
  question:"Can I sell a completely dead phone that doesn't turn on?",
  answer:
-"Yes! Revora buys completely dead, water-damaged, and motherboard-faulty phones. We salvage functional ICs, camera sensors, chassis components, and recycle hazardous materials responsibly. Simply choose 'Dead / Non-Functional' in our calculator for an payout via UPI quote.",
+"Yes! Revora buys completely dead, water-damaged, and motherboard-faulty phones. We salvage functional ICs, camera sensors, chassis components, and recycle hazardous materials responsibly. Simply choose 'Dead / Non-Functional' in our calculator for an direct value quote.",
  },
  {
  question:"How and when do I receive payment for my old phone?",
@@ -63,12 +63,12 @@ export const Route = createFileRoute("/sell-phone")({
  head: () => ({
  meta: [
  {
- title:"Sell Used Phone Price Calculator — Instant Quote & Cash Payout | Revora",
+ title:"Sell Used Phone Price Calculator — Instant Quote & Fast Pickup | Revora",
  },
  {
  name:"description",
  content:
-"Purana phone becho for highest payout via UPI! Sell old, used, broken, or dead mobile phones online. Free doorstep pickup, instant UPI payment & certified data wipe.",
+"Purana phone becho for direct valuation! Sell old, used, broken, or dead mobile phones online. Free doorstep pickup, instant UPI payment & certified data wipe.",
  },
  {
  name:"keywords",
@@ -77,12 +77,12 @@ export const Route = createFileRoute("/sell-phone")({
  },
  {
  property:"og:title",
- content:"Sell Used Phone Price Calculator — Instant Quote & Cash Payout | Revora",
+ content:"Sell Used Phone Price Calculator — Instant Quote & Fast Pickup | Revora",
  },
  {
  property:"og:description",
  content:
-"Calculate your used smartphone's payout via UPI trade-in value online with Revora. Get a live price quote, free doorstep pickup in Mumbai & India, and instant UPI payout.",
+"Calculate your used smartphone's trade-in value online with Revora. Get a live price quote, free doorstep pickup in Mumbai & India, and fast UPI payment.",
  },
  {
  property:"og:url",
@@ -111,7 +111,7 @@ function SellPhonePage() {
  const serviceSchema = getServiceSchema({
  name:"Sell Old Phone & Dead Phone Buyback",
  description:
-"Sell used, cracked, broken, or completely dead mobile phones for payout via UPI payouts with complimentary doorstep pickup and secure data wiping.",
+"Sell used, cracked, broken, or completely dead mobile phones for direct payments with complimentary doorstep pickup and secure data wiping.",
  serviceType:"Mobile Phone Buyback & Recycling",
  url: `${SITE_URL}/sell-phone`,
  });
@@ -145,7 +145,7 @@ function SellPhonePage() {
  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink tracking-tight leading-tight">
  Used Phone Price Calculator &{""}
  <span className="text-brand">
- payout via UPI Trade-In
+ direct value Trade-In
  </span>
  </h1>
 
@@ -176,7 +176,7 @@ function SellPhonePage() {
  Instant Valuation Calculator
  </h2>
  <p className="text-slate-500 text-sm mt-2 max-w-xl mx-auto">
- Select your brand, model, storage, and condition below to view your assured payout and schedule a free doorstep pickup.
+ Select your brand, model, storage, and condition below to view your assured payment and schedule a free doorstep pickup.
  </p>
  </div>
 
@@ -299,7 +299,7 @@ function SellPhonePage() {
  </div>
  <h3 className="text-lg font-semibold text-ink">Instant UPI Cash</h3>
  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
- Once verified, the payout is transferred immediately to your bank account or UPI address before our executive leaves your premises.
+ Once verified, the payment is transferred immediately to your bank account or UPI address before our executive leaves your premises.
  </p>
  </div>
  </div>
