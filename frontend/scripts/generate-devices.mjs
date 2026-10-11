@@ -8,6 +8,11 @@ const __dirname = path.dirname(__filename);
 const dbPath = path.resolve(__dirname, "../../backend/data/revivetech_db.json");
 const outPath = path.resolve(__dirname, "../src/content/devices.ts");
 
+if (!fs.existsSync(dbPath)) {
+  console.log(`Notice: database file not found at ${dbPath}. Skipping generation (devices.ts is already bundled).`);
+  process.exit(0);
+}
+
 const rawDb = JSON.parse(fs.readFileSync(dbPath, "utf-8"));
 const rawDevices = rawDb.devices || [];
 
