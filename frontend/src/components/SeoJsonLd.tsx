@@ -19,7 +19,7 @@ export function SeoJsonLd({ schema }: SeoJsonLdProps) {
  );
 }
 
-export const SITE_URL = "https://www.sellrepairphone.org";
+export const SITE_URL = siteConfig.siteUrl.replace(/\/$/, "");
 
 /**
  * Organization structured data
@@ -63,7 +63,8 @@ export function getOrganizationSchema() {
 export function getLocalBusinessSchema() {
  const schema: any = {
  "@context": "https://schema.org",
- "@type": "LocalBusiness",
+ // Do not claim a storefront or publish coordinates when no public address is configured.
+ "@type": siteConfig.business.hasPublicAddress && siteConfig.business.address ? "LocalBusiness" : "Organization",
  "@id": `${SITE_URL}/#business`,
  name: siteConfig.brandName,
  url: SITE_URL,
@@ -85,7 +86,7 @@ export function getLocalBusinessSchema() {
  streetAddress: siteConfig.business.address,
  addressCountry: "IN",
  };
- if (siteConfig.business.geo) {
+ if (siteConfig.business.geo && (siteConfig.business.geo.latitude !== 0 || siteConfig.business.geo.longitude !== 0)) {
  schema.geo = {
  "@type": "GeoCoordinates",
  latitude: siteConfig.business.geo.latitude,
