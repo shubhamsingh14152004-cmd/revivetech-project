@@ -1,5 +1,6 @@
 import React from "react";
 import { PhoneState } from "./PhoneIllustration";
+import { getConditionLabel } from "../content/conditions";
 
 interface ReceiptProps {
   brandName: string;
@@ -11,10 +12,7 @@ interface ReceiptProps {
 }
 
 export function Receipt({ brandName, model, storage, condition, hasBox }: ReceiptProps) {
-  const conditionLabel = condition === "working" ? "Working" 
-    : condition === "flawed" ? "Flawed" 
-    : condition === "broken_screen" ? "Broken screen" 
-    : "Dead / Not turning on";
+  const conditionLabel = getConditionLabel(condition);
 
   return (
     <div className="mb-6 p-5 rounded-2xl bg-white border border-line shadow-sm relative overflow-hidden flex flex-col">

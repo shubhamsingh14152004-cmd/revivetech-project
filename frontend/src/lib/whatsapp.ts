@@ -8,30 +8,14 @@
  *  - Omit fields that are empty / falsy
  *  - Sanitize: trim, strip non-printable chars, enforce per-field char caps
  *  - Total message capped at 900 chars before encoding
+ *  - No reference codes (RV-*)
+ *  - No business hours in customer message
+ *  - Exact customer-facing labels for condition from conditions.ts
+ *  - Closing line is the exact request line; nothing appended after
  */
 
 import { siteConfig } from "../config/siteConfig";
-
-// ---------------------------------------------------------------------------
-// Reference ID — generated once per browser session
-// ---------------------------------------------------------------------------
-function makeRefId(): string {
-  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no 0/O/1/I ambiguity
-  let id = "RV-";
-  for (let i = 0; i < 5; i++) {
-    id += chars[Math.floor(Math.random() * chars.length)];
-  }
-  return id;
-}
-
-let _sessionRef: string | null = null;
-
-export function getSessionRef(): string {
-  if (!_sessionRef) {
-    _sessionRef = makeRefId();
-  }
-  return _sessionRef;
-}
+import { getConditionLabel } from "../content/conditions";
 
 // ---------------------------------------------------------------------------
 // Sanitize helpers
@@ -101,6 +85,8 @@ export interface WaModelNotListedData {
 
 export interface WaCatalogRowData {
   brand: string;
+  model?: string;
+  storage?: string;
   note?: string;
 }
 
@@ -147,24 +133,22 @@ export type WaData =
 // Core builder
 // ---------------------------------------------------------------------------
 export function buildWhatsAppMessage(kind: WaKind, data: WaData = {}): string {
-  const ref = getSessionRef();
-  const hours = siteConfig.hours;
   let msg = "";
 
   switch (kind) {
     case "SELL": {
       const d = data as WaSellData;
       msg += "Hi Revora, I want to sell my phone.\n\n";
-      msg += line("Phone", `${d.brand} ${d.model}`);
+      msg += line("Phone", `${d.brand} ${d.model}`.trim());
       msg += line("Storage", d.storage);
-      msg += line("Condition", d.condition);
+      msg += line("Condition", getConditionLabel(d.condition));
       if (d.hasBox !== undefined) {
         msg += line("Box and charger", d.hasBox ? "Yes" : "No");
       }
       msg += line("Name", d.name);
       msg += line("Pincode", d.pincode);
       if (d.note) msg += line("Note", d.note);
-      msg += `\nRef: ${ref}`;
+      msg += "\nPlease share the price and pickup details.";
       break;
     }
 
@@ -177,7 +161,7 @@ export function buildWhatsAppMessage(kind: WaKind, data: WaData = {}): string {
       msg += line("Name", d.name);
       msg += line("Pincode", d.pincode);
       if (d.note) msg += line("Note", d.note);
-      msg += `\nRef: ${ref}`;
+      msg += "\nPlease tell me if you can take it and share the price.";
       break;
     }
 
@@ -193,7 +177,7 @@ export function buildWhatsAppMessage(kind: WaKind, data: WaData = {}): string {
       msg += line("Name", d.name);
       msg += line("Pincode", d.pincode);
       if (d.note) msg += line("Note", d.note);
-      msg += `\nRef: ${ref}`;
+      msg += "\nPlease share the repair price and the time needed.";
       break;
     }
 
@@ -203,15 +187,20 @@ export function buildWhatsAppMessage(kind: WaKind, data: WaData = {}): string {
       msg += line("Brand", d.brand);
       msg += line("Model searched", d.searchedName);
       if (d.note) msg += line("Note", d.note);
-      msg += `\nRef: ${ref}`;
+      msg += "\nPlease share the price and pickup details.";
       break;
     }
 
     case "CATALOG_ROW": {
       const d = data as WaCatalogRowData;
-      msg += `Hi Revora, I am interested in selling my ${san(d.brand, 40)} phone.\n\n`;
+      if (d.model) {
+        msg += `Hi Revora, I want the price for my ${san(d.brand, 40)} ${san(d.model, 40)}.\n\n`;
+      } else {
+        msg += `Hi Revora, I am interested in selling my ${san(d.brand, 40)} phone.\n\n`;
+      }
+      if (d.storage) msg += line("Storage", d.storage);
       if (d.note) msg += line("Note", d.note);
-      msg += `\nRef: ${ref}`;
+      msg += "\nI will share the condition and photos here.";
       break;
     }
 
@@ -221,7 +210,7 @@ export function buildWhatsAppMessage(kind: WaKind, data: WaData = {}): string {
       msg += line("Phone", `${d.brand || ""} ${d.model || ""}`.trim());
       msg += line("Issue", d.issue);
       if (d.note) msg += line("Note", d.note);
-      msg += `\nRef: ${ref}`;
+      msg += "\nPlease advise and share both prices.";
       break;
     }
 
@@ -231,16 +220,15 @@ export function buildWhatsAppMessage(kind: WaKind, data: WaData = {}): string {
       if (d.count) msg += line("Approximate count", String(d.count));
       msg += line("Brands", d.brands);
       if (d.note) msg += line("Note", d.note);
-      msg += `\nRef: ${ref}`;
+      msg += "\nI will send the list of models and conditions here.";
       break;
     }
 
     case "TRACK": {
       const d = data as WaTrackData;
       msg += "Hi Revora, I want to check on my repair or sell request.\n\n";
-      msg += line("Ticket / Reference", d.ticketNumber);
+      msg += line("Ticket", d.ticketNumber);
       msg += line("Name", d.name);
-      msg += `\nRef: ${ref}`;
       break;
     }
 
@@ -249,7 +237,6 @@ export function buildWhatsAppMessage(kind: WaKind, data: WaData = {}): string {
       msg += "Hi Revora, I have a question.\n\n";
       msg += line("Page", d.pageTitle);
       if (d.note) msg += line("Note", d.note);
-      msg += `\nRef: ${ref}`;
       break;
     }
 
@@ -257,15 +244,12 @@ export function buildWhatsAppMessage(kind: WaKind, data: WaData = {}): string {
       const d = data as WaGeneralData;
       msg += "Hi Revora, I have a question about my phone.\n\n";
       if (d.note) msg += line("Note", d.note);
-      msg += `\nRef: ${ref}`;
       break;
     }
   }
 
-  // Append business hours reminder and trim to 900 chars
-  const hoursLine = `\nWe are available ${hours}.`;
-  const trimmed = msg.slice(0, 900 - hoursLine.length);
-  return (trimmed + hoursLine).trim();
+  // Exactly trim to 900 chars max, nothing appended after
+  return msg.trim().slice(0, 900);
 }
 
 // ---------------------------------------------------------------------------

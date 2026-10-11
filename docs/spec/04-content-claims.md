@@ -48,7 +48,7 @@ The script prints file, line, and the phrase. It also flags any digit-based stat
 - Buttons: "Get my price", "Book pickup", "Book repair", "Check my pincode", "Send on WhatsApp", "Track my request", "Continue", "Back".
 - Errors say what to do: "Enter a 10-digit mobile number." "We could not send your request. Check your connection and try again."
 - Empty search: "No match. Ask us on WhatsApp and we will check."
-- Success: "Request received. Your reference is RT-1234. We will WhatsApp you shortly." (use the real response-time claim only if verified)
+- Success: "Request received. We will WhatsApp you shortly." (use the real response-time claim only if verified)
 - Toasts: one line, no emoji, optional action.
 
 ## Testimonials

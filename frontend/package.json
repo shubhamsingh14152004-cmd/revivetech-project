@@ -16,7 +16,9 @@
     "format": "prettier --write .",
     "check:links": "node scripts/check-links.mjs",
     "check:claims": "node scripts/check-claims.mjs",
-    "check:seo": "node scripts/check-seo.mjs"
+    "check:seo": "node scripts/check-seo.mjs",
+    "test:whatsapp": "node scripts/test-whatsapp.mjs",
+    "test": "node scripts/test-whatsapp.mjs"
   },
   "overrides": {
     "rolldown": "1.2.1"

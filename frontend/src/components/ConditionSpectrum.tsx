@@ -6,12 +6,8 @@ interface ConditionSpectrumProps {
   onChange: (value: PhoneState) => void;
 }
 
-const conditions: { id: PhoneState; label: string; desc: string }[] = [
-  { id: "dead", label: "Dead", desc: "Won't turn on / Water" },
-  { id: "broken_screen", label: "Cracked", desc: "Screen glass broken" },
-  { id: "flawed", label: "Worn", desc: "Heavy scratches/dents" },
-  { id: "working", label: "Mint", desc: "Flawless screen & body" },
-];
+import { CONDITIONS } from "../content/conditions";
+const conditions = CONDITIONS;
 
 export function ConditionSpectrum({ value, onChange }: ConditionSpectrumProps) {
   return (
@@ -70,11 +66,11 @@ export function ConditionSpectrum({ value, onChange }: ConditionSpectrumProps) {
                 <span className={`block text-[13px] font-bold transition-colors ${
                   isSelected ? "text-ink" : "text-muted group-hover:text-ink"
                 }`}>
-                  {condition.label}
+                  {condition.shortLabel}
                 </span>
                 {isSelected && (
                   <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-max text-[11px] font-medium text-brand animate-in fade-in slide-in-from-top-1">
-                    {condition.desc}
+                    {condition.label}
                   </span>
                 )}
               </div>

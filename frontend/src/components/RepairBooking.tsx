@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { waHref, fireWaAnalytics } from "../lib/whatsapp";
+import { siteConfig } from "../config/siteConfig";
 import {
   Wrench,
   Clock,
@@ -421,10 +422,15 @@ export function RepairBooking() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => fireWaAnalytics("REPAIR", { brand: selectedBrand, model: deviceModel })}
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-brand hover:bg-brand-600 px-6 py-4 text-[15px] font-bold text-white transition focus-ring min-h-[48px] mb-3"
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-brand hover:bg-brand-600 px-6 py-4 text-[15px] font-bold text-white transition focus-ring min-h-[48px] mb-2"
               >
                 Get Quote on WhatsApp
               </a>
+              {siteConfig.hours ? (
+                <p className="text-[12px] text-muted text-center -mt-1 mb-3 font-medium">
+                  We reply between {siteConfig.hours}
+                </p>
+              ) : null}
 
               <button
                 type="submit"

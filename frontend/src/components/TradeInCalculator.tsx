@@ -9,6 +9,7 @@ import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, Command
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Drawer, DrawerContent, DrawerTrigger, DrawerTitle } from "./ui/drawer";
 import { waHref, fireWaAnalytics } from "../lib/whatsapp";
+import { siteConfig } from "../config/siteConfig";
 import { toast } from "sonner";
 import { api } from "../services/api";
 import { useIsMobile } from "../hooks/use-mobile";
@@ -424,13 +425,30 @@ export function TradeInCalculator({
               </div>
 
               {/* Primary: WhatsApp */}
-              <button 
-                type="button" 
-                onClick={handleWhatsApp}
+              <a 
+                href={waHref("SELL", {
+                  brand: selectedBrand?.name || brandId,
+                  model,
+                  storage,
+                  condition,
+                  hasBox,
+                  name: name || undefined,
+                  pincode: pincode || undefined,
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  fireWaAnalytics("SELL", { brand: selectedBrand?.name || brandId, model, condition });
+                }}
                 className="w-full py-3.5 rounded-xl bg-brand text-white font-bold text-[14px] flex items-center justify-center gap-2 hover:bg-brand-700 transition-colors shadow-md focus-ring"
               >
                 Ask price on WhatsApp
-              </button>
+              </a>
+              {siteConfig.hours ? (
+                <p className="text-[12px] text-muted text-center -mt-2 mb-1 font-medium">
+                  We reply between {siteConfig.hours}
+                </p>
+              ) : null}
 
               {/* Secondary: Book Pickup */}
               <button 
