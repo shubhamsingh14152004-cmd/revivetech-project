@@ -19,16 +19,16 @@ interface ChatMessage {
 const DEFAULT_MESSAGES: ChatMessage[] = [
  {
  sender:"bot",
- text:"Welcome to Revora! Sell your old/dead phone or book a 45-minute doorstep repair. How can we help you today?",
+ text:"Welcome to Revora. Tell us your phone model and whether you need to sell it or arrange a repair. We can confirm availability and next steps.",
  time:"Just now",
  },
 ];
 
 const PRESET_QUESTIONS = [
-"How does dead phone cash pickup work?",
-"How long does screen replacement take?",
-"Is my personal data safe if the phone is dead?",
-"What is the 90-day warranty coverage?",
+"How can I ask about selling my phone?",
+"How do I ask about a repair?",
+"What should I do with my data before selling?",
+"Which areas do you serve?",
 ];
 
 interface FloatingDockProps {
@@ -56,19 +56,7 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
  setIsTyping(true);
 
  setTimeout(() => {
- let botReply =
-"Our lab technicians are reviewing your inquiry. You can also call or WhatsApp us directly at +91 8591770877 for instant pricing!";
- const lower = textToSend.toLowerCase();
- if (lower.includes("iphone") || lower.includes("dead") || lower.includes("price") || lower.includes("cash") || lower.includes("sell")) {
- botReply =
-"We offer the highest market payout for dead iPhones and smartphones! Call or WhatsApp us at +91 8591770877 for your payout via UPI quote and free doorstep pickup.";
- } else if (lower.includes("screen") || lower.includes("repair") || lower.includes("time") || lower.includes("doorstep")) {
- botReply =
-"Most OLED screen replacements and battery swaps are completed in 45 minutes right at your doorstep. Plus enjoy a free glass protector and cover!";
- } else if (lower.includes("data") || lower.includes("safe") || lower.includes("wipe")) {
- botReply =
-"All trade-in devices undergo certified NIST 800-88 sanitized cryptographic wiping. Your personal photos and data remain 100% secure.";
- }
+ const botReply = "This quick help widget does not provide a live assessment. Call or WhatsApp Revora at +91 85917 70877 to confirm pricing, availability, and next steps.";
 
  setMessages((prev) => [
  ...prev,
@@ -132,11 +120,11 @@ export function FloatingDock({ onOpenRepairModal }: FloatingDockProps = {}) {
  </div>
  <div>
  <h4 className="text-sm font-bold text-ink">
- Revora AI Assistant
+ Revora Quick Help
  </h4>
  <div className="flex items-center gap-1.5 text-[10px] text-brand-ink font-semibold">
  <span className="h-1.5 w-1.5 rounded-full bg-brand" />
- <span>Online · Instant Answers</span>
+ <span>Contact options</span>
  </div>
  </div>
  </div>
