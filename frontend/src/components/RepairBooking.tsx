@@ -283,7 +283,7 @@ export function RepairBooking() {
                   >
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-bold text-[15px]">{issue.name}</span>
-                      <span className="text-[14px] font-bold text-brand">₹{issue.cost.toLocaleString("en-IN")}</span>
+                      <span className="text-[14px] font-bold text-brand">Ask for a quote</span>
                     </div>
                     <p className="text-[13px] text-muted line-clamp-2 leading-relaxed">{issue.desc}</p>
                     <div className="flex items-center justify-between mt-3 pt-3 border-t border-line/50 text-[13px] font-medium">
