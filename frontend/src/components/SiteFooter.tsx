@@ -18,7 +18,7 @@ export function SiteFooter() {
             </Link>
             <p className="text-[14px] text-brand-tint/70 leading-relaxed">
               Sell your smartphone or book a repair with a simple, convenient experience. 
-              Certified lab mobile phone repairs and assured a fair price buybacks.
+              Phone repair and buyback options in Mumbai, Navi Mumbai, and Thane. Contact us to confirm current service availability.
             </p>
             <div className="space-y-3 text-[14px]">
               {siteConfig.business.hasPublicAddress && siteConfig.business.address && (
@@ -48,6 +48,9 @@ export function SiteFooter() {
             <Link to="/sell-damaged-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Damaged Phone</Link>
             <Link to="/sell-dead-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Dead Phone</Link>
             <Link to="/dead-phone-buyback" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Dead Mobile Salvage</Link>
+            <Link to="/sell-dead-iphone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell a Dead iPhone</Link>
+            <Link to="/sell-water-damaged-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell a Water-Damaged Phone</Link>
+            <Link to="/phone-buyback-price-india" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Phone Buyback Prices</Link>
             <Link to="/buyback" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Enterprise ITAD</Link>
           </div>
 
@@ -60,6 +63,14 @@ export function SiteFooter() {
             <Link to="/screen-repair" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Screen Replacement</Link>
             <Link to="/battery-replacement" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Battery Replacement</Link>
             <Link to="/water-damage-repair" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Liquid Damage Repair</Link>
+            <Link to="/phone-repair-navi-mumbai" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Navi Mumbai Repair</Link>
+            <Link to="/phone-repair-thane" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Thane Repair</Link>
+            <Link to="/doorstep-mobile-repair-andheri" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Andheri Repair</Link>
+            <Link to="/doorstep-mobile-repair-bandra" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Bandra Repair</Link>
+            <Link to="/doorstep-mobile-repair-borivali" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Borivali Repair</Link>
+            <Link to="/doorstep-mobile-repair-dadar" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Dadar Repair</Link>
+            <Link to="/doorstep-mobile-repair-kurla" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Kurla Repair</Link>
+            <Link to="/doorstep-mobile-repair-powai" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Powai Repair</Link>
           </div>
 
           {/* Company */}

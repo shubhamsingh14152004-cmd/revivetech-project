@@ -24,27 +24,28 @@ import {
  PhoneCall,
 } from"lucide-react";
 import heroPhone from"../assets/hero-phone.jpg";
+import { siteConfig } from "../config/siteConfig";
 
 const FAQS = [
  {
  question:"What is the difference between trade-in and selling for cash?",
  answer:
-"At Revora, both options provide upfront liquidity. You can choose direct payout via UPI (via UPI or bank transfer) or receive a high-quality credit voucher with bonus value toward a certified refurbished phone upgrade.",
+"Contact Revora with your phone model and condition to ask about an assessment. If a quote is provided, confirm the final offer, payment method, and applicable terms before deciding.",
  },
  {
  question:"Do you accept corporate and bulk phone buyback orders?",
  answer:
-"Yes. We support corporate fleet upgrades, IT asset disposition (ITAD), and bulk enterprise smartphone buybacks. We provide formal GST invoices, serialised asset reconciliation reports, and certified NIST 800-88 data sanitization certificates.",
+"Contact us with your organization’s requirements and device details. We can confirm whether a bulk buyback assessment is available and discuss applicable documentation and data-handling terms.",
  },
  {
  question:"How is device data sanitized before refurbishing or recycling?",
  answer:
-"Every single device enters our digital sanitization dock where proprietary firmware flashing overwrites internal flash storage blocks. We provide digital Certificates of Erasure upon request.",
+"Before handing over a working device, back up your data, sign out of accounts, remove SIM and memory cards, and factory-reset it. Contact Revora first if a device cannot be powered on, and confirm the handling process before proceeding.",
  },
  {
  question:"What happens to phones that cannot be repaired or refurbished?",
  answer:
-"Non-recoverable mobile phones are routed through our zero-landfill e-waste recycling pipeline. Hazardous elements like lithium and lead are safely sequestered, while precious metals (gold, copper, rare-earths) are reclaimed.",
+"Ask Revora how an unrepairable or non-working device can be handled. Confirm any recycling arrangements and applicable terms directly with the team.",
  },
 ];
 
@@ -57,7 +58,7 @@ export const Route = createFileRoute("/buyback")({
  {
  name:"description",
  content:
-"Upgrade and trade in old, damaged, or company fleet phones. Best market valuation, zero-landfill e-waste recycling & NIST 800-88 certified data destruction.",
+"Ask Revora about selling or trading in a phone. Share the model and condition to confirm whether an assessment is available in your area.",
  },
  {
  name:"keywords",
@@ -71,7 +72,7 @@ export const Route = createFileRoute("/buyback")({
  {
  property:"og:description",
  content:
-"Consumer & enterprise mobile phone buyback. assured highest value, certified data destruction, and fast doorstep logistics.",
+"Phone buyback enquiries for Mumbai, Navi Mumbai, and Thane. Contact Revora to confirm assessment availability and terms.",
  },
  {
  property:"og:url",
@@ -220,7 +221,7 @@ function BuybackPage() {
  <span>Call Corporate Desk: +91 8591770877</span>
  </a>
  <a
- href="mailto:supportsellphone@gmail.com?subject=Corporate%20Buyback%20Inquiry"
+ href={`mailto:${siteConfig.email}?subject=Corporate%20Buyback%20Inquiry`}
  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-slate-50 border border-line text-ink text-sm font-semibold transition-colors"
  >
  <span>Email Fleet Inquiry</span>
