@@ -11,6 +11,7 @@ import {
  SITE_URL,
 } from"../components/SeoJsonLd";
 import { waHref } from"../lib/whatsapp";
+import { siteConfig } from "../config/siteConfig";
 import {
  Phone,
  Mail,
@@ -35,7 +36,7 @@ export const Route = createFileRoute("/contact")({
  {
  name:"description",
  content:
-"Contact Revora customer support. Call/WhatsApp +91 8591770877 or email supportsellphone@gmail.com for instant repair quotes, doorstep courier pickup & phone buybacks.",
+"Contact Revora about phone repair and buyback services in Mumbai, Navi Mumbai, and Thane. Call, WhatsApp, or email our team to confirm availability.",
  },
  {
  name:"keywords",
@@ -211,7 +212,7 @@ function ContactPage() {
 
  {/* Email Card */}
  <a
- href="mailto:supportsellphone@gmail.com"
+ href={`mailto:${siteConfig.email}`}
  className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-line hover:border-brand transition-colors group shadow-xs"
  >
  <div className="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-700 shrink-0 group-hover:bg-brand group-hover:text-white transition-colors">
@@ -221,7 +222,7 @@ function ContactPage() {
  <div className="text-xs text-teal-800 font-semibold uppercase tracking-wider">
  Official Email
  </div>
- <div className="text-base font-bold text-ink mt-0.5">supportsellphone@gmail.com</div>
+ <div className="text-base font-bold text-ink mt-0.5">{siteConfig.email}</div>
  <p className="text-xs text-muted mt-1">Corporate inquiries, ITAD bulk buybacks & warranty service</p>
  </div>
  </a>
