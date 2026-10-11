@@ -475,9 +475,9 @@ export function TradeInCalculator({
           <div className="w-20 h-20 rounded-full bg-brand-50 flex items-center justify-center mb-6">
             <CheckCircle2 className="h-10 w-10 text-brand" />
           </div>
-          <h3 className="text-3xl font-black text-ink mb-3">Request Confirmed!</h3>
+          <h3 className="text-3xl font-black text-ink mb-3">Request received</h3>
           <p className="text-[15px] text-muted max-w-sm mb-8 leading-relaxed">
-            Our team will contact you at <strong className="text-ink font-bold">+91 {phone}</strong> within 15 minutes to schedule your doorstep pickup.
+            We will contact you at <strong className="text-ink font-bold">+91 {phone}</strong> to discuss the assessment and check pickup availability for your area.
           </p>
           
           <button 

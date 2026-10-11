@@ -110,7 +110,7 @@ export function getWebSiteSchema() {
  alternateName: "sellrepairphone.org",
  url: `${SITE_URL}/`,
  publisher: {
- "@id": `${SITE_URL}/#org`,
+ "@id": `${SITE_URL}/#business`,
  },
  };
 }
