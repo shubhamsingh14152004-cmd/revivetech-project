@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import repairRoutes from "./routes/repairRoutes.js";
+import deviceRoutes from "./routes/deviceRoutes.js";
+import deviceAdminRoutes from "./routes/deviceAdminRoutes.js";
 import { errorHandler, notFoundHandler } from "./middleware/errorHandler.js";
 import { Admin } from "./models/Admin.js";
 
@@ -170,6 +172,8 @@ apiRouter.get("/health", async (req, res) => {
 
 apiRouter.use("/auth", authRoutes);
 apiRouter.use("/repairs", repairRoutes);
+apiRouter.use("/devices", deviceRoutes);
+apiRouter.use("/admin/devices", deviceAdminRoutes);
 
 // Mount central API router under /api
 app.use("/api", apiRouter);

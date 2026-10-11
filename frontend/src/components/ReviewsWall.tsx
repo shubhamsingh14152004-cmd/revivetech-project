@@ -38,7 +38,7 @@ const REVIEWS_DATA: Review[] = [
  date:"Yesterday",
  highlightBadge:"42-Min lab Fix",
  review:
-"Dropped my phone down concrete metro stairs. Dropped it off at Revora during lunch and had it back glowing like brand new in 42 minutes. True OEM display and fingerprint get works seamlessly.",
+"Dropped my phone down concrete metro stairs. Dropped it off at Revora during lunch and had it back glowing like brand new in 42 minutes. True OEM display and fingerprint get works perfectly.",
  payoutOrSaved:"Saved ₹35,000 vs replacement",
  },
  {

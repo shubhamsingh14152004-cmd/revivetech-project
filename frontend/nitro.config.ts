@@ -7,4 +7,7 @@ export default defineNitroConfig({
       runtime: "nodejs22.x",
     },
   },
+  routeRules: {
+    "/api/**": { proxy: "http://127.0.0.1:5000/api/**" },
+  },
 });

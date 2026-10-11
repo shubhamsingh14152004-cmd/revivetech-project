@@ -23,6 +23,7 @@ import {
  Phone,
 } from"lucide-react";
 import heroPhone from"../assets/hero-phone.jpg";
+import { NAV_BRANDS } from "../content/nav";
 
 const FAQS = [
  {
@@ -260,34 +261,16 @@ function RepairPage() {
  </div>
 
  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs">
+ {NAV_BRANDS.map(brand => (
  <Link
- to="/iphone-repair"
+ key={brand.href}
+ to={brand.href as any}
  className="p-4 rounded-xl bg-white border border-line hover:border-brand flex items-center justify-between group transition shadow-xs"
  >
- <span className="font-bold text-ink group-hover:text-brand">Apple iPhone</span>
+ <span className="font-bold text-ink group-hover:text-brand">{brand.name}</span>
  <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-brand" />
  </Link>
- <Link
- to="/samsung-repair"
- className="p-4 rounded-xl bg-white border border-line hover:border-brand flex items-center justify-between group transition shadow-xs"
- >
- <span className="font-bold text-ink group-hover:text-brand">Samsung Galaxy</span>
- <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-brand" />
- </Link>
- <Link
- to="/android-repair"
- className="p-4 rounded-xl bg-white border border-line hover:border-brand flex items-center justify-between group transition shadow-xs"
- >
- <span className="font-bold text-ink group-hover:text-brand">OnePlus & Pixel</span>
- <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-brand" />
- </Link>
- <Link
- to="/android-repair"
- className="p-4 rounded-xl bg-white border border-line hover:border-brand flex items-center justify-between group transition shadow-xs"
- >
- <span className="font-bold text-ink group-hover:text-brand">Xiaomi, Vivo & Oppo</span>
- <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-brand" />
- </Link>
+ ))}
  </div>
  </section>
 

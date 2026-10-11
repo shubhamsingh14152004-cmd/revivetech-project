@@ -27,7 +27,7 @@ function walk(dir, fileList = []) {
         walk(path.join(dir, file), fileList);
       }
     } else {
-      if (file.endsWith('.tsx')) {
+      if (file.endsWith('.tsx') || file.endsWith('.ts')) {
         fileList.push(path.join(dir, file));
       }
     }
@@ -35,12 +35,16 @@ function walk(dir, fileList = []) {
   return fileList;
 }
 
-const tsxFiles = walk(path.join(process.cwd(), 'src'));
+const sourceFiles = walk(path.join(process.cwd(), 'src'));
+const linkedRoutes = new Set();
+// Add root by default
+linkedRoutes.add('/');
+
 const telLinks = new Set();
 const waLinks = new Set();
 const mailLinks = new Set();
 
-for (const file of tsxFiles) {
+for (const file of sourceFiles) {
   const content = fs.readFileSync(file, 'utf8');
   
   // check to="..."
@@ -50,22 +54,30 @@ for (const file of tsxFiles) {
     if (link === '' || link === '#') {
       console.error(`Invalid link to="${link}" in ${file}`);
       errors++;
-    } else if (link.startsWith('/') && !validRoutes.has(link.split('?')[0].split('#')[0])) {
-      console.error(`Link to unknown route to="${link}" in ${file}`);
-      errors++;
+    } else if (link.startsWith('/')) {
+      const cleanLink = link.split('?')[0].split('#')[0];
+      linkedRoutes.add(cleanLink);
+      if (!validRoutes.has(cleanLink)) {
+        console.error(`Link to unknown route to="${link}" in ${file}`);
+        errors++;
+      }
     }
   }
 
-  // check href="..."
-  const hrefMatches = [...content.matchAll(/href=["'](.*?)["']/g)];
+  // check href="..." or href: "..."
+  const hrefMatches = [...content.matchAll(/href:\s*["'](.*?)["']/g), ...content.matchAll(/href=["'](.*?)["']/g)];
   for (const m of hrefMatches) {
     let link = m[1];
     if (link === '' || link === '#' || link.startsWith('javascript:')) {
       console.error(`Invalid link href="${link}" in ${file}`);
       errors++;
     } else if (link.startsWith('/')) {
+      const cleanLink = link.split('?')[0].split('#')[0];
+      if (!link.includes('.') && !link.startsWith('/api')) {
+        linkedRoutes.add(cleanLink);
+      }
       // allow some valid static files
-      if (!validRoutes.has(link.split('?')[0].split('#')[0]) && !link.includes('.') && !link.startsWith('/api')) {
+      if (!validRoutes.has(cleanLink) && !link.includes('.') && !link.startsWith('/api')) {
         console.error(`Link to unknown route href="${link}" in ${file}`);
         errors++;
       }
@@ -79,6 +91,16 @@ for (const file of tsxFiles) {
   }
 }
 
+// 2. Check for orphaned pages
+for (const route of validRoutes) {
+  if (route.startsWith('/api') || route.startsWith('/admin') || route === '/noindex') continue;
+  
+  if (!linkedRoutes.has(route)) {
+    console.error(`Orphaned route found! No internal links point to: ${route}`);
+    errors++;
+  }
+}
+
 console.log('--- External Contact Links Found ---');
 console.log('TEL:', Array.from(telLinks));
 console.log('MAILTO:', Array.from(mailLinks));
@@ -89,5 +111,5 @@ if (errors > 0) {
   console.error(`Found ${errors} link errors.`);
   process.exit(1);
 } else {
-  console.log('Link check passed.');
+  console.log('Link check passed. All routes are valid and linked.');
 }

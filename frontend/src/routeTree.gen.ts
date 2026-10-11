@@ -21,12 +21,17 @@ import { Route as DeadPhoneBuybackRouteImport } from './routes/dead-phone-buybac
 import { Route as DeadPhoneRepairRouteImport } from './routes/dead-phone-repair'
 import { Route as DoorstepMobileRepairRouteImport } from './routes/doorstep-mobile-repair'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as FixOrSellRouteImport } from './routes/fix-or-sell'
 import { Route as GooglePixelRepairRouteImport } from './routes/google-pixel-repair'
+import { Route as HowWeWipeYourDataRouteImport } from './routes/how-we-wipe-your-data'
 import { Route as IphoneRepairRouteImport } from './routes/iphone-repair'
 import { Route as MobileRepairMumbaiRouteImport } from './routes/mobile-repair-mumbai'
 import { Route as MotorolaRepairRouteImport } from './routes/motorola-repair'
+import { Route as NothingRepairRouteImport } from './routes/nothing-repair'
 import { Route as OneplusRepairRouteImport } from './routes/oneplus-repair'
 import { Route as OppoRepairRouteImport } from './routes/oppo-repair'
+import { Route as PhoneBuybackPriceIndiaRouteImport } from './routes/phone-buyback-price-india'
+import { Route as PhoneNotTurningOnRouteImport } from './routes/phone-not-turning-on'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RealmeRepairRouteImport } from './routes/realme-repair'
 import { Route as RepairRouteImport } from './routes/repair'
@@ -42,6 +47,7 @@ import { Route as WaterDamageRepairRouteImport } from './routes/water-damage-rep
 import { Route as XiaomiRepairRouteImport } from './routes/xiaomi-repair'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as SellBrandSlugRouteImport } from './routes/sell.$brandSlug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -103,9 +109,19 @@ const FaqRoute = FaqRouteImport.update({
   path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FixOrSellRoute = FixOrSellRouteImport.update({
+  id: '/fix-or-sell',
+  path: '/fix-or-sell',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GooglePixelRepairRoute = GooglePixelRepairRouteImport.update({
   id: '/google-pixel-repair',
   path: '/google-pixel-repair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowWeWipeYourDataRoute = HowWeWipeYourDataRouteImport.update({
+  id: '/how-we-wipe-your-data',
+  path: '/how-we-wipe-your-data',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IphoneRepairRoute = IphoneRepairRouteImport.update({
@@ -123,6 +139,11 @@ const MotorolaRepairRoute = MotorolaRepairRouteImport.update({
   path: '/motorola-repair',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NothingRepairRoute = NothingRepairRouteImport.update({
+  id: '/nothing-repair',
+  path: '/nothing-repair',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OneplusRepairRoute = OneplusRepairRouteImport.update({
   id: '/oneplus-repair',
   path: '/oneplus-repair',
@@ -131,6 +152,16 @@ const OneplusRepairRoute = OneplusRepairRouteImport.update({
 const OppoRepairRoute = OppoRepairRouteImport.update({
   id: '/oppo-repair',
   path: '/oppo-repair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhoneBuybackPriceIndiaRoute = PhoneBuybackPriceIndiaRouteImport.update({
+  id: '/phone-buyback-price-india',
+  path: '/phone-buyback-price-india',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhoneNotTurningOnRoute = PhoneNotTurningOnRouteImport.update({
+  id: '/phone-not-turning-on',
+  path: '/phone-not-turning-on',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -208,6 +239,11 @@ const AdminLoginRoute = AdminLoginRouteImport.update({
   path: '/admin/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SellBrandSlugRoute = SellBrandSlugRouteImport.update({
+  id: '/sell/$brandSlug',
+  path: '/sell/$brandSlug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -222,12 +258,17 @@ export interface FileRoutesByFullPath {
   '/dead-phone-repair': typeof DeadPhoneRepairRoute
   '/doorstep-mobile-repair': typeof DoorstepMobileRepairRoute
   '/faq': typeof FaqRoute
+  '/fix-or-sell': typeof FixOrSellRoute
   '/google-pixel-repair': typeof GooglePixelRepairRoute
+  '/how-we-wipe-your-data': typeof HowWeWipeYourDataRoute
   '/iphone-repair': typeof IphoneRepairRoute
   '/mobile-repair-mumbai': typeof MobileRepairMumbaiRoute
   '/motorola-repair': typeof MotorolaRepairRoute
+  '/nothing-repair': typeof NothingRepairRoute
   '/oneplus-repair': typeof OneplusRepairRoute
   '/oppo-repair': typeof OppoRepairRoute
+  '/phone-buyback-price-india': typeof PhoneBuybackPriceIndiaRoute
+  '/phone-not-turning-on': typeof PhoneNotTurningOnRoute
   '/privacy': typeof PrivacyRoute
   '/realme-repair': typeof RealmeRepairRoute
   '/repair': typeof RepairRoute
@@ -242,6 +283,7 @@ export interface FileRoutesByFullPath {
   '/water-damage-repair': typeof WaterDamageRepairRoute
   '/xiaomi-repair': typeof XiaomiRepairRoute
   '/admin/login': typeof AdminLoginRoute
+  '/sell/$brandSlug': typeof SellBrandSlugRoute
   '/admin/': typeof AdminIndexRoute
 }
 export interface FileRoutesByTo {
@@ -257,12 +299,17 @@ export interface FileRoutesByTo {
   '/dead-phone-repair': typeof DeadPhoneRepairRoute
   '/doorstep-mobile-repair': typeof DoorstepMobileRepairRoute
   '/faq': typeof FaqRoute
+  '/fix-or-sell': typeof FixOrSellRoute
   '/google-pixel-repair': typeof GooglePixelRepairRoute
+  '/how-we-wipe-your-data': typeof HowWeWipeYourDataRoute
   '/iphone-repair': typeof IphoneRepairRoute
   '/mobile-repair-mumbai': typeof MobileRepairMumbaiRoute
   '/motorola-repair': typeof MotorolaRepairRoute
+  '/nothing-repair': typeof NothingRepairRoute
   '/oneplus-repair': typeof OneplusRepairRoute
   '/oppo-repair': typeof OppoRepairRoute
+  '/phone-buyback-price-india': typeof PhoneBuybackPriceIndiaRoute
+  '/phone-not-turning-on': typeof PhoneNotTurningOnRoute
   '/privacy': typeof PrivacyRoute
   '/realme-repair': typeof RealmeRepairRoute
   '/repair': typeof RepairRoute
@@ -277,6 +324,7 @@ export interface FileRoutesByTo {
   '/water-damage-repair': typeof WaterDamageRepairRoute
   '/xiaomi-repair': typeof XiaomiRepairRoute
   '/admin/login': typeof AdminLoginRoute
+  '/sell/$brandSlug': typeof SellBrandSlugRoute
   '/admin': typeof AdminIndexRoute
 }
 export interface FileRoutesById {
@@ -293,12 +341,17 @@ export interface FileRoutesById {
   '/dead-phone-repair': typeof DeadPhoneRepairRoute
   '/doorstep-mobile-repair': typeof DoorstepMobileRepairRoute
   '/faq': typeof FaqRoute
+  '/fix-or-sell': typeof FixOrSellRoute
   '/google-pixel-repair': typeof GooglePixelRepairRoute
+  '/how-we-wipe-your-data': typeof HowWeWipeYourDataRoute
   '/iphone-repair': typeof IphoneRepairRoute
   '/mobile-repair-mumbai': typeof MobileRepairMumbaiRoute
   '/motorola-repair': typeof MotorolaRepairRoute
+  '/nothing-repair': typeof NothingRepairRoute
   '/oneplus-repair': typeof OneplusRepairRoute
   '/oppo-repair': typeof OppoRepairRoute
+  '/phone-buyback-price-india': typeof PhoneBuybackPriceIndiaRoute
+  '/phone-not-turning-on': typeof PhoneNotTurningOnRoute
   '/privacy': typeof PrivacyRoute
   '/realme-repair': typeof RealmeRepairRoute
   '/repair': typeof RepairRoute
@@ -313,6 +366,7 @@ export interface FileRoutesById {
   '/water-damage-repair': typeof WaterDamageRepairRoute
   '/xiaomi-repair': typeof XiaomiRepairRoute
   '/admin/login': typeof AdminLoginRoute
+  '/sell/$brandSlug': typeof SellBrandSlugRoute
   '/admin/': typeof AdminIndexRoute
 }
 export interface FileRouteTypes {
@@ -330,12 +384,17 @@ export interface FileRouteTypes {
     | '/dead-phone-repair'
     | '/doorstep-mobile-repair'
     | '/faq'
+    | '/fix-or-sell'
     | '/google-pixel-repair'
+    | '/how-we-wipe-your-data'
     | '/iphone-repair'
     | '/mobile-repair-mumbai'
     | '/motorola-repair'
+    | '/nothing-repair'
     | '/oneplus-repair'
     | '/oppo-repair'
+    | '/phone-buyback-price-india'
+    | '/phone-not-turning-on'
     | '/privacy'
     | '/realme-repair'
     | '/repair'
@@ -350,6 +409,7 @@ export interface FileRouteTypes {
     | '/water-damage-repair'
     | '/xiaomi-repair'
     | '/admin/login'
+    | '/sell/$brandSlug'
     | '/admin/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -365,12 +425,17 @@ export interface FileRouteTypes {
     | '/dead-phone-repair'
     | '/doorstep-mobile-repair'
     | '/faq'
+    | '/fix-or-sell'
     | '/google-pixel-repair'
+    | '/how-we-wipe-your-data'
     | '/iphone-repair'
     | '/mobile-repair-mumbai'
     | '/motorola-repair'
+    | '/nothing-repair'
     | '/oneplus-repair'
     | '/oppo-repair'
+    | '/phone-buyback-price-india'
+    | '/phone-not-turning-on'
     | '/privacy'
     | '/realme-repair'
     | '/repair'
@@ -385,6 +450,7 @@ export interface FileRouteTypes {
     | '/water-damage-repair'
     | '/xiaomi-repair'
     | '/admin/login'
+    | '/sell/$brandSlug'
     | '/admin'
   id:
     | '__root__'
@@ -400,12 +466,17 @@ export interface FileRouteTypes {
     | '/dead-phone-repair'
     | '/doorstep-mobile-repair'
     | '/faq'
+    | '/fix-or-sell'
     | '/google-pixel-repair'
+    | '/how-we-wipe-your-data'
     | '/iphone-repair'
     | '/mobile-repair-mumbai'
     | '/motorola-repair'
+    | '/nothing-repair'
     | '/oneplus-repair'
     | '/oppo-repair'
+    | '/phone-buyback-price-india'
+    | '/phone-not-turning-on'
     | '/privacy'
     | '/realme-repair'
     | '/repair'
@@ -420,6 +491,7 @@ export interface FileRouteTypes {
     | '/water-damage-repair'
     | '/xiaomi-repair'
     | '/admin/login'
+    | '/sell/$brandSlug'
     | '/admin/'
   fileRoutesById: FileRoutesById
 }
@@ -436,12 +508,17 @@ export interface RootRouteChildren {
   DeadPhoneRepairRoute: typeof DeadPhoneRepairRoute
   DoorstepMobileRepairRoute: typeof DoorstepMobileRepairRoute
   FaqRoute: typeof FaqRoute
+  FixOrSellRoute: typeof FixOrSellRoute
   GooglePixelRepairRoute: typeof GooglePixelRepairRoute
+  HowWeWipeYourDataRoute: typeof HowWeWipeYourDataRoute
   IphoneRepairRoute: typeof IphoneRepairRoute
   MobileRepairMumbaiRoute: typeof MobileRepairMumbaiRoute
   MotorolaRepairRoute: typeof MotorolaRepairRoute
+  NothingRepairRoute: typeof NothingRepairRoute
   OneplusRepairRoute: typeof OneplusRepairRoute
   OppoRepairRoute: typeof OppoRepairRoute
+  PhoneBuybackPriceIndiaRoute: typeof PhoneBuybackPriceIndiaRoute
+  PhoneNotTurningOnRoute: typeof PhoneNotTurningOnRoute
   PrivacyRoute: typeof PrivacyRoute
   RealmeRepairRoute: typeof RealmeRepairRoute
   RepairRoute: typeof RepairRoute
@@ -456,6 +533,7 @@ export interface RootRouteChildren {
   WaterDamageRepairRoute: typeof WaterDamageRepairRoute
   XiaomiRepairRoute: typeof XiaomiRepairRoute
   AdminLoginRoute: typeof AdminLoginRoute
+  SellBrandSlugRoute: typeof SellBrandSlugRoute
   AdminIndexRoute: typeof AdminIndexRoute
 }
 
@@ -545,11 +623,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fix-or-sell': {
+      id: '/fix-or-sell'
+      path: '/fix-or-sell'
+      fullPath: '/fix-or-sell'
+      preLoaderRoute: typeof FixOrSellRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/google-pixel-repair': {
       id: '/google-pixel-repair'
       path: '/google-pixel-repair'
       fullPath: '/google-pixel-repair'
       preLoaderRoute: typeof GooglePixelRepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-we-wipe-your-data': {
+      id: '/how-we-wipe-your-data'
+      path: '/how-we-wipe-your-data'
+      fullPath: '/how-we-wipe-your-data'
+      preLoaderRoute: typeof HowWeWipeYourDataRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/iphone-repair': {
@@ -573,6 +665,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MotorolaRepairRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/nothing-repair': {
+      id: '/nothing-repair'
+      path: '/nothing-repair'
+      fullPath: '/nothing-repair'
+      preLoaderRoute: typeof NothingRepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/oneplus-repair': {
       id: '/oneplus-repair'
       path: '/oneplus-repair'
@@ -585,6 +684,20 @@ declare module '@tanstack/react-router' {
       path: '/oppo-repair'
       fullPath: '/oppo-repair'
       preLoaderRoute: typeof OppoRepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/phone-buyback-price-india': {
+      id: '/phone-buyback-price-india'
+      path: '/phone-buyback-price-india'
+      fullPath: '/phone-buyback-price-india'
+      preLoaderRoute: typeof PhoneBuybackPriceIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/phone-not-turning-on': {
+      id: '/phone-not-turning-on'
+      path: '/phone-not-turning-on'
+      fullPath: '/phone-not-turning-on'
+      preLoaderRoute: typeof PhoneNotTurningOnRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -692,6 +805,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sell/$brandSlug': {
+      id: '/sell/$brandSlug'
+      path: '/sell/$brandSlug'
+      fullPath: '/sell/$brandSlug'
+      preLoaderRoute: typeof SellBrandSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -708,12 +828,17 @@ const rootRouteChildren: RootRouteChildren = {
   DeadPhoneRepairRoute: DeadPhoneRepairRoute,
   DoorstepMobileRepairRoute: DoorstepMobileRepairRoute,
   FaqRoute: FaqRoute,
+  FixOrSellRoute: FixOrSellRoute,
   GooglePixelRepairRoute: GooglePixelRepairRoute,
+  HowWeWipeYourDataRoute: HowWeWipeYourDataRoute,
   IphoneRepairRoute: IphoneRepairRoute,
   MobileRepairMumbaiRoute: MobileRepairMumbaiRoute,
   MotorolaRepairRoute: MotorolaRepairRoute,
+  NothingRepairRoute: NothingRepairRoute,
   OneplusRepairRoute: OneplusRepairRoute,
   OppoRepairRoute: OppoRepairRoute,
+  PhoneBuybackPriceIndiaRoute: PhoneBuybackPriceIndiaRoute,
+  PhoneNotTurningOnRoute: PhoneNotTurningOnRoute,
   PrivacyRoute: PrivacyRoute,
   RealmeRepairRoute: RealmeRepairRoute,
   RepairRoute: RepairRoute,
@@ -728,6 +853,7 @@ const rootRouteChildren: RootRouteChildren = {
   WaterDamageRepairRoute: WaterDamageRepairRoute,
   XiaomiRepairRoute: XiaomiRepairRoute,
   AdminLoginRoute: AdminLoginRoute,
+  SellBrandSlugRoute: SellBrandSlugRoute,
   AdminIndexRoute: AdminIndexRoute,
 }
 export const routeTree = rootRouteImport

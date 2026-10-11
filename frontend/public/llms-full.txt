@@ -1,0 +1,40 @@
+# Revora (sellrepairphone.org) - Full Knowledge Base
+
+Revora is a quality mobile repair and phone buyback service based in Mumbai, India. We specialise in reviving dead phones, micro-soldering, liquid damage recovery, and offering assured cash for pre-owned or broken devices.
+
+## Key Services
+- Instant Phone Buyback: Sell old, broken, or completely dead phones (iPhone, Samsung, etc.) for payment via UPI or bank transfer.
+- Lab Bench Repair: Specialized micro-soldering for dead logic boards, data recovery, and hardware faults.
+- Standard Repair: Same-day screen, battery, and camera replacements.
+- Pre-Loved Flagships: Shop certified 100-point inspected refurbished iPhones and Galaxy phones with 1-year shield warranty.
+- Doorstep Service: Free secure pickup and drop available across Mumbai, Navi Mumbai, and Thane.
+
+## Operating Principles & Security
+- 100% Data Security: We execute NIST 800-88 military-grade 3-pass hardware wipe on working phones. If dead, the memory chip is physically destroyed and recycled safely.
+- OEM Level Components: We use genuine components or quality equivalents, re-vulcanize IP68 water seals, and reprogram TrueTone/battery health data.
+- Turnaround Time: Most screen and battery replacements take 30-45 minutes. Micro-soldering and liquid damage recovery takes 24-48 hours.
+
+## Booking Process
+1. Quote: Customers use our online estimators (T1/T2) to get a fixed upfront price.
+2. Handover: Customers can book a free doorstep pickup (courier/runner), mail it in, or walk into the lab.
+3. Diagnostic: Devices undergo a 22-point diagnostic.
+4. Execution: Approved work is completed by master technicians.
+5. Payout / Return: Buyback payouts are instant via UPI/IMPS. Repaired devices are returned securely.
+
+## Contact & Location
+- Phone / WhatsApp: +91 85917 70877
+- Email: supportsellphone@gmail.com
+- Hours: 10:00 AM - 8:00 PM
+- Service Areas: Mumbai, Navi Mumbai, Thane (with Mail-In available pan-India)
+
+## URL Structure
+- Homepage: /
+- Buyback Calculator: /buyback
+- Repair Booking: /repair
+- Apple Repair: /iphone-repair
+- Samsung Repair: /samsung-repair
+- Dead Phone Recovery: /dead-phone-repair
+- Pre-Loved Store: /
+- FAQ: /faq
+
+For developers interacting with our system, all routes are rendered via TanStack Start (SSR/SSG).

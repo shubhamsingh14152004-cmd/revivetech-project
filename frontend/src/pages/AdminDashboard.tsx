@@ -39,9 +39,12 @@ import {
  UserCheck,
 } from"lucide-react";
 import { toast } from"sonner";
+import { AdminDevicesTab } from "./AdminDevicesTab";
 
 export function AdminDashboard() {
  const navigate = useNavigate();
+ const [activeMainTab, setActiveMainTab] = useState("requests");
+
 
  const [stats, setStats] = useState<RepairStats>({
  total: 0,
@@ -282,7 +285,29 @@ export function AdminDashboard() {
  <span>Sync Live DB</span>
  </button>
  </div>
+ 
+ <div className="flex gap-4 border-b border-white/10 mb-6">
+    <button
+      onClick={() => setActiveMainTab("requests")}
+      className={`pb-3 font-bold text-sm transition-colors border-b-2 ${
+        activeMainTab === "requests" ? "border-brand text-brand" : "border-transparent text-slate-400 hover:text-white"
+      }`}
+    >
+      Repair Requests
+    </button>
+    <button
+      onClick={() => setActiveMainTab("devices")}
+      className={`pb-3 font-bold text-sm transition-colors border-b-2 ${
+        activeMainTab === "devices" ? "border-brand text-brand" : "border-transparent text-slate-400 hover:text-white"
+      }`}
+    >
+      Device Catalog
+    </button>
+ </div>
+ </div>
 
+ {activeMainTab === "requests" ? (
+   <>
  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
  {/* Total */}
  <div className="h-full flex flex-col justify-between rounded-2xl glass-card-admin p-4 border border-brand/20 shadow-lg">
@@ -348,7 +373,6 @@ export function AdminDashboard() {
  {stats.cancelled}
  </span>
  <span className="text-[10px] text-rose-300/80 mt-1 block">Void / refunded</span>
- </div>
  </div>
  </div>
 
@@ -611,6 +635,10 @@ export function AdminDashboard() {
  </table>
  </div>
  </div>
+ </>
+ ) : (
+   <AdminDevicesTab />
+ )}
  </main>
 
  {/* Full Customer & Order Details Modal */}

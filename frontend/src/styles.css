@@ -2,9 +2,36 @@
 @source "../src";
 @import "tw-animate-css";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 @theme inline {
+  --color-brand-50: oklch(0.97 0.02 160);
+  --color-brand-100: oklch(0.93 0.04 160);
+  --color-brand-200: oklch(0.88 0.06 160);
+  --color-brand-300: oklch(0.81 0.09 160);
+  --color-brand-400: oklch(0.72 0.11 160);
+  --color-brand-500: oklch(0.62 0.13 160);
+  --color-brand-600: oklch(0.55 0.13 160); /* #007F5F */
+  --color-brand-700: oklch(0.42 0.11 160);
+  --color-brand-800: oklch(0.33 0.08 160);
+  --color-brand-900: oklch(0.24 0.05 160);
+  --color-brand-950: oklch(0.16 0.03 160);
+
+  --color-neutral-50: oklch(0.98 0.005 95);
+  --color-neutral-100: oklch(0.95 0.006 95);
+  --color-neutral-200: oklch(0.9 0.007 95);
+  --color-neutral-300: oklch(0.82 0.008 95);
+  --color-neutral-400: oklch(0.7 0.009 95);
+  --color-neutral-500: oklch(0.55 0.01 95);
+  --color-neutral-600: oklch(0.43 0.01 95);
+  --color-neutral-700: oklch(0.33 0.008 95);
+  --color-neutral-800: oklch(0.23 0.006 95);
+  --color-neutral-900: oklch(0.16 0.004 95);
+  --color-neutral-950: oklch(0.1 0.002 95);
+
+  --color-warning-500: oklch(0.75 0.15 70);
+  --color-error-500: oklch(0.6 0.2 25);
+
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
@@ -40,21 +67,29 @@
   --color-surface: var(--surface);
   --color-line: var(--line);
   --color-danger: var(--danger);
+  --color-warning: var(--warning);
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --text-h1: clamp(2.125rem, 1.2rem + 3.6vw, 4rem);
+  --text-h2: clamp(1.75rem, 1.2rem + 1.8vw, 2.75rem);
+  --text-body: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+  --text-small: 0.875rem;
+  --text-floor: 0.8125rem;
 }
 
 :root {
-  --bg: #FAFAF7;
+  --bg: var(--color-neutral-50);
   --surface: #FFFFFF;
-  --ink: #102A26;
-  --muted: #5B6B67;
-  --line: #E7E9E4;
-  --brand: #007F5F;
-  --brand-ink: #005B46;
-  --brand-tint: #EAF6F1;
-  --danger: #DC2626;
-  --radius: 12px;
+  --ink: var(--color-neutral-900);
+  --muted: var(--color-neutral-500);
+  --line: var(--color-neutral-200);
+  --brand: var(--color-brand-600);
+  --brand-ink: var(--color-brand-900);
+  --brand-tint: var(--color-brand-50);
+  --danger: var(--color-error-500);
+  --warning: var(--color-warning-500);
+  --radius: 16px;
 }
 
 @utility focus-ring {
@@ -85,9 +120,24 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     width: 100%;
+    font-size: var(--text-body);
+    line-height: 1.55;
   }
 
-  /* Accessible focus ring on all links/buttons by default if not specified */
+  h1 {
+    font-size: var(--text-h1);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+  }
+
+  h2 {
+    font-size: var(--text-h2);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
   a:focus-visible, button:focus-visible {
     outline: 2px solid var(--brand);
     outline-offset: 2px;
@@ -104,7 +154,6 @@
     }
   }
 
-  /* Custom sleek scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;

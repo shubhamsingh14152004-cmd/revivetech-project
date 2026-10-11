@@ -15,6 +15,14 @@ export default defineConfig({
     tailwindcss(),
     nitro(),
   ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:5000',
+        changeOrigin: true,
+      }
+    }
+  },
   nitro: {
     preset: process.env["NITRO_PRESET"] || "vercel",
     vercel: {

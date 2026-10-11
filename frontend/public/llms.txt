@@ -1,0 +1,22 @@
+# Revora (sellrepairphone.org)
+
+Revora is a quality mobile repair and phone buyback service based in Mumbai, India. We specialise in reviving dead phones, micro-soldering, liquid damage recovery, and offering assured cash for pre-owned or broken devices.
+
+## Key Services
+- Instant Phone Buyback: Sell old, broken, or completely dead phones (iPhone, Samsung, etc.) for payment via UPI or bank transfer.
+- Lab Bench Repair: Specialized micro-soldering for dead logic boards, data recovery, and hardware faults.
+- Standard Repair: Same-day screen, battery, and camera replacements.
+- Pre-Loved Flagships: Shop certified 100-point inspected refurbished iPhones and Galaxy phones with 1-year shield warranty.
+- Doorstep Service: Free secure pickup and drop available across Mumbai, Navi Mumbai, and Thane.
+
+## Guarantees
+- 100% Data Security: We execute NIST 800-88 military-grade 3-pass hardware wipe on working phones, and physically destroy memory chips on dead boards before recycling.
+- OEM Level Components: We use genuine components or quality equivalents.
+- Transparent Pricing: Our estimators provide fixed upfront repair/sell quotes based on live market pricing.
+
+## Contact
+- Phone / WhatsApp: +91 85917 70877
+- Email: supportsellphone@gmail.com
+- Hours: 10:00 AM - 8:00 PM
+
+For detailed pricing and booking, visit https://sellrepairphone.org.

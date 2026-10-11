@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import { Admin } from "./Admin.js";
 import { RepairRequest } from "./RepairRequest.js";
+import { Device } from "./Device.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -38,6 +39,7 @@ const loadFileDb = () => {
           },
         ],
         repairs: [],
+        devices: [],
       };
       fs.writeFileSync(DB_FILE, JSON.stringify(initial, null, 2), "utf8");
       return initial;
@@ -46,7 +48,7 @@ const loadFileDb = () => {
     return JSON.parse(raw);
   } catch (e) {
     console.error("Local dev database read error:", e.message);
-    return { admins: [], repairs: [] };
+    return { admins: [], repairs: [], devices: [] };
   }
 };
 
@@ -310,5 +312,145 @@ export const db = {
       saveFileDb(data);
       return deleted;
     },
+  },
+
+  // DEVICES OPERATIONS
+  devices: {
+    create: async (doc) => {
+      if (db.isMongooseConnected()) {
+        return Device.create(doc);
+      }
+      checkProductionDb();
+      const data = loadFileDb();
+      const newDevice = {
+        _id: `dev_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`,
+        ...doc,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      if (!data.devices) data.devices = [];
+      
+      // Upsert logic for seed vs admin
+      const existingIdx = data.devices.findIndex(d => d.brandId === doc.brandId && d.slug === doc.slug);
+      if (existingIdx !== -1) {
+        if (data.devices[existingIdx].source === "admin" && doc.source === "seed") {
+          return data.devices[existingIdx]; // Don't overwrite admin with seed
+        }
+        data.devices[existingIdx] = { ...data.devices[existingIdx], ...doc, updatedAt: new Date().toISOString() };
+        saveFileDb(data);
+        return data.devices[existingIdx];
+      }
+
+      data.devices.push(newDevice);
+      saveFileDb(data);
+      return newDevice;
+    },
+
+    find: async ({ brandId, q, active, page = 1, limit = 50 }) => {
+      if (db.isMongooseConnected()) {
+        const query = {};
+        if (brandId) query.brandId = brandId;
+        if (active !== undefined) query.isActive = active === "true" || active === true;
+        if (q && q.trim()) {
+          const searchRegex = new RegExp(q.trim(), "i");
+          query.$or = [
+            { name: searchRegex },
+            { series: searchRegex },
+            { aliases: searchRegex },
+          ];
+        }
+        const skip = (page - 1) * limit;
+        const [devices, total] = await Promise.all([
+          Device.find(query).sort({ sortOrder: 1, name: 1 }).skip(skip).limit(limit),
+          Device.countDocuments(query),
+        ]);
+        return { devices, total };
+      }
+
+      checkProductionDb();
+      const data = loadFileDb();
+      let filtered = data.devices || [];
+
+      if (brandId) {
+        filtered = filtered.filter((d) => d.brandId === brandId);
+      }
+      if (active !== undefined) {
+        const isActive = active === "true" || active === true;
+        filtered = filtered.filter((d) => d.isActive === isActive);
+      }
+      if (q && q.trim()) {
+        const search = q.trim().toLowerCase();
+        filtered = filtered.filter((d) => 
+          d.name?.toLowerCase().includes(search) ||
+          d.series?.toLowerCase().includes(search) ||
+          d.aliases?.some(a => a.toLowerCase().includes(search))
+        );
+      }
+
+      // Sort by sortOrder, then name
+      filtered.sort((a, b) => {
+        if (a.sortOrder !== b.sortOrder) return (a.sortOrder || 0) - (b.sortOrder || 0);
+        return (a.name || "").localeCompare(b.name || "");
+      });
+
+      const total = filtered.length;
+      const skip = (page - 1) * limit;
+      const devices = filtered.slice(skip, skip + limit);
+
+      return { devices, total };
+    },
+
+    findById: async (id) => {
+      if (db.isMongooseConnected()) {
+        return Device.findById(id);
+      }
+      checkProductionDb();
+      const data = loadFileDb();
+      return (data.devices || []).find((d) => d._id.toString() === id.toString()) || null;
+    },
+
+    update: async (id, updateDoc) => {
+      if (db.isMongooseConnected()) {
+        return Device.findByIdAndUpdate(id, { $set: updateDoc }, { new: true });
+      }
+
+      checkProductionDb();
+      const data = loadFileDb();
+      const idx = (data.devices || []).findIndex((d) => d._id.toString() === id.toString());
+      if (idx === -1) return null;
+
+      data.devices[idx] = { ...data.devices[idx], ...updateDoc, updatedAt: new Date().toISOString() };
+      saveFileDb(data);
+      return data.devices[idx];
+    },
+
+    delete: async (id) => {
+      // We will do soft deletes mostly, but here's actual delete if needed
+      if (db.isMongooseConnected()) {
+        return Device.findByIdAndDelete(id);
+      }
+      checkProductionDb();
+      const data = loadFileDb();
+      const idx = (data.devices || []).findIndex((d) => d._id.toString() === id.toString());
+      if (idx === -1) return null;
+
+      const deleted = data.devices.splice(idx, 1)[0];
+      saveFileDb(data);
+      return deleted;
+    },
+
+    count: async (query = {}) => {
+      if (db.isMongooseConnected()) {
+        return Device.countDocuments(query);
+      }
+      checkProductionDb();
+      const data = loadFileDb();
+      return (data.devices || []).filter(d => {
+        for (const [k, v] of Object.entries(query)) {
+          if (d[k] !== v) return false;
+        }
+        return true;
+      }).length;
+    }
   },
 };

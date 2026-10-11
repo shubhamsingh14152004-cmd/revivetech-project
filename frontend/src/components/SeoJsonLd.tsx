@@ -48,7 +48,6 @@ export function getOrganizationSchema() {
  if (siteConfig.social.facebook) schema.sameAs.push(siteConfig.social.facebook);
  if (siteConfig.social.instagram) schema.sameAs.push(siteConfig.social.instagram);
  if (siteConfig.social.youtube) schema.sameAs.push(siteConfig.social.youtube);
- if (siteConfig.social.x) schema.sameAs.push(siteConfig.social.x);
  if (siteConfig.social.googleBusiness) schema.sameAs.push(siteConfig.social.googleBusiness);
 
  if (schema.sameAs.length === 0) {

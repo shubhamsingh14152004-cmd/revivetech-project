@@ -24,6 +24,7 @@ import {
  AlertTriangle,
 } from"lucide-react";
 import heroPhone from"../assets/hero-phone.jpg";
+import { NAV_BRANDS } from "../content/nav";
 
 const FAQS = [
  {
@@ -301,6 +302,27 @@ function SellPhonePage() {
  Once verified, the payout is transferred immediately to your bank account or UPI address before our executive leaves your premises.
  </p>
  </div>
+ </div>
+ </section>
+
+ {/* Supported Brands Navigation */}
+ <section className="mb-14 py-12 border-t border-b border-line">
+ <div className="text-center mb-8">
+ <h2 className="text-2xl font-bold text-ink">
+ Sell Mobile Phone By Brand
+ </h2>
+ </div>
+ <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs">
+ {NAV_BRANDS.map(brand => (
+ <Link
+ key={brand.href}
+ to={brand.href as any}
+ className="p-4 rounded-xl bg-white border border-line hover:border-brand flex items-center justify-between group transition shadow-xs"
+ >
+ <span className="font-bold text-ink group-hover:text-brand">{brand.name}</span>
+ <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-brand" />
+ </Link>
+ ))}
  </div>
  </section>
 

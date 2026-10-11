@@ -3,13 +3,18 @@ import mongoose from "mongoose";
 // Connection caching for serverless environments (e.g. Vercel)
 let cached = global.mongooseConnection;
 if (!cached) {
-  cached = global.mongooseConnection = { conn: null, promise: null };
+  cached = global.mongooseConnection = { conn: null, promise: null, failed: false };
 }
 
 export const connectDB = async () => {
   // If already connected and ready, return existing connection immediately
   if (cached.conn && mongoose.connection.readyState === 1) {
     return cached.conn;
+  }
+  
+  // If it already failed once in dev mode, don't keep waiting 5 seconds on every API request
+  if (cached.failed && process.env.NODE_ENV !== "production") {
+    return null;
   }
 
   // If connection is in-flight, return the existing promise
@@ -59,11 +64,12 @@ export const connectDB = async () => {
   } catch (err) {
     cached.conn = null;
     cached.promise = null;
+    cached.failed = true;
     console.error(`❌ MongoDB Connection Error: ${err.message}`);
     if (process.env.NODE_ENV === "production") {
       throw err;
     }
-    console.log("ℹ️ Running in local development without active MongoDB daemon. Dev local persistence active.");
+    console.log("ℹ️ Running in local development without active MongoDB daemon. Dev local persistence active. Further mongo connection attempts will be skipped.");
     return null;
   }
 };

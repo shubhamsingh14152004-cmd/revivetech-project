@@ -1,347 +1,92 @@
-import React from"react";
-import { Link } from"@tanstack/react-router";
-import {
- Phone,
- Mail,
- MapPin,
- Clock,
- ShieldCheck,
- CheckCircle2,
- Lock,
- Truck,
-} from"lucide-react";
-import { WhatsAppIcon } from"./WhatsAppIcon";
-import { trackEvent } from"../lib/analytics";
+import React from "react";
+import { Link } from "@tanstack/react-router";
+import { siteConfig, telHref, waHref, mailtoHref } from "../config/siteConfig";
+import { Logo } from "./Logo";
 
 export function SiteFooter() {
- const handleCall = () => {
- trackEvent("phone_call_click", { source:"footer_call_link" });
- };
+  return (
+    <footer className="w-full bg-brand-ink text-brand-tint mt-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-16 pb-8">
+        
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+          
+          {/* Brand Info */}
+          <div className="space-y-6">
+            <Link to="/" className="inline-block focus-ring rounded-lg">
+              <Logo variant="horizontal" className="brightness-0 invert" />
+            </Link>
+            <p className="text-[14px] text-brand-tint/70 leading-relaxed">
+              Sell your smartphone or book a repair with a simple, convenient experience. 
+              Certified lab mobile phone repairs and assured a fair price buybacks.
+            </p>
+            <div className="space-y-3 text-[14px]">
+              {siteConfig.business.hasPublicAddress && siteConfig.business.address && (
+                <div className="text-brand-tint/80">
+                  <span className="block font-semibold text-white">Service Hub:</span>
+                  {siteConfig.business.address}
+                </div>
+              )}
+              <div>
+                <a href={telHref()} className="inline-block text-brand-tint/80 hover:text-white transition py-1 focus-ring">
+                  {siteConfig.phoneDisplay}
+                </a>
+              </div>
+              <div>
+                <a href={mailtoHref()} className="inline-block text-brand-tint/80 hover:text-white transition py-1 focus-ring">
+                  {siteConfig.email}
+                </a>
+              </div>
+            </div>
+          </div>
 
- const handleWhatsApp = () => {
- trackEvent("whatsapp_click", { source:"footer_whatsapp_link" });
- };
+          {/* Sell & Buyback */}
+          <div className="flex flex-col gap-3">
+            <h4 className="text-[13px] font-bold uppercase tracking-wider text-white mb-2">Sell & Buyback</h4>
+            <Link to="/sell-old-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Old Phone</Link>
+            <Link to="/phone-buyback-price-india" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Price Guide</Link>
+            <Link to="/sell-damaged-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Damaged Phone</Link>
+            <Link to="/sell-dead-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Dead Phone</Link>
+            <Link to="/dead-phone-buyback" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Dead Mobile Salvage</Link>
+            <Link to="/buyback" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Enterprise ITAD</Link>
+          </div>
 
- return (
- <footer className="w-full bg-brand-ink border-t border-brand/30 text-xs text-brand-tint/90 pt-12 pb-14 mt-20">
- <div className="mx-auto max-w-6xl px-4 sm:px-6">
- {/* Top Trust Badges */}
- <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-10 border-b border-white/10 text-xs">
- <div className="flex items-center gap-2.5">
- <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand/20 text-brand">
- <Truck className="h-4 w-4" />
- </div>
- <div>
- <span className="font-bold text-white block">Free Doorstep Pickup</span>
- <span className="text-[11px] text-white/50">Zero courier fees across India</span>
- </div>
- </div>
+          {/* Repair Services */}
+          <div className="flex flex-col gap-3">
+            <h4 className="text-[13px] font-bold uppercase tracking-wider text-white mb-2">Repair Services</h4>
+            <Link to="/doorstep-mobile-repair" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Doorstep Repair</Link>
+            <Link to="/mobile-repair-mumbai" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Mumbai Service Hub</Link>
+            <Link to="/dead-phone-repair" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Dead Phone Repair</Link>
+            <Link to="/screen-repair" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Screen Replacement</Link>
+            <Link to="/battery-replacement" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Battery Replacement</Link>
+            <Link to="/water-damage-repair" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Liquid Damage Repair</Link>
+          </div>
 
- <div className="flex items-center gap-2.5">
- <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-accent/20">
- <Clock className="h-4 w-4" />
- </div>
- <div>
- <span className="font-bold text-white block">45-Min Express Lab</span>
- <span className="text-[11px] text-white/50">Same-day screen & battery swap</span>
- </div>
- </div>
+          {/* Company */}
+          <div className="flex flex-col gap-3">
+            <h4 className="text-[13px] font-bold uppercase tracking-wider text-white mb-2">Company</h4>
+            <Link to="/about" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">About Revora</Link>
+            <Link to="/fix-or-sell" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Fix or Sell?</Link>
+            <Link to="/how-we-wipe-your-data" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Data Privacy Process</Link>
+            <Link to="/blog" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Guides & Articles</Link>
+            <Link to="/faq" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">FAQs</Link>
+            <Link to="/contact" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Contact Us</Link>
+          </div>
 
- <div className="flex items-center gap-2.5">
- <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-emerald-500/20 text-emerald-400">
- <ShieldCheck className="h-4 w-4" />
- </div>
- <div>
- <span className="font-bold text-white block">90-Day Priority Warranty</span>
- <span className="text-[11px] text-white/50">OEM-grade certified components</span>
- </div>
- </div>
+        </div>
 
- <div className="flex items-center gap-2.5">
- <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-blue-500/20">
- <Lock className="h-4 w-4" />
- </div>
- <div>
- <span className="font-bold text-white block">NIST 800-88 Wiped</span>
- <span className="text-[11px] text-white/50">Permanent cryptographic data wipe</span>
- </div>
- </div>
- </div>
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-brand-tint/10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-[13px] text-brand-tint/50">
+             {new Date().getFullYear()} {siteConfig.brandName}. All rights reserved.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+            <Link to="/privacy" className="text-[13px] text-brand-tint/50 hover:text-white transition py-1 inline-block focus-ring">Privacy Policy</Link>
+            <Link to="/terms" className="text-[13px] text-brand-tint/50 hover:text-white transition py-1 inline-block focus-ring">Terms of Service</Link>
+          </div>
+        </div>
 
- {/* Multi-Column Sitemap Links & NAP */}
- <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-5 py-10">
- {/* Column 1: Business NAP */}
- <div className="space-y-3 md:col-span-1">
- <Link to="/" className="flex items-center gap-2 group">
- <img
- src="/images/revora-logo-transparent.png"
- alt="Revora"
- className="h-10 w-auto object-contain transition group-hover:scale-105"
- />
- </Link>
- <p className="text-white/60 leading-relaxed text-xs">
- Sell your old smartphone or book a repair with a simple, convenient experience. Certified lab mobile phone repairs and assured a fair price buybacks.
- </p>
-
- {/* Consistent NAP Presentation */}
- <div className="pt-2 space-y-2 text-xs">
- <div className="flex items-start gap-2 text-white/80">
- <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
- <span>
- <strong className="text-white block">Service Hub & Dispatch:</strong>
- Doorstep Express Courier Pickup & lab Facility, India
- </span>
- </div>
- <div className="flex items-center gap-2 text-white/80">
- <Phone className="h-3.5 w-3.5 shrink-0" />
- <a
- href="tel:8591770877"
- onClick={handleCall}
- className="hover: font-bold"
- title="Call Revora"
- >
- +91 8591770877
- </a>
- </div>
- <div className="flex items-center gap-2 text-white/80">
- <WhatsAppIcon className="h-3.5 w-3.5 fill-emerald-400 shrink-0" />
- <a
- href="https://wa.me/918591770877?text=Hi%20Revora%2C%20I%20have%20an%20inquiry%20regarding%20phone%20repair%20or%20buyback."
- target="_blank"
- rel="noopener noreferrer"
- onClick={handleWhatsApp}
- className="hover:text-emerald-400 font-bold"
- title="WhatsApp Revora"
- >
- +91 8591770877
- </a>
- </div>
- <div className="flex items-center gap-2 text-white/80">
- <Mail className="h-3.5 w-3.5 shrink-0" />
- <a
- href="mailto:supportsellphone@gmail.com"
- className="hover:text-white"
- title="Email Revora Support"
- >
- supportsellphone@gmail.com
- </a>
- </div>
- <div className="flex items-center gap-2 text-white/60 text-[11px]">
- <Clock className="h-3.5 w-3.5 text-white/40 shrink-0" />
- <span>Open Mon – Sun: 09:00 AM – 09:00 PM IST</span>
- </div>
- </div>
- </div>
-
- {/* Column 2: Sell & Buyback Services */}
- <div>
- <h4 className="text-xs font-bold uppercase text-white tracking-wider mb-3">
- Sell & Buyback
- </h4>
- <ul className="space-y-2 text-xs text-white/70">
- <li>
- <Link to="/sell-old-phone" className="hover:text-white transition font-semibold text-white">
- Sell Old Mobile Phone (payout via UPI)
- </Link>
- </li>
- <li>
- <Link to="/sell-damaged-phone" className="hover:text-white transition">
- Sell Damaged & Broken Phone
- </Link>
- </li>
- <li>
- <Link to="/sell-dead-phone" className="hover:text-white transition font-semibold text-emerald-300">
- Sell Dead Phone (Band Phone Becho)
- </Link>
- </li>
- <li>
- <Link to="/dead-phone-buyback" className="hover:text-white transition text-white/80">
- Dead Mobile Salvage Buyback
- </Link>
- </li>
- <li>
- <Link to="/sell-phone" className="hover:text-white transition">
- Used Phone Value Calculator
- </Link>
- </li>
- <li>
- <Link to="/buyback" className="hover:text-white transition">
- Corporate Phone Buyback (ITAD)
- </Link>
- </li>
- </ul>
- </div>
-
- {/* Column 3: Repair Services */}
- <div>
- <h4 className="text-xs font-bold uppercase text-white tracking-wider mb-3 text-brand">
- Repair Services
- </h4>
- <ul className="space-y-2 text-xs text-white/70">
- <li>
- <Link to="/doorstep-mobile-repair" className="hover:text-white transition font-semibold text-white">
- Doorstep Mobile Repair (45-Min Fix)
- </Link>
- </li>
- <li>
- <Link to="/mobile-repair-mumbai" className="hover:text-white transition font-semibold">
- Mobile Repair in Mumbai Hub
- </Link>
- </li>
- <li>
- <Link to="/repair" className="hover:text-white transition">
- Same-Day Phone Repair
- </Link>
- </li>
- <li>
- <Link to="/dead-phone-repair" className="hover:text-white transition font-semibold text-emerald-300">
- Dead Phone Repair (Band Phone)
- </Link>
- </li>
- <li>
- <Link to="/screen-repair" className="hover:text-white transition">
- Screen & Display Replacement
- </Link>
- </li>
- <li>
- <Link to="/battery-replacement" className="hover:text-white transition">
- Phone Battery Replacement
- </Link>
- </li>
- <li>
- <Link to="/charging-port-repair" className="hover:text-white transition">
- Charging Port & Socket Repair
- </Link>
- </li>
- <li>
- <Link to="/water-damage-repair" className="hover:text-white transition">
- Water Damage Ultrasonic Repair
- </Link>
- </li>
- </ul>
- </div>
-
- {/* Column 4: Brand Hubs */}
- <div>
- <h4 className="text-xs font-bold uppercase text-white tracking-wider mb-3">
- Supported Brands
- </h4>
- <ul className="space-y-2 text-xs text-white/70">
- <li>
- <Link to="/iphone-repair" className="hover:text-white transition">
- Apple iPhone Repair
- </Link>
- </li>
- <li>
- <Link to="/samsung-repair" className="hover:text-white transition">
- Samsung Galaxy Repair
- </Link>
- </li>
- <li>
- <Link to="/oneplus-repair" className="hover:text-white transition">
- OnePlus Repair
- </Link>
- </li>
- <li>
- <Link to="/xiaomi-repair" className="hover:text-white transition">
- Xiaomi, Redmi & POCO Repair
- </Link>
- </li>
- <li>
- <Link to="/vivo-repair" className="hover:text-white transition">
- Vivo & iQOO Repair
- </Link>
- </li>
- <li>
- <Link to="/oppo-repair" className="hover:text-white transition">
- Oppo Reno & Find Repair
- </Link>
- </li>
- <li>
- <Link to="/realme-repair" className="hover:text-white transition">
- Realme GT & Narzo Repair
- </Link>
- </li>
- <li>
- <Link to="/motorola-repair" className="hover:text-white transition">
- Motorola Edge & Razr Repair
- </Link>
- </li>
- <li>
- <Link to="/google-pixel-repair" className="hover:text-white transition">
- Google Pixel Repair
- </Link>
- </li>
- </ul>
- </div>
-
- {/* Column 5: Company & Help */}
- <div>
- <h4 className="text-xs font-bold uppercase text-white tracking-wider mb-3">
- Guides & Help
- </h4>
- <ul className="space-y-2 text-xs text-white/70">
- <li>
- <Link to="/blog" className="hover:text-white transition font-semibold">
- Repair & Buyback Guides
- </Link>
- </li>
- <li>
- <Link to="/about" className="hover:text-white transition">
- About Revora Lab
- </Link>
- </li>
- <li>
- <Link to="/faq" className="hover:text-white transition">
- Frequently Asked Questions
- </Link>
- </li>
- <li>
- <Link to="/privacy" className="hover:text-white transition font-medium">
- Privacy Policy & Data Security
- </Link>
- </li>
- <li>
- <Link to="/terms" className="hover:text-white transition">
- Terms of Service & 90-Day Warranty
- </Link>
- </li>
- <li>
- <Link to="/contact" className="hover:text-white transition">
- Contact & Courier Dispatch
- </Link>
- </li>
-
- </ul>
- </div>
- </div>
-
- {/* Bottom Copyright & Legal */}
- <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/50">
- <p> 2026 Revora (sellrepairphone.org). All rights reserved.</p>
- <div className="flex flex-wrap items-center gap-4">
- <Link to="/privacy" className="hover:text-white">
- Privacy Policy
- </Link>
- <span>·</span>
- <Link to="/terms" className="hover:text-white">
- Terms of Service
- </Link>
- <span>·</span>
- <Link to="/faq" className="hover:text-white">
- 90-Day Warranty Policy
- </Link>
- <span>·</span>
- <Link to="/contact" className="hover:text-white">
- Doorstep Coverage Area
- </Link>
- <span>·</span>
- <Link to="/blog" className="hover:text-white">
- Tech Guides
- </Link>
- </div>
- </div>
- </div>
- </footer>
- );
+      </div>
+    </footer>
+  );
 }

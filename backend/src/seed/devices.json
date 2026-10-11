@@ -1,0 +1,2506 @@
+[
+  {
+    "brandId": "apple",
+    "name": "iPhone 15 Pro Max",
+    "series": "iPhone 15",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 10
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 15 Pro",
+    "series": "iPhone 15",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 20
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 15 Plus",
+    "series": "iPhone 15",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 30
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 15",
+    "series": "iPhone 15",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 40
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 14 Pro Max",
+    "series": "iPhone 14",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 50
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 14 Pro",
+    "series": "iPhone 14",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 60
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 14 Plus",
+    "series": "iPhone 14",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 70
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 14",
+    "series": "iPhone 14",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 80
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 13 Pro Max",
+    "series": "iPhone 13",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 13 Pro",
+    "series": "iPhone 13",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 13",
+    "series": "iPhone 13",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 13 mini",
+    "series": "iPhone 13",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 12 Pro Max",
+    "series": "iPhone 12",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 12 Pro",
+    "series": "iPhone 12",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 12",
+    "series": "iPhone 12",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 12 mini",
+    "series": "iPhone 12",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 11 Pro Max",
+    "series": "iPhone 11",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "64GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 11 Pro",
+    "series": "iPhone 11",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "64GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 11",
+    "series": "iPhone 11",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone XS Max",
+    "series": "Older Models",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "64GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone XS",
+    "series": "Older Models",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "64GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone XR",
+    "series": "Older Models",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone X",
+    "series": "Older Models",
+    "releaseYear": 2017,
+    "storageOptions": [
+      "64GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 8 Plus",
+    "series": "Older Models",
+    "releaseYear": 2017,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone 8",
+    "series": "Older Models",
+    "releaseYear": 2017,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone SE (3rd Gen)",
+    "series": "Older Models",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "apple",
+    "name": "iPhone SE (2nd Gen)",
+    "series": "Older Models",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S24 Ultra",
+    "series": "Galaxy S Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 10
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S24+",
+    "series": "Galaxy S Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 20
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S24",
+    "series": "Galaxy S Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 30
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S23 Ultra",
+    "series": "Galaxy S Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S23+",
+    "series": "Galaxy S Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S23",
+    "series": "Galaxy S Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S23 FE",
+    "series": "Galaxy S Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S22 Ultra",
+    "series": "Galaxy S Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S22+",
+    "series": "Galaxy S Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S22",
+    "series": "Galaxy S Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S21 Ultra",
+    "series": "Galaxy S Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S21+",
+    "series": "Galaxy S Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S21",
+    "series": "Galaxy S Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S21 FE",
+    "series": "Galaxy S Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S20 Ultra",
+    "series": "Galaxy S Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S20+",
+    "series": "Galaxy S Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S20",
+    "series": "Galaxy S Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S20 FE",
+    "series": "Galaxy S Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S10+",
+    "series": "Galaxy S Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "128GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S10",
+    "series": "Galaxy S Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "128GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S10e",
+    "series": "Galaxy S Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S9+",
+    "series": "Galaxy S Series",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy S9",
+    "series": "Galaxy S Series",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Note 20 Ultra",
+    "series": "Galaxy Note Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Note 20",
+    "series": "Galaxy Note Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Note 10+",
+    "series": "Galaxy Note Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Note 10",
+    "series": "Galaxy Note Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Note 9",
+    "series": "Galaxy Note Series",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "128GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Z Fold 5",
+    "series": "Galaxy Z Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Z Flip 5",
+    "series": "Galaxy Z Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Z Fold 4",
+    "series": "Galaxy Z Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Z Flip 4",
+    "series": "Galaxy Z Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Z Fold 3",
+    "series": "Galaxy Z Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy Z Flip 3",
+    "series": "Galaxy Z Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy A54 5G",
+    "series": "Galaxy A Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy A34 5G",
+    "series": "Galaxy A Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy A53 5G",
+    "series": "Galaxy A Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy A73 5G",
+    "series": "Galaxy A Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy A52s 5G",
+    "series": "Galaxy A Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy A52",
+    "series": "Galaxy A Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy A72",
+    "series": "Galaxy A Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy A51",
+    "series": "Galaxy A Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy A71",
+    "series": "Galaxy A Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy M54 5G",
+    "series": "Galaxy M Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy M34 5G",
+    "series": "Galaxy M Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy M53 5G",
+    "series": "Galaxy M Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy M33 5G",
+    "series": "Galaxy M Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy M51",
+    "series": "Galaxy M Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy F54 5G",
+    "series": "Galaxy F Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "samsung",
+    "name": "Galaxy F23 5G",
+    "series": "Galaxy F Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 12",
+    "series": "Numbered Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 12R",
+    "series": "Numbered Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 11",
+    "series": "Numbered Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 11R",
+    "series": "Numbered Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 10 Pro",
+    "series": "Numbered Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 10T",
+    "series": "Numbered Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 10R",
+    "series": "Numbered Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 9 Pro",
+    "series": "Numbered Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 9",
+    "series": "Numbered Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 9R",
+    "series": "Numbered Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 8 Pro",
+    "series": "Numbered Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 8",
+    "series": "Numbered Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 8T",
+    "series": "Numbered Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 7 Pro",
+    "series": "Numbered Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 7T Pro",
+    "series": "Numbered Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 7",
+    "series": "Numbered Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 7T",
+    "series": "Numbered Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 6T",
+    "series": "Numbered Series",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus 6",
+    "series": "Numbered Series",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus Nord 3",
+    "series": "Nord Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus Nord CE 3",
+    "series": "Nord Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus Nord CE 3 Lite",
+    "series": "Nord Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus Nord 2T",
+    "series": "Nord Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus Nord 2",
+    "series": "Nord Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus Nord CE",
+    "series": "Nord Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oneplus",
+    "name": "OnePlus Nord",
+    "series": "Nord Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Xiaomi 14",
+    "series": "Xiaomi Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Xiaomi 13 Pro",
+    "series": "Xiaomi Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Xiaomi 12 Pro",
+    "series": "Xiaomi Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Xiaomi Mi 11 Ultra",
+    "series": "Xiaomi Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Xiaomi Mi 11X Pro",
+    "series": "Xiaomi Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Xiaomi Mi 11X",
+    "series": "Xiaomi Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Xiaomi Mi 10",
+    "series": "Xiaomi Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Redmi Note 13 Pro+",
+    "series": "Redmi Note Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Redmi Note 13 Pro",
+    "series": "Redmi Note Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Redmi Note 13",
+    "series": "Redmi Note Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Redmi Note 12 Pro+",
+    "series": "Redmi Note Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Redmi Note 12 Pro",
+    "series": "Redmi Note Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Redmi Note 11 Pro+",
+    "series": "Redmi Note Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Redmi Note 10 Pro Max",
+    "series": "Redmi Note Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "64GB",
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Redmi Note 9 Pro Max",
+    "series": "Redmi Note Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "64GB",
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "Redmi Note 8 Pro",
+    "series": "Redmi Note Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "64GB",
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "POCO X6 Pro",
+    "series": "POCO Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "POCO X5 Pro",
+    "series": "POCO Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "POCO F5",
+    "series": "POCO Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "POCO F4",
+    "series": "POCO Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "POCO X4 Pro",
+    "series": "POCO Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "POCO X3 Pro",
+    "series": "POCO Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "xiaomi",
+    "name": "POCO F1",
+    "series": "POCO Series",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "64GB",
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo Reno 11 Pro",
+    "series": "Reno Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo Reno 11",
+    "series": "Reno Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo Reno 10 Pro+",
+    "series": "Reno Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo Reno 10 Pro",
+    "series": "Reno Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo Reno 8 Pro",
+    "series": "Reno Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo Reno 7 Pro",
+    "series": "Reno Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo Find N3 Flip",
+    "series": "Find Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo Find N2 Flip",
+    "series": "Find Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo Find X2",
+    "series": "Find Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo F25 Pro",
+    "series": "F and A Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo F23",
+    "series": "F and A Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "oppo",
+    "name": "Oppo F21 Pro",
+    "series": "F and A Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo X100 Pro",
+    "series": "X Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo X100",
+    "series": "X Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo X90 Pro",
+    "series": "X Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo X80 Pro",
+    "series": "X Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo X70 Pro+",
+    "series": "X Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo X60 Pro+",
+    "series": "X Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo V30 Pro",
+    "series": "V Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo V29 Pro",
+    "series": "V Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo V27 Pro",
+    "series": "V Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo V25 Pro",
+    "series": "V Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "vivo",
+    "name": "Vivo V23 Pro",
+    "series": "V Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "iqoo",
+    "name": "iQOO 12",
+    "series": "Numbered Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "iqoo",
+    "name": "iQOO 11",
+    "series": "Numbered Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "iqoo",
+    "name": "iQOO 9 Pro",
+    "series": "Numbered Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "iqoo",
+    "name": "iQOO 7 Legend",
+    "series": "Numbered Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "iqoo",
+    "name": "iQOO Neo 9 Pro",
+    "series": "Neo Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "iqoo",
+    "name": "iQOO Neo 7 Pro",
+    "series": "Neo Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "iqoo",
+    "name": "iQOO Neo 6",
+    "series": "Neo Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "iqoo",
+    "name": "iQOO Z9",
+    "series": "Z Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "iqoo",
+    "name": "iQOO Z7 Pro",
+    "series": "Z Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "realme",
+    "name": "Realme GT 5 Pro",
+    "series": "GT Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "realme",
+    "name": "Realme GT 2 Pro",
+    "series": "GT Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "realme",
+    "name": "Realme GT Neo 3",
+    "series": "GT Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "realme",
+    "name": "Realme GT Master Edition",
+    "series": "GT Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "realme",
+    "name": "Realme 12 Pro+",
+    "series": "Numbered Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "realme",
+    "name": "Realme 11 Pro+",
+    "series": "Numbered Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "realme",
+    "name": "Realme 10 Pro+",
+    "series": "Numbered Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "realme",
+    "name": "Realme 9 Pro+",
+    "series": "Numbered Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "realme",
+    "name": "Realme 8 Pro",
+    "series": "Numbered Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "motorola",
+    "name": "Motorola Edge 50 Pro",
+    "series": "Edge Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "motorola",
+    "name": "Motorola Edge 40 Neo",
+    "series": "Edge Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "motorola",
+    "name": "Motorola Edge 30 Ultra",
+    "series": "Edge Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "motorola",
+    "name": "Motorola Edge 20 Pro",
+    "series": "Edge Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "motorola",
+    "name": "Motorola Razr 40 Ultra",
+    "series": "Razr Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "motorola",
+    "name": "Motorola Razr 40",
+    "series": "Razr Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "motorola",
+    "name": "Moto G84",
+    "series": "G Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "motorola",
+    "name": "Moto G54",
+    "series": "G Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "motorola",
+    "name": "Moto G82",
+    "series": "G Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 8 Pro",
+    "series": "Pixel Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 8",
+    "series": "Pixel Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 7 Pro",
+    "series": "Pixel Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 7",
+    "series": "Pixel Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 7a",
+    "series": "Pixel Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 6 Pro",
+    "series": "Pixel Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 6",
+    "series": "Pixel Series",
+    "releaseYear": 2021,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 6a",
+    "series": "Pixel Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 5",
+    "series": "Pixel Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 4a",
+    "series": "Pixel Series",
+    "releaseYear": 2020,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 4",
+    "series": "Pixel Series",
+    "releaseYear": 2019,
+    "storageOptions": [
+      "64GB",
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 3 XL",
+    "series": "Pixel Series",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "64GB",
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "pixel",
+    "name": "Google Pixel 3",
+    "series": "Pixel Series",
+    "releaseYear": 2018,
+    "storageOptions": [
+      "64GB",
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "nothing",
+    "name": "Nothing Phone (2)",
+    "series": "Phone Series",
+    "releaseYear": 2023,
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "nothing",
+    "name": "Nothing Phone (2a)",
+    "series": "Phone Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "nothing",
+    "name": "Nothing Phone (1)",
+    "series": "Phone Series",
+    "releaseYear": 2022,
+    "storageOptions": [
+      "128GB",
+      "256GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  },
+  {
+    "brandId": "nothing",
+    "name": "CMF Phone 1",
+    "series": "Phone Series",
+    "releaseYear": 2024,
+    "storageOptions": [
+      "128GB"
+    ],
+    "aliases": [],
+    "isActive": true,
+    "sortOrder": 0
+  }
+]
