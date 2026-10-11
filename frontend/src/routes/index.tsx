@@ -282,10 +282,11 @@ function Index() {
  <video
  src="/videos/revora-animation.mp4"
  poster={heroPhone}
+ autoPlay
  muted
+ loop
  playsInline
- controls
- preload="none"
+ preload="auto"
  className="w-full h-full object-cover scale-[1.09] -translate-x-[2%] -translate-y-[2%] rounded-2xl block mx-auto"
  >
  <track kind="captions" />
