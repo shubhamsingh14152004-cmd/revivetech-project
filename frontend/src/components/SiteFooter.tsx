@@ -44,7 +44,7 @@ export function SiteFooter() {
           <div className="flex flex-col gap-3">
             <h4 className="text-[13px] font-bold uppercase tracking-wider text-white mb-2">Sell & Buyback</h4>
             <Link to="/sell-old-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Old Phone</Link>
-            <Link to="/phone-buyback-price-india" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Price Guide</Link>
+            <Link to="/sell-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Phone Valuation</Link>
             <Link to="/sell-damaged-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Damaged Phone</Link>
             <Link to="/sell-dead-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Dead Phone</Link>
             <Link to="/dead-phone-buyback" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Dead Mobile Salvage</Link>

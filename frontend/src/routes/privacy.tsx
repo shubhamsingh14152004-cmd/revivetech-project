@@ -159,7 +159,7 @@ function PrivacyPage() {
  <div className="p-6 rounded-2xl bg-white border border-line space-y-2 shadow-xs">
  <h3 className="text-base font-bold text-ink">Questions About Your Data Privacy?</h3>
  <p className="text-xs text-muted">
- Contact our Data Protection Officer directly at <a href="mailto:supportsellphone@gmail.com" className="text-brand hover:underline font-medium">supportsellphone@gmail.com</a> or call our helpline at <a href="tel:8591770877" className="text-brand hover:underline font-medium">+91 8591770877</a>.
+ Contact our Data Protection Officer directly at <a href="mailto:support@sellrepairphone.org" className="text-brand hover:underline font-medium">support@sellrepairphone.org</a> or call our helpline at <a href="tel:+918591770877" className="text-brand hover:underline font-medium">+91 85917 70877</a>.
  </p>
  </div>
  </section>

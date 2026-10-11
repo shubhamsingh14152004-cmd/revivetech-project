@@ -20,66 +20,84 @@ import {
 import heroPhone from"../assets/hero-phone.jpg";
 
 const ALL_FAQS = [
- {
- category:"Phone Repairs",
- question:"How long does a typical phone repair take at Revora?",
- answer:
-"Most common smartphone repairs—such as screen replacement, battery swap, charging port repair, and camera lens replacement—take between 30 and 45 minutes on our certified bench desk. Motherboard micro-soldering or complex liquid damage treatments typically take 24 to 48 hours.",
- },
- {
- category:"Phone Repairs",
- question:"Do you use genuine OEM-grade replacement screens and parts?",
- answer:
-"Yes. We use certified OEM-grade displays with display calibration for iPhones and genuine Dynamic AMOLED 120Hz panels with in-display fingerprint calibration for Samsung and Android flagships. All parts are rigorously bench-tested prior to installation.",
- },
- {
- category:"Phone Repairs",
- question:"Will my phone data be erased during a repair?",
- answer:
-"No! Hardware replacements like displays, batteries, cameras, and charging ports do not alter or wipe your flash memory storage. Your photos, contacts, WhatsApp chats, and apps remain 100% intact.",
- },
- {
- category:"Phone Repairs",
- question:"What does the 90-Day Priority Warranty cover?",
- answer:
-"Our 90-Day Priority Warranty covers touch digitizer unresponsiveness, ghost touching, color discolouration, premature battery drain, and replacement component craftsmanship against manufacturing defects. (Physical drops and accidental liquid spills occurring after repair are excluded).",
- },
- {
- category:"Selling & Buyback",
- question:"Can I sell a phone that is completely dead and won't turn on?",
- answer:
-"Yes! Revora buys completely non-functional, water-damaged, or motherboard-shorted phones. We salvage working IC chips, camera modules, and chassis brackets, and send non-recoverable materials to authorized e-waste recyclers. Choose 'Dead' in our calculator for an payout via UPI quote.",
- },
- {
- category:"Selling & Buyback",
- question:"How and when do I get paid after selling my phone?",
- answer:
-"Payment is executed instantly on the spot. Once our doorstep executive conducts a 5-minute physical and diagnostic verification, the agreed cash amount is transferred immediately via UPI (GPay, PhonePe, Paytm) or IMPS bank transfer.",
- },
- {
- category:"Selling & Buyback",
- question:"How do you ensure my personal data is permanently destroyed?",
- answer:
-"For bootable smartphones, we run automated NIST 800-88 compliant cryptographic multi-pass data wipes that render past user profiles, images, and data irretrievable. For permanently dead units, internal storage flash chips are physically shredded or demagnetized.",
- },
- {
- category:"Selling & Buyback",
- question:"Do I need the original box, bill, and accessories to sell?",
- answer:
-"Having the original box, bill, and charger increases your payout bonus, but they are not strictly mandatory. A valid government photo ID (Aadhaar or Driving License) is mandatory for anti-theft compliance.",
- },
- {
- category:"Logistics & Security",
- question:"How does the free doorstep pickup and return service work?",
- answer:
-"When booking a repair or selling a device, you select your address and a convenient time window. Our logistics partner arrives with tamper-evident, anti-static security pouches. You receive a digital tracking receipt the moment your phone is handed over.",
- },
- {
- category:"Logistics & Security",
- question:"What areas do you serve?",
- answer:
-"We provide express doorstep pickup in major metropolitan hubs and nationwide courier pickup across all serviced PIN codes in India. All parcels are fully transit-insured.",
- },
+  {
+    category: "Selling & Buyback",
+    question: "Where can I sell my dead phone in Mumbai?",
+    answer:
+      "You can sell non-functional, water-damaged, or completely dead phones (band phone becho) directly to Revora. We provide free doorstep pickup across Mumbai, Thane, and Navi Mumbai, inspect the salvage value of modular hardware components, and pay immediately via UPI or bank transfer before leaving.",
+  },
+  {
+    category: "Selling & Buyback",
+    question: "Who buys a phone that does not switch on?",
+    answer:
+      "Revora buys smartphones that do not power on or boot. Even when logic boards are shorted or water-damaged, modular parts such as OEM camera sensors, displays, speakers, and chassis retain salvage value. Non-recoverable materials are routed to authorized green e-waste recyclers.",
+  },
+  {
+    category: "Selling & Buyback",
+    question: "Where can I sell a broken or cracked iPhone?",
+    answer:
+      "You can sell broken, cracked, liquid-damaged, and dead iPhones with Revora. Simply select your model and condition in our valuation calculator or message us on WhatsApp to receive a direct quote and schedule free doorstep collection across Mumbai, Thane, and Navi Mumbai.",
+  },
+  {
+    category: "Selling & Buyback",
+    question: "Can I sell a water-damaged or liquid-submerged phone?",
+    answer:
+      "Yes! Even after severe liquid exposure, internal modular components often remain valuable. Revora evaluates water-damaged Apple and Android smartphones and provides direct on-the-spot payment without requiring you to visit a repair shop.",
+  },
+  {
+    category: "Selling & Buyback",
+    question: "What happens if I decline the final valuation offer at my doorstep?",
+    answer:
+      "You have zero obligation. If the physical condition verified by our technician results in a revised offer that you choose not to accept, you can decline with zero penalty. Your phone is returned immediately with zero visiting fee and zero cancellation charges.",
+  },
+  {
+    category: "Selling & Buyback",
+    question: "How do I sell my old phone for instant payment? (Purana phone becho)",
+    answer:
+      "If you want to sell your used phone (purana phone becho / dead phone bechna hai), select your brand and model on our calculator or contact us on WhatsApp. Our doorstep executive conducts a quick verification and transfers your payment instantly via UPI (GPay, PhonePe, Paytm) or IMPS before taking the phone.",
+  },
+  {
+    category: "Selling & Buyback",
+    question: "Do I need the original box, bill, and accessories to sell?",
+    answer:
+      "Having the original box, bill, and charger increases your device valuation, but they are not mandatory. A valid government photo ID (Aadhaar or Driving License) is required for legal ownership verification and anti-theft compliance.",
+  },
+  {
+    category: "Selling & Buyback",
+    question: "How do you ensure my personal data is permanently destroyed?",
+    answer:
+      "For bootable smartphones, we run automated NIST 800-88 compliant cryptographic sanitization that renders past profiles, photos, and accounts irretrievable. For permanently dead units, internal flash memory chips are physically decommissioned or destroyed before metal recycling.",
+  },
+  {
+    category: "Phone Repairs",
+    question: "Can I get doorstep mobile repair at my home or office? (Phone repair karwana hai)",
+    answer:
+      "Yes! For common repairs like cracked screens, battery replacements, and charging jack repairs, our mobile technician brings genuine replacement parts and precision tools directly to your doorstep in Mumbai, Thane, or Navi Mumbai, backed by our 90-day warranty.",
+  },
+  {
+    category: "Phone Repairs",
+    question: "Do you use genuine OEM-grade replacement screens and parts?",
+    answer:
+      "Yes. We use certified OEM-grade displays with proper calibration for iPhones and genuine Dynamic AMOLED panels with in-display fingerprint responsiveness for Samsung and Android flagships. All replacement modules are bench-tested before installation.",
+  },
+  {
+    category: "Phone Repairs",
+    question: "Will my phone data be erased during a repair?",
+    answer:
+      "No! Standard hardware replacements such as screens, batteries, cameras, and charging ports do not alter flash memory storage. Your photos, contacts, WhatsApp chats, and apps remain 100% intact.",
+  },
+  {
+    category: "Phone Repairs",
+    question: "What does the 90-Day Warranty cover?",
+    answer:
+      "Our 90-Day Warranty covers touch digitizer unresponsiveness, display flickering, premature battery capacity drop, and manufacturing defects on replacement parts. (Subsequent physical drops and liquid spills occurring after repair handover are excluded).",
+  },
+  {
+    category: "Logistics & Service Areas",
+    question: "Is doorstep phone pickup available across Mumbai, Thane, and Navi Mumbai?",
+    answer:
+      "Yes! Doorstep pickup and repair operates across Western Suburbs (Andheri, Bandra, Borivali, Goregaon, Malad), Central Suburbs (Dadar, Kurla, Chembur, Ghatkopar, Powai), Thane (Thane West, Ghodbunder, Majiwada), and Navi Mumbai (Vashi, Nerul, Belapur, Seawoods) with zero visiting fee.",
+  },
 ];
 
 export const Route = createFileRoute("/faq")({

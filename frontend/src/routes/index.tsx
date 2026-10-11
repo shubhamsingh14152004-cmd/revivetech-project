@@ -256,21 +256,21 @@ function Index() {
  <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-6 border-t border-line pt-5 w-full text-xs text-muted">
  <div>
  <span className="text-xl sm:text-2xl font-black text-ink block">
- 4.9
+ 3 Hubs
  </span>
- <span className="text-muted">12,400+ Repairs</span>
+ <span className="text-muted">Mumbai, Thane & Navi Mumbai</span>
  </div>
  <div>
  <span className="text-xl sm:text-2xl font-black text-brand block">
- 45m
+ 90 Days
  </span>
- <span className="text-muted">Avg. Turnaround</span>
+ <span className="text-muted">Repair Warranty</span>
  </div>
  <div>
  <span className="text-xl sm:text-2xl font-black text-brand block">
- ₹2.5L+
+ Free Pickup
  </span>
- <span className="text-muted">Paid to Customers</span>
+ <span className="text-muted">Zero Visiting Fee</span>
  </div>
  </div>
  </div>

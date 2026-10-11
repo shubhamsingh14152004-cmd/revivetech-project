@@ -96,17 +96,23 @@ function TermsPage() {
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-ink flex items-center gap-2">
               <RefreshCw className="w-5 h-5 text-brand" />
-              <span>1. Phone Trade-In & Buyback Lock-In Terms</span>
+              <span>1. Phone Valuation, Final Offer & Zero-Fee Decline Policy</span>
             </h2>
             <ul className="space-y-2 pl-5 list-disc text-muted">
               <li>
-                <strong className="text-ink">Device Ownership Guarantee:</strong> You confirm that you are the lawful owner of the device handed over for buyback and that the device is free from financial liens or illegal acquirements.
+                <strong className="text-ink">Device Ownership Requirement:</strong> You confirm that you are the lawful owner of the device handed over for buyback and that the device is free from financial liens or illegal acquirements. Government ID verification is conducted for compliance.
               </li>
               <li>
-                <strong className="text-ink">Physical Inspection Verification:</strong> Online price calculations are initial estimations. Final payout is confirmed upon physical inspection by our verified doorstep technician. If the physical condition matches your selection, the full locked quote is transferred instantly via UPI or Cash.
+                <strong className="text-ink">Doorstep Verification & Offer Confirmation:</strong> Initial quotations provided on WhatsApp are preliminary guides. The final offer is confirmed on the spot following a physical hardware and functional inspection by our verified doorstep technician.
               </li>
               <li>
-                <strong className="text-ink">Account Unlinking:</strong> Before handing over a device, you must sign out of iCloud (iOS) or Google FRP accounts.
+                <strong className="text-ink">Zero-Fee Decline Guarantee:</strong> If the physical inspection reveals discrepancies and you choose not to accept the final offer, you may decline with zero penalty. Your device is handed back immediately with zero cancellation fee and zero doorstep visiting charges.
+              </li>
+              <li>
+                <strong className="text-ink">Instant Direct Payment:</strong> Once you confirm and accept the offer, payment is transferred immediately via UPI or direct bank transfer before device handover.
+              </li>
+              <li>
+                <strong className="text-ink">Account Unlinking:</strong> Before handing over a working device, you must remove all iCloud (iOS) or Google FRP accounts.
               </li>
             </ul>
           </div>
@@ -115,10 +121,10 @@ function TermsPage() {
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-ink flex items-center gap-2">
               <Wrench className="w-5 h-5 text-brand" />
-              <span>2. 90-Day Priority Repair Warranty Terms</span>
+              <span>2. 90-Day Repair Warranty Terms</span>
             </h2>
             <p>
-              Every certified screen, battery, or hardware component repair performed by Revora is backed by our official <strong className="text-ink">90-Day Priority Warranty</strong>:
+              Every screen, battery, or hardware component repair performed by Revora is backed by our official <strong className="text-ink">90-Day Warranty</strong>:
             </p>
             <ul className="space-y-2 pl-5 list-disc text-muted">
               <li>
@@ -134,10 +140,10 @@ function TermsPage() {
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-ink flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-brand" />
-              <span>3. Doorstep Service & Courier Logistics</span>
+              <span>3. Doorstep Service, Booking & Cancellation</span>
             </h2>
             <p>
-              Free doorstep pickup and delivery services operate across major metro hubs. For mail-in repairs outside doorstep zones, insured courier shipping kits are dispatched to your registered address.
+              Doorstep pickup and repair services operate across Mumbai, Thane, and Navi Mumbai with zero visiting fees. You may reschedule or cancel your booking window at any time prior to technician dispatch with zero penalty.
             </p>
           </div>
 
@@ -145,10 +151,10 @@ function TermsPage() {
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-ink flex items-center gap-2">
               <AlertCircle className="w-5 h-5 text-brand" />
-              <span>4. Limitation of Liability</span>
+              <span>4. Limitation of Liability & Data Backup</span>
             </h2>
             <p>
-              While Revora exercises precision precautions, we strongly advise backing up device data prior to micro-soldering motherboard repairs. Revora is not liable for pre-existing liquid corrosion damage or NAND flash chip wear.
+              While Revora exercises precision precautions, we strongly advise backing up device data prior to motherboard repairs. Revora is not liable for pre-existing internal liquid corrosion damage or worn NAND flash chips on non-booting devices.
             </p>
           </div>
 
@@ -156,7 +162,7 @@ function TermsPage() {
           <div className="p-6 rounded-2xl bg-white border border-line space-y-2 shadow-xs">
             <h3 className="text-base font-bold text-ink">Need Clarification on Warranty or Service Terms?</h3>
             <p className="text-xs text-muted">
-              Contact our support coordinator at <a href="mailto:supportsellphone@gmail.com" className="text-brand hover:underline font-medium">supportsellphone@gmail.com</a> or call <a href="tel:8591770877" className="text-brand hover:underline font-medium">+91 8591770877</a>.
+              Contact our support team directly at <a href="mailto:support@sellrepairphone.org" className="text-brand hover:underline font-medium">support@sellrepairphone.org</a> or call/WhatsApp <a href="tel:+918591770877" className="text-brand hover:underline font-medium">+91 85917 70877</a>.
             </p>
           </div>
         </section>

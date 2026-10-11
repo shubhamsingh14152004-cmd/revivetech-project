@@ -20,6 +20,12 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DeadPhoneBuybackRouteImport } from './routes/dead-phone-buyback'
 import { Route as DeadPhoneRepairRouteImport } from './routes/dead-phone-repair'
 import { Route as DoorstepMobileRepairRouteImport } from './routes/doorstep-mobile-repair'
+import { Route as DoorstepMobileRepairAndheriRouteImport } from './routes/doorstep-mobile-repair-andheri'
+import { Route as DoorstepMobileRepairBandraRouteImport } from './routes/doorstep-mobile-repair-bandra'
+import { Route as DoorstepMobileRepairBorivaliRouteImport } from './routes/doorstep-mobile-repair-borivali'
+import { Route as DoorstepMobileRepairDadarRouteImport } from './routes/doorstep-mobile-repair-dadar'
+import { Route as DoorstepMobileRepairKurlaRouteImport } from './routes/doorstep-mobile-repair-kurla'
+import { Route as DoorstepMobileRepairPowaiRouteImport } from './routes/doorstep-mobile-repair-powai'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FixOrSellRouteImport } from './routes/fix-or-sell'
 import { Route as GooglePixelRepairRouteImport } from './routes/google-pixel-repair'
@@ -32,15 +38,19 @@ import { Route as OneplusRepairRouteImport } from './routes/oneplus-repair'
 import { Route as OppoRepairRouteImport } from './routes/oppo-repair'
 import { Route as PhoneBuybackPriceIndiaRouteImport } from './routes/phone-buyback-price-india'
 import { Route as PhoneNotTurningOnRouteImport } from './routes/phone-not-turning-on'
+import { Route as PhoneRepairNaviMumbaiRouteImport } from './routes/phone-repair-navi-mumbai'
+import { Route as PhoneRepairThaneRouteImport } from './routes/phone-repair-thane'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RealmeRepairRouteImport } from './routes/realme-repair'
 import { Route as RepairRouteImport } from './routes/repair'
 import { Route as SamsungRepairRouteImport } from './routes/samsung-repair'
 import { Route as ScreenRepairRouteImport } from './routes/screen-repair'
 import { Route as SellDamagedPhoneRouteImport } from './routes/sell-damaged-phone'
+import { Route as SellDeadIphoneRouteImport } from './routes/sell-dead-iphone'
 import { Route as SellDeadPhoneRouteImport } from './routes/sell-dead-phone'
 import { Route as SellOldPhoneRouteImport } from './routes/sell-old-phone'
 import { Route as SellPhoneRouteImport } from './routes/sell-phone'
+import { Route as SellWaterDamagedPhoneRouteImport } from './routes/sell-water-damaged-phone'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VivoRepairRouteImport } from './routes/vivo-repair'
 import { Route as WaterDamageRepairRouteImport } from './routes/water-damage-repair'
@@ -104,6 +114,42 @@ const DoorstepMobileRepairRoute = DoorstepMobileRepairRouteImport.update({
   path: '/doorstep-mobile-repair',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DoorstepMobileRepairAndheriRoute =
+  DoorstepMobileRepairAndheriRouteImport.update({
+    id: '/doorstep-mobile-repair-andheri',
+    path: '/doorstep-mobile-repair-andheri',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DoorstepMobileRepairBandraRoute =
+  DoorstepMobileRepairBandraRouteImport.update({
+    id: '/doorstep-mobile-repair-bandra',
+    path: '/doorstep-mobile-repair-bandra',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DoorstepMobileRepairBorivaliRoute =
+  DoorstepMobileRepairBorivaliRouteImport.update({
+    id: '/doorstep-mobile-repair-borivali',
+    path: '/doorstep-mobile-repair-borivali',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DoorstepMobileRepairDadarRoute =
+  DoorstepMobileRepairDadarRouteImport.update({
+    id: '/doorstep-mobile-repair-dadar',
+    path: '/doorstep-mobile-repair-dadar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DoorstepMobileRepairKurlaRoute =
+  DoorstepMobileRepairKurlaRouteImport.update({
+    id: '/doorstep-mobile-repair-kurla',
+    path: '/doorstep-mobile-repair-kurla',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DoorstepMobileRepairPowaiRoute =
+  DoorstepMobileRepairPowaiRouteImport.update({
+    id: '/doorstep-mobile-repair-powai',
+    path: '/doorstep-mobile-repair-powai',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
@@ -164,6 +210,16 @@ const PhoneNotTurningOnRoute = PhoneNotTurningOnRouteImport.update({
   path: '/phone-not-turning-on',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PhoneRepairNaviMumbaiRoute = PhoneRepairNaviMumbaiRouteImport.update({
+  id: '/phone-repair-navi-mumbai',
+  path: '/phone-repair-navi-mumbai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhoneRepairThaneRoute = PhoneRepairThaneRouteImport.update({
+  id: '/phone-repair-thane',
+  path: '/phone-repair-thane',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
@@ -194,6 +250,11 @@ const SellDamagedPhoneRoute = SellDamagedPhoneRouteImport.update({
   path: '/sell-damaged-phone',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SellDeadIphoneRoute = SellDeadIphoneRouteImport.update({
+  id: '/sell-dead-iphone',
+  path: '/sell-dead-iphone',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SellDeadPhoneRoute = SellDeadPhoneRouteImport.update({
   id: '/sell-dead-phone',
   path: '/sell-dead-phone',
@@ -207,6 +268,11 @@ const SellOldPhoneRoute = SellOldPhoneRouteImport.update({
 const SellPhoneRoute = SellPhoneRouteImport.update({
   id: '/sell-phone',
   path: '/sell-phone',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SellWaterDamagedPhoneRoute = SellWaterDamagedPhoneRouteImport.update({
+  id: '/sell-water-damaged-phone',
+  path: '/sell-water-damaged-phone',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermsRoute = TermsRouteImport.update({
@@ -257,6 +323,12 @@ export interface FileRoutesByFullPath {
   '/dead-phone-buyback': typeof DeadPhoneBuybackRoute
   '/dead-phone-repair': typeof DeadPhoneRepairRoute
   '/doorstep-mobile-repair': typeof DoorstepMobileRepairRoute
+  '/doorstep-mobile-repair-andheri': typeof DoorstepMobileRepairAndheriRoute
+  '/doorstep-mobile-repair-bandra': typeof DoorstepMobileRepairBandraRoute
+  '/doorstep-mobile-repair-borivali': typeof DoorstepMobileRepairBorivaliRoute
+  '/doorstep-mobile-repair-dadar': typeof DoorstepMobileRepairDadarRoute
+  '/doorstep-mobile-repair-kurla': typeof DoorstepMobileRepairKurlaRoute
+  '/doorstep-mobile-repair-powai': typeof DoorstepMobileRepairPowaiRoute
   '/faq': typeof FaqRoute
   '/fix-or-sell': typeof FixOrSellRoute
   '/google-pixel-repair': typeof GooglePixelRepairRoute
@@ -269,15 +341,19 @@ export interface FileRoutesByFullPath {
   '/oppo-repair': typeof OppoRepairRoute
   '/phone-buyback-price-india': typeof PhoneBuybackPriceIndiaRoute
   '/phone-not-turning-on': typeof PhoneNotTurningOnRoute
+  '/phone-repair-navi-mumbai': typeof PhoneRepairNaviMumbaiRoute
+  '/phone-repair-thane': typeof PhoneRepairThaneRoute
   '/privacy': typeof PrivacyRoute
   '/realme-repair': typeof RealmeRepairRoute
   '/repair': typeof RepairRoute
   '/samsung-repair': typeof SamsungRepairRoute
   '/screen-repair': typeof ScreenRepairRoute
   '/sell-damaged-phone': typeof SellDamagedPhoneRoute
+  '/sell-dead-iphone': typeof SellDeadIphoneRoute
   '/sell-dead-phone': typeof SellDeadPhoneRoute
   '/sell-old-phone': typeof SellOldPhoneRoute
   '/sell-phone': typeof SellPhoneRoute
+  '/sell-water-damaged-phone': typeof SellWaterDamagedPhoneRoute
   '/terms': typeof TermsRoute
   '/vivo-repair': typeof VivoRepairRoute
   '/water-damage-repair': typeof WaterDamageRepairRoute
@@ -298,6 +374,12 @@ export interface FileRoutesByTo {
   '/dead-phone-buyback': typeof DeadPhoneBuybackRoute
   '/dead-phone-repair': typeof DeadPhoneRepairRoute
   '/doorstep-mobile-repair': typeof DoorstepMobileRepairRoute
+  '/doorstep-mobile-repair-andheri': typeof DoorstepMobileRepairAndheriRoute
+  '/doorstep-mobile-repair-bandra': typeof DoorstepMobileRepairBandraRoute
+  '/doorstep-mobile-repair-borivali': typeof DoorstepMobileRepairBorivaliRoute
+  '/doorstep-mobile-repair-dadar': typeof DoorstepMobileRepairDadarRoute
+  '/doorstep-mobile-repair-kurla': typeof DoorstepMobileRepairKurlaRoute
+  '/doorstep-mobile-repair-powai': typeof DoorstepMobileRepairPowaiRoute
   '/faq': typeof FaqRoute
   '/fix-or-sell': typeof FixOrSellRoute
   '/google-pixel-repair': typeof GooglePixelRepairRoute
@@ -310,15 +392,19 @@ export interface FileRoutesByTo {
   '/oppo-repair': typeof OppoRepairRoute
   '/phone-buyback-price-india': typeof PhoneBuybackPriceIndiaRoute
   '/phone-not-turning-on': typeof PhoneNotTurningOnRoute
+  '/phone-repair-navi-mumbai': typeof PhoneRepairNaviMumbaiRoute
+  '/phone-repair-thane': typeof PhoneRepairThaneRoute
   '/privacy': typeof PrivacyRoute
   '/realme-repair': typeof RealmeRepairRoute
   '/repair': typeof RepairRoute
   '/samsung-repair': typeof SamsungRepairRoute
   '/screen-repair': typeof ScreenRepairRoute
   '/sell-damaged-phone': typeof SellDamagedPhoneRoute
+  '/sell-dead-iphone': typeof SellDeadIphoneRoute
   '/sell-dead-phone': typeof SellDeadPhoneRoute
   '/sell-old-phone': typeof SellOldPhoneRoute
   '/sell-phone': typeof SellPhoneRoute
+  '/sell-water-damaged-phone': typeof SellWaterDamagedPhoneRoute
   '/terms': typeof TermsRoute
   '/vivo-repair': typeof VivoRepairRoute
   '/water-damage-repair': typeof WaterDamageRepairRoute
@@ -340,6 +426,12 @@ export interface FileRoutesById {
   '/dead-phone-buyback': typeof DeadPhoneBuybackRoute
   '/dead-phone-repair': typeof DeadPhoneRepairRoute
   '/doorstep-mobile-repair': typeof DoorstepMobileRepairRoute
+  '/doorstep-mobile-repair-andheri': typeof DoorstepMobileRepairAndheriRoute
+  '/doorstep-mobile-repair-bandra': typeof DoorstepMobileRepairBandraRoute
+  '/doorstep-mobile-repair-borivali': typeof DoorstepMobileRepairBorivaliRoute
+  '/doorstep-mobile-repair-dadar': typeof DoorstepMobileRepairDadarRoute
+  '/doorstep-mobile-repair-kurla': typeof DoorstepMobileRepairKurlaRoute
+  '/doorstep-mobile-repair-powai': typeof DoorstepMobileRepairPowaiRoute
   '/faq': typeof FaqRoute
   '/fix-or-sell': typeof FixOrSellRoute
   '/google-pixel-repair': typeof GooglePixelRepairRoute
@@ -352,15 +444,19 @@ export interface FileRoutesById {
   '/oppo-repair': typeof OppoRepairRoute
   '/phone-buyback-price-india': typeof PhoneBuybackPriceIndiaRoute
   '/phone-not-turning-on': typeof PhoneNotTurningOnRoute
+  '/phone-repair-navi-mumbai': typeof PhoneRepairNaviMumbaiRoute
+  '/phone-repair-thane': typeof PhoneRepairThaneRoute
   '/privacy': typeof PrivacyRoute
   '/realme-repair': typeof RealmeRepairRoute
   '/repair': typeof RepairRoute
   '/samsung-repair': typeof SamsungRepairRoute
   '/screen-repair': typeof ScreenRepairRoute
   '/sell-damaged-phone': typeof SellDamagedPhoneRoute
+  '/sell-dead-iphone': typeof SellDeadIphoneRoute
   '/sell-dead-phone': typeof SellDeadPhoneRoute
   '/sell-old-phone': typeof SellOldPhoneRoute
   '/sell-phone': typeof SellPhoneRoute
+  '/sell-water-damaged-phone': typeof SellWaterDamagedPhoneRoute
   '/terms': typeof TermsRoute
   '/vivo-repair': typeof VivoRepairRoute
   '/water-damage-repair': typeof WaterDamageRepairRoute
@@ -383,6 +479,12 @@ export interface FileRouteTypes {
     | '/dead-phone-buyback'
     | '/dead-phone-repair'
     | '/doorstep-mobile-repair'
+    | '/doorstep-mobile-repair-andheri'
+    | '/doorstep-mobile-repair-bandra'
+    | '/doorstep-mobile-repair-borivali'
+    | '/doorstep-mobile-repair-dadar'
+    | '/doorstep-mobile-repair-kurla'
+    | '/doorstep-mobile-repair-powai'
     | '/faq'
     | '/fix-or-sell'
     | '/google-pixel-repair'
@@ -395,15 +497,19 @@ export interface FileRouteTypes {
     | '/oppo-repair'
     | '/phone-buyback-price-india'
     | '/phone-not-turning-on'
+    | '/phone-repair-navi-mumbai'
+    | '/phone-repair-thane'
     | '/privacy'
     | '/realme-repair'
     | '/repair'
     | '/samsung-repair'
     | '/screen-repair'
     | '/sell-damaged-phone'
+    | '/sell-dead-iphone'
     | '/sell-dead-phone'
     | '/sell-old-phone'
     | '/sell-phone'
+    | '/sell-water-damaged-phone'
     | '/terms'
     | '/vivo-repair'
     | '/water-damage-repair'
@@ -424,6 +530,12 @@ export interface FileRouteTypes {
     | '/dead-phone-buyback'
     | '/dead-phone-repair'
     | '/doorstep-mobile-repair'
+    | '/doorstep-mobile-repair-andheri'
+    | '/doorstep-mobile-repair-bandra'
+    | '/doorstep-mobile-repair-borivali'
+    | '/doorstep-mobile-repair-dadar'
+    | '/doorstep-mobile-repair-kurla'
+    | '/doorstep-mobile-repair-powai'
     | '/faq'
     | '/fix-or-sell'
     | '/google-pixel-repair'
@@ -436,15 +548,19 @@ export interface FileRouteTypes {
     | '/oppo-repair'
     | '/phone-buyback-price-india'
     | '/phone-not-turning-on'
+    | '/phone-repair-navi-mumbai'
+    | '/phone-repair-thane'
     | '/privacy'
     | '/realme-repair'
     | '/repair'
     | '/samsung-repair'
     | '/screen-repair'
     | '/sell-damaged-phone'
+    | '/sell-dead-iphone'
     | '/sell-dead-phone'
     | '/sell-old-phone'
     | '/sell-phone'
+    | '/sell-water-damaged-phone'
     | '/terms'
     | '/vivo-repair'
     | '/water-damage-repair'
@@ -465,6 +581,12 @@ export interface FileRouteTypes {
     | '/dead-phone-buyback'
     | '/dead-phone-repair'
     | '/doorstep-mobile-repair'
+    | '/doorstep-mobile-repair-andheri'
+    | '/doorstep-mobile-repair-bandra'
+    | '/doorstep-mobile-repair-borivali'
+    | '/doorstep-mobile-repair-dadar'
+    | '/doorstep-mobile-repair-kurla'
+    | '/doorstep-mobile-repair-powai'
     | '/faq'
     | '/fix-or-sell'
     | '/google-pixel-repair'
@@ -477,15 +599,19 @@ export interface FileRouteTypes {
     | '/oppo-repair'
     | '/phone-buyback-price-india'
     | '/phone-not-turning-on'
+    | '/phone-repair-navi-mumbai'
+    | '/phone-repair-thane'
     | '/privacy'
     | '/realme-repair'
     | '/repair'
     | '/samsung-repair'
     | '/screen-repair'
     | '/sell-damaged-phone'
+    | '/sell-dead-iphone'
     | '/sell-dead-phone'
     | '/sell-old-phone'
     | '/sell-phone'
+    | '/sell-water-damaged-phone'
     | '/terms'
     | '/vivo-repair'
     | '/water-damage-repair'
@@ -507,6 +633,12 @@ export interface RootRouteChildren {
   DeadPhoneBuybackRoute: typeof DeadPhoneBuybackRoute
   DeadPhoneRepairRoute: typeof DeadPhoneRepairRoute
   DoorstepMobileRepairRoute: typeof DoorstepMobileRepairRoute
+  DoorstepMobileRepairAndheriRoute: typeof DoorstepMobileRepairAndheriRoute
+  DoorstepMobileRepairBandraRoute: typeof DoorstepMobileRepairBandraRoute
+  DoorstepMobileRepairBorivaliRoute: typeof DoorstepMobileRepairBorivaliRoute
+  DoorstepMobileRepairDadarRoute: typeof DoorstepMobileRepairDadarRoute
+  DoorstepMobileRepairKurlaRoute: typeof DoorstepMobileRepairKurlaRoute
+  DoorstepMobileRepairPowaiRoute: typeof DoorstepMobileRepairPowaiRoute
   FaqRoute: typeof FaqRoute
   FixOrSellRoute: typeof FixOrSellRoute
   GooglePixelRepairRoute: typeof GooglePixelRepairRoute
@@ -519,15 +651,19 @@ export interface RootRouteChildren {
   OppoRepairRoute: typeof OppoRepairRoute
   PhoneBuybackPriceIndiaRoute: typeof PhoneBuybackPriceIndiaRoute
   PhoneNotTurningOnRoute: typeof PhoneNotTurningOnRoute
+  PhoneRepairNaviMumbaiRoute: typeof PhoneRepairNaviMumbaiRoute
+  PhoneRepairThaneRoute: typeof PhoneRepairThaneRoute
   PrivacyRoute: typeof PrivacyRoute
   RealmeRepairRoute: typeof RealmeRepairRoute
   RepairRoute: typeof RepairRoute
   SamsungRepairRoute: typeof SamsungRepairRoute
   ScreenRepairRoute: typeof ScreenRepairRoute
   SellDamagedPhoneRoute: typeof SellDamagedPhoneRoute
+  SellDeadIphoneRoute: typeof SellDeadIphoneRoute
   SellDeadPhoneRoute: typeof SellDeadPhoneRoute
   SellOldPhoneRoute: typeof SellOldPhoneRoute
   SellPhoneRoute: typeof SellPhoneRoute
+  SellWaterDamagedPhoneRoute: typeof SellWaterDamagedPhoneRoute
   TermsRoute: typeof TermsRoute
   VivoRepairRoute: typeof VivoRepairRoute
   WaterDamageRepairRoute: typeof WaterDamageRepairRoute
@@ -616,6 +752,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DoorstepMobileRepairRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/doorstep-mobile-repair-andheri': {
+      id: '/doorstep-mobile-repair-andheri'
+      path: '/doorstep-mobile-repair-andheri'
+      fullPath: '/doorstep-mobile-repair-andheri'
+      preLoaderRoute: typeof DoorstepMobileRepairAndheriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doorstep-mobile-repair-bandra': {
+      id: '/doorstep-mobile-repair-bandra'
+      path: '/doorstep-mobile-repair-bandra'
+      fullPath: '/doorstep-mobile-repair-bandra'
+      preLoaderRoute: typeof DoorstepMobileRepairBandraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doorstep-mobile-repair-borivali': {
+      id: '/doorstep-mobile-repair-borivali'
+      path: '/doorstep-mobile-repair-borivali'
+      fullPath: '/doorstep-mobile-repair-borivali'
+      preLoaderRoute: typeof DoorstepMobileRepairBorivaliRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doorstep-mobile-repair-dadar': {
+      id: '/doorstep-mobile-repair-dadar'
+      path: '/doorstep-mobile-repair-dadar'
+      fullPath: '/doorstep-mobile-repair-dadar'
+      preLoaderRoute: typeof DoorstepMobileRepairDadarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doorstep-mobile-repair-kurla': {
+      id: '/doorstep-mobile-repair-kurla'
+      path: '/doorstep-mobile-repair-kurla'
+      fullPath: '/doorstep-mobile-repair-kurla'
+      preLoaderRoute: typeof DoorstepMobileRepairKurlaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doorstep-mobile-repair-powai': {
+      id: '/doorstep-mobile-repair-powai'
+      path: '/doorstep-mobile-repair-powai'
+      fullPath: '/doorstep-mobile-repair-powai'
+      preLoaderRoute: typeof DoorstepMobileRepairPowaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faq': {
       id: '/faq'
       path: '/faq'
@@ -700,6 +878,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PhoneNotTurningOnRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/phone-repair-navi-mumbai': {
+      id: '/phone-repair-navi-mumbai'
+      path: '/phone-repair-navi-mumbai'
+      fullPath: '/phone-repair-navi-mumbai'
+      preLoaderRoute: typeof PhoneRepairNaviMumbaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/phone-repair-thane': {
+      id: '/phone-repair-thane'
+      path: '/phone-repair-thane'
+      fullPath: '/phone-repair-thane'
+      preLoaderRoute: typeof PhoneRepairThaneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy': {
       id: '/privacy'
       path: '/privacy'
@@ -742,6 +934,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SellDamagedPhoneRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sell-dead-iphone': {
+      id: '/sell-dead-iphone'
+      path: '/sell-dead-iphone'
+      fullPath: '/sell-dead-iphone'
+      preLoaderRoute: typeof SellDeadIphoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sell-dead-phone': {
       id: '/sell-dead-phone'
       path: '/sell-dead-phone'
@@ -761,6 +960,13 @@ declare module '@tanstack/react-router' {
       path: '/sell-phone'
       fullPath: '/sell-phone'
       preLoaderRoute: typeof SellPhoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sell-water-damaged-phone': {
+      id: '/sell-water-damaged-phone'
+      path: '/sell-water-damaged-phone'
+      fullPath: '/sell-water-damaged-phone'
+      preLoaderRoute: typeof SellWaterDamagedPhoneRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/terms': {
@@ -827,6 +1033,12 @@ const rootRouteChildren: RootRouteChildren = {
   DeadPhoneBuybackRoute: DeadPhoneBuybackRoute,
   DeadPhoneRepairRoute: DeadPhoneRepairRoute,
   DoorstepMobileRepairRoute: DoorstepMobileRepairRoute,
+  DoorstepMobileRepairAndheriRoute: DoorstepMobileRepairAndheriRoute,
+  DoorstepMobileRepairBandraRoute: DoorstepMobileRepairBandraRoute,
+  DoorstepMobileRepairBorivaliRoute: DoorstepMobileRepairBorivaliRoute,
+  DoorstepMobileRepairDadarRoute: DoorstepMobileRepairDadarRoute,
+  DoorstepMobileRepairKurlaRoute: DoorstepMobileRepairKurlaRoute,
+  DoorstepMobileRepairPowaiRoute: DoorstepMobileRepairPowaiRoute,
   FaqRoute: FaqRoute,
   FixOrSellRoute: FixOrSellRoute,
   GooglePixelRepairRoute: GooglePixelRepairRoute,
@@ -839,15 +1051,19 @@ const rootRouteChildren: RootRouteChildren = {
   OppoRepairRoute: OppoRepairRoute,
   PhoneBuybackPriceIndiaRoute: PhoneBuybackPriceIndiaRoute,
   PhoneNotTurningOnRoute: PhoneNotTurningOnRoute,
+  PhoneRepairNaviMumbaiRoute: PhoneRepairNaviMumbaiRoute,
+  PhoneRepairThaneRoute: PhoneRepairThaneRoute,
   PrivacyRoute: PrivacyRoute,
   RealmeRepairRoute: RealmeRepairRoute,
   RepairRoute: RepairRoute,
   SamsungRepairRoute: SamsungRepairRoute,
   ScreenRepairRoute: ScreenRepairRoute,
   SellDamagedPhoneRoute: SellDamagedPhoneRoute,
+  SellDeadIphoneRoute: SellDeadIphoneRoute,
   SellDeadPhoneRoute: SellDeadPhoneRoute,
   SellOldPhoneRoute: SellOldPhoneRoute,
   SellPhoneRoute: SellPhoneRoute,
+  SellWaterDamagedPhoneRoute: SellWaterDamagedPhoneRoute,
   TermsRoute: TermsRoute,
   VivoRepairRoute: VivoRepairRoute,
   WaterDamageRepairRoute: WaterDamageRepairRoute,

@@ -175,8 +175,8 @@ export function DiagnosticWizard() {
                     <Wrench className="h-6 w-6" />
                   </div>
                   <div>
-                    <h5 className="text-[16px] font-bold">Book Same-Day Fix</h5>
-                    <p className="text-[13px] opacity-80 mt-1">Est. ₹1,499 - ₹2,999</p>
+                    <h5 className="text-[16px] font-bold">Book Doorstep Repair</h5>
+                    <p className="text-[13px] opacity-80 mt-1">Tested Parts & 90-Day Warranty</p>
                   </div>
                 </div>
                 <ArrowRight className="h-5 w-5 opacity-80 group-hover:translate-x-1 group-hover:opacity-100 transition" />

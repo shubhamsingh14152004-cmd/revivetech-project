@@ -74,7 +74,7 @@ function FixOrSellPage() {
 
           <h2 className="text-2xl font-bold text-ink mb-6">Depreciation Truths</h2>
           <p className="text-[15px] md:text-[16px] text-muted leading-relaxed mb-6">
-            A new ₹80,000 phone depreciates by roughly 30% the moment the seal is opened. When you buy a new phone, you are absorbing that massive initial depreciation hit all over again. In contrast, spending ₹8,000 on a high-grade OEM screen replacement protects your investment. Always ensure your repair center installs grade-A panels that preserve 120Hz refresh rates, true color calibration, and in-display fingerprint sensitivity.
+            A flagship phone depreciates significantly the moment the seal is opened. When you buy a brand new phone to replace a repairable defect, you absorb a large initial depreciation hit all over again. In contrast, replacing the broken component with a high-grade OEM screen protects your existing investment. Always ensure your repair center installs grade-A panels that preserve refresh rates, true color calibration, and in-display fingerprint sensitivity.
           </p>
 
           <h2 className="text-2xl font-bold text-ink mb-6">The 50% Rule</h2>

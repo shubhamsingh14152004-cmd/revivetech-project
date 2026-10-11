@@ -1,22 +1,32 @@
 # Revora (sellrepairphone.org)
 
-Revora is a quality mobile repair and phone buyback service based in Mumbai, India. We specialise in reviving dead phones, micro-soldering, liquid damage recovery, and offering assured cash for pre-owned or broken devices.
+Revora is a specialized mobile phone buyback and doorstep repair service operating across Mumbai, Thane, and Navi Mumbai, India. We help customers sell old, damaged, or completely dead smartphones for immediate payment via UPI or bank transfer, and provide certified doorstep repair services with a 90-day warranty.
 
-## Key Services
-- Instant Phone Buyback: Sell old, broken, or completely dead phones (iPhone, Samsung, etc.) for payment via UPI or bank transfer.
-- Lab Bench Repair: Specialized micro-soldering for dead logic boards, data recovery, and hardware faults.
-- Standard Repair: Same-day screen, battery, and camera replacements.
-- Pre-Loved Flagships: Shop certified 100-point inspected refurbished iPhones and Galaxy phones with 1-year shield warranty.
-- Doorstep Service: Free secure pickup and drop available across Mumbai, Navi Mumbai, and Thane.
+## Core Services
+- Phone Buyback: Sell old, used, broken, cracked-screen, liquid-damaged, or completely dead phones (Apple iPhone, Samsung, OnePlus, Xiaomi, Vivo, Oppo, Realme, Motorola, Google Pixel).
+- Doorstep Mobile Repair: Professional screen replacements, battery replacements, charging port fixes, and dead phone logic board repairs across Mumbai, Thane, and Navi Mumbai.
+- Electronic Waste Recycling: Environmentally responsible recycling of unfixable parts and dead mobile scrap to prevent landfill contamination.
+- Enterprise & ITAD Buyback: Bulk smartphone buyback for business device refreshes with certified data sanitization.
 
-## Guarantees
-- 100% Data Security: We execute NIST 800-88 military-grade 3-pass hardware wipe on working phones, and physically destroy memory chips on dead boards before recycling.
-- OEM Level Components: We use genuine components or quality equivalents.
-- Transparent Pricing: Our estimators provide fixed upfront repair/sell quotes based on live market pricing.
+## Service Coverage & Logistics
+- Primary Doorstep Zones: Mumbai (Andheri, Bandra, Borivali, Dadar, Kurla, Powai, South Mumbai), Thane (Thane West, Ghodbunder, Majiwada), and Navi Mumbai (Vashi, Nerul, Belapur, Seawoods).
+- Zero Doorstep Fee: Doorstep pickup and evaluation is free across our primary service areas.
+- Turnaround: Doorstep technicians carry genuine OEM-grade replacement parts and diagnostic equipment directly to the customer's home or office.
 
-## Contact
+## Valuation & Decline Policy
+- Direct WhatsApp Quote: Customers share their device model, storage, and condition to receive a customized quote on WhatsApp.
+- Doorstep Verification: A technician inspects the device physically in the customer's presence.
+- Zero-Fee Decline Policy: If the customer declines the final verified offer at the doorstep, the device is returned immediately with zero cancellation fee and zero hidden charges.
+- Instant Payment: When the offer is accepted, payment is transferred immediately via UPI or bank transfer before handover.
+
+## Data Security & Privacy
+- Functional Devices: Cryptographic data sanitization compliant with NIST 800-88 guidelines before resale or recycling.
+- Dead Motherboards: Flash memory storage chips are physically decommissioned or destroyed before metal/e-waste recovery.
+- Customer Privacy: Lockscreen passcodes are never requested unless testing biometric sensors in the customer's direct presence.
+
+## Verified Contact Details
+- Brand: Revora
 - Phone / WhatsApp: +91 85917 70877
-- Email: supportsellphone@gmail.com
-- Hours: 10:00 AM - 8:00 PM
-
-For detailed pricing and booking, visit https://www.sellrepairphone.org.
+- Email: support@sellrepairphone.org
+- Operating Hours: 10:00 AM - 8:00 PM
+- Canonical Website: https://www.sellrepairphone.org
