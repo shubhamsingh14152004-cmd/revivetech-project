@@ -18,12 +18,6 @@ interface Device {
   name: string;
   series: string;
   variants: { storage: string }[];
-  priceRanges?: {
-    dead?: { min: number, max: number };
-    cracked?: { min: number, max: number };
-    worn?: { min: number, max: number };
-    mint?: { min: number, max: number };
-  };
 }
 
 export function TradeInCalculator({ 
@@ -125,22 +119,6 @@ export function TradeInCalculator({
     }
   }, [availableStorages, storage, selectedDevice]);
 
-  const getPriceRange = (): [number, number] | null => {
-    if (!selectedDevice || !selectedDevice.priceRanges) return null;
-    let rangeObj;
-    if (condition === "working") rangeObj = selectedDevice.priceRanges.mint;
-    else if (condition === "flawed") rangeObj = selectedDevice.priceRanges.worn;
-    else if (condition === "broken_screen") rangeObj = selectedDevice.priceRanges.cracked;
-    else rangeObj = selectedDevice.priceRanges.dead;
-
-    if (!rangeObj || !rangeObj.min || !rangeObj.max) return null;
-
-    const boxBonus = hasBox ? 300 : 0;
-    return [rangeObj.min + boxBonus, rangeObj.max + boxBonus];
-  };
-
-  const estimate = getPriceRange();
-
   const handleNext = () => {
     if (step === 1 && !brandId) return toast.error("Select a brand");
     if (step === 2 && !model) return toast.error("Select a model");
@@ -160,7 +138,7 @@ export function TradeInCalculator({
         phoneBrand: selectedBrand?.name || brandId,
         phoneModel: `${model} (${storage})`,
         serviceType: "Sell Phone",
-        problemDescription: `Condition: ${condition} | Box: ${hasBox ? "Yes" : "No"} | Est: ${estimate ? `₹${estimate[0]}-₹${estimate[1]}` : "Ask on WhatsApp"} | Pincode: ${pincode}`,
+        problemDescription: `Condition: ${condition} | Box: ${hasBox ? "Yes" : "No"} | Pincode: ${pincode}`,
         preferredOption: "Doorstep Pickup"
       });
       toast.success("Request received! We will contact you shortly.");
@@ -250,11 +228,11 @@ export function TradeInCalculator({
       {/* Header */}
       {step < 5 && (
         <div className="px-6 py-5 border-b border-line bg-background flex items-center justify-between">
-          <h2 className="text-lg font-bold text-ink">Get My Price</h2>
+          <h2 className="text-lg font-bold text-ink">Sell Your Phone</h2>
           <div className="flex items-center gap-1.5 text-xs font-semibold text-muted">
             <span className={step >= 1 ? "text-brand" : ""}>Brand</span> •
             <span className={step >= 2 ? "text-brand" : ""}>Model</span> •
-            <span className={step >= 3 ? "text-brand" : ""}>Value</span>
+            <span className={step >= 3 ? "text-brand" : ""}>Summary</span>
           </div>
         </div>
       )}
@@ -404,11 +382,7 @@ export function TradeInCalculator({
                 </div>
                 <input type="checkbox" className="sr-only" checked={hasBox} onChange={e => setHasBox(e.target.checked)} />
                 <div className="flex-1">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[13px] font-bold text-ink">Original Box & Charger</span>
-                    {estimate && <span className="text-[13px] font-bold text-brand">+₹300</span>}
-                  </div>
-                  <span className="text-[11px] text-muted">Increases your total payout</span>
+                  <span className="text-[13px] font-bold text-ink">I have the original box and charger</span>
                 </div>
               </label>
             </div>
@@ -423,7 +397,6 @@ export function TradeInCalculator({
               storage={storage}
               condition={condition}
               hasBox={hasBox}
-              baseEstimate={estimate}
             />
 
             <form onSubmit={handleSubmit} className="mt-auto space-y-4">
@@ -475,7 +448,7 @@ export function TradeInCalculator({
                 {isSubmitting ? "Processing..." : (
                   <>
                     <Truck className="h-4 w-4" />
-                    Book free pickup
+                    Book pickup
                   </>
                 )}
               </button>
@@ -493,7 +466,7 @@ export function TradeInCalculator({
           </div>
           <h3 className="text-3xl font-black text-ink mb-3">Request Confirmed!</h3>
           <p className="text-[15px] text-muted max-w-sm mb-8 leading-relaxed">
-            Our team will contact you at <strong className="text-ink font-bold">+91 {phone}</strong> within 15 minutes to schedule your free doorstep pickup.
+            Our team will contact you at <strong className="text-ink font-bold">+91 {phone}</strong> within 15 minutes to schedule your doorstep pickup.
           </p>
           
           <button 
