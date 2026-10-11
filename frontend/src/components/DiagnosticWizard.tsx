@@ -189,7 +189,7 @@ export function DiagnosticWizard() {
                   </div>
                   <div>
                     <h5 className="text-[16px] font-bold text-ink">Cash Out As-Is</h5>
-                    <p className="text-[13px] text-muted mt-1">Free Doorstep Pickup</p>
+                    <p className="text-[13px] text-muted mt-1">Ask about pickup availability</p>
                   </div>
                 </div>
                 <ArrowRight className="h-5 w-5 text-muted group-hover:translate-x-1 group-hover:text-ink transition" />

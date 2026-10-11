@@ -37,6 +37,7 @@ import {
  SITE_URL,
 } from"../components/SeoJsonLd";
 import { waHref } from"../lib/whatsapp";
+import { siteConfig } from"../config/siteConfig";
 
 export const Route = createFileRoute("/")({
  head: () => ({
@@ -252,25 +253,9 @@ function Index() {
  </div>
 
  {/* Service area and contact details */}
- <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-6 border-t border-line pt-5 w-full text-xs text-muted">
- <div>
- <span className="text-xl sm:text-2xl font-black text-ink block">
- 3 Hubs
- </span>
- <span className="text-muted">Mumbai, Thane & Navi Mumbai</span>
- </div>
- <div>
- <span className="text-xl sm:text-2xl font-black text-brand block">
- Phone Repair
- </span>
- <span className="text-muted">Ask about service availability</span>
- </div>
- <div>
- <span className="text-xl sm:text-2xl font-black text-brand block">
- Phone Buyback
- </span>
- <span className="text-muted">Request a device assessment</span>
- </div>
+ <div className="mt-8 border-t border-line pt-5 w-full text-sm text-muted">
+ <p className="font-semibold text-ink">Phone repair and buyback in {siteConfig.serviceAreas.join(", ")}</p>
+ <p className="mt-1">Contact us to confirm current service availability for your area.</p>
  </div>
  </div>
 
@@ -286,10 +271,11 @@ function Index() {
  muted
  loop
  playsInline
- preload="auto"
+ preload="metadata"
+ aria-label="Animation showing the phone repair process"
+ tabIndex={-1}
  className="w-full h-full object-cover scale-[1.09] -translate-x-[2%] -translate-y-[2%] rounded-2xl block mx-auto"
  >
- <track kind="captions" />
  Your browser does not support the video tag.
  </video>
  </div>
