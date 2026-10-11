@@ -42,12 +42,12 @@ export const Route = createFileRoute("/")({
  head: () => ({
     meta: [
       {
-        title: "Revora | Sell Old Phones & Doorstep Mobile Repair",
+        title: "Revora | Phone Repair & Buyback in Mumbai",
       },
       {
         name: "description",
         content:
-          "Sell your smartphone or book doorstep mobile repair with Revora across Mumbai, Navi Mumbai and Thane. Request a direct quote and pickup on WhatsApp.",
+          "Explore phone buyback and repair with Revora in Mumbai, Navi Mumbai and Thane. Share device details to ask about assessment and current availability.",
       },
       {
         name: "keywords",
@@ -56,12 +56,12 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Revora | Sell Old Phones & Doorstep Mobile Repair",
+        content: "Revora | Phone Repair & Buyback in Mumbai",
       },
       {
         property: "og:description",
         content:
-          "Sell your smartphone or book doorstep mobile repair with Revora across Mumbai, Navi Mumbai and Thane. Request a direct quote and pickup on WhatsApp.",
+          "Explore phone buyback and repair with Revora in Mumbai, Navi Mumbai and Thane. Share device details to ask about assessment and current availability.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.sellrepairphone.org/" },
@@ -198,15 +198,15 @@ function Index() {
  <div className="lg:col-span-7 flex flex-col items-start text-left">
  <div className="inline-flex items-center gap-2 rounded-full bg-brand-tint px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink border border-brand/30">
  <span className="h-2 w-2 rounded-full bg-brand shrink-0" />
- <span>lab Diagnostics · Doorstep Service · 90-Day Warranty</span>
+          <span>Phone repair and buyback · Mumbai region</span>
  </div>
 
  <h1 className="mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-ink">
- Sell old mobile phones, <span className="text-brand block sm:inline">& repair your phone.</span>
+ Sell your old phone <span className="text-brand block sm:inline">or ask about a repair.</span>
  </h1>
 
  <p className="mt-4 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-muted">
- Sell your old, used, damaged, or dead phone with doorstep pickup across Mumbai, Navi Mumbai and Thane. Or book doorstep mobile repair with tested parts and 90-day warranty.
+            Explore phone buyback and repair options across Mumbai, Navi Mumbai and Thane. Share your phone model and condition to confirm current availability and request an assessment.
  </p>
 
  {/* Quick Action CTA Buttons */}
@@ -224,8 +224,7 @@ function Index() {
  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-ink hover:bg-background transition border border-line hover:border-brand cursor-pointer shadow-xs text-center"
  >
  <Wrench className="h-4 w-4 text-brand" />
- <span>Repair Phone (Free Doorstep)</span>
- <span className="rounded-full bg-brand-tint px-2 py-0.5 text-[10px] text-brand-ink uppercase tracking-wider font-bold">Benefits</span>
+          <span>Ask About Phone Repair</span>
  </button>
  </div>
 
@@ -252,7 +251,7 @@ function Index() {
  </a>
  </div>
 
- {/* Trust Metrics */}
+ {/* Service area and contact details */}
  <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-6 border-t border-line pt-5 w-full text-xs text-muted">
  <div>
  <span className="text-xl sm:text-2xl font-black text-ink block">
@@ -262,15 +261,15 @@ function Index() {
  </div>
  <div>
  <span className="text-xl sm:text-2xl font-black text-brand block">
- 90 Days
+ Phone Repair
  </span>
- <span className="text-muted">Repair Warranty</span>
+ <span className="text-muted">Ask about service availability</span>
  </div>
  <div>
  <span className="text-xl sm:text-2xl font-black text-brand block">
- Free Pickup
+ Phone Buyback
  </span>
- <span className="text-muted">Zero Visiting Fee</span>
+ <span className="text-muted">Request a device assessment</span>
  </div>
  </div>
  </div>
@@ -283,10 +282,10 @@ function Index() {
  <video
  src="/videos/revora-animation.mp4"
  poster={heroPhone}
- autoPlay
  muted
- loop
  playsInline
+ controls
+ preload="none"
  className="w-full h-full object-cover scale-[1.09] -translate-x-[2%] -translate-y-[2%] rounded-2xl block mx-auto"
  >
  <track kind="captions" />
@@ -536,7 +535,7 @@ function Index() {
  Q: Phone chalu nahi ho raha? Kya dead phone repair ho sakta hai?
  </h3>
  <p className="text-muted leading-relaxed">
- Haan! Phone band ho gaya ho ya chalu nahi ho raha ho, hamare lab lab me motherboard IC micro-soldering aur power chip repair ke zariye bina data delete kiye 80%+ phones ko thik kiya jata hai.
+ Phone on nahi ho raha? Humein model aur symptoms batayein. Hum assessment aur available repair options par baat karenge; outcome fault aur device condition par depend karta hai.
  </p>
  <div className="mt-3">
  <a href="/dead-phone-repair" className="text-brand font-semibold hover:underline inline-flex items-center gap-1 text-xs">
@@ -551,7 +550,7 @@ function Index() {
  Q: Phone ki screen toot gayi ya display me lines aa rahi hain?
  </h3>
  <p className="text-muted leading-relaxed">
- Original OEM Dynamic AMOLED aur display displays se 30 se 45 minute ke andar screen replace ki jaati hai. Har screen replacement par 90-day Priority warranty milti hai.
+ Screen repair options and parts depend on the phone model and fault. Contact us with your device details to discuss assessment, availability, pricing, and applicable terms.
  </p>
  <div className="mt-3">
  <a href="/screen-repair" className="text-brand font-semibold hover:underline inline-flex items-center gap-1 text-xs">
@@ -566,7 +565,7 @@ function Index() {
  Q: Phone ki battery jaldi khatam hoti hai ya charge nahi ho raha?
  </h3>
  <p className="text-muted leading-relaxed">
- Degraded battery swap aur USB-C / Lightning charging port repair express 30 minute me ho jata hai. Fast charging protocol 100% preserve rehta hai.
+ Battery and charging issues can have different causes. Share the phone model and symptoms so we can discuss an assessment and available options.
  </p>
  <div className="mt-3">
  <a href="/battery-replacement" className="text-brand font-semibold hover:underline inline-flex items-center gap-1 text-xs">
