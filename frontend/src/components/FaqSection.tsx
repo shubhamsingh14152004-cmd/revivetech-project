@@ -8,19 +8,19 @@ interface FaqItem {
 }
 
 const FAQS_EN: FaqItem[] = [
-  { category: "sell", q: "Will you really buy a completely dead phone?", a: "Yes, 100%! Even if your phone has suffered severe liquid damage, a crushed motherboard, or won't charge, our technicians recover undamaged OEM components. We pay assured cash for all dead flagships." },
-  { category: "security", q: "What happens to my personal data?", a: "Your data security is our #1 priority. If the device powers on, we execute a military-grade data wipe. If dead, the memory chip is physically destroyed and recycled safely." },
-  { category: "repair", q: "How fast is same-day repair?", a: "Most screen and battery replacements take only 30 to 45 minutes on our in-store lab benches. Reserving a slot online guarantees bench priority." },
-  { category: "shipping", q: "How does the mail-in prepaid kit work?", a: "We immediately send a shockproof mailer with a prepaid Express Courier label to your doorstep. Simply slide your device in and hand it to the courier." },
-  { category: "sell", q: "How quickly do I get paid?", a: "Once your package arrives, our automated bench inspects it within 4 hours. Funds are released instantly via UPI (GPay, PhonePe) or IMPS." },
+  { category: "sell", q: "Can I ask Revora about a damaged or non-working phone?", a: "Contact us with the phone model and its condition. We will let you know whether we can assess it and explain the next steps before you decide." },
+  { category: "security", q: "What should I do with my personal data before selling?", a: "Back up your data, sign out of accounts, remove the SIM and memory card, and factory-reset a working phone before handing it over. Contact us first if your phone cannot be powered on." },
+  { category: "repair", q: "How do I find out whether my phone can be repaired?", a: "Tell us the model and describe the problem. We can discuss an assessment and availability; repair time and cost depend on the device, fault, and parts required." },
+  { category: "shipping", q: "Where does Revora currently serve?", a: "Revora lists service areas in Mumbai, Navi Mumbai, and Thane. Contact us to confirm availability for your location and the service you need." },
+  { category: "sell", q: "How do I get a quote or contact support?", a: "Share the phone model and condition by phone or WhatsApp. Any estimate may change after the device is assessed; you can ask questions before deciding." },
 ];
 
 const FAQS_HINGLISH: FaqItem[] = [
-  { category: "sell", q: "Kya aap sach mein completely dead phone kharidte ho?", a: "Haan, 100%! Agar phone paani mein gir gaya ho, motherboard dead ho, ya charge nahi ho raha ho, hum fir bhi undamaged parts recover karte hain. Hum sabhi dead flagships ke liye assured cash dete hain." },
-  { category: "security", q: "Mere personal photos aur data ka kya hoga?", a: "Data security humari sabse badi priority hai. Agar phone on hota hai toh hum military-grade wipe karte hain. Agar completely dead hai, toh memory chip physically destroy aur recycle ki jaati hai." },
-  { category: "repair", q: "Same-day repair kitna fast hota hai?", a: "Zyadatar screen aur battery replacements sirf 30 se 45 minute mein ho jaati hain. Online slot book karne se aapko priority milti hai." },
-  { category: "shipping", q: "Mail-in prepaid pickup kaise kaam karta hai?", a: "Hum turant aapke address par ek shockproof mailer aur prepaid express courier label bhejte hain. Bas apna phone usme daaliye aur courier wale ko de dijiye." },
-  { category: "sell", q: "Payment kitni jaldi milegi?", a: "Jaise hi aapka phone humare lab mein aata hai, 4 ghante mein inspection ho jata hai. Uske turant baad payment UPI (GPay, PhonePe) ya IMPS ke through mil jayegi." },
+  { category: "sell", q: "Kya Revora damaged ya band phone ke baare mein bata sakta hai?", a: "Phone ka model aur condition humein batayein. Hum batayenge ki assessment possible hai ya nahi aur aage ke steps samjhayenge." },
+  { category: "security", q: "Phone bechne se pehle personal data ka kya karun?", a: "Data ka backup lein, accounts se sign out karein, SIM aur memory card nikaalein, aur chalne wale phone ko factory reset karein. Phone on nahi hota ho toh pehle humse baat karein." },
+  { category: "repair", q: "Phone repair ho sakta hai ya nahi kaise pata chalega?", a: "Model aur problem batayein. Hum assessment aur availability par baat karenge; time aur cost device, fault aur required parts par depend karte hain." },
+  { category: "shipping", q: "Revora kin jagahon par service deta hai?", a: "Revora ki listed service areas Mumbai, Navi Mumbai aur Thane hain. Apne area aur required service ki availability confirm karne ke liye humein contact karein." },
+  { category: "sell", q: "Quote ya support ke liye kaise contact karun?", a: "Phone ka model aur condition call ya WhatsApp par share karein. Assessment ke baad estimate badal sakta hai; faisla karne se pehle aap sawal pooch sakte hain." },
 ];
 
 export function FaqSection() {
@@ -74,7 +74,7 @@ export function FaqSection() {
       <div className="relative z-10 mt-8 space-y-3">
         {filteredFaqs.length === 0 ? (
           <div className="py-12 text-center text-[15px] text-muted border-2 border-dashed border-line rounded-2xl">
-            No questions matched your search query. Contact our 24/7 team!
+            No questions matched your search query. Contact our team for help.
           </div>
         ) : (
           filteredFaqs.map((faq, idx) => {
