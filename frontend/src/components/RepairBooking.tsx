@@ -19,6 +19,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Drawer, DrawerContent, DrawerTrigger, DrawerTitle } from "./ui/drawer";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "./ui/command";
 import { useIsMobile } from "../hooks/use-mobile";
+import { getDevicesByBrand } from "../content/devices";
 
 interface RepairIssue {
   id: string;
@@ -47,7 +48,11 @@ export function RepairBooking() {
   const [deviceModel, setDeviceModel] = useState("");
   const [modelSearch, setModelSearch] = useState("");
   const [modelOpen, setModelOpen] = useState(false);
-  const [allModels, setAllModels] = useState<string[]>([]);
+  const [selectedBrand, setSelectedBrand] = useState("apple");
+  const [allModels, setAllModels] = useState<string[]>(() => {
+    const local = getDevicesByBrand("apple");
+    return local.map(d => `Apple ${d.name}`);
+  });
 
   const [selectedIssues, setSelectedIssues] = useState<string[]>(["screen"]);
   const [serviceSpeed, setServiceSpeed] = useState<"express" | "van" | "mail">("express");
@@ -59,14 +64,17 @@ export function RepairBooking() {
   const [isBooked, setIsBooked] = useState(false);
   const [bookingRef, setBookingRef] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const [selectedBrand, setSelectedBrand] = useState("apple");
   
   useEffect(() => {
+    const local = getDevicesByBrand(selectedBrand);
+    if (local.length > 0) {
+      const brandName = selectedBrand.charAt(0).toUpperCase() + selectedBrand.slice(1);
+      setAllModels(local.map(d => `${brandName} ${d.name}`));
+    }
     fetch(`/api/devices?brand=${selectedBrand}`)
-      .then(res => res.json())
+      .then(res => res.ok ? res.json() : null)
       .then(data => {
-        if (data.success && data.data) {
+        if (data && data.success && Array.isArray(data.data) && data.data.length > 0) {
           const names = data.data.map((d: any) => {
             const brandName = d.brandId.charAt(0).toUpperCase() + d.brandId.slice(1);
             return `${brandName} ${d.name}`;
@@ -158,7 +166,7 @@ export function RepairBooking() {
         </CommandEmpty>
         <CommandGroup>
           {availableModels.map((m) => (
-            <CommandItem key={m} value={m} onSelect={(currentValue) => { setDeviceModel(currentValue); setModelOpen(false); }} className="text-[15px] py-3">
+            <CommandItem key={m} value={m} onSelect={() => { setDeviceModel(m); setModelOpen(false); }} className="text-[15px] py-3">
               <Check className={`mr-2 h-4 w-4 ${deviceModel === m ? "opacity-100" : "opacity-0"}`} />
               {m}
             </CommandItem>

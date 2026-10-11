@@ -3,6 +3,7 @@ import { PhoneIllustration, PhoneState } from "./PhoneIllustration";
 import { ConditionSpectrum } from "./ConditionSpectrum";
 import { Receipt } from "./Receipt";
 import { brands } from "../content/brands";
+import { getDevicesByBrand, DeviceData } from "../content/devices";
 import { Smartphone, Check, ChevronsUpDown, Search, ArrowRight, Truck, CheckCircle2, Info } from "lucide-react";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "./ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
@@ -39,7 +40,11 @@ export function TradeInCalculator({
   const [brandId, setBrandId] = useState<string>(initialBrandId);
   const [brandSearch, setBrandSearch] = useState<string>("");
   
-  const [devices, setDevices] = useState<Device[]>(initialDevices);
+  const [devices, setDevices] = useState<Device[]>(() => {
+    if (initialDevices && initialDevices.length > 0) return initialDevices;
+    if (initialBrandId) return getDevicesByBrand(initialBrandId);
+    return [];
+  });
   const [isLoadingDevices, setIsLoadingDevices] = useState(false);
 
   const [model, setModel] = useState<string>("");
@@ -61,33 +66,37 @@ export function TradeInCalculator({
   }, [brandSearch]);
 
   useEffect(() => {
-    if (initialBrandId && initialDevices.length === 0) {
-      fetchDevices(initialBrandId);
+    if (initialBrandId && devices.length === 0) {
+      const local = getDevicesByBrand(initialBrandId);
+      if (local.length > 0) {
+        setDevices(local);
+      }
     }
-  }, [initialBrandId, initialDevices.length]);
+  }, [initialBrandId, devices.length]);
 
   const fetchDevices = async (bId: string) => {
     setBrandId(bId);
-    setDevices([]);
+    // Instant synchronous population so user never waits for dropdown models
+    const local = getDevicesByBrand(bId);
+    setDevices(local);
     setModel("");
     setStorage("");
     setStep(2);
     try {
-      setIsLoadingDevices(true);
       const res = await fetch(`/api/devices?brand=${bId}`);
-      const data = await res.json();
-      if (data.success && data.data) {
-        setDevices(data.data);
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success && Array.isArray(data.data) && data.data.length > 0) {
+          setDevices(data.data);
+        }
       }
     } catch (e) {
-      console.error("Failed to load devices", e);
-    } finally {
-      setIsLoadingDevices(false);
+      // Gracefully retain local devices
     }
   };
 
   const selectedBrand = brands.find(b => b.id === brandId);
-  const selectedDevice = devices.find(d => d.name === model);
+  const selectedDevice = devices.find(d => d.name.toLowerCase() === model.toLowerCase());
 
   const devicesBySeries = useMemo(() => {
     const grouped: Record<string, Device[]> = {};
@@ -206,8 +215,8 @@ export function TradeInCalculator({
               <CommandItem
                 key={m.name}
                 value={m.name}
-                onSelect={(currentValue) => {
-                  setModel(currentValue);
+                onSelect={() => {
+                  setModel(m.name);
                   setModelOpen(false);
                 }}
               >

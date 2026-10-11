@@ -4,6 +4,7 @@ import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { TradeInCalculator } from "../components/TradeInCalculator";
 import { brands } from "../content/brands";
+import { getDevicesByBrand } from "../content/devices";
 import { ArrowRight, Sparkles, Truck, ShieldCheck, Zap } from "lucide-react";
 import { SeoJsonLd, getServiceSchema, getBreadcrumbSchema, SITE_URL } from "../components/SeoJsonLd";
 
@@ -14,17 +15,8 @@ export const Route = createFileRoute("/sell/$brandSlug")({
     const b = brands.find(br => br.id === brandSlug);
     if (!b) return { brand: null, devices: [], error: "Brand not found" };
 
-    try {
-      // In SSR or CSR, we fetch from API
-      // Use absolute URL if SSR, relative if CSR
-      const baseUrl = typeof window === "undefined" ? "http://localhost:5000" : "";
-      const res = await fetch(`${baseUrl}/api/devices?brand=${brandSlug}`);
-      if (!res.ok) throw new Error("Failed");
-      const data = await res.json();
-      return { brand: b, devices: data.data || [] };
-    } catch (e) {
-      return { brand: b, devices: [] };
-    }
+    const localDevices = getDevicesByBrand(brandSlug);
+    return { brand: b, devices: localDevices };
   },
   head: ({ loaderData }) => {
     if (!loaderData || !loaderData.brand) {
@@ -33,7 +25,7 @@ export const Route = createFileRoute("/sell/$brandSlug")({
       };
     }
     const { brand, devices } = loaderData;
-    const shouldIndex = devices.length >= 10;
+    const shouldIndex = devices.length >= 5;
     
     const meta = [
       { title: `Sell Old ${brand.name} Phone Online | Best Resale Value | Revora` },
