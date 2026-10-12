@@ -24,22 +24,23 @@ import {
 } from"lucide-react";
 import heroPhone from"../assets/hero-phone.jpg";
 import { NAV_BRANDS } from "../content/nav";
+import { ExperienceHighlights } from "../components/ExperienceHighlights";
 
 const FAQS = [
  {
- question:"How fast is doorstep mobile phone repair at Revora?",
+ question:"How do I ask about mobile phone repair at Revora?",
  answer:
-"Most screen replacements, battery swaps, and camera lens fixes take only 30 to 45 minutes on our certified lab benches. You can book an express slot online or request free doorstep courier collection.",
+"Share your phone model, symptoms, and location. We can discuss assessment, pricing, and current service availability before you decide.",
  },
  {
  question:"What warranty do you provide on phone repairs?",
  answer:
-"All phone repairs include our 90-Day Priority Warranty Shield covering touch responsiveness, display performance, and component craftsmanship against manufacturing defects.",
+"Repair terms can vary by device and service. Contact us to confirm the terms that apply to your repair before proceeding.",
  },
  {
  question:"Do you use OEM-grade replacement parts?",
  answer:
-"Yes. We use certified OEM-grade displays with true color calibration and high-capacity battery cells tested to match original device specifications.",
+"Parts and options vary by device and repair. Contact us with your model and we can discuss available options.",
  },
  {
  question:"Phone repair karwana hai: Kitna time lagta hai aur process kya hai?",
@@ -49,7 +50,7 @@ const FAQS = [
  {
  question:"Phone chalu nahi ho raha: Kya dead phone thik ho jayega?",
  answer:
-"Haan! Agar aapka phone band ho gaya hai ya chalu nahi ho raha hai, hamare lab technicians motherboard micro-soldering aur power IC repair ke zariye use revive karte hain. 90-day warranty milti hai.",
+"Phone ke model aur symptoms ke saath humse contact karein. Assessment ke baad available repair options aur applicable terms discuss kiye ja sakte hain.",
  },
 ];
 
@@ -57,12 +58,12 @@ export const Route = createFileRoute("/repair")({
  head: () => ({
  meta: [
  {
- title:"Phone Repair Near Me — Mobile Repair Karwana Hai | Revora",
+ title:"Mobile Phone Repair in Mumbai | Revora",
  },
  {
  name:"description",
  content:
-"Phone repair karwana hai? Expert mobile repair service. OEM screen replacement, battery swap & motherboard repair with tested parts. Free doorstep pickup & 90-day warranty across India.",
+"Ask Revora about mobile phone repair in Mumbai, Navi Mumbai and Thane. Share your phone model and symptoms to discuss assessment, service options and availability.",
  },
  {
  name:"keywords",
@@ -71,12 +72,12 @@ export const Route = createFileRoute("/repair")({
  },
  {
  property:"og:title",
- content:"Phone Repair Near Me — Mobile Repair Karwana Hai | Revora",
+ content:"Mobile Phone Repair in Mumbai | Revora",
  },
  {
  property:"og:description",
  content:
-"Need phone repair? Certified lab technicians fix cracked screens, dead batteries, and liquid damage with tested parts. 90-day warranty & free doorstep pickup.",
+"Ask about phone repair options in Mumbai, Navi Mumbai and Thane. Share your phone model and symptoms with Revora.",
  },
  { property:"og:url", content: `${SITE_URL}/repair` },
  { property:"og:type", content:"website" },
@@ -100,7 +101,7 @@ function RepairPage() {
  const serviceSchema = getServiceSchema({
  name:"Mobile Phone Repair Service",
  description:
-"Certified doorstep mobile phone screen replacement, battery swap, and motherboard micro-soldering with 90-day warranty and free doorstep courier collection.",
+"Mobile phone repair enquiries for screen, battery, charging, and other device issues in Mumbai, Navi Mumbai and Thane.",
  serviceType:"Mobile Phone Repair",
  url: `${SITE_URL}/repair`,
  });
@@ -135,32 +136,20 @@ function RepairPage() {
 
  <div className="inline-flex items-center gap-2 rounded-full bg-brand-tint px-4 py-1.5 text-xs font-semibold text-brand-ink border border-brand/30 mb-4">
  <Wrench className="h-3.5 w-3.5 text-brand" />
- <span>Certified lab Phone Repair Lab</span>
+ <span>Mobile phone repair enquiries</span>
  </div>
 
  <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-ink leading-tight">
- Fast, Certified <span className="text-brand">Phone Repair Near You</span>
+ Mobile Phone Repair <span className="text-brand">in Mumbai</span>
  </h1>
 
  <p className="mt-4 text-sm sm:text-base text-muted max-w-2xl mx-auto leading-relaxed">
- Cracked screen, fast-draining battery, or dead motherboard? Revora delivers precision repairs in 45 minutes using OEM-grade components, backed by a 90-day warranty and 100% free doorstep courier pickup.
+ Cracked screen, battery, charging, or other phone issue? Share your device model and symptoms to discuss repair options, pricing, and current availability.
  </p>
 
- <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-brand-ink">
- <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-line shadow-xs">
- <Clock className="h-3.5 w-3.5 text-brand" />
- <span>Express Turnaround</span>
- </div>
- <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-line shadow-xs">
- <ShieldCheck className="h-3.5 w-3.5 text-brand" />
- <span>90-Day Priority Warranty</span>
- </div>
- <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-line shadow-xs">
- <Truck className="h-3.5 w-3.5 text-brand" />
- <span>Free Doorstep Pickup Across India</span>
- </div>
- </div>
  </section>
+
+ <ExperienceHighlights />
 
  {/* Repair Services Grid */}
  <section className="py-8 mb-12">
@@ -172,7 +161,7 @@ function RepairPage() {
  Common Phone Problems We Fix Daily
  </h2>
  <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl mx-auto">
- lab ESD-safe workstations ensure zero dust contamination during delicate internal servicing.
+ Service options depend on the phone model, issue, and assessment.
  </p>
  </div>
 

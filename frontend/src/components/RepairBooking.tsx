@@ -28,6 +28,7 @@ interface RepairIssue {
   name: string;
   desc: string;
   timeMins: number;
+  cost?: number;
 }
 
 const REPAIR_ISSUES: RepairIssue[] = [
@@ -91,9 +92,12 @@ export function RepairBooking() {
     return allModels.filter(m => m.toLowerCase().includes(modelSearch.toLowerCase()));
   }, [allModels, modelSearch]);
 
-  const toggleIssue = (id: string) => {
+  const toggleIssue = (id: string): void => {
     if (selectedIssues.includes(id)) {
-      if (selectedIssues.length === 1) return toast.warning("Please select at least one repair service");
+      if (selectedIssues.length === 1) {
+        toast.warning("Please select at least one repair service");
+        return;
+      }
       setSelectedIssues(selectedIssues.filter((i) => i !== id));
     } else {
       setSelectedIssues([...selectedIssues, id]);
@@ -109,13 +113,22 @@ export function RepairBooking() {
     return Math.min(totalTime, 90);
   };
 
-  const handleBooking = async (e: React.FormEvent) => {
+  const handleBooking = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
-    if (!deviceModel) return toast.error("Please select a device model");
-    if (!custName.trim()) return toast.error("Please enter your name");
+    if (!deviceModel) {
+      toast.error("Please select a device model");
+      return;
+    }
+    if (!custName.trim()) {
+      toast.error("Please enter your name");
+      return;
+    }
     
     const cleanPhone = custPhone.replace(/\D/g, "");
-    if (cleanPhone.length !== 10) return toast.error("Phone number must be exactly 10 digits");
+    if (cleanPhone.length !== 10) {
+      toast.error("Phone number must be exactly 10 digits");
+      return;
+    }
 
     const issueNames = selectedIssues.map((id) => REPAIR_ISSUES.find((item) => item.id === id)?.name).filter(Boolean).join(", ");
     const serviceSpeedLabel = serviceSpeed === "van" ? "Mobile Van Dispatch" : serviceSpeed === "express" ? "In-Store Priority" : "Mail-In Kit";

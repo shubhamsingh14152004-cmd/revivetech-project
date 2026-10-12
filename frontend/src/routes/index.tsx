@@ -4,6 +4,8 @@ import heroPhone from"../assets/hero-phone.jpg";
 import { TradeInCalculator } from"../components/TradeInCalculator";
 import { DiagnosticWizard } from"../components/DiagnosticWizard";
 import { FaqSection } from"../components/FaqSection";
+import { ExperienceHighlights } from "../components/ExperienceHighlights";
+import { CustomerNames } from "../components/CustomerNames";
 import { FloatingDock } from"../components/FloatingDock";
 import { WhatsAppIcon } from"../components/WhatsAppIcon";
 import { api } from"../services/api";
@@ -43,12 +45,12 @@ export const Route = createFileRoute("/")({
  head: () => ({
     meta: [
       {
-        title: "Revora | Phone Repair & Buyback in Mumbai",
+        title: "Expert Mobile Repair Services | Revora Mumbai",
       },
       {
         name: "description",
         content:
-          "Explore phone buyback and repair with Revora in Mumbai, Navi Mumbai and Thane. Share device details to ask about assessment and current availability.",
+          "With over 7 years of mobile repair expertise and 1,200+ repairs completed, we focus on reliable service, quality workmanship, and customer satisfaction.",
       },
       {
         name: "keywords",
@@ -57,12 +59,12 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Revora | Phone Repair & Buyback in Mumbai",
+        content: "Expert Mobile Repair Services | Revora Mumbai",
       },
       {
         property: "og:description",
         content:
-          "Explore phone buyback and repair with Revora in Mumbai, Navi Mumbai and Thane. Share device details to ask about assessment and current availability.",
+          "With over 7 years of mobile repair expertise and 1,200+ repairs completed, we focus on reliable service, quality workmanship, and customer satisfaction.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.sellrepairphone.org/" },
@@ -203,11 +205,11 @@ function Index() {
  </div>
 
  <h1 className="mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-ink">
- Sell your old phone <span className="text-brand block sm:inline">or ask about a repair.</span>
+ Expert Mobile Repair Services <span className="text-brand block sm:inline">You Can Trust</span>
  </h1>
 
  <p className="mt-4 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-muted">
-            Explore phone buyback and repair options across Mumbai, Navi Mumbai and Thane. Share your phone model and condition to confirm current availability and request an assessment.
+            With over 7 years of mobile repair expertise and 1,200+ repairs completed, we focus on reliable service, quality workmanship, and customer satisfaction.
  </p>
 
  {/* Quick Action CTA Buttons */}
@@ -285,6 +287,8 @@ function Index() {
  </div>
  </section>
 
+ <ExperienceHighlights />
+
  {/* Interactive Tabs Navigation Hub */}
  <section className="mx-auto max-w-6xl px-5 py-6">
  <div className="flex flex-wrap items-center justify-center gap-2 rounded-3xl bg-white p-2 border border-line shadow-xs">
@@ -324,6 +328,8 @@ function Index() {
  <section id="faq" className="mx-auto max-w-6xl px-5 py-10 scroll-mt-24">
  <FaqSection />
  </section>
+
+ <CustomerNames />
 
  {/* SECTION 9: Quote and service enquiry form */}
  <section id="quote" className="mx-auto max-w-6xl px-5 py-12 scroll-mt-24">
