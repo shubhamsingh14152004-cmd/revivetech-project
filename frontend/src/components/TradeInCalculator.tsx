@@ -47,7 +47,7 @@ export function TradeInCalculator({
   const [modelOpen, setModelOpen] = useState(false);
   
   const [storage, setStorage] = useState<string>("");
-  const [condition, setCondition] = useState<PhoneState>("working");
+  const [condition, setCondition] = useState<PhoneState>("dead");
   const [hasBox, setHasBox] = useState<boolean>(false);
 
   const [phone, setPhone] = useState<string>("");

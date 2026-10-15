@@ -24,38 +24,37 @@ import {
  AlertTriangle,
 } from"lucide-react";
 import heroPhone from"../assets/hero-phone.jpg";
-import { NAV_BRANDS } from "../content/nav";
 
 const FAQS = [
  {
  question:"Can I sell a completely dead phone that doesn't turn on?",
  answer:
-"Yes! Revora buys completely dead, water-damaged, and motherboard-faulty phones. We salvage functional ICs, camera sensors, chassis components, and recycle hazardous materials responsibly. Simply choose 'Dead / Non-Functional' in our calculator for an direct value quote.",
+"Yes. Revora's phone buyback is only for phones that will not power on. Share the model and your location so we can confirm whether an assessment is available.",
  },
  {
  question:"How and when do I receive payment for my old phone?",
  answer:
-"Payment is disbursed instantly on the spot. Once our doorstep executive performs a 5-minute visual and hardware verification, the agreed cash amount is transferred immediately via UPI (Google Pay, PhonePe, Paytm) or IMPS bank transfer.",
+"We confirm any offer and the payment method with you after the phone is assessed. Contact us with the model and location for current availability.",
  },
  {
  question:"Is personal data safely removed from phones sold to Revora?",
  answer:
-"Absolutely. For working devices, we perform military-grade NIST 800-88 cryptographic data erasure that renders prior photos, accounts, and files permanently unrecoverable. For dead devices, storage flash chips are demagnetized or shredded.",
+"A phone that will not turn on may still contain personal data. Ask us about data handling before arranging an assessment, and do not share passwords or account credentials over chat.",
  },
  {
  question:"Do I need the original box, bill, and charger to sell my phone?",
  answer:
-"Original accessories and invoice are not mandatory, but having the original box and bill can fetch you an extra trade-in bonus. A valid government photo ID (Aadhaar/Driving License) is required at pickup for anti-theft verification.",
+"Tell us the phone model and your area first. We will explain what is needed if an assessment can be arranged; a box or charger does not change our dead-phone-only buyback policy.",
  },
  {
- question:"Purana phone kaha beche: How does doorstep pickup work for selling used phones?",
+ question:"How do I ask about selling a dead phone in Mumbai?",
  answer:
-"Aap ghar baithe apna purana mobile sell kar sakte hain. Revora provides free doorstep collection across India. Simply calculate your device value online, schedule a pickup, and receive cash directly via UPI before our representative leaves.",
+"Send us the phone model and your Mumbai, Navi Mumbai, or Thane area on WhatsApp. We will confirm whether we can assess it and discuss any collection and payment details before you proceed.",
  },
  {
- question:"Phone bechna hai: Can I sell broken screen or dead phones here?",
+ question:"Do you buy phones with a cracked screen or that still work?",
  answer:
-"Haan! Chahe phone ki screen toot gayi ho, dead ho gaya ho, ya purana model ho, Revora buys phones in all conditions with instant valuation and certified data wipe.",
+"No. Buyback is only for phones that will not power on. If a phone has a cracked screen or is old but still turns on, it is not eligible for buyback. You can ask us about repair separately.",
  },
 ];
 
@@ -63,26 +62,26 @@ export const Route = createFileRoute("/sell-phone")({
  head: () => ({
  meta: [
  {
- title:"Sell Used Phone Price Calculator — Instant Quote & Fast Pickup | Revora",
+ title:"Sell a Dead Phone in Mumbai | Revora Buyback",
  },
  {
  name:"description",
  content:
-"Purana phone becho for direct valuation! Sell old, used, broken, or dead mobile phones online. Free doorstep pickup, instant UPI payment & certified data wipe.",
+"Sell a dead phone that will not power on. Revora serves Mumbai, Navi Mumbai, and Thane; contact us to confirm assessment availability.",
  },
  {
  name:"keywords",
  content:
-"purana phone becho, purana mobile becho, phone bechna hai, mobile bechna hai, purana phone kaha beche, ghar baithe phone becho, sell old phone, sell used phone, sell dead phone, dead phone becho, band phone becho, phone buyback, old phone sell, sell mobile phone near me",
+"sell dead phone Mumbai, dead phone buyback Mumbai, sell phone that will not turn on, dead mobile buyer Mumbai, band phone becho, dead phone price",
  },
  {
  property:"og:title",
- content:"Sell Used Phone Price Calculator — Instant Quote & Fast Pickup | Revora",
+ content:"Sell a Dead Phone in Mumbai | Revora Buyback",
  },
  {
  property:"og:description",
  content:
-"Calculate your used smartphone's trade-in value online with Revora. Get a live price quote, free doorstep pickup in Mumbai & India, and fast UPI payment.",
+"Revora buys phones only when they will not power on. Ask about assessment availability in Mumbai, Navi Mumbai, and Thane.",
  },
  {
  property:"og:url",
@@ -109,9 +108,9 @@ function SellPhonePage() {
  ]);
 
  const serviceSchema = getServiceSchema({
- name:"Sell Old Phone & Dead Phone Buyback",
+ name:"Dead Phone Buyback Enquiries",
  description:
-"Sell used, cracked, broken, or completely dead mobile phones for direct payments with complimentary doorstep pickup and secure data wiping.",
+"Buyback enquiries for mobile phones that will not power on in Mumbai, Navi Mumbai, and Thane. Contact Revora to confirm assessment availability and terms.",
  serviceType:"Mobile Phone Buyback & Recycling",
  url: `${SITE_URL}/sell-phone`,
  });
@@ -139,32 +138,32 @@ function SellPhonePage() {
  <section className="relative py-10 text-center max-w-3xl mx-auto mb-10">
  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint border border-brand/30 text-brand-ink text-xs font-semibold mb-6">
  <Sparkles className="w-3.5 h-3.5 text-brand" />
- Highest Buyback Value assured • Free Doorstep Collection
+ Dead phones only · Mumbai, Navi Mumbai & Thane
  </div>
 
  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink tracking-tight leading-tight">
- Used Phone Price Calculator &{""}
+ Sell a Dead Phone That Won't Turn On &{""}
  <span className="text-brand">
- direct value Trade-In
+ Request a Buyback Assessment
  </span>
  </h1>
 
  <p className="mt-4 text-base sm:text-lg text-muted leading-relaxed">
- Turn your idle smartphones into real money within 24 hours. Whether your phone is in pristine condition, cracked, water-damaged, or completely dead, Revora guarantees honest valuations and on-the-spot UPI payment.
+ Revora's buyback is only for phones that will not power on. Share your phone model and area to ask whether an assessment is available; we will confirm any offer, collection, and payment details with you first.
  </p>
 
  <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-600">
  <div className="flex items-center gap-2">
  <CheckCircle2 className="w-4 h-4 text-brand" />
- <span>Instant Bank/UPI Transfer</span>
+ <span>Offer confirmed after assessment</span>
  </div>
  <div className="flex items-center gap-2">
  <Truck className="w-4 h-4 text-brand" />
- <span>Zero Pickup Fee</span>
+ <span>Ask about collection in your area</span>
  </div>
  <div className="flex items-center gap-2">
  <Lock className="w-4 h-4 text-brand" />
- <span>NIST 800-88 Data Sanitization</span>
+ <span>Ask us about data handling</span>
  </div>
  </div>
  </section>
@@ -173,87 +172,26 @@ function SellPhonePage() {
  <section className="py-8 mb-14">
  <div className="mb-8 text-center">
  <h2 className="text-2xl sm:text-3xl font-bold text-ink">
- Instant Valuation Calculator
+ Request a Dead Phone Assessment
  </h2>
  <p className="text-slate-500 text-sm mt-2 max-w-xl mx-auto">
- Select your brand, model, storage, and condition below to view your assured payment and schedule a free doorstep pickup.
+ Select your brand and model. We buy phones that will not power on only. Send your details to ask about assessment availability and any offer.
  </p>
  </div>
 
  <TradeInCalculator />
  </section>
 
- {/* Condition Grading Guide */}
+ {/* Buyback eligibility */}
  <section className="mb-14 rounded-3xl bg-white p-6 sm:p-10 border border-line shadow-xs">
- <div className="text-center max-w-2xl mx-auto mb-12">
- <h2 className="text-2xl sm:text-3xl font-bold text-ink">
- Phone Condition Grading Guide
- </h2>
- <p className="text-slate-500 text-sm mt-2">
- We accept mobile phones in every conceivable state. Here is how our transparent valuation tiers work:
+ <div className="mx-auto max-w-3xl rounded-2xl border border-brand/20 bg-brand/5 p-6 sm:p-8 text-center">
+ <h2 className="text-2xl sm:text-3xl font-bold text-ink">What phones qualify for buyback?</h2>
+ <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+ We consider phones that will not power on. A phone that still works is not eligible for buyback, even if it is old, scratched, or has a cracked screen. For a working phone with a fault, ask about repair instead.
  </p>
- </div>
-
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
- <div className="bg-background p-6 rounded-2xl border border-line flex flex-col justify-between">
- <div>
- <div className="w-10 h-10 rounded-lg bg-brand-tint border border-brand/30 flex items-center justify-center text-brand mb-4 font-bold">
- A+
- </div>
- <h3 className="text-lg font-bold text-ink">Flawless / Like New</h3>
- <p className="text-xs text-slate-600 mt-2 leading-relaxed">
- No scratches or dents. Original screen with zero discolouration. Battery health above 85%. All cameras, Wi-Fi, and biometric sensors 100% operational.
- </p>
- </div>
- <div className="mt-4 pt-3 border-t border-line text-xs text-brand font-semibold">
- Up to 75% Payout of Resale
- </div>
- </div>
-
- <div className="bg-background p-6 rounded-2xl border border-line flex flex-col justify-between">
- <div>
- <div className="w-10 h-10 rounded-lg bg-brand-tint border border-brand/30 flex items-center justify-center text-brand-ink mb-4 font-bold">
- B
- </div>
- <h3 className="text-lg font-bold text-ink">Good / Minor Wear</h3>
- <p className="text-xs text-slate-600 mt-2 leading-relaxed">
- Minor scratches on the back or frame from regular use. Display intact without cracks. All ports and buttons fully responsive.
- </p>
- </div>
- <div className="mt-4 pt-3 border-t border-line text-xs text-brand-ink font-semibold">
- High Market Payout
- </div>
- </div>
-
- <div className="bg-background p-6 rounded-2xl border border-line flex flex-col justify-between">
- <div>
- <div className="w-10 h-10 rounded-lg bg-brand-tint border border-brand/30 flex items-center justify-center text-brand mb-4 font-bold">
- C
- </div>
- <h3 className="text-lg font-bold text-ink">Cracked / Broken Glass</h3>
- <p className="text-xs text-slate-600 mt-2 leading-relaxed">
- Shattered front glass or back panel. Display panel or touch digitizer damaged, lines on screen, or degraded battery requiring replacement.
- </p>
- </div>
- <div className="mt-4 pt-3 border-t border-line text-xs text-brand font-semibold">
- Solid Hardware Salvage Value
- </div>
- </div>
-
- <div className="bg-background p-6 rounded-2xl border border-line flex flex-col justify-between">
- <div>
- <div className="w-10 h-10 rounded-lg bg-brand-tint border border-brand/30 flex items-center justify-center text-brand-ink mb-4 font-bold">
- D
- </div>
- <h3 className="text-lg font-bold text-ink">Dead / Damaged Phone</h3>
- <p className="text-xs text-slate-600 mt-2 leading-relaxed">
- Phone does not power on, stuck in bootloop, water-damaged, or motherboard has short circuits. We purchase for micro-IC parts & eco-recycling!
- </p>
- </div>
- <div className="mt-4 pt-3 border-t border-line text-xs text-brand-ink font-semibold flex items-center gap-1">
- <Coins className="w-3.5 h-3.5" />
- assured Cash Instead of E-Waste
- </div>
+ <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm font-semibold">
+ <Link to="/sell-dead-phone" className="rounded-full bg-brand px-5 py-3 text-white hover:bg-brand-ink focus-ring">Dead phone buyback details</Link>
+ <Link to="/repair" className="rounded-full border border-line bg-white px-5 py-3 text-ink hover:border-brand hover:text-brand focus-ring">Ask about repair</Link>
  </div>
  </div>
  </section>
@@ -265,7 +203,7 @@ function SellPhonePage() {
  How Revora Buyback Works
  </h2>
  <p className="text-slate-500 text-sm mt-2">
- Three effortless steps to sell your old or damaged mobile phone without haggling.
+ Learn how to ask about an assessment for a phone that will not power on.
  </p>
  </div>
 
@@ -275,9 +213,9 @@ function SellPhonePage() {
  <div className="w-12 h-12 rounded-xl bg-brand-tint border border-brand/30 flex items-center justify-center text-brand mb-4">
  <Zap className="w-6 h-6" />
  </div>
- <h3 className="text-lg font-semibold text-ink">Check Instant Quote</h3>
+ <h3 className="text-lg font-semibold text-ink">Share phone details</h3>
  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
- Select your device model and honest condition above. Our dynamic valuation engine calculates the highest competitive market quote in seconds.
+ Share the model, storage, and your area. We will confirm whether an assessment is available and discuss an offer after inspection.
  </p>
  </div>
 
@@ -286,9 +224,9 @@ function SellPhonePage() {
  <div className="w-12 h-12 rounded-xl bg-brand-tint border border-brand/30 flex items-center justify-center text-brand mb-4">
  <Truck className="w-6 h-6" />
  </div>
- <h3 className="text-lg font-semibold text-ink">Doorstep Pickup</h3>
+ <h3 className="text-lg font-semibold text-ink">Confirm assessment availability</h3>
  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
- Choose a pickup date and time that suits you. Our field technician arrives at your doorstep with anti-static packaging to inspect the device.
+ We will let you know whether an assessment or collection can be arranged for your location before you decide.
  </p>
  </div>
 
@@ -297,32 +235,11 @@ function SellPhonePage() {
  <div className="w-12 h-12 rounded-xl bg-brand-tint border border-brand/30 flex items-center justify-center text-brand mb-4">
  <Coins className="w-6 h-6" />
  </div>
- <h3 className="text-lg font-semibold text-ink">Instant UPI Cash</h3>
+ <h3 className="text-lg font-semibold text-ink">Review any offer first</h3>
  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
- Once verified, the payment is transferred immediately to your bank account or UPI address before our executive leaves your premises.
+ If we can assess the phone, we will explain any offer and payment details before you choose whether to proceed.
  </p>
  </div>
- </div>
- </section>
-
- {/* Supported Brands Navigation */}
- <section className="mb-14 py-12 border-t border-b border-line">
- <div className="text-center mb-8">
- <h2 className="text-2xl font-bold text-ink">
- Sell Mobile Phone By Brand
- </h2>
- </div>
- <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs">
- {NAV_BRANDS.map(brand => (
- <Link
- key={brand.href}
- to={brand.href as any}
- className="p-4 rounded-xl bg-white border border-line hover:border-brand flex items-center justify-between group transition shadow-xs"
- >
- <span className="font-bold text-ink group-hover:text-brand">{brand.name}</span>
- <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-brand" />
- </Link>
- ))}
  </div>
  </section>
 

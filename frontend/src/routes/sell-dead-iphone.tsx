@@ -53,26 +53,26 @@ export const Route = createFileRoute("/sell-dead-iphone")({
   head: () => ({
     meta: [
       {
-        title: "Sell Dead iPhone Online | Broken iPhone Buyback | Revora",
+        title: "Sell Dead iPhone in Mumbai, Thane & Navi Mumbai | Revora",
       },
       {
         name: "description",
         content:
-          "Sell your dead, broken, or water-damaged iPhone in Mumbai, Thane & Navi Mumbai. Free doorstep collection, instant UPI payment, and zero-fee decline.",
+          "Ask about buyback for an iPhone that will not power on in Mumbai, Thane & Navi Mumbai. Contact us to confirm assessment availability and any offer.",
       },
       {
         name: "keywords",
         content:
-          "sell dead iPhone, sell broken iPhone Mumbai, dead iPhone buyback, sell water damaged iPhone, sell non working iPhone, iPhone motherboard dead sell, band iPhone becho",
+          "sell dead iPhone, dead iPhone buyback, sell non working iPhone, iPhone motherboard dead sell, band iPhone becho",
       },
       {
         property: "og:title",
-        content: "Sell Dead iPhone Online | Broken iPhone Buyback | Revora",
+        content: "Sell Dead iPhone in Mumbai, Thane & Navi Mumbai | Revora",
       },
       {
         property: "og:description",
         content:
-          "Sell your dead, broken, or water-damaged iPhone in Mumbai, Thane & Navi Mumbai. Free doorstep collection, instant UPI payment, and zero-fee decline.",
+          "Ask about buyback for an iPhone that will not power on in Mumbai, Thane & Navi Mumbai. Contact us to confirm assessment availability and any offer.",
       },
       {
         property: "og:url",
@@ -88,12 +88,12 @@ export const Route = createFileRoute("/sell-dead-iphone")({
       },
       {
         name: "twitter:title",
-        content: "Sell Dead iPhone Online | Broken iPhone Buyback | Revora",
+        content: "Sell Dead iPhone in Mumbai, Thane & Navi Mumbai | Revora",
       },
       {
         name: "twitter:description",
         content:
-          "Sell your dead, broken, or water-damaged iPhone in Mumbai, Thane & Navi Mumbai. Free doorstep collection, instant UPI payment, and zero-fee decline.",
+          "Ask about buyback for an iPhone that will not power on in Mumbai, Thane & Navi Mumbai. Contact us to confirm assessment availability and any offer.",
       },
       {
         name: "twitter:image",
@@ -109,7 +109,7 @@ function SellDeadIPhonePage() {
   const serviceSchema = getServiceSchema({
     name: "Sell Dead iPhone Buyback",
     description:
-      "Dead and broken iPhone buyback with free doorstep collection across Mumbai, Thane, and Navi Mumbai.",
+      "Buyback enquiries for iPhones that will not power on in Mumbai, Thane, and Navi Mumbai.",
     category: "https://schema.org/RecycleAction",
     url: `${SITE_URL}/sell-dead-iphone`,
   });
@@ -149,7 +149,7 @@ function SellDeadIPhonePage() {
             <div className="lg:col-span-7 space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-tint border border-brand/30 text-brand-ink text-xs font-semibold">
                 <Zap className="w-3.5 h-3.5 text-brand" />
-                <span>Apple iPhone Buyback • Free Doorstep Collection</span>
+                <span>Dead iPhone Buyback</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-ink tracking-tight leading-tight">
@@ -157,7 +157,7 @@ function SellDeadIPhonePage() {
               </h1>
 
               <p className="text-muted text-base sm:text-lg leading-relaxed max-w-2xl">
-                Has your iPhone stopped turning on? Got a dead motherboard, water submersion, or shattered front and back glass? Don't leave it in your drawer. Revora buys dead and non-working iPhones with <strong>free doorstep collection and instant UPI payment</strong> across Mumbai, Thane, and Navi Mumbai.
+                Does your iPhone no longer power on? Revora considers buyback only for iPhones that will not turn on. Contact us with your model and location to confirm assessment availability and discuss any offer.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">

@@ -30,9 +30,9 @@ const LOCAL_FAQS = [
       "When you book a repair, our verified technician arrives at your home or office in Borivali & Kandivali carrying genuine OEM-grade replacement parts and diagnostic equipment. Most repairs like screens and batteries are completed right in front of you.",
   },
   {
-    question: "Can I sell a dead or broken phone in Borivali & Kandivali?",
+    question: "Do you buy phones that will not power on in Borivali & Kandivali?",
     answer:
-      "Yes! Revora buys old, damaged, water-damaged, and completely dead phones across Borivali & Kandivali. Our technician inspects the device at your doorstep and transfers payment immediately via UPI or bank transfer.",
+      "Revora buys phones only when they will not power on. Share the model and location to ask whether an assessment is available.",
   },
   {
     question: "Is there any visiting or inspection fee in Borivali & Kandivali?",
@@ -154,7 +154,7 @@ function LocalityPage() {
               </h1>
 
               <p className="text-muted text-base sm:text-lg leading-relaxed max-w-2xl">
-                Looking for trustworthy mobile repair or wanting to sell a broken smartphone in Borivali or Kandivali? Revora brings certified lab-grade repair technicians and fair cash buyback straight to your residence with zero visiting fee.
+                Looking for mobile repair in Borivali or Kandivali, or buyback for a phone that will not power on? Contact Revora to confirm repair and dead-phone assessment availability in your area.
               </p>
 
               <div className="p-4 rounded-2xl bg-neutral-50 border border-line text-xs sm:text-sm text-muted space-y-1">
@@ -167,7 +167,7 @@ function LocalityPage() {
                   href="#calculator"
                   className="px-6 py-3 rounded-full bg-brand hover:bg-brand-ink text-white font-bold text-sm shadow-md transition-colors"
                 >
-                  Sell Phone (Free Pickup)
+                  Sell Dead Phone
                 </a>
                 <a
                   href={waHref("PAGE_CONTEXT", {
@@ -196,7 +196,7 @@ function LocalityPage() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5" />
-                  <span><strong>Instant UPI Payment:</strong> Sell old or dead phones and get paid before the technician leaves.</span>
+                  <span><strong>Instant UPI Payment:</strong> Ask about buyback for phones that will not power on. We will confirm any offer and payment details before you proceed.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Wrench className="w-4 h-4 text-brand shrink-0 mt-0.5" />
@@ -230,14 +230,14 @@ function LocalityPage() {
               <div className="h-12 w-12 rounded-2xl bg-brand-tint text-brand flex items-center justify-center">
                 <Smartphone className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-ink">Sell Old & Dead Phones</h3>
+              <h3 className="text-xl font-bold text-ink">Dead Phone Buyback</h3>
               <p className="text-sm text-muted leading-relaxed">
                 Have a dead phone sitting in your drawer (band phone becho)? Our executive inspects the device at your home and transfers your payment instantly via UPI before taking the unit.
               </p>
               <ul className="text-xs text-muted space-y-2 pt-2">
-                <li>• Sell old & used phones for immediate UPI payment</li>
-                <li>• Sell cracked, broken screen & water-damaged phones</li>
-                <li>• Sell dead phones that do not turn on (band phone becho)</li>
+                <li>• Buyback is only for phones that will not power on</li>
+                <li>• Phones that still turn on are not eligible, even if damaged</li>
+                <li>• Contact us to confirm assessment availability and any offer</li>
                 <li>• NIST 800-88 compliant data wiping</li>
               </ul>
             </div>

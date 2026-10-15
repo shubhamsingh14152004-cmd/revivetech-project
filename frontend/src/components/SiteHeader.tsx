@@ -74,7 +74,7 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
                 <Search className="w-5 h-5" />
               </button>
               <Link to="/sell-phone" className="hidden sm:inline-flex items-center justify-center h-10 rounded-full border border-line bg-white px-4 text-[14px] font-semibold text-ink transition hover:border-brand hover:text-brand focus-ring">
-                Sell Phone
+                Sell Dead Phone
               </Link>
               
               {onOpenRepairModal ? (
@@ -123,7 +123,7 @@ export function SiteHeader({ onOpenRepairModal }: SiteHeaderProps) {
           
           <div className="flex-1 overflow-y-auto px-4 py-6 space-y-1">
             <Link to="/sell-phone" className="flex items-center justify-between h-12 px-4 rounded-xl hover:bg-black/5 text-ink font-semibold text-[16px]">
-              <span>Sell Phone</span>
+              <span>Sell Dead Phone</span>
               <ChevronRight className="w-5 h-5 text-muted" />
             </Link>
             <Link to="/repair" className="flex items-center justify-between h-12 px-4 rounded-xl hover:bg-black/5 text-ink font-semibold text-[16px]">

@@ -19,3 +19,4 @@ Disallow: /admin/
 Disallow: /api/
 
 Sitemap: https://www.sellrepairphone.org/sitemap.xml
+Sitemap: https://www.sellrepairphone.org/video-sitemap.xml

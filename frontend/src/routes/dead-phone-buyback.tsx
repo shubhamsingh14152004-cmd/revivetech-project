@@ -29,12 +29,12 @@ const FAQS = [
  {
  question:"Dead phone becho: Can I really get cash for a phone that won't turn on at all?",
  answer:
-"Yes! Even if your phone is completely dead (band phone / chalu nahi ho raha), its internal hardware components still hold real value. Original OLED flex circuits, camera modules, chassis housing, speakers, and micro-ICs can be salvaged for refurbishing or eco-recycling. Revora pays UPI payment for dead phones via UPI or IMPS.",
+"Revora considers buyback only for phones that will not power on. Contact us with the model and location to confirm whether an assessment is available and discuss any offer.",
  },
  {
  question:"Kharab phone kaise beche: How does doorstep dead phone selling work?",
  answer:
-"Selling your dead phone takes 3 simple steps: 1) Select your brand and model in our calculator above and choose 'Dead'. 2) Enter your 10-digit mobile number and address to book a free doorstep pickup. 3) Our logistics technician arrives, confirms the device model, and transfers the cash payment instantly to your bank or UPI before leaving.",
+"Share your phone model and location with Revora. We will confirm whether an assessment is available and explain any offer and collection details before you decide.",
  },
  {
  question:"What about my personal photos and data inside the dead phone?",
@@ -42,9 +42,9 @@ const FAQS = [
 "Security is assured. For dead phones where the storage chips cannot boot, our lab recycling process physically de-solders and demagnetizes the NAND flash chip according to NIST 800-88 data destruction standards, rendering prior data 100% unrecoverable.",
  },
  {
- question:"Do you buy water damaged or smashed phones?",
+ question:"Do you buy water-damaged or smashed phones?",
  answer:
-"Yes, we purchase phones that fell in water, phones run over by vehicles, smashed screens, bent frames, or phones rejected by other street shops.",
+"Only if the phone will not power on. A water-damaged or smashed phone that still turns on is not eligible for buyback.",
  },
  {
  question:"Do I need the original invoice, box, or charger to sell a dead phone?",
@@ -62,7 +62,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
  {
  name:"description",
  content:
-"Dead phone becho for fair value! Sell non-working, broken, water-damaged, or completely dead mobiles. Free doorstep pickup & instant UPI payment across India.",
+"Ask about buyback for a dead phone that will not power on. Revora serves customers in Mumbai, Thane, and Navi Mumbai; contact us to confirm assessment availability and any offer.",
  },
  {
  name:"keywords",
@@ -76,7 +76,7 @@ export const Route = createFileRoute("/dead-phone-buyback")({
  {
  property:"og:description",
  content:
-"Turn your dead smartphone into UPI payment today. Free doorstep collection, transparent valuation, and immediate UPI payment.",
+"Buyback is limited to phones that will not power on. Contact us to confirm availability and discuss an offer.",
  },
  {
  property:"og:url",
@@ -104,9 +104,9 @@ function DeadPhoneBuybackPage() {
  ]);
 
  const serviceSchema = getServiceSchema({
- name:"Dead Phone Buyback & Broken Mobile Purchasing",
+ name:"Dead Phone Buyback",
  description:
-"Buyback service paying UPI payment for completely non-functional, water-damaged, motherboard-dead, or broken screen smartphones with free doorstep collection.",
+"Buyback enquiries for mobile phones that will not power on. Phones that still turn on are not eligible, even if old or damaged.",
  serviceType:"Electronics Buyback & Recycling",
  url: `${SITE_URL}/dead-phone-buyback`,
  });

@@ -43,13 +43,12 @@ export function SiteFooter() {
           {/* Sell & Buyback */}
           <div className="flex flex-col gap-3">
             <h4 className="text-[13px] font-bold uppercase tracking-wider text-white mb-2">Sell & Buyback</h4>
-            <Link to="/sell-old-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Old Phone</Link>
+            <Link to="/sell-dead-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell a Dead Phone</Link>
             <Link to="/sell-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Phone Valuation</Link>
-            <Link to="/sell-damaged-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Damaged Phone</Link>
+            <Link to="/dead-phone-buyback" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Dead Phone Buyback</Link>
             <Link to="/sell-dead-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell Dead Phone</Link>
             <Link to="/dead-phone-buyback" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Dead Mobile Salvage</Link>
             <Link to="/sell-dead-iphone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell a Dead iPhone</Link>
-            <Link to="/sell-water-damaged-phone" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Sell a Water-Damaged Phone</Link>
             <Link to="/phone-buyback-price-india" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Phone Buyback Prices</Link>
             <Link to="/buyback" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Enterprise ITAD</Link>
           </div>
@@ -58,6 +57,7 @@ export function SiteFooter() {
           <div className="flex flex-col gap-3">
             <h4 className="text-[13px] font-bold uppercase tracking-wider text-white mb-2">Repair Services</h4>
             <Link to="/doorstep-mobile-repair" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Doorstep Repair</Link>
+            <Link to="/doorstep-phone-service-video" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Watch Doorstep Service Video</Link>
             <Link to="/mobile-repair-mumbai" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Mumbai Service Hub</Link>
             <Link to="/dead-phone-repair" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Dead Phone Repair</Link>
             <Link to="/screen-repair" className="text-[14px] text-brand-tint/70 hover:text-white transition py-1 inline-block focus-ring">Screen Replacement</Link>

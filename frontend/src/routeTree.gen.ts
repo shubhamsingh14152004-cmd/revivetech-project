@@ -26,6 +26,7 @@ import { Route as DoorstepMobileRepairBorivaliRouteImport } from './routes/doors
 import { Route as DoorstepMobileRepairDadarRouteImport } from './routes/doorstep-mobile-repair-dadar'
 import { Route as DoorstepMobileRepairKurlaRouteImport } from './routes/doorstep-mobile-repair-kurla'
 import { Route as DoorstepMobileRepairPowaiRouteImport } from './routes/doorstep-mobile-repair-powai'
+import { Route as DoorstepPhoneServiceVideoRouteImport } from './routes/doorstep-phone-service-video'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FixOrSellRouteImport } from './routes/fix-or-sell'
 import { Route as GooglePixelRepairRouteImport } from './routes/google-pixel-repair'
@@ -148,6 +149,12 @@ const DoorstepMobileRepairPowaiRoute =
   DoorstepMobileRepairPowaiRouteImport.update({
     id: '/doorstep-mobile-repair-powai',
     path: '/doorstep-mobile-repair-powai',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DoorstepPhoneServiceVideoRoute =
+  DoorstepPhoneServiceVideoRouteImport.update({
+    id: '/doorstep-phone-service-video',
+    path: '/doorstep-phone-service-video',
     getParentRoute: () => rootRouteImport,
   } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -329,6 +336,7 @@ export interface FileRoutesByFullPath {
   '/doorstep-mobile-repair-dadar': typeof DoorstepMobileRepairDadarRoute
   '/doorstep-mobile-repair-kurla': typeof DoorstepMobileRepairKurlaRoute
   '/doorstep-mobile-repair-powai': typeof DoorstepMobileRepairPowaiRoute
+  '/doorstep-phone-service-video': typeof DoorstepPhoneServiceVideoRoute
   '/faq': typeof FaqRoute
   '/fix-or-sell': typeof FixOrSellRoute
   '/google-pixel-repair': typeof GooglePixelRepairRoute
@@ -380,6 +388,7 @@ export interface FileRoutesByTo {
   '/doorstep-mobile-repair-dadar': typeof DoorstepMobileRepairDadarRoute
   '/doorstep-mobile-repair-kurla': typeof DoorstepMobileRepairKurlaRoute
   '/doorstep-mobile-repair-powai': typeof DoorstepMobileRepairPowaiRoute
+  '/doorstep-phone-service-video': typeof DoorstepPhoneServiceVideoRoute
   '/faq': typeof FaqRoute
   '/fix-or-sell': typeof FixOrSellRoute
   '/google-pixel-repair': typeof GooglePixelRepairRoute
@@ -432,6 +441,7 @@ export interface FileRoutesById {
   '/doorstep-mobile-repair-dadar': typeof DoorstepMobileRepairDadarRoute
   '/doorstep-mobile-repair-kurla': typeof DoorstepMobileRepairKurlaRoute
   '/doorstep-mobile-repair-powai': typeof DoorstepMobileRepairPowaiRoute
+  '/doorstep-phone-service-video': typeof DoorstepPhoneServiceVideoRoute
   '/faq': typeof FaqRoute
   '/fix-or-sell': typeof FixOrSellRoute
   '/google-pixel-repair': typeof GooglePixelRepairRoute
@@ -485,6 +495,7 @@ export interface FileRouteTypes {
     | '/doorstep-mobile-repair-dadar'
     | '/doorstep-mobile-repair-kurla'
     | '/doorstep-mobile-repair-powai'
+    | '/doorstep-phone-service-video'
     | '/faq'
     | '/fix-or-sell'
     | '/google-pixel-repair'
@@ -536,6 +547,7 @@ export interface FileRouteTypes {
     | '/doorstep-mobile-repair-dadar'
     | '/doorstep-mobile-repair-kurla'
     | '/doorstep-mobile-repair-powai'
+    | '/doorstep-phone-service-video'
     | '/faq'
     | '/fix-or-sell'
     | '/google-pixel-repair'
@@ -587,6 +599,7 @@ export interface FileRouteTypes {
     | '/doorstep-mobile-repair-dadar'
     | '/doorstep-mobile-repair-kurla'
     | '/doorstep-mobile-repair-powai'
+    | '/doorstep-phone-service-video'
     | '/faq'
     | '/fix-or-sell'
     | '/google-pixel-repair'
@@ -639,6 +652,7 @@ export interface RootRouteChildren {
   DoorstepMobileRepairDadarRoute: typeof DoorstepMobileRepairDadarRoute
   DoorstepMobileRepairKurlaRoute: typeof DoorstepMobileRepairKurlaRoute
   DoorstepMobileRepairPowaiRoute: typeof DoorstepMobileRepairPowaiRoute
+  DoorstepPhoneServiceVideoRoute: typeof DoorstepPhoneServiceVideoRoute
   FaqRoute: typeof FaqRoute
   FixOrSellRoute: typeof FixOrSellRoute
   GooglePixelRepairRoute: typeof GooglePixelRepairRoute
@@ -792,6 +806,13 @@ declare module '@tanstack/react-router' {
       path: '/doorstep-mobile-repair-powai'
       fullPath: '/doorstep-mobile-repair-powai'
       preLoaderRoute: typeof DoorstepMobileRepairPowaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doorstep-phone-service-video': {
+      id: '/doorstep-phone-service-video'
+      path: '/doorstep-phone-service-video'
+      fullPath: '/doorstep-phone-service-video'
+      preLoaderRoute: typeof DoorstepPhoneServiceVideoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -1039,6 +1060,7 @@ const rootRouteChildren: RootRouteChildren = {
   DoorstepMobileRepairDadarRoute: DoorstepMobileRepairDadarRoute,
   DoorstepMobileRepairKurlaRoute: DoorstepMobileRepairKurlaRoute,
   DoorstepMobileRepairPowaiRoute: DoorstepMobileRepairPowaiRoute,
+  DoorstepPhoneServiceVideoRoute: DoorstepPhoneServiceVideoRoute,
   FaqRoute: FaqRoute,
   FixOrSellRoute: FixOrSellRoute,
   GooglePixelRepairRoute: GooglePixelRepairRoute,

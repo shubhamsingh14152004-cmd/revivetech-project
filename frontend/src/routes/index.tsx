@@ -55,7 +55,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "Revora, sell old smartphone, sell used phone, phone repair Mumbai, doorstep mobile repair, sell dead phone, sell broken phone, purana mobile becho",
+          "Revora, phone repair Mumbai, doorstep mobile repair, sell dead phone Mumbai, dead phone buyback",
       },
       {
         property: "og:title",
@@ -219,7 +219,7 @@ function Index() {
  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand hover:bg-brand-ink px-6 py-3.5 text-sm font-bold text-white shadow-md transition cursor-pointer text-center"
  >
  <IndianRupee className="h-4 w-4 text-white" />
- <span>Sell Phone (WhatsApp Quote)</span>
+ <span>Sell Dead Phone (WhatsApp Quote)</span>
  </a>
  <button
  type="button"
@@ -256,7 +256,7 @@ function Index() {
 
  {/* Service area and contact details */}
  <div className="mt-8 border-t border-line pt-5 w-full text-sm text-muted">
- <p className="font-semibold text-ink">Phone repair and buyback in {siteConfig.serviceAreas.join(", ")}</p>
+ <p className="font-semibold text-ink">Phone repair and dead-phone buyback in {siteConfig.serviceAreas.join(", ")}</p>
  <p className="mt-1">Contact us to confirm current service availability for your area.</p>
  </div>
  </div>
@@ -281,6 +281,12 @@ function Index() {
  Your browser does not support the video tag.
  </video>
  </div>
+  <Link
+    to="/doorstep-phone-service-video"
+    className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-ink transition-colors focus-ring rounded-md"
+  >
+    Watch how doorstep phone handoff works <ArrowRight className="h-4 w-4" aria-hidden="true" />
+  </Link>
  </div>
  </div>
  </div>

@@ -90,7 +90,7 @@ function DataWipePage() {
               <h3 className="text-xl font-bold mb-2">Ready to sell securely?</h3>
               <p className="text-[14px] text-white/90">Get an instant quote and free doorstep pickup in Mumbai.</p>
             </div>
-            <Link to="/sell-phone" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-ink font-bold text-[15px] transition focus-ring shadow-sm whitespace-nowrap">
+            <Link to="/sell-dead-phone" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-ink font-bold text-[15px] transition focus-ring shadow-sm whitespace-nowrap">
               <Smartphone className="w-5 h-5 text-brand" /> Get Buyback Price
             </Link>
           </div>

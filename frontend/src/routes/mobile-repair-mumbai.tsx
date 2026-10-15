@@ -54,9 +54,9 @@ const FAQS = [
 "For express repair bookings, a technician arrives within 45 to 90 minutes of booking confirmation, carrying genuine OEM replacement displays and diagnostic tools.",
  },
  {
- question:"Can I also sell my old or dead phone in Mumbai?",
+ question:"Can I sell a phone that will not power on in Mumbai?",
  answer:
-"Yes. Revora is Mumbai's top mobile buyback destination. You can value your used, broken, or dead smartphone online and receive instant UPI cash on the spot when our Mumbai technician visits.",
+"Revora buys phones only when they will not power on. Contact us with your model and Mumbai area to ask whether an assessment is available.",
  },
  {
  question:"Is there any extra pickup charge for Thane or Navi Mumbai?",
@@ -79,7 +79,7 @@ export const Route = createFileRoute("/mobile-repair-mumbai")({
  {
  name:"keywords",
  content:
-"mobile repair Mumbai, phone repair Mumbai, mobile repair shop Mumbai, phone repair near me Mumbai, sell old phone Mumbai, sell dead phone Mumbai, sell used phone Mumbai, doorstep mobile repair Mumbai, iPhone repair Mumbai, Samsung repair Mumbai",
+"mobile repair Mumbai, phone repair Mumbai, mobile repair near me Mumbai, sell dead phone Mumbai, dead phone buyback Mumbai, doorstep mobile repair Mumbai, iPhone repair Mumbai, Samsung repair Mumbai",
  },
  {
  property:"og:title",

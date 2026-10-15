@@ -1,5 +1,5 @@
 import React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { TradeInCalculator } from "../components/TradeInCalculator";
@@ -52,6 +52,9 @@ const WATER_DAMAGE_FAQS = [
 ];
 
 export const Route = createFileRoute("/sell-water-damaged-phone")({
+  beforeLoad: () => {
+    throw redirect({ to: "/sell-dead-phone" });
+  },
   head: () => ({
     meta: [
       {

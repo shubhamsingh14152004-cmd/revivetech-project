@@ -1,5 +1,5 @@
 import React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { TradeInCalculator } from "../components/TradeInCalculator";
@@ -10,6 +10,9 @@ import { SeoJsonLd, getServiceSchema, getBreadcrumbSchema, SITE_URL } from "../c
 
 // Loader to fetch devices for this brand
 export const Route = createFileRoute("/sell/$brandSlug")({
+  beforeLoad: () => {
+    throw redirect({ to: "/sell-dead-phone" });
+  },
   loader: async ({ params }) => {
     const brandSlug = params.brandSlug;
     const b = brands.find(br => br.id === brandSlug);

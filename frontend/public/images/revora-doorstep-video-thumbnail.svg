@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Revora doorstep phone handoff animation</title>
+  <desc id="desc">Illustration of a customer handing a mobile phone to a green-uniformed service representative at a doorway.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f5eee2"/>
+      <stop offset="1" stop-color="#e8dfd0"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffaf1"/>
+      <stop offset="1" stop-color="#f5ead9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="1070" cy="100" r="220" fill="#dbe9df" opacity=".55"/>
+  <circle cx="190" cy="680" r="280" fill="#f1d4ae" opacity=".36"/>
+  <rect x="0" y="526" width="1280" height="194" fill="#1b2826"/>
+  <rect x="414" y="46" width="452" height="628" rx="34" fill="url(#card)" stroke="#d8cdbc" stroke-width="3"/>
+  <rect x="724" y="130" width="110" height="388" rx="5" fill="#e8dcc9" stroke="#b9a98f" stroke-width="8"/>
+  <rect x="747" y="160" width="66" height="350" fill="#f9f3e9"/>
+  <circle cx="800" cy="336" r="7" fill="#8e7b64"/>
+  <rect x="470" y="520" width="334" height="9" rx="4" fill="#b4a68f" opacity=".7"/>
+  <!-- Service representative -->
+  <circle cx="590" cy="253" r="40" fill="#efc5a8"/>
+  <path d="M551 244q5-44 42-44 37 3 40 45l-18-12-15-18-25 20z" fill="#324238"/>
+  <path d="M549 245q17-27 48-24 21 2 36 20l-3-29q-12-29-45-28-32 3-39 32z" fill="#146b52"/>
+  <path d="M534 314q54-34 109 0l24 166H512z" fill="#147657"/>
+  <path d="M551 325l-32 102 50 22 27-93zM627 326l39 86-43 27-40-82z" fill="#efc5a8"/>
+  <path d="M548 476h55v112h-55zM608 476h48v112h-48z" fill="#254c3c"/>
+  <path d="M538 584h72v20h-80q-5-11 8-20zM607 584h60q16 3 18 20h-78z" fill="#25332d"/>
+  <rect x="517" y="360" width="50" height="83" rx="5" fill="#124f3d"/>
+  <path d="M525 375h34v39h-34z" fill="#72b294"/>
+  <path d="M534 385h16m-16 9h16m-16 9h12" stroke="#fffaf1" stroke-width="3"/>
+  <!-- Customer -->
+  <circle cx="696" cy="277" r="38" fill="#edc1a2"/>
+  <path d="M659 267q2-45 41-45 34 4 38 46l-17-16-18-9-25 20z" fill="#26332c"/>
+  <path d="M656 333q43-30 82 0l23 147H643z" fill="#82a08c"/>
+  <path d="M663 346l-31 88 29 18 50-75zM727 346l-2 70-38 1-18-55z" fill="#edc1a2"/>
+  <path d="M649 475h52v113h-52zM704 475h45v113h-45z" fill="#29332f"/>
+  <path d="M639 584h69v20h-76q-4-12 7-20zM703 584h57q16 4 16 20h-73z" fill="#25332d"/>
+  <!-- Phone being handed over -->
+  <rect x="650" y="387" width="25" height="42" rx="5" fill="#25352f" transform="rotate(-12 650 387)"/>
+  <rect x="655" y="392" width="15" height="30" rx="2" fill="#cbe4d6" transform="rotate(-12 655 392)"/>
+  <path d="M617 407q21-16 44-4M671 415q19-11 35-7" fill="none" stroke="#edc1a2" stroke-width="13" stroke-linecap="round"/>
+  <rect x="458" y="626" width="364" height="42" rx="21" fill="#0f795c"/>
+  <text x="640" y="654" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">DOORSTEP PHONE HANDOFF</text>
+</svg>

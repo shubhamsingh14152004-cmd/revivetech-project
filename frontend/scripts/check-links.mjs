@@ -37,6 +37,7 @@ function walk(dir, fileList = []) {
 
 const sourceFiles = walk(path.join(process.cwd(), 'src'));
 const linkedRoutes = new Set();
+const redirectRoutes = new Set();
 // Add root by default
 linkedRoutes.add('/');
 
@@ -46,6 +47,8 @@ const mailLinks = new Set();
 
 for (const file of sourceFiles) {
   const content = fs.readFileSync(file, 'utf8');
+  const routeMatch = content.match(/createFileRoute\([\"'](\/[^\"']*)[\"']\)/);
+  if (routeMatch && /beforeLoad:[\s\S]{0,240}?redirect/.test(content)) redirectRoutes.add(routeMatch[1]);
   
   // check to="..."
   const toMatches = [...content.matchAll(/to=["'](.*?)["']/g)];
@@ -95,7 +98,7 @@ for (const file of sourceFiles) {
 for (const route of validRoutes) {
   if (route.startsWith('/api') || route.startsWith('/admin') || route === '/noindex') continue;
   
-  if (!linkedRoutes.has(route)) {
+  if (!linkedRoutes.has(route) && !redirectRoutes.has(route)) {
     console.error(`Orphaned route found! No internal links point to: ${route}`);
     errors++;
   }

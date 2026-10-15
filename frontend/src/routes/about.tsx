@@ -71,16 +71,16 @@ function AboutPage() {
           <article className="bg-white border border-line p-7 rounded-2xl shadow-xs">
             <h2 className="text-xl font-bold text-ink mb-3">Phone buyback enquiries</h2>
             <p className="text-sm text-muted leading-relaxed">
-              If you are considering selling a used phone, share its model and condition so we can
-              discuss assessment and current availability.
+              For phone buyback, we only consider devices that will not power on. Share the model and
+              your area so we can confirm whether an assessment is available.
             </p>
           </article>
         </section>
         <section className="mb-14 rounded-3xl bg-white p-8 border border-line shadow-xs text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-ink">Talk to Revora</h2>
           <p className="text-sm text-muted mt-3">
-            Contact us with your phone model, issue, and location. We can discuss repair or buyback
-            options and current availability.
+            Contact us with your phone model, issue, and location. We can discuss repair options or
+            dead-phone buyback assessment availability.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-4">
             <Link

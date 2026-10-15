@@ -99,7 +99,7 @@ function PrivacyPage() {
  <span>1. Device Storage Sanitization (NIST 800-88 Guidelines)</span>
  </h2>
  <p>
- When you sell an old, used, damaged, or dead smartphone to Revora, your data security is our highest operational priority:
+ If you ask Revora about selling a phone that will not power on, contact us first to discuss assessment and data-handling details:
  </p>
  <ul className="space-y-2 pl-5 list-disc text-muted">
  <li>

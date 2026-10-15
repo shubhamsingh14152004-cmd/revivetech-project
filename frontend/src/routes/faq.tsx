@@ -24,7 +24,7 @@ const ALL_FAQS = [
     category: "Selling & Buyback",
     question: "Where can I sell my dead phone in Mumbai?",
     answer:
-      "You can sell non-functional, water-damaged, or completely dead phones (band phone becho) directly to Revora. We provide free doorstep pickup across Mumbai, Thane, and Navi Mumbai, inspect the salvage value of modular hardware components, and pay immediately via UPI or bank transfer before leaving.",
+      "Revora's buyback is only for phones that will not power on. Contact us with the model and location to confirm whether an assessment is available. We will explain any offer and payment details before you decide.",
   },
   {
     category: "Selling & Buyback",
@@ -34,13 +34,13 @@ const ALL_FAQS = [
   },
   {
     category: "Selling & Buyback",
-    question: "Where can I sell a broken or cracked iPhone?",
+    question: "Can I sell a dead iPhone that will not turn on?",
     answer:
-      "You can sell broken, cracked, liquid-damaged, and dead iPhones with Revora. Simply select your model and condition in our valuation calculator or message us on WhatsApp to receive a direct quote and schedule free doorstep collection across Mumbai, Thane, and Navi Mumbai.",
+      "Revora buys iPhones only when they will not power on. Send your model and location on WhatsApp to ask whether an assessment is available; we will confirm any offer and collection details before you proceed.",
   },
   {
     category: "Selling & Buyback",
-    question: "Can I sell a water-damaged or liquid-submerged phone?",
+    question: "Can I sell a water-damaged phone that will not turn on?",
     answer:
       "Yes! Even after severe liquid exposure, internal modular components often remain valuable. Revora evaluates water-damaged Apple and Android smartphones and provides direct on-the-spot payment without requiring you to visit a repair shop.",
   },
@@ -52,9 +52,9 @@ const ALL_FAQS = [
   },
   {
     category: "Selling & Buyback",
-    question: "How do I sell my old phone for instant payment? (Purana phone becho)",
+    question: "How do I ask about selling a dead phone? (Band phone becho)",
     answer:
-      "If you want to sell your used phone (purana phone becho / dead phone bechna hai), select your brand and model on our calculator or contact us on WhatsApp. Our doorstep executive conducts a quick verification and transfers your payment instantly via UPI (GPay, PhonePe, Paytm) or IMPS before taking the phone.",
+      "Revora's buyback is only for phones that will not power on. Send the model and your area on WhatsApp to ask whether an assessment is available. Any offer and payment details will be confirmed with you before you decide.",
   },
   {
     category: "Selling & Buyback",
@@ -201,7 +201,7 @@ function FaqPage() {
  </h1>
 
  <p className="mt-4 text-base sm:text-lg text-muted leading-relaxed">
- Find instant answers to common questions about repairing your smartphone, selling old or dead devices for cash, doorstep courier security, and warranties.
+ Find answers about phone repair and selling a dead phone that will not power on.
  </p>
 
  {/* Search Input */}

@@ -146,7 +146,7 @@ function IphoneRepairPage() {
           <div className="text-[13px] text-muted border-t border-line pt-6 mb-8 flex justify-between items-center">
             <span>Last updated: October 2026.</span>
             <div className="flex gap-4">
-              <Link to="/sell-phone" className="font-bold text-brand hover:underline p-2 -m-2">Sell your iPhone instead?</Link>
+              <Link to="/sell-dead-iphone" className="font-bold text-brand hover:underline p-2 -m-2">Ask about selling a dead iPhone</Link>
               <Link to="/contact" className="font-bold text-brand hover:underline p-2 -m-2">Contact Us</Link>
             </div>
           </div>

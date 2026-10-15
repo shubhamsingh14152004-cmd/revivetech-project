@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://www.sellrepairphone.org/doorstep-phone-service-video</loc>
+    <lastmod>2026-10-12</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://www.sellrepairphone.org/images/revora-doorstep-video-thumbnail.svg</video:thumbnail_loc>
+      <video:title>Revora doorstep phone handoff animation</video:title>
+      <video:description>A short animation showing a customer handing a phone to a Revora representative at the doorstep. Contact Revora to ask about phone repair or buyback service in your area.</video:description>
+      <video:content_loc>https://www.sellrepairphone.org/videos/revora-animation.mp4</video:content_loc>
+      <video:publication_date>2026-10-04T08:32:16Z</video:publication_date>
+    </video:video>
+  </url>
+</urlset>

@@ -10,27 +10,9 @@ export interface ConditionOption {
 export const CONDITIONS: ConditionOption[] = [
   {
     id: "dead",
-    label: "Not turning on",
-    shortLabel: "Dead",
-    desc: "Won't turn on / Water",
-  },
-  {
-    id: "broken_screen",
-    label: "Cracked screen or body",
-    shortLabel: "Cracked",
-    desc: "Screen glass broken",
-  },
-  {
-    id: "flawed",
-    label: "Used, with scratches",
-    shortLabel: "Worn",
-    desc: "Heavy scratches/dents",
-  },
-  {
-    id: "working",
-    label: "Like new, no marks",
-    shortLabel: "Mint",
-    desc: "Flawless screen & body",
+    label: "Dead — will not power on",
+    shortLabel: "Dead phone only",
+    desc: "Buyback is for phones that will not turn on",
   },
 ];
 
